@@ -1,10 +1,10 @@
 #ifndef ZADANIE_H
 #define ZADANIE_H
 
-class zadanie
+class zadanie			///klasa zadania
 {
     public:
-		int *numer;
+		int *numer;	//numer zadania na wspólnej tablicy
 
     protected:
     private:
