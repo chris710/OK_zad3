@@ -1,11 +1,13 @@
 #ifndef MASZYNA_H
 #define MASZYNA_H
 
-class maszyna
+class maszyna				///klasa procesora
 {
     public:
-		int *rozpoczecie;
-		int *dlugosc;
+		int *rozpoczecie;		//wskaŸnik na tablicê z czasami rozpoczêcia
+						//czasów przestoju
+		int *dlugosc;			//wskaŸnik na tablicê z czasami trwania
+						//czasów przestoju
 		
     protected:
     private:
