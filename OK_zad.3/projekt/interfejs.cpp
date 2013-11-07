@@ -2,7 +2,7 @@
 using namespace std;
 #include "naglowek1.h"
 
-int czas_wykonania(){		// funkcja
+int czas_wykonania(){
 	int wybor;
 	cout << "Wybierz czas wykonania zadan: \n  1) od 1 do 20 \n  2) od 1 do 200 \n  3) mieszane" << endl;
 	cin >> wybor;

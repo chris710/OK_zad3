@@ -58,8 +58,8 @@ cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
 
 void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3){
 	int odd,doo; 
-	switch(liczba_przest){
-	case 10: // 
+	switch(liczba_przest){			// wybieram opje 
+	case 10: //						// od 1do 10 s
 		odd=1;
 		doo=10;
 		break;
