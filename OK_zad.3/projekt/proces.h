@@ -1,7 +1,7 @@
 #ifndef PROCES_H
 #define PROCES_H
 
-#include "zadanie.h"
+//#include "zadanie.h"
 
 ///klasa procesu zadania
 class Proces

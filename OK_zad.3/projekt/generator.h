@@ -13,12 +13,18 @@ I. Generator
 8) Optymalizacja generowanych wyników (limiter)
 */
 
+#include "zadanie.h"
 
 
 /// Klasa generatora
 class Generator
 {
 	//TODO pola generatora
+	int liczbaZadan;		//rozmiar instancji
+	int liczbaPrzestojow;	//liczba przestojów
+	int dlugoscZadan;		//opcja d³ugoœci zadañ
+	int dlugosc przestojow;	//opcja d³ugoœci przestojów
+
 public:
 	//TODO metody
 	void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3);

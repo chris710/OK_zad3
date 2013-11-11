@@ -1,12 +1,12 @@
 #ifndef ZADANIE_H
 #define ZADANIE_H
 
-
+#include "proces.h"
 
 class zadanie			///klasa zadania
 {
     public:
-		int *numer;	//numer zadania na wspólnej tablicy
+		Proces[] numer;	//numer zadania na wspólnej tablicy
 
     protected:
     private:
