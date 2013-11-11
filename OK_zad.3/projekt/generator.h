@@ -1,3 +1,6 @@
+#ifndef GENERATOR_H
+#define GENERATOR_H
+
 /*
 I. Generator 
 [DONE] 1) Interfejs w konsoli 
@@ -21,3 +24,5 @@ public:
 	void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3);
 	void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie op1, zadanie op2, zadanie op3);
 }
+
+#endif

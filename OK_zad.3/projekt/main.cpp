@@ -1,7 +1,7 @@
 #include<iostream>
 #include<time.h>
 
-//linkowanie plikó projektu
+//linkowanie plików projektu
 #include "naglowek1.h"
 #include "maszyna.h"
 #include "zadanie.h"

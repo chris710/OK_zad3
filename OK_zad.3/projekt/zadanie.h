@@ -1,6 +1,8 @@
 #ifndef ZADANIE_H
 #define ZADANIE_H
 
+
+
 class zadanie			///klasa zadania
 {
     public:
