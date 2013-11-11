@@ -1,57 +1,50 @@
 #include<iostream>
 #include<time.h>
-using namespace std;
 
+//linkowanie plikó projektu
 #include "naglowek1.h"
 #include "maszyna.h"
 #include "zadanie.h"
-
-/*
-I. Generator 
-1) Interfejs w konsoli 
-2) Funkcja generuj¹ca liczby losowe 
-3) Generowanie instancji problemu od 50 do n (iloœæ zadañ) 
-4) Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
-5) Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
-6) Generowanie miejsc przestojów dla wszystkich maszyn 
-7) Eksport do pliku .txt 
-8) Optymalizacja generowanych wyników (limiter)*/
-
-void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3);
-void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie op1, zadanie op2, zadanie op3);
-
-int main(){
-int czas_wyk, liczba_przest, liczba_zadan;
-srand(time(NULL));
-interfejs(czas_wyk, liczba_przest, liczba_zadan);
+#include "generator.h"
 
 
-//////////////////////////////////////////
-zadanie gotowosc, op1,op2,op3;
-gotowosc.numer=new int[liczba_zadan];
-op1.numer=new int[liczba_zadan];
-op2.numer=new int[liczba_zadan];
-op3.numer=new int[liczba_zadan];
-
-maszyna m1, m2, m3;
-m1.dlugosc=new int[liczba_przest];
-m1.rozpoczecie=new int[liczba_przest];
-m2.dlugosc=new int[liczba_przest];
-m2.rozpoczecie=new int[liczba_przest];
-m3.dlugosc=new int[liczba_przest];
-m3.rozpoczecie=new int[liczba_przest];
-//////////////////////////////////////////
-
-cout << "======== ZADANIE LOSOWANIE ========\n\n";
-zadanie_losowanie(liczba_zadan, czas_wyk, gotowosc, op1, op2, op3);
-for(int i=0;i<liczba_zadan;i++)
-	cout << gotowosc.numer[i] << "  | \t" << op1.numer[i] << "\t" << op2.numer[i] << "\t" << op3.numer[i] << endl;
-
-cout << "\n======== MASZYNA LOSOWANIE ========\n\n";
-maszyna_losowanie(liczba_przest, m1, m2, m3);
+using namespace std;
 
 
-cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
+
+int main()
+{
+	int czas_wyk, liczba_przest, liczba_zadan;
+	srand(time(NULL));
+	interfejs(czas_wyk, liczba_przest, liczba_zadan);
+
+
+	//////////////////////////////////////////
+	zadanie gotowosc, op1,op2,op3;
+	gotowosc.numer=new int[liczba_zadan];
+	op1.numer=new int[liczba_zadan];
+	op2.numer=new int[liczba_zadan];
+	op3.numer=new int[liczba_zadan];
+
+	maszyna m1, m2, m3;
+	m1.dlugosc=new int[liczba_przest];
+	m1.rozpoczecie=new int[liczba_przest];
+	m2.dlugosc=new int[liczba_przest];
+	m2.rozpoczecie=new int[liczba_przest];
+	m3.dlugosc=new int[liczba_przest];
+	m3.rozpoczecie=new int[liczba_przest];
+	//////////////////////////////////////////
+
+	cout << "======== ZADANIE LOSOWANIE ========\n\n";
+	zadanie_losowanie(liczba_zadan, czas_wyk, gotowosc, op1, op2, op3);
+	for(int i=0;i<liczba_zadan;i++)
+		cout << gotowosc.numer[i] << "  | \t" << op1.numer[i] << "\t" << op2.numer[i] << "\t" << op3.numer[i] << endl;
+
+	cout << "\n======== MASZYNA LOSOWANIE ========\n\n";
+	maszyna_losowanie(liczba_przest, m1, m2, m3);
+
+
+	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
