@@ -3,10 +3,12 @@
 
 #include "proces.h"
 
-class zadanie			///klasa zadania
+class Zadanie			///klasa zadania
 {
     public:
-		Proces[] numer;	//numer zadania na wspólnej tablicy
+		Proces procesy[3];	//tablica trzech procesów zadania
+
+		//TODO metody klasy
 
     protected:
     private:

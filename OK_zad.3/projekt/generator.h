@@ -13,6 +13,7 @@ I. Generator
 8) Optymalizacja generowanych wyników (limiter)
 */
 
+#include <fstream>			//do operacji na plikach
 #include "zadanie.h"
 
 
@@ -23,12 +24,12 @@ class Generator
 	int liczbaZadan;		//rozmiar instancji
 	int liczbaPrzestojow;	//liczba przestojów
 	int dlugoscZadan;		//opcja d³ugoœci zadañ
-	int dlugosc przestojow;	//opcja d³ugoœci przestojów
+	int dlugoscPrzestojow;	//opcja d³ugoœci przestojów
 
 public:
 	//TODO metody
 	void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3);
 	void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie op1, zadanie op2, zadanie op3);
-}
+};
 
 #endif
