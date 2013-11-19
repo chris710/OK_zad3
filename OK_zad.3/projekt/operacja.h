@@ -1,5 +1,5 @@
-#ifndef PROCES_H
-#define PROCES_H
+#ifndef operacja_H
+#define operacja_H
 
 #include<iostream>
 
@@ -13,11 +13,11 @@
 
 //#include "zadanie.h"
 
-///klasa procesu zadania
-class Proces
+///klasa operacjau zadania
+class Operacja
 {
 public:
-	//TODO pola procesu
+	//TODO pola operacjau
 	int czas;		//d³ugoœæ trwania operacji
 	//int maszyna;	//na której maszynie jest wykonywana operacja
 
@@ -28,10 +28,10 @@ public:
 	*	@Argumenty:
 	*		int czas	-	d³ugoœæ trwania operacji
 	****/
-	Proces(int czas);
+	Operacja(int czas);
 
 
-	//TODO metody procesu
+	//TODO metody operacjau
 
 };
 

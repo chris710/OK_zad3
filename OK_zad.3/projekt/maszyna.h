@@ -1,12 +1,30 @@
 #ifndef MASZYNA_H
 #define MASZYNA_H
 
-class maszyna				///klasa procesora
+#include<vector>
+#include "operacja.h"
+
+using namespace std;
+/*************
+		TODO List
+*
+*
+*
+*************/
+
+
+class Maszyna				///klasa operacjaora
 {
     public:
-		int *rozpoczecie;		//wskaŸnik na tablicê z czasami rozpoczêcia czasów przestoju
-		int *dlugosc;			//wskaŸnik na tablicê z czasami trwania czasów przestoju
-		
+		//TODO pola klasy
+		vector<int> rozpoczecie;				//wskaŸnik na wektor z czasami rozpoczêcia czasów przestoj
+		vector<int> dlugosc;					//wskaŸnik na wektor z czasami trwania czasów przestoju
+		vector<Operacja*> uszeregowanie;	//wektor zawieraj¹cy uszeregowanie operacjaów
+
+		//TODO konstruktory
+		Maszyna();
+		//TODO metody
+
     protected:
     private:
 };

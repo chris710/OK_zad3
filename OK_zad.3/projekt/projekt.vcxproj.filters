@@ -30,7 +30,7 @@
     <ClCompile Include="generator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="proces.cpp">
+    <ClCompile Include="operacja.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,9 +41,6 @@
     <ClInclude Include="zadanie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="proces.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -51,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="operacja.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

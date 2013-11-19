@@ -7,20 +7,21 @@
 /**************
 		TODO List
 I. Generator 
-[DONE] 1) Interfejs w konsoli 
-[DONE] 2) Funkcja generuj¹ca liczby losowe 
-3) Generowanie instancji problemu od 50 do n (iloœæ zadañ) 
-4) Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
-5) Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
-6) Generowanie miejsc przestojów dla wszystkich maszyn 
-7) Eksport do pliku .txt 
-8) Optymalizacja generowanych wyników (limiter)
+[DONE] Interfejs w konsoli 
+[DONE] Funkcja generuj¹ca liczby losowe 
+* Generowanie instancji problemu od 50 do n (iloœæ zadañ) 
+* Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
+* Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
+* Generowanie miejsc przestojów dla wszystkich maszyn 
+* Eksport do pliku .txt 
+* Optymalizacja generowanych wyników (limiter)
 ***************/
 
 #include<fstream>			//do operacji na plikach
+#include<time.h>			//do liczb losowych
 #include "zadanie.h"		//do do 
 #include "maszyna.h"		//do generowania przestojów
-#include<time.h>			//do liczb losowych
+
 
 
 /// Klasa generatora
@@ -29,13 +30,12 @@ class Generator
 public:
 	//TODO pola generatora
 	int liczbaZadan;		//rozmiar instancji
-	int liczbaPrzestojow;	//liczba przestojów
-	int dlugoscZadan;		//opcja d³ugoœci zadañ
-	int dlugoscPrzestojow;	//opcja d³ugoœci przestojów
 
 
 	//TODO konstruktory
+
 	//TODO destruktor
+
 	//TODO metody
 
 	/********
@@ -46,12 +46,22 @@ public:
 	*		int maxDlugosc	-	maksymalna d³ugoœæ operacji zadania
 	*		int delay		-	minimalny czas przed wykonaniem pierwszej operacji zadania	
 	*	@Zwraca:
-	*		Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		Proces	, z wygenerowanymi danymi
+	*		Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		operacja	, z wygenerowanymi danymi
 	*							spe³niaj¹cymi kryteria podane w argumentach funkcji
 	*********/
 	Zadanie generujZadanie(int minDlugosc, int maxDlugosc, int delay);
 
 
+	/********
+	*	@ generujMaszyne
+	*		Funkcja generuj¹ca przestoje w maszynie
+	*	@Argumenty:
+	*		int nPrzestojow		-	liczba przestojów w maszynie
+	*		int czasPrzestojow	-	maksymalny czas trwania przestojów
+	*	@Zwraca
+	*		Maszyna Result	-	objekt klasy	Maszyna	,	z tablicami		rozpoczecie i	dlugosc	z wygenerowanymi losowo danymi
+	********/
+	Maszyna generujMaszyne(int nPrzestojow, int czasPrzestojow);
 };
 
 /**************

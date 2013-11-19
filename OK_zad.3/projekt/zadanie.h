@@ -1,7 +1,7 @@
 #ifndef ZADANIE_H
 #define ZADANIE_H
 
-#include "proces.h"
+#include "operacja.h"
 
 /*****************
 		TODO List
@@ -12,12 +12,16 @@
 class Zadanie			///klasa zadania
 {
     public:
-		Proces* procesy[3];	//tablica trzech procesów zadania
+		Operacja* operacje[3];	//tablica trzech operacjaów zadania
 		int delay;		//czas opóŸnienia pierwszej operacji
 		
-		//TODO metody klasy
+		
 		//TODO konsturktory
 		Zadanie();
+
+		//TODO destruktor
+		~Zadanie();
+		//TODO metody klasy
     protected:
     private:
 };

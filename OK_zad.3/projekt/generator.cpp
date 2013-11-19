@@ -7,8 +7,8 @@
 ********/
 
 
-/*void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3){
-	int odd,doo; 
+/*void maszyna_losowanie(int liczb maszyna m1, maszyna m2, maszyna m3){
+	int odd,doo; a_przest,
 	switch(liczba_przest){			// wybieram opje 
 	case 10: //						// od 1do 10 s
 		odd=1;
@@ -100,10 +100,24 @@ Zadanie Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 {
 	Zadanie* Result = new Zadanie();
 	Result->delay = random(0,delay);
-	Result->procesy[0] = new Proces(random(minDlugosc, maxDlugosc));
-	Result->procesy[1] = new Proces(random(minDlugosc, maxDlugosc));
-	Result->procesy[2] = new Proces(random(minDlugosc, maxDlugosc));
+	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc));
+	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc));
+	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc));
 
+	return *Result;
+}
+
+
+Maszyna generujMaszyne(int nPrzestojow, int czasPrzestojow)
+{
+	Maszyna* Result = new Maszyna();
+	for (int i = 0; i < nPrzestojow; ++i)
+	{
+		Result->dlugosc.push_back(random(0,czasPrzestojow));
+		//TODO znormalizuj czasy aby siê nie pierdoli³y
+		//TODO zrób coœ aby siê nie nak³ada³y
+		Result->rozpoczecie.push_back(random(0,czasPrzestojow));
+	}
 	return *Result;
 }
 

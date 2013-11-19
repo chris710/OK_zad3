@@ -11,7 +11,7 @@ using namespace std;
 
 /***********
 *	@ czas_wykonania
-*		funkcja pokazuj¹ca mo¿liwe opcje wyboru zakresu losowanych liczb dla czasów wykonania procesów
+*		funkcja pokazuj¹ca mo¿liwe opcje wyboru zakresu losowanych liczb dla czasów wykonania operacjaów
 *	@ Argumenty:
 *		
 *	@ Zwraca:
