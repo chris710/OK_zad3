@@ -3,6 +3,12 @@
 
 #include "proces.h"
 
+/*****************
+		TODO List
+*
+*
+*****************/
+
 class Zadanie			///klasa zadania
 {
     public:
@@ -11,7 +17,7 @@ class Zadanie			///klasa zadania
 		
 		//TODO metody klasy
 		//TODO konsturktory
-		Zadanie(){};
+		Zadanie();
     protected:
     private:
 };

@@ -96,8 +96,21 @@ void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie
 }*/
 
 
-Zadanie Generator::generujZadanie(int maxDlugosc)
+Zadanie Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 {
 	Zadanie* Result = new Zadanie();
+	Result->delay = random(0,delay);
+	Result->procesy[0] = new Proces(random(minDlugosc, maxDlugosc));
+	Result->procesy[1] = new Proces(random(minDlugosc, maxDlugosc));
+	Result->procesy[2] = new Proces(random(minDlugosc, maxDlugosc));
+
 	return *Result;
+}
+
+
+int random(int min, int max)
+{
+	int result, lower = max-min;
+	result = rand()%lower + min;
+	return result;
 }

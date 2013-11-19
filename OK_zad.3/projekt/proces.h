@@ -5,7 +5,7 @@
 
 /***********
 		TODO LIST
-*	-pola klasy(?)
+[DONE]	-pola klasy(?)
 *	-metody klasy(?)
 ***********/
 
@@ -16,11 +16,23 @@
 ///klasa procesu zadania
 class Proces
 {
+public:
 	//TODO pola procesu
 	int czas;		//d³ugoœæ trwania operacji
 	//int maszyna;	//na której maszynie jest wykonywana operacja
-public:
+
+	//TODO konstruktory
+
+	/******
+	*	Konstruktor ustalaj¹cy pole		czas
+	*	@Argumenty:
+	*		int czas	-	d³ugoœæ trwania operacji
+	****/
+	Proces(int czas);
+
+
 	//TODO metody procesu
+
 };
 
 

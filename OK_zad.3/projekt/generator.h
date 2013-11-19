@@ -17,9 +17,10 @@ I. Generator
 8) Optymalizacja generowanych wyników (limiter)
 ***************/
 
-#include <fstream>			//do operacji na plikach
+#include<fstream>			//do operacji na plikach
 #include "zadanie.h"		//do do 
 #include "maszyna.h"		//do generowania przestojów
+#include<time.h>			//do liczb losowych
 
 
 /// Klasa generatora
@@ -41,14 +42,26 @@ public:
 	*	@ generujZadanie
 	*		Funkcja generuj¹ca d³ugoœci operacji poszczególnego zadania
 	*	@Argumenty:	
+	*		int minDlugosc	-	minimalna d³ugoœæ operacji
 	*		int maxDlugosc	-	maksymalna d³ugoœæ operacji zadania
+	*		int delay		-	minimalny czas przed wykonaniem pierwszej operacji zadania	
 	*	@Zwraca:
 	*		Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		Proces	, z wygenerowanymi danymi
 	*							spe³niaj¹cymi kryteria podane w argumentach funkcji
 	*********/
-	Zadanie generujZadanie(int maxDlugosc);
+	Zadanie generujZadanie(int minDlugosc, int maxDlugosc, int delay);
 
 
 };
 
+/**************
+*	@random
+*		Funkcja losuj¹ca liczby z przedzia³u
+*	@Argumenty:
+*		int min		-	dolny próg losowanego przedzia³u 
+*		int max		-	góryny próg losowanego przedzia³u
+*	@Zwraca:
+*		int result	-	wylosowana liczba z przedzia³u
+**************/
+int random(int min, int max);
 #endif

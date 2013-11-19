@@ -4,10 +4,8 @@
 class maszyna				///klasa procesora
 {
     public:
-		int *rozpoczecie;		//wskaŸnik na tablicê z czasami rozpoczêcia
-						//czasów przestoju
-		int *dlugosc;			//wskaŸnik na tablicê z czasami trwania
-						//czasów przestoju
+		int *rozpoczecie;		//wskaŸnik na tablicê z czasami rozpoczêcia czasów przestoju
+		int *dlugosc;			//wskaŸnik na tablicê z czasami trwania czasów przestoju
 		
     protected:
     private:
