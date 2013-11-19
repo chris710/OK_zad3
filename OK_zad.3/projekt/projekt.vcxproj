@@ -61,6 +61,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="generator.cpp" />
     <ClCompile Include="interfejs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maszyna.cpp">
@@ -100,12 +101,15 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="generator.h" />
+    <ClInclude Include="interfejs.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="maszyna.h">
-      <FileType>CppClass</FileType>
+      <FileType>CppHeader</FileType>
     </ClInclude>
-    <ClInclude Include="naglowek1.h" />
+    <ClInclude Include="proces.h" />
     <ClInclude Include="zadanie.h">
-      <FileType>CppClass</FileType>
+      <FileType>CppHeader</FileType>
     </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

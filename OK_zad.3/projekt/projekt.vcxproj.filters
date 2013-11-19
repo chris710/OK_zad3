@@ -27,6 +27,9 @@
     <ClCompile Include="interfejs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="maszyna.h">
@@ -35,7 +38,16 @@
     <ClInclude Include="zadanie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="naglowek1.h">
+    <ClInclude Include="proces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interfejs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

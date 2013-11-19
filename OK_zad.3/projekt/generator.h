@@ -1,7 +1,11 @@
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
-/*
+#include<iostream>
+#include "zadanie.h"
+
+/**************
+		TODO List
 I. Generator 
 [DONE] 1) Interfejs w konsoli 
 [DONE] 2) Funkcja generuj¹ca liczby losowe 
@@ -11,25 +15,40 @@ I. Generator
 6) Generowanie miejsc przestojów dla wszystkich maszyn 
 7) Eksport do pliku .txt 
 8) Optymalizacja generowanych wyników (limiter)
-*/
+***************/
 
 #include <fstream>			//do operacji na plikach
-#include "zadanie.h"
+#include "zadanie.h"		//do do 
+#include "maszyna.h"		//do generowania przestojów
 
 
 /// Klasa generatora
 class Generator
 {
+public:
 	//TODO pola generatora
 	int liczbaZadan;		//rozmiar instancji
 	int liczbaPrzestojow;	//liczba przestojów
 	int dlugoscZadan;		//opcja d³ugoœci zadañ
 	int dlugoscPrzestojow;	//opcja d³ugoœci przestojów
 
-public:
+
+	//TODO konstruktory
+	//TODO destruktor
 	//TODO metody
-	void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3);
-	void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie op1, zadanie op2, zadanie op3);
+
+	/********
+	*	@ generujZadanie
+	*		Funkcja generuj¹ca d³ugoœci operacji poszczególnego zadania
+	*	@Argumenty:	
+	*		int maxDlugosc	-	maksymalna d³ugoœæ operacji zadania
+	*	@Zwraca:
+	*		Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		Proces	, z wygenerowanymi danymi
+	*							spe³niaj¹cymi kryteria podane w argumentach funkcji
+	*********/
+	Zadanie generujZadanie(int maxDlugosc);
+
+
 };
 
 #endif

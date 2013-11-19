@@ -1,9 +1,13 @@
 #include "generator.h"
 
-///TODO pouk³adaæ te œmieci z maina
+/*******
+		TODO List
+*	pouk³adaæ te œmieci z maina
+*
+********/
 
 
-void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3){
+/*void maszyna_losowanie(int liczba_przest, maszyna m1, maszyna m2, maszyna m3){
 	int odd,doo; 
 	switch(liczba_przest){			// wybieram opje 
 	case 10: //						// od 1do 10 s
@@ -89,4 +93,11 @@ void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie
 	for (int i=0;i<liczba_zadan;i++)
 		gotowosc.numer[i]=rand()%suma;
 
+}*/
+
+
+Zadanie Generator::generujZadanie(int maxDlugosc)
+{
+	Zadanie* Result = new Zadanie();
+	return *Result;
 }
