@@ -29,7 +29,9 @@ class Generator
 {
 public:
 	//TODO pola generatora
-	int liczbaZadan;		//rozmiar instancji
+	int liczbaZadan;			//rozmiar instancji
+	int dlugoscInstancji;		//d³ugoœæ wszystkich zadañ i przestojów
+	vector<Zadanie*> zadania;	//wektor zawieraj¹cy wszystkie zadania
 
 
 	//TODO konstruktory
