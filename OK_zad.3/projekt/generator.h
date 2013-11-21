@@ -58,12 +58,12 @@ public:
 	*	@ generujMaszyne
 	*		Funkcja generuj¹ca przestoje w maszynie
 	*	@Argumenty:
-	*		int nPrzestojow		-	liczba przestojów w maszynie
-	*		int czasPrzestojow	-	maksymalny czas trwania przestojów
-	*	@Zwraca
+	*		int nPrzestojowMin/Max	-	maksymalna/minimalna liczba przestojów w maszynie
+	*		int czasPrzestojow		-	maksymalny czas trwania przestojów
+	*	@Zwraca:
 	*		Maszyna Result	-	objekt klasy	Maszyna	,	z tablicami		rozpoczecie i	dlugosc	z wygenerowanymi losowo danymi
 	********/
-	Maszyna generujMaszyne(int nPrzestojow, int czasPrzestojow);
+	Maszyna generujMaszyne(int nPrzestojowMin, int nPrzestojowMax, int czasPrzestojow);
 };
 
 /**************

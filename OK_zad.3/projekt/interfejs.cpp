@@ -1,5 +1,13 @@
 #include "interfejs.h"
 
+/**************
+		TODO List
+*	dostosowaæ funkcje do nowych metod klas
+*
+*
+**************/
+
+
 int czas_wykonania()
 {
 	int wybor;
@@ -34,4 +42,13 @@ void interfejs(int &czas_wyk,int &liczba_przest, int &liczba_zadan)
 	cout << "Liczba zadan to: " ;
 	cin >> liczba_zadan;
 	cout <<"\n===========================\n\n";
+}
+
+
+void wyswietlZadanie(const Zadanie& zadanie)
+{
+	cout<<"Czas gotowoœci:\t"<<zadanie.delay<<endl;
+	cout<<"Czas operacji 1:\t"<<zadanie.operacje[0]->czas<<endl;
+	cout<<"Czas operacji 2:\t"<<zadanie.operacje[1]->czas<<endl;
+	cout<<"Czas operacji 3:\t"<<zadanie.operacje[2]->czas<<endl<<endl;
 }

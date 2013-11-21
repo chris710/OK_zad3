@@ -17,6 +17,7 @@ class Maszyna				///klasa operacjaora
 {
     public:
 		//TODO pola klasy
+		int nPrzestojow;			//iloœæ przestojów
 		vector<int> rozpoczecie;				//wskaŸnik na wektor z czasami rozpoczêcia czasów przestoj
 		vector<int> dlugosc;					//wskaŸnik na wektor z czasami trwania czasów przestoju
 		vector<Operacja*> uszeregowanie;	//wektor zawieraj¹cy uszeregowanie operacjaów

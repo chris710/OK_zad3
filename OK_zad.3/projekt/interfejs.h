@@ -2,6 +2,7 @@
 #define INTERFEJS_H
 
 #include <iostream>
+#include "generator.h"
 using namespace std;
 
 /***********
@@ -48,5 +49,16 @@ int liczba_przestojow();
 ***********/
 void interfejs(int &czas_wyk,int &liczba_przest, int &liczba_zadan);
 
+
+
+/**********
+*	@ wyswietlZadanie
+*		funkcja wyœwietlaj¹ca w konsoli dane zadania i nale¿¹cych do niego operacji
+*	@Argumenty:
+*		Zadanie& zadanie		odniesienie do klasy	Zadanie, z której pobierane s¹ dane
+*	@Zwraca:
+*		nic
+**********/
+void wyswietlZadanie(const Zadanie& zadanie);
 
 #endif //INTERFEJS_H

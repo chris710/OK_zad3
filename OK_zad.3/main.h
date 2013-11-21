@@ -12,6 +12,7 @@ using namespace std;
 #include "generator.h"
 #include "zadanie.h"
 #include "operacja.h"
+#include "maszyna.h"
 #include "interfejs.h"
 
 #endif //MAIN_H

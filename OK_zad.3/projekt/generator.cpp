@@ -108,10 +108,11 @@ Zadanie Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 }
 
 
-Maszyna Generator::generujMaszyne(int nPrzestojow, int czasPrzestojow)
+Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int czasPrzestojow)
 {
 	Maszyna* Result = new Maszyna();
-	for (int i = 0; i < nPrzestojow; ++i)
+	Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
+	for (int i = 0; i < Result->nPrzestojow; ++i)
 	{
 		Result->dlugosc.push_back(random(0,czasPrzestojow));
 	}
@@ -126,8 +127,8 @@ Maszyna Generator::generujMaszyne(int nPrzestojow, int czasPrzestojow)
 
 	//TODO znormalizuj czasy aby siê nie pierdoli³y
 	//TODO zrób coœ aby siê nie nak³ada³y
-	int przedzial = (this->dlugoscInstancji/3)/nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
-	for(int i = 1; i<=nPrzestojow; ++i)
+	int przedzial = (this->dlugoscInstancji/3)/Result->nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
+	for(int i = 1; i<=Result->nPrzestojow; ++i)
 	{
 		Result->rozpoczecie.push_back(i*przedzial);
 	}
