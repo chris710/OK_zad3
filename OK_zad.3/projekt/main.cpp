@@ -31,12 +31,13 @@ int main()
 	m3.dlugosc=new int[liczba_przest];
 	m3.rozpoczecie=new int[liczba_przest];
 	/////////////////////////////////////////*/
-
+	Generator generator;
 	cout << "======== ZADANIE LOSOWANIE ========\n\n";
 	/*zadanie_losowanie(liczba_zadan, czas_wyk, gotowosc, op1, op2, op3);
 	for(int i=0;i<liczba_zadan;i++)
 		cout << gotowosc.numer[i] << "  | \t" << op1.numer[i] << "\t" << op2.numer[i] << "\t" << op3.numer[i] << endl;
 		*/
+	interfejs(generator);
 	cout << "\n======== MASZYNA LOSOWANIE ========\n\n";
 	//maszyna_losowanie(liczba_przest, m1, m2, m3);
 

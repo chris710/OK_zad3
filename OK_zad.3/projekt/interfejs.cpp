@@ -24,22 +24,38 @@ int liczba_przestojow()
 	return wybor;
 }
 
+int przestojeMin(int wybor)
+{
+	if (wybor==2)
+		return 10;
+	else 
+		return 1;
+}
 
-void interfejs(int &czas_wyk,int &liczba_przest, int &liczba_zadan)
+int przestojeMax(int wybor)
+{
+	if (wybor==1)
+		return 10;
+	else 
+		return 50;
+}
+
+
+void interfejs(Generator &generator)
+// int &czas_wyk,int &liczba_przest, int &liczba_zadan, Generator generator
 {
 	cout << "======== GENERATOR ========\n\n";
-	czas_wyk=czas_wykonania();
-	liczba_przest=liczba_przestojow();
-	if (liczba_przest==1)
-		liczba_przest=10;
-	else if (liczba_przest==2)
-		liczba_przest=40;
-	else 
-		liczba_przest=50;
+	int czas_wyk=czas_wykonania(),liczba_zadan, liczba_przest=1;
+	int x,y,z;
+	x=liczba_przestojow();
+	y=przestojeMin(x);
+	z=przestojeMax(x);
+	Zadanie hehe;
+	hehe=generator.generujZadanie(1,5,5);
 	cout <<"\n===========================\n\n";
 	cout <<"Czas wykonania zadan: " << czas_wyk <<endl;
 	cout <<"Liczba przestjow: " << liczba_przest <<endl;
-	cout << "Liczba zadan to: " ;
+	cout << "Liczba zadan to: ";
 	cin >> liczba_zadan;
 	cout <<"\n===========================\n\n";
 }

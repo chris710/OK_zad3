@@ -1,6 +1,7 @@
 #ifndef	INTERFEJS_H
 #define INTERFEJS_H
 
+#include "generator.h"
 #include <iostream>
 #include "generator.h"
 using namespace std;
@@ -22,7 +23,6 @@ using namespace std;
 int czas_wykonania();
 
 
-
 /***********
 *	@ liczba_przestojow
 *		funkcja pokazuj¹ca mo¿liwe opcje wyboru liczby losowanych przestojow
@@ -33,6 +33,19 @@ int czas_wykonania();
 * 
 ***********/
 int liczba_przestojow();
+
+/***********
+*	@ przestojeMIN/MAX
+*		funkcja zwracaj¹ca min/max liczbê przestojów
+*	@ Argumenty:
+*		int wybor=wybor opcji otrzymany z liczba_przestojow()
+*	@ Zwraca:
+*		wybran¹ czas	
+* 
+***********/
+
+int przestojeMin(int wybor);
+int przestojeMax(int wybor);
 
 
 /***********
@@ -47,7 +60,9 @@ int liczba_przestojow();
 *	 
 * 
 ***********/
-void interfejs(int &czas_wyk,int &liczba_przest, int &liczba_zadan);
+
+
+void interfejs(Generator & generator);
 
 
 
