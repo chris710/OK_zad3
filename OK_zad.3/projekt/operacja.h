@@ -13,12 +13,13 @@
 
 //#include "zadanie.h"
 
-///klasa operacjau zadania
+///klasa operacja zadania
 class Operacja
 {
 public:
 	//TODO pola operacjau
 	int czas;		//d³ugoœæ trwania operacji
+	bool done;		//flaga ukoñczenia operacji czyli ¿e kolejna mo¿e siê zacz¹æ
 	//int maszyna;	//na której maszynie jest wykonywana operacja
 
 	//TODO konstruktory

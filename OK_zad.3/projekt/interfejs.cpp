@@ -24,6 +24,16 @@ int liczba_przestojow()
 	return wybor;
 }
 
+
+int liczba_zadan()
+{
+	int wybor;
+	cout << "Wybierz liczbe zadan: " << endl;
+	cin >> wybor;
+	return wybor;
+}
+
+
 int przestojeMin(int wybor)
 {
 	if (wybor==2)
@@ -42,21 +52,17 @@ int przestojeMax(int wybor)
 
 
 void interfejs(Generator &generator)
-// int &czas_wyk,int &liczba_przest, int &liczba_zadan, Generator generator
 {
 	cout << "======== GENERATOR ========\n\n";
-	int czas_wyk=czas_wykonania(),liczba_zadan, liczba_przest=1;
+	int czas_wyk=czas_wykonania(),liczba_zadan = generator.liczbaZadan, liczba_przest=1;
 	int x,y,z;
 	x=liczba_przestojow();
 	y=przestojeMin(x);
 	z=przestojeMax(x);
-	Zadanie hehe;
-	hehe=generator.generujZadanie(1,5,5);
+	generator.generujZadanie(y,z,1);
 	cout <<"\n===========================\n\n";
 	cout <<"Czas wykonania zadan: " << czas_wyk <<endl;
 	cout <<"Liczba przestjow: " << liczba_przest <<endl;
-	cout << "Liczba zadan to: ";
-	cin >> liczba_zadan;
 	cout <<"\n===========================\n\n";
 }
 

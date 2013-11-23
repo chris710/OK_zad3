@@ -1,9 +1,9 @@
 #ifndef	INTERFEJS_H
 #define INTERFEJS_H
 
-#include "generator.h"
 #include <iostream>
 #include "generator.h"
+
 using namespace std;
 
 /***********
@@ -21,6 +21,15 @@ using namespace std;
 * 
 ***********/
 int czas_wykonania();
+
+
+/*********
+*	@ liczba_zadan
+*		wczytuje od u¿ytkownika liczbê zadañ dla generatora
+*	@zwraca:
+*		liczbê zadañ podan¹ przez usera
+*********/
+int liczba_zadan();
 
 
 /***********

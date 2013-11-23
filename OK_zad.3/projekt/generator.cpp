@@ -6,6 +6,11 @@
 *
 ********/
 
+Generator::Generator(int nZadan)
+{
+	this->liczbaZadan = nZadan;
+}
+
 
 /*void maszyna_losowanie(int liczb maszyna m1, maszyna m2, maszyna m3){
 	int odd,doo; a_przest,
@@ -96,15 +101,16 @@ void zadanie_losowanie(int liczba_zadan, int czas_wyk, zadanie gotowosc, zadanie
 }*/
 
 
-Zadanie Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
+void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 {
 	Zadanie* Result = new Zadanie();
+	this->zadania.push_back(Result);
 	Result->delay = random(0,delay);
 	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc));
 	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc));
 	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc));
-	this->zadania.push_back(Result);
-	return *Result;
+	
+	//return Result;
 }
 
 
@@ -121,12 +127,11 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 	{
 		for(int j=0; j<3; ++j)
 			(this->dlugoscInstancji) += this->zadania[i]->operacje[j]->czas;
-		for(int j = 0; j<Result->dlugosc.size(); ++j)
+		for(int j = 0; j < Result->dlugosc.size(); ++j)
 			this->dlugoscInstancji += Result->dlugosc[j];
 	}
 
-	//TODO znormalizuj czasy aby siê nie pierdoli³y
-	//TODO zrób coœ aby siê nie nak³ada³y
+
 	int przedzial = (this->dlugoscInstancji/3)/Result->nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
 	for(int i = 1; i<=Result->nPrzestojow; ++i)
 	{
@@ -139,6 +144,7 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 int random(int min, int max)
 {
 	int result, lower = max-min;
+	if(max == 0) return 0;
 	result = rand()%lower + min;
 	return result;
 }

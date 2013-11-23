@@ -1,25 +1,26 @@
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
-#include<iostream>
-#include "zadanie.h"
+
 
 /**************
 		TODO List
 I. Generator 
 [DONE] Interfejs w konsoli 
 [DONE] Funkcja generuj¹ca liczby losowe 
-* Generowanie instancji problemu od 50 do n (iloœæ zadañ) 
-* Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
-* Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
-* Generowanie miejsc przestojów dla wszystkich maszyn 
+[DONE] Generowanie instancji problemu od 50 do n (iloœæ zadañ) 
+[DONE] Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
+[DONE] Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
+[DONE] Generowanie miejsc przestojów dla wszystkich maszyn 
 * Eksport do pliku .txt 
-* Optymalizacja generowanych wyników (limiter)
+[DONE] Optymalizacja generowanych wyników (limiter)
 ***************/
 
+#include<iostream>
 #include<fstream>			//do operacji na plikach
 #include<time.h>			//do liczb losowych
-#include "zadanie.h"		//do do 
+
+#include "zadanie.h"		//do generowania danych
 #include "maszyna.h"		//do generowania przestojów
 
 
@@ -35,7 +36,12 @@ public:
 
 
 	//TODO konstruktory
-
+	/********
+	*	@Konstruktor
+	*	@Argumenty
+	*		int nZadan	-	liczba zadañ do wygenerowania
+	********/
+	Generator(int nZadan);
 	//TODO destruktor
 
 	//TODO metody
@@ -46,12 +52,12 @@ public:
 	*	@Argumenty:	
 	*		int minDlugosc	-	minimalna d³ugoœæ operacji
 	*		int maxDlugosc	-	maksymalna d³ugoœæ operacji zadania
-	*		int delay		-	minimalny czas przed wykonaniem pierwszej operacji zadania	
+	*		int delay		-	minimalny czas przed wykonaniem pierwszej operacji zadania	(czas gotowoœci)
 	*	@Zwraca:
-	*		Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		operacja	, z wygenerowanymi danymi
+	*		nic-------Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		Operacja	, z wygenerowanymi danymi
 	*							spe³niaj¹cymi kryteria podane w argumentach funkcji
 	*********/
-	Zadanie generujZadanie(int minDlugosc, int maxDlugosc, int delay);
+	void generujZadanie(int minDlugosc, int maxDlugosc, int delay);
 
 
 	/********
@@ -65,6 +71,9 @@ public:
 	********/
 	Maszyna generujMaszyne(int nPrzestojowMin, int nPrzestojowMax, int czasPrzestojow);
 };
+
+
+
 
 /**************
 *	@random
