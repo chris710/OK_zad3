@@ -56,6 +56,28 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 
 
 
+bool Generator::czyWejdzie(Maszyna & maszyna, Operacja & operacja)
+{
+	bool flag = true;		//wynik
+	//obliczanie obecnej d³ugoœci uszeregowania
+	int rozmiar = 0;
+	for(int i = 0; i<maszyna.uszeregowanie.size(); ++i)
+	{
+		rozmiar += maszyna.uszeregowanie[i]->czas;
+	}
+	//sprawdzenie
+	for( int i = 0; i<maszyna.rozpoczecie.size(); ++i)
+	{
+		if(maszyna.rozpoczecie[i] < rozmiar && (maszyna.rozpoczecie[i]+maszyna.dlugosc[i] > rozmiar+operacja.czas) ||
+			maszyna.rozpoczecie[i] > rozmiar && (maszyna.rozpoczecie[i]+maszyna.dlugosc[i] < rozmiar+operacja.czas))
+			flag = false;
+	}
+	return flag
+}
+
+
+
+
 
 
 int random(int min, int max)

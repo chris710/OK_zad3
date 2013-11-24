@@ -22,6 +22,7 @@ I. Generator
 
 #include "zadanie.h"		//do generowania danych
 #include "maszyna.h"		//do generowania przestojów
+#include "operacja.h"		//do sprawdzania poprawnoœci
 
 
 
@@ -75,6 +76,18 @@ public:
 	*		Maszyna Result	-	objekt klasy	Maszyna	,	z tablicami		rozpoczecie i	dlugosc	z wygenerowanymi losowo danymi
 	********/
 	Maszyna generujMaszyne(int nPrzestojowMin, int nPrzestojowMax, int czasPrzestojow);
+
+
+	/********
+	*	@ czyWejdzie
+	*		Funkcja sprawdzaj¹ca, czy operacja mo¿e zostaæ umieszczona w maszynie bez kolizji z przestojem maszyny
+	*	@Argumenty:
+	*		Maszyna maszyna			-	maszyna, na której sprawdzamy czy jest miejsce
+	*		Operacja operacja		-	operacja, której poprawnoœæ sprawdzamy
+	*	@Zwraca:
+	*		bool	-	czy operacja mo¿e wejœæ na nastêpne miejsce bez kolizji z przestojem maszyny
+	********/
+	bool czyWejdzie(Maszyna & maszyna, Operacja & operacja);
 
 
 
