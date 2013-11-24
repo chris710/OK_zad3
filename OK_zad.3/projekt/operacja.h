@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include "zadanie.h"
+#include "maszyna.h"
 
 /***********
 		TODO LIST
@@ -20,6 +21,7 @@ public:
 	bool done;		//flaga ukoñczenia operacji czyli ¿e kolejna mo¿e siê zacz¹æ
 	int numer;		//która jest to operacja zadania
 	Zadanie*	parent;	//wskaŸnik na rodzica
+	Maszyna* maszyna;	//wskaŸnik na maszynê, na której jest operacja
 
 	//TODO konstruktory
 

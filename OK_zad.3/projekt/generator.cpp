@@ -61,10 +61,7 @@ bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) c
 	bool flag = true;		//wynik
 	//obliczanie obecnej d³ugoœci uszeregowania
 	int rozmiar = 0;
-	for(int i = 0; i<maszyna.uszeregowanie.size(); ++i)
-	{
-		rozmiar += maszyna.uszeregowanie[i]->czas;
-	}
+	this->dlugosc(maszyna);
 	//sprawdzenie
 	for( int i = 0; i<maszyna.rozpoczecie.size(); ++i)
 	{
@@ -76,18 +73,56 @@ bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) c
 }
 
 
+bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) const
+{
+	bool flag = true;
+	if(operacja.numer == 0) return flag;
+	if(this->getTime(*operacja.parent->operacje[operacja.numer-1]) > this->dlugosc(maszyna))
+		flag = false;
+
+	return flag;
+}
+
+
 int Generator::dlugosc(const Maszyna & maszyna) const
 {
-	int result = 0;
+	int result = 0, j = 0;
+		//dodawanie d³ugoœci operacji
 	for(int i = 0; i < maszyna.uszeregowanie.size(); ++i)
 	{
 		if(maszyna.uszeregowanie[i]->numer == 0)	result += maszyna.uszeregowanie[i]->parent->delay;
-
 		result += maszyna.uszeregowanie[i]->czas;
 	}
+		//dodawanie d³ugoœci przestojów
+	while(result > maszyna.rozpoczecie[j])
+	{
+		result += maszyna.dlugosc[j];
+		++j;
+	}
+		
 	return result;
 }
 
+
+int Generator::getTime(const Operacja & operacja) const
+{
+	int rozmiar = 0, i = 0, j = 0;
+	Maszyna* maszyna = operacja.maszyna;
+	//for(int i = 0; i<maszyna.uszeregowanie.size(); ++i)
+	while(maszyna->uszeregowanie[i] != &operacja)
+	{
+		if(maszyna->uszeregowanie[i]->numer == 0)	rozmiar += maszyna->uszeregowanie[i]->parent->delay;
+		rozmiar += maszyna->uszeregowanie[i]->czas;
+		++i;
+	}
+	while(rozmiar > maszyna->rozpoczecie[j])
+	{
+		rozmiar += maszyna->dlugosc[j];
+		++j;
+	}
+	rozmiar += operacja.czas;
+	return rozmiar;
+}
 
 
 

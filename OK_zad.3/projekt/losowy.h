@@ -6,6 +6,14 @@
 #include "generator.h"
 #include "maszyna.h"
 
+/***********
+*		TODO List
+[DONE]	spe³nianie warunków zadania
+*	wyw³aszczanie
+*	zapis do pliku w odpowiednim formacie
+*
+***********/
+
 void algorytmLosowy(const Generator& generator);
 
 #endif //LOSOWY_H

@@ -2,7 +2,7 @@
 #define MASZYNA_H
 
 #include<vector>
-#include "operacja.h"
+//#include "operacja.h"
 #include "zadanie.h"	//do obliczania d³ugoœci
 
 using namespace std;
@@ -12,6 +12,9 @@ using namespace std;
 *
 *
 *************/
+
+
+class Operacja;			//deklaracja wyprzedzaj¹ca
 
 
 class Maszyna				///klasa operacjaora

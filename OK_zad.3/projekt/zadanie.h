@@ -9,7 +9,7 @@
 *
 *****************/
 
-class Operacja;
+class Operacja;			//deklaracja wyprzedzaj¹ca
 
 class Zadanie			///klasa zadania
 {

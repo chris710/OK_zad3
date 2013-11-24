@@ -90,15 +90,38 @@ public:
 	bool czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) const;
 
 
+	/********
+	*	@ czyMozna
+	*		Funkcja sprawdzaj¹ca, czy poprzednia operacja zadania zosta³a ju¿ ukoñczona i mo¿na spokojnie ju¿ dodaæ nastêpn¹ na dan¹ maszynê
+	*	@Argumenty:
+	*		Operacja operacja		-	operacja, której poprawnoœæ sprawdzamy
+	*		Maszyna maszyna			-	maszyna na której sprawdzamy miejsce
+	*	@Zwraca:
+	*		bool	-	czy operacja mo¿e wejœæ bo poprzednia zosta³a ju¿ ukoñczona
+	********/
+	bool czyMozna(const Operacja & operacja, const Maszyna & maszyna) const;
+
+
 	/**************
 	*	@ dlugosc
-	*		funkcja licz¹ca obecn¹ d³ugoœæ uszeregowania
+	*		funkcja licz¹ca obecn¹ d³ugoœæ uszeregowania na danej maszynie
 	*	@Argumenty
 	*		Maszyna maszyna			-	maszyna na której liczymy obecn¹ d³ugoœæ uszeregowania
 	*	@Zwraca
 	*		int		-	d³ugoœæ uszeregowania
 	**************/
 	int dlugosc(const Maszyna & maszyna) const;
+
+
+	/************
+	*	@ getTime
+	*		funkcja licz¹ca czas zakoñczenia siê operacji
+	*	@Argumenty
+	*		Operacja operacja		-	operacja, której czasu szukamy
+	*	@Zwraca
+	*		int		-	czas zakoñczenia siê operacja
+	**************/
+	int getTime(const Operacja & operacja) const;
 
 };
 
