@@ -10,6 +10,7 @@ Generator::Generator(int nZadan)
 {
 	this->liczbaZadan = nZadan;
 	this->dlugoscInstancji = 0;
+
 }
 
 
@@ -34,7 +35,7 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 	Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
 	for (int i = 0; i < Result->nPrzestojow; ++i)
 	{
-		Result->dlugosc.push_back(random(0,czasPrzestojow));
+		Result->dlugosc.push_back(random(5,czasPrzestojow));
 	}
 	//oszacowanie d³ugoœci instancji
 	for(int i = 0; i<this->liczbaZadan; ++i)

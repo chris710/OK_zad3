@@ -11,7 +11,7 @@
 int czas_wykonania()
 {
 	int wybor;
-	cout << "Wybierz czas wykonania zadan: \n  1) od 1 do 20 \n  2) od 1 do 200 \n  3) mieszane" << endl;
+	cout << "Wybierz czas wykonania operacji: \n  1) od 1 do 20 \n  2) od 1 do 200 \n  3) mieszane" << endl;
 	cin >> wybor;
 	return wybor;
 }
@@ -50,31 +50,50 @@ int przestojeMax(int wybor)
 		return 50;
 }
 
+int czasOpMin(int wybor)
+{
+	return 1;
+}
 
+int czasOpMax(int wybor)
+{
+	if (wybor==1)
+		return 20;
+	else if (wybor==2)
+		return 200;
+	else 
+		return 100;
+}
 
 
 void interfejs(Generator &generator)
 {
 	cout << "\n======== GENERATOR ========\n\n";
-	int czas_wyk=czas_wykonania(),liczba_zadan = generator.liczbaZadan, liczba_przest=1;
+	int liczba_zadan = generator.liczbaZadan;
 	int x,y,z;
+
+	//generujemy zadania
+	x=czas_wykonania();
+	y=czasOpMin(x);
+	z=czasOpMax(x);
+	int gotowosc=0;
+	for(int i = 0; i < generator.liczbaZadan; ++i){
+		generator.generujZadanie(y,z,gotowosc);
+		gotowosc+=10;
+	}
+
+	//generujemy przestoje dla 3 maszyn
 	x=liczba_przestojow();
 	y=przestojeMin(x);
 	z=przestojeMax(x);
-	//generujemy zadania
-	for(int i = 0; i < generator.liczbaZadan; ++i)
-		generator.generujZadanie(y,z,1);
-	
-	//generujemy przestoje dla 3 maszyn
+	int czasPrzestojow=200;
 	for(int i = 0; i<3; ++i)
-	{
-		generator.generujMaszyne(y,z,5);
-	}
-
+			generator.generujMaszyne(y,z,czasPrzestojow);
+	
 	cout <<"\n===========================\n\n";
-	cout <<"Czas wykonania zadan: " << czas_wyk <<endl<<endl;;
+	//cout <<"OPCJA czasu wykonania zadan: " << x <<endl<<endl;;
 	wyswietlZadania(generator);
-	cout <<"Liczba przestjow: " << liczba_przest <<endl;
+	//cout <<"OPCJA Liczba przestjow: " << liczba_przest <<endl;
 	wyswietlMaszyny(generator);
 
 	cout <<"\n===========================\n\n";
