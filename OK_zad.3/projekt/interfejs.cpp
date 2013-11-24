@@ -91,7 +91,7 @@ void interfejs(Generator &generator)
 			generator.generujMaszyne(y,z,czasPrzestojow);
 	
 	cout <<"\n===========================\n\n";
-	//cout <<"OPCJA czasu wykonania zadan: " << x <<endl<<endl;;
+	cout <<"OPCJA czasu wykonania zadan: " << generator.dlugoscInstancji <<endl<<endl;;
 	wyswietlZadania(generator);
 	//cout <<"OPCJA Liczba przestjow: " << liczba_przest <<endl;
 	wyswietlMaszyny(generator);
