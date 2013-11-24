@@ -90,6 +90,15 @@ public:
 	bool czyWejdzie(Maszyna & maszyna, Operacja & operacja);
 
 
+	/**************
+	*	@ dlugosc
+	*		funkcja licz¹ca obecn¹ d³ugoœæ uszeregowania
+	*	@Argumenty
+	*		Maszyna maszyna			-	maszyna na której liczymy obecn¹ d³ugoœæ uszeregowania
+	*	@Zwraca
+	*		int		-	d³ugoœæ uszeregowania
+	**************/
+	int dlugosc(Maszyna & maszyna);
 
 };
 

@@ -3,6 +3,7 @@
 
 #include<vector>
 #include "operacja.h"
+#include "zadanie.h"	//do obliczania d³ugoœci
 
 using namespace std;
 /*************
@@ -17,14 +18,17 @@ class Maszyna				///klasa operacjaora
 {
     public:
 		//TODO pola klasy
-		int nPrzestojow;			//iloœæ przestojów
-		vector<int> rozpoczecie;				//wskaŸnik na wektor z czasami rozpoczêcia czasów przestoj
-		vector<int> dlugosc;					//wskaŸnik na wektor z czasami trwania czasów przestoju
+		int nPrzestojow;					//iloœæ przestojów
+		vector<int> rozpoczecie;			//wskaŸnik na wektor z czasami rozpoczêcia czasów przestoj
+		vector<int> dlugosc;				//wskaŸnik na wektor z czasami trwania czasów przestoju
 		vector<Operacja*> uszeregowanie;	//wektor zawieraj¹cy uszeregowanie operacjaów
 
 		//TODO konstruktory
 		Maszyna();
+
+
 		//TODO metody
+		
 
     protected:
     private:

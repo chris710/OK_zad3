@@ -20,9 +20,9 @@ void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 	Zadanie* Result = new Zadanie();
 	this->zadania.push_back(Result);
 	Result->delay = random(0,delay);
-	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc));
-	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc));
-	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc));
+	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc), 0, Result);
+	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc), 1, Result);
+	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc), 2, Result);
 	
 	//return Result;
 }
@@ -72,9 +72,21 @@ bool Generator::czyWejdzie(Maszyna & maszyna, Operacja & operacja)
 			maszyna.rozpoczecie[i] > rozmiar && (maszyna.rozpoczecie[i]+maszyna.dlugosc[i] < rozmiar+operacja.czas))
 			flag = false;
 	}
-	return flag
+	return flag;
 }
 
+
+int Generator::dlugosc(Maszyna & maszyna)
+{
+	int result = 0;
+	for(int i = 0; i < maszyna.uszeregowanie.size(); ++i)
+	{
+		if(maszyna.uszeregowanie[i]->numer == 0)	result += maszyna.uszeregowanie[i]->parent->delay;
+
+		result += maszyna.uszeregowanie[i]->czas;
+	}
+	return result;
+}
 
 
 

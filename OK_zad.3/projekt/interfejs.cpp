@@ -108,10 +108,10 @@ void wyswietlZadania(const Generator& generator)
 	for( it = zadania.begin(); it != zadania.end(); ++it)
 	{
 		zadanie = *it;
-		cout<<"Czas gotowoœci:\t"<<zadanie->delay<<endl;
-		cout<<"Czas operacji 1:\t"<<zadanie->operacje[0]->czas<<endl;
-		cout<<"Czas operacji 2:\t"<<zadanie->operacje[1]->czas<<endl;
-		cout<<"Czas operacji 3:\t"<<zadanie->operacje[2]->czas<<endl<<endl;
+		cout<<"Czas gotowosci:\t"<<zadanie->delay<<endl;
+		cout<<"Czas operacji "<<zadanie->operacje[0]->numer<<":\t"<<zadanie->operacje[0]->czas<<endl;
+		cout<<"Czas operacji "<<zadanie->operacje[1]->numer<<":\t"<<zadanie->operacje[1]->czas<<endl;
+		cout<<"Czas operacji "<<zadanie->operacje[2]->numer<<":\t"<<zadanie->operacje[2]->czas<<endl<<endl;
 	}
 	cout<<endl;
 }

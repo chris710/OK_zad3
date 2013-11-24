@@ -63,6 +63,7 @@
   <ItemGroup>
     <ClCompile Include="generator.cpp" />
     <ClCompile Include="interfejs.cpp" />
+    <ClCompile Include="losowy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maszyna.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
@@ -104,6 +105,7 @@
   <ItemGroup>
     <ClInclude Include="generator.h" />
     <ClInclude Include="interfejs.h" />
+    <ClInclude Include="losowy.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="maszyna.h">
       <FileType>CppHeader</FileType>

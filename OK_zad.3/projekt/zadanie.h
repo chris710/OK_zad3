@@ -1,13 +1,15 @@
 #ifndef ZADANIE_H
 #define ZADANIE_H
 
-#include "operacja.h"
+//#include "operacja.h"
 
 /*****************
 		TODO List
 *
 *
 *****************/
+
+class Operacja;
 
 class Zadanie			///klasa zadania
 {
