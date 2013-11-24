@@ -8,12 +8,17 @@ using namespace std;
 
 /***********
 *		TODO List		
-*	
+*	napisz funkcjê pobieraj¹c¹ od u¿ytkownika maksymalny czas trwania przestoju i czasu gotowoœci dla zadañ oraz...
+*	popraw te dane u¿ywane do generowania w funkcji	interfejs
 ***********/
+
+
+
+
 
 /***********
 *	@ czas_wykonania
-*		funkcja pokazuj¹ca mo¿liwe opcje wyboru zakresu losowanych liczb dla czasów wykonania operacjaów
+*		funkcja pokazuj¹ca mo¿liwe opcje wyboru zakresu losowanych liczb dla czasów wykonania operacji
 *	@ Argumenty:
 *		
 *	@ Zwraca:
@@ -65,9 +70,7 @@ int przestojeMax(int wybor);
 		int &liczba_przest		adres zmiennej, która przechowuje wybor zakresu liczby przestojow
 		int &liczba_zadan		adres zmiennej, która przechowuje wybor zakresu liczby zadan
 *	@ Zwraca:
-*		
-*	 
-* 
+*		nic
 ***********/
 
 
@@ -76,13 +79,25 @@ void interfejs(Generator & generator);
 
 
 /**********
-*	@ wyswietlZadanie
+*	@ wyswietlZadania
 *		funkcja wyœwietlaj¹ca w konsoli dane zadania i nale¿¹cych do niego operacji
 *	@Argumenty:
-*		Zadanie& zadanie		odniesienie do klasy	Zadanie, z której pobierane s¹ dane
+*		Generator generator		odniesienie do klasy	Generator, z której pobierane s¹ dane
 *	@Zwraca:
 *		nic
 **********/
-void wyswietlZadanie(const Zadanie& zadanie);
+void wyswietlZadania(const Generator& generator);
+
+
+
+/**********
+*	@ wyswietlMaszyny
+*		funkcja wyœwietlaj¹ca w konsoli dane maszyny i jej przestoje
+*	@Argumenty:
+*		Generator generator		odniesienie do klasy	Generator, z której pobierane s¹ dane
+*	@Zwraca:
+*		nic
+**********/
+void wyswietlMaszyny(const Generator& generator);
 
 #endif //INTERFEJS_H

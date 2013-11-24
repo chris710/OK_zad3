@@ -9,6 +9,7 @@
 Generator::Generator(int nZadan)
 {
 	this->liczbaZadan = nZadan;
+	this->dlugoscInstancji = 0;
 }
 
 
@@ -117,6 +118,7 @@ void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
 Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int czasPrzestojow)
 {
 	Maszyna* Result = new Maszyna();
+	this->maszyny.push_back(Result);
 	Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
 	for (int i = 0; i < Result->nPrzestojow; ++i)
 	{
@@ -139,6 +141,9 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 	}
 	return *Result;
 }
+
+
+
 
 
 int random(int min, int max)

@@ -33,6 +33,7 @@ public:
 	int liczbaZadan;			//rozmiar instancji
 	int dlugoscInstancji;		//d³ugoœæ wszystkich zadañ i przestojów
 	vector<Zadanie*> zadania;	//wektor zawieraj¹cy wszystkie zadania
+	vector<Maszyna*> maszyny;	//wektor zawieraj¹cy wszystkie maszyny
 
 
 	//TODO konstruktory
@@ -42,9 +43,13 @@ public:
 	*		int nZadan	-	liczba zadañ do wygenerowania
 	********/
 	Generator(int nZadan);
+
+
 	//TODO destruktor
 
+
 	//TODO metody
+
 
 	/********
 	*	@ generujZadanie

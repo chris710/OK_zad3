@@ -59,18 +59,59 @@ void interfejs(Generator &generator)
 	x=liczba_przestojow();
 	y=przestojeMin(x);
 	z=przestojeMax(x);
-	generator.generujZadanie(y,z,1);
+	//generujemy zadania
+	for(int i = 0; i < generator.liczbaZadan; ++i)
+		generator.generujZadanie(y,z,1);
+	
+	//generujemy przestoje dla 3 maszyn
+	for(int i = 0; i<3; ++i)
+	{
+		generator.generujMaszyne(y,z,5);
+	}
+
 	cout <<"\n===========================\n\n";
-	cout <<"Czas wykonania zadan: " << czas_wyk <<endl;
+	cout <<"Czas wykonania zadan: " << czas_wyk <<endl<<endl;;
+	wyswietlZadania(generator);
 	cout <<"Liczba przestjow: " << liczba_przest <<endl;
+	wyswietlMaszyny(generator);
+
 	cout <<"\n===========================\n\n";
 }
 
 
-void wyswietlZadanie(const Zadanie& zadanie)
+void wyswietlZadania(const Generator& generator)
 {
-	cout<<"Czas gotowoœci:\t"<<zadanie.delay<<endl;
-	cout<<"Czas operacji 1:\t"<<zadanie.operacje[0]->czas<<endl;
-	cout<<"Czas operacji 2:\t"<<zadanie.operacje[1]->czas<<endl;
-	cout<<"Czas operacji 3:\t"<<zadanie.operacje[2]->czas<<endl<<endl;
+	Zadanie *zadanie;
+	vector<Zadanie*> zadania = generator.zadania;
+	vector<Zadanie*>::iterator it;
+	for( it = zadania.begin(); it != zadania.end(); ++it)
+	{
+		zadanie = *it;
+		cout<<"Czas gotowoœci:\t"<<zadanie->delay<<endl;
+		cout<<"Czas operacji 1:\t"<<zadanie->operacje[0]->czas<<endl;
+		cout<<"Czas operacji 2:\t"<<zadanie->operacje[1]->czas<<endl;
+		cout<<"Czas operacji 3:\t"<<zadanie->operacje[2]->czas<<endl<<endl;
+	}
+	cout<<endl;
+}
+
+
+
+void wyswietlMaszyny(const Generator& generator)
+{
+	Maszyna *maszyna;
+	vector<Maszyna*> maszyny = generator.maszyny;
+	for( int i = 0; i < 3; ++i)
+	{
+		maszyna = maszyny[i];
+		cout<<"Maszyna nr "<<i<<endl;
+		cout<<"Liczba przestojow:\t"<<maszyna->nPrzestojow<<endl;
+		for(int i = 0; i < maszyna->rozpoczecie.size(); ++i)
+		{
+			cout<<"Kiedy przestoj:\t"<<maszyna->rozpoczecie[i]<<endl;
+			cout<<"Jak dlugo:\t"<<maszyna->dlugosc[i]<<endl;
+		}
+		cout<<endl;
+	}
+	cout<<endl;
 }
