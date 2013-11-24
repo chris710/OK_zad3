@@ -28,7 +28,7 @@ int liczba_przestojow()
 int liczba_zadan()
 {
 	int wybor;
-	cout << "Wybierz liczbe zadan: " << endl;
+	cout << "Wybierz liczbe zadan: " ;
 	cin >> wybor;
 	return wybor;
 }
@@ -51,9 +51,11 @@ int przestojeMax(int wybor)
 }
 
 
+
+
 void interfejs(Generator &generator)
 {
-	cout << "======== GENERATOR ========\n\n";
+	cout << "\n======== GENERATOR ========\n\n";
 	int czas_wyk=czas_wykonania(),liczba_zadan = generator.liczbaZadan, liczba_przest=1;
 	int x,y,z;
 	x=liczba_przestojow();

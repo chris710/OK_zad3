@@ -10,9 +10,6 @@
 ***********/
 
 
-
-//#include "zadanie.h"
-
 ///klasa operacja zadania
 class Operacja
 {

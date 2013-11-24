@@ -11,15 +11,9 @@
 
 int main()
 {
-
 	srand(time(NULL));
-
-
 	int nZadan = liczba_zadan();
 	Generator generator(nZadan);
-	cout << "======== ZADANIE LOSOWANIE ========\n\n";
-
-
 	interfejs(generator);
 
 
