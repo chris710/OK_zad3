@@ -56,7 +56,7 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 
 
 
-bool Generator::czyWejdzie(Maszyna & maszyna, Operacja & operacja)
+bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) const
 {
 	bool flag = true;		//wynik
 	//obliczanie obecnej d³ugoœci uszeregowania
@@ -76,7 +76,7 @@ bool Generator::czyWejdzie(Maszyna & maszyna, Operacja & operacja)
 }
 
 
-int Generator::dlugosc(Maszyna & maszyna)
+int Generator::dlugosc(const Maszyna & maszyna) const
 {
 	int result = 0;
 	for(int i = 0; i < maszyna.uszeregowanie.size(); ++i)

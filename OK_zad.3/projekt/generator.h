@@ -87,7 +87,7 @@ public:
 	*	@Zwraca:
 	*		bool	-	czy operacja mo¿e wejœæ na nastêpne miejsce bez kolizji z przestojem maszyny
 	********/
-	bool czyWejdzie(Maszyna & maszyna, Operacja & operacja);
+	bool czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) const;
 
 
 	/**************
@@ -98,7 +98,7 @@ public:
 	*	@Zwraca
 	*		int		-	d³ugoœæ uszeregowania
 	**************/
-	int dlugosc(Maszyna & maszyna);
+	int dlugosc(const Maszyna & maszyna) const;
 
 };
 
