@@ -63,7 +63,7 @@ public:
 	*		nic-------Zadanie	Result	-	objekt klasy	Zadanie	, zawieraj¹cy tablicê 3 podklas		Operacja	, z wygenerowanymi danymi
 	*							spe³niaj¹cymi kryteria podane w argumentach funkcji
 	*********/
-	void generujZadanie(int minDlugosc, int maxDlugosc, int delay);
+	void generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad);
 
 
 	/********

@@ -79,7 +79,7 @@ void interfejs(Generator &generator)
 	z=czasOpMax(x);
 	int gotowosc=0;
 	for(int i = 0; i < generator.liczbaZadan; ++i){
-		generator.generujZadanie(y,z,gotowosc);
+		generator.generujZadanie(y,z,gotowosc,i);
 		gotowosc+=10;
 	}
 

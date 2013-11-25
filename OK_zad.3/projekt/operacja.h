@@ -20,6 +20,7 @@ public:
 	int czas;		//d³ugoœæ trwania operacji
 	bool done;		//flaga ukoñczenia operacji czyli ¿e kolejna mo¿e siê zacz¹æ
 	int numer;		//która jest to operacja zadania
+	int nrZadania;
 	Zadanie*	parent;	//wskaŸnik na rodzica
 	Maszyna* maszyna;	//wskaŸnik na maszynê, na której jest operacja
 
@@ -31,7 +32,7 @@ public:
 	*		int czas	-	d³ugoœæ trwania operacji
 	*		int numer	-	która jest to operacja zadania
 	****/
-	Operacja(int czas, int numer, Zadanie* zadanie);
+	Operacja(int czas, int numer, Zadanie* zadanie, int nrZad);
 
 
 	//TODO metody operacjau

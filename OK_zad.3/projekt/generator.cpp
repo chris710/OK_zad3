@@ -15,14 +15,14 @@ Generator::Generator(int nZadan)
 
 
 
-void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay)
+void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad)
 {
 	Zadanie* Result = new Zadanie();
 	this->zadania.push_back(Result);
 	Result->delay = random(0,delay);
-	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc), 0, Result);
-	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc), 1, Result);
-	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc), 2, Result);
+	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc), 0, Result, nrZad);
+	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc), 1, Result, nrZad);
+	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc), 2, Result, nrZad);
 	
 	//return Result;
 }
