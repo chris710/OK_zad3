@@ -30,7 +30,8 @@ void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nr
 
 Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int czasPrzestojow)
 {
-	Maszyna* Result = new Maszyna();
+	int numer = this->maszyny.size();
+	Maszyna* Result = new Maszyna(numer);
 	this->maszyny.push_back(Result);
 	Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
 	for (int i = 0; i < Result->nPrzestojow; ++i)
@@ -77,7 +78,7 @@ bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) con
 {
 	bool flag = true;
 	if(operacja.numer == 0) return flag;
-	if(this->getTime(*operacja.parent->operacje[operacja.numer-1]) > this->dlugosc(maszyna))
+	if(this->getTime(*operacja.parent->operacje[operacja.numer-1])-operacja.czas > this->dlugosc(maszyna))
 		flag = false;
 
 	return flag;
@@ -99,7 +100,7 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 		result += maszyna.uszeregowanie[i]->czas;
 	}
 		//dodawanie d³ugoœci przestojów
-	while(result > maszyna.rozpoczecie[j])
+	while(result > maszyna.rozpoczecie[j] && j<maszyna.rozpoczecie.size()-1)
 	{
 		result += maszyna.dlugosc[j];
 		++j;
@@ -125,7 +126,7 @@ int Generator::getTime(const Operacja & operacja) const
 		rozmiar += maszyna->uszeregowanie[i]->czas;
 		++i;
 	}
-	while(rozmiar > maszyna->rozpoczecie[j])
+	while(rozmiar > maszyna->rozpoczecie[j] && j<maszyna->rozpoczecie.size()-1)
 	{
 		rozmiar += maszyna->dlugosc[j];
 		++j;

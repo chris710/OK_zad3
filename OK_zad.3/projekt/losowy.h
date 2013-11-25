@@ -12,7 +12,8 @@
 [DONE]	spe³nianie warunków zadania
 *	wyw³aszczanie
 *	zapis do pliku w odpowiednim formacie
-*
+*	wykonywanie operacji na ró¿nych maszynach
+*	
 ***********/
 
 void algorytmLosowy(const Generator& generator);

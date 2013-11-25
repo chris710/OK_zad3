@@ -1,6 +1,6 @@
 #include "maszyna.h"
 
-Maszyna::Maszyna()
+Maszyna::Maszyna(int numer)
 {
-
+	this->numer = numer;
 }
