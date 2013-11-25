@@ -36,6 +36,9 @@
     <ClCompile Include="losowy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sjf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="maszyna.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="losowy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sjf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

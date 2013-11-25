@@ -82,6 +82,7 @@
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
     <ClCompile Include="operacja.cpp" />
+    <ClCompile Include="sjf.cpp" />
     <ClCompile Include="zadanie.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -111,6 +112,7 @@
       <FileType>CppHeader</FileType>
     </ClInclude>
     <ClInclude Include="operacja.h" />
+    <ClInclude Include="sjf.h" />
     <ClInclude Include="zadanie.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
