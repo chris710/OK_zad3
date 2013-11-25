@@ -15,6 +15,6 @@
 *
 ***********/
 
-//void algorytmSJF(const Generator& generator);
+void algorytmSJF(const Generator& generator);
 
 #endif //SJF_H

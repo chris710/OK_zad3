@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "sjf.h"
 /*		MAIN		*/
 
 /**************
@@ -16,7 +16,8 @@ int main()
 	int nZadan = liczba_zadan();
 	Generator generator(nZadan);
 	interfejs(generator);
-	algorytmLosowy(generator);
+	//algorytmLosowy(generator);
+	algorytmSJF(generator);
 
 
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
