@@ -2,6 +2,7 @@
 #define LOSOWY_H
 
 #include<fstream>	//do plików
+#include<iostream>
 #include<algorithm>	//do sortowania
 #include "generator.h"
 #include "maszyna.h"

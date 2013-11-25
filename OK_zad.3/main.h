@@ -9,10 +9,12 @@
 
 using namespace std;
 
+#include "losowy.h"
 #include "generator.h"
 #include "zadanie.h"
 #include "operacja.h"
 #include "maszyna.h"
 #include "interfejs.h"
+
 
 #endif //MAIN_H

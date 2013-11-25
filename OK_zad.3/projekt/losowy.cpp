@@ -30,6 +30,7 @@ void algorytmLosowy(const Generator& generator)
 			zadania[zadanie] = zadania[zadania.size()-1];
 			zadania[zadania.size()-1] = tmp;
 
+			//std::cout<<(!zadania[zadanie]->operacje[0]->done)<<" "<<(!zadania[zadanie]->operacje[1]->done && generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))<<" "<<(!zadania[zadanie]->operacje[2]->done && generator.czyMozna(*zadania[zadanie]->operacje[2],*generator.maszyny[preferred]))<<std::endl;
 			if(!zadania[zadanie]->operacje[0]->done)		//wsadŸ pierwsze je¿eli jeszcze tego nie zrobi³eœ
 			{
 				generator.maszyny[preferred]->uszeregowanie.push_back(zadania[zadanie]->operacje[0]);	//wtykamy operacjê do uszeregowania
@@ -54,6 +55,7 @@ void algorytmLosowy(const Generator& generator)
 				break;
 			}
 		}
+		std::cout<<"yay"<<std::endl;
 
 	}
 }

@@ -86,11 +86,16 @@ bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) con
 
 int Generator::dlugosc(const Maszyna & maszyna) const
 {
-	int result = 0, j = 0;
+	int result = 0, j = 0, delay;
 		//dodawanie d³ugoœci operacji
 	for(int i = 0; i < maszyna.uszeregowanie.size(); ++i)
 	{
-		if(maszyna.uszeregowanie[i]->numer == 0)	result += maszyna.uszeregowanie[i]->parent->delay;
+		if(maszyna.uszeregowanie[i]->numer == 0)	
+		{
+			delay = maszyna.uszeregowanie[i]->parent->delay - result;
+			if(delay > 0)
+				result += delay;
+		}
 		result += maszyna.uszeregowanie[i]->czas;
 	}
 		//dodawanie d³ugoœci przestojów
@@ -106,12 +111,17 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 
 int Generator::getTime(const Operacja & operacja) const
 {
-	int rozmiar = 0, i = 0, j = 0;
+	int rozmiar = 0, i = 0, j = 0, delay;
 	Maszyna* maszyna = operacja.maszyna;
 	//for(int i = 0; i<maszyna.uszeregowanie.size(); ++i)
 	while(maszyna->uszeregowanie[i] != &operacja)
 	{
-		if(maszyna->uszeregowanie[i]->numer == 0)	rozmiar += maszyna->uszeregowanie[i]->parent->delay;
+		if(maszyna->uszeregowanie[i]->numer == 0)	
+		{
+			delay = maszyna->uszeregowanie[i]->parent->delay - rozmiar;
+			if(delay > 0)
+				rozmiar += delay;
+		}
 		rozmiar += maszyna->uszeregowanie[i]->czas;
 		++i;
 	}
