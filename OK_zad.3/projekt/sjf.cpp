@@ -9,6 +9,14 @@ void obliczanie_dlugosci(vector<int*> &dlugosci, vector<Zadanie*> zadania){
 	}
 }
 
+int czas_uszeregowania(Generator generator, int i){
+	int suma=0;
+	for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
+				suma+= generator.maszyny[i]->uszeregowanie[j]->czas ;
+	return suma;
+}
+
+
 
 bool rosnaco(Zadanie *const a, Zadanie *const b)
 {
@@ -37,6 +45,7 @@ bool czy_juz_gotowy(int gotowosc, vector<Operacja*> uszeregowanie){
 void algorytmSJF(const Generator& generator)
 {
 	vector<Zadanie*> zadania = generator.zadania;			//tymczasowa tablica do usuwania zadañ
+	int rozmiar=zadania.size();
 	vector<int*> nr_zadania;
 	vector<int*> dlugosci;						// do usuniecia
 	obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
@@ -52,14 +61,17 @@ void algorytmSJF(const Generator& generator)
 //		cout << zadania[i]->operacje[0]->czas << endl;			// do usuniecia
 
 	int nrZAD;												//zadanie do wykonania
-	int preferred;											//preferowana maszyna
+	int preferred;		
+									//preferowana maszyna
+	nrZAD = -1;
 	
 	while (zadania.size() != 0)
 	{
 		//wybieramy najmniej zawalon¹ maszynê
-		int a = generator.dlugosc(*generator.maszyny[0]);
-		int b = generator.dlugosc(*generator.maszyny[1]);
-		int c = generator.dlugosc(*generator.maszyny[2]);
+		int a = czas_uszeregowania(generator,0);
+		int b = czas_uszeregowania(generator,1);
+		int c = czas_uszeregowania(generator,2);
+		//cout << "A=" <<a<< endl;
 
 		if(a<=b && a<=c)
 			preferred = 0;
@@ -69,8 +81,12 @@ void algorytmSJF(const Generator& generator)
 			preferred = 2;
 		
 //////////////// tab.erase( tab.begin() + 2 );
-		nrZAD = 0;
-		//cout << "Wybor Maszyny to=" << preferred << endl;
+		cout << "ROZMIAR ZADANIA=" << zadania.size()-1 << endl;
+		if (nrZAD < (zadania.size()-1))
+			nrZAD++;
+		else
+			nrZAD=0;
+		//cout << "maszyna=" << preferred << endl;
 		while(true)														//póki czegoœ nie wsadzisz i nie trzeba wybieraæ znowu maszyny losuj zadania
 		{
 			maszyna = generator.maszyny[preferred];
@@ -142,5 +158,5 @@ void algorytmSJF(const Generator& generator)
 				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
 		}}
-
+	
 }

@@ -103,7 +103,14 @@ void algorytmLosowy(const Generator& generator)
 					preferred = rand()%2;
 			}
 		}
-		std::cout<<"yay"<<std::endl;
+	//	std::cout<<"yay"<<std::endl;
 		
 	}
+		for (int i=0; i<3; i++){
+		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++){
+			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
+				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
+		}}
 }
