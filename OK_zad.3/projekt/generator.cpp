@@ -62,7 +62,7 @@ bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) c
 	bool flag = true;		//wynik
 	//obliczanie obecnej d³ugoœci uszeregowania
 	int rozmiar = 0;
-	this->dlugosc(maszyna);
+	//this->dlugosc(maszyna);
 	//sprawdzenie
 	for( int i = 0; i<maszyna.rozpoczecie.size(); ++i)
 	{
@@ -97,7 +97,10 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 			if(delay > 0)
 				result += delay;
 		}
-		result += maszyna.uszeregowanie[i]->czas;
+		if(this->czyWejdzie(maszyna,*maszyna.uszeregowanie[i]))
+			result += maszyna.uszeregowanie[i]->czas;
+		else
+			result += maszyna.uszeregowanie[i]->czas*1.3;
 	}
 		//dodawanie d³ugoœci przestojów
 	while(result > maszyna.rozpoczecie[j] && j<maszyna.rozpoczecie.size()-1)
