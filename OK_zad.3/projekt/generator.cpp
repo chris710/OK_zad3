@@ -44,8 +44,8 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 		for(int j=0; j<3; ++j)
 			(this->dlugoscInstancji) += this->zadania[i]->operacje[j]->czas;
 	}
-	for(int j = 0; j < Result->dlugosc.size(); ++j)
-			this->dlugoscInstancji += Result->dlugosc[j];
+	/*for(int j = 0; j < Result->dlugosc.size(); ++j)
+			this->dlugoscInstancji += Result->dlugosc[j];*/
 
 	int przedzial = (this->dlugoscInstancji/3)/Result->nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
 	for(int i = 1; i<=Result->nPrzestojow; ++i)

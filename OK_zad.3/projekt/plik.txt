@@ -1,0 +1,249 @@
+NR 0 MASZYNA:
+------
+OP = 1		ZAD = 50		CZAS = 2
+
+OP = 1		ZAD = 43		CZAS = 8
+
+OP = 1		ZAD = 35		CZAS = 1
+
+OP = 2		ZAD = 37		CZAS = 19
+
+OP = 2		ZAD = 39		CZAS = 1
+
+OP = 2		ZAD = 41		CZAS = 7
+
+OP = 2		ZAD = 45		CZAS = 6
+
+OP = 2		ZAD = 47		CZAS = 15
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 1		ZAD = 23		CZAS = 12
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 3		ZAD = 49		CZAS = 4
+
+OP = 1		ZAD = 21		CZAS = 4
+
+OP = 1		ZAD = 20		CZAS = 7
+
+OP = 1		ZAD = 19		CZAS = 4
+
+OP = 1		ZAD = 18		CZAS = 7
+
+OP = 1		ZAD = 17		CZAS = 12
+
+OP = 1		ZAD = 16		CZAS = 19
+
+OP = 1		ZAD = 14		CZAS = 17
+
+OP = 2		ZAD = 13		CZAS = 10
+
+OP = 2		ZAD = 15		CZAS = 7
+
+OP = 1		ZAD = 12		CZAS = 18
+
+OP = 2		ZAD = 11		CZAS = 16
+
+OP = 1		ZAD = 10		CZAS = 17
+
+OP = 2		ZAD = 9		CZAS = 2
+
+OP = 1		ZAD = 8		CZAS = 14
+
+OP = 2		ZAD = 7		CZAS = 14
+
+OP = 1		ZAD = 6		CZAS = 7
+
+OP = 2		ZAD = 5		CZAS = 10
+
+OP = 1		ZAD = 4		CZAS = 12
+
+OP = 1		ZAD = 2		CZAS = 4
+
+OP = 1		ZAD = 1		CZAS = 7
+
+OP = 3		ZAD = 3		CZAS = 2
+
+OP = 3		ZAD = 3		CZAS = 2
+
+NR 1 MASZYNA:
+------
+OP = 2		ZAD = 50		CZAS = 9
+
+OP = 1		ZAD = 49		CZAS = 13
+
+OP = 3		ZAD = 47		CZAS = 15
+
+OP = 3		ZAD = 43		CZAS = 15
+
+OP = 3		ZAD = 39		CZAS = 8
+
+OP = 2		ZAD = 35		CZAS = 1
+
+OP = 3		ZAD = 37		CZAS = 8
+
+OP = 3		ZAD = 41		CZAS = 13
+
+OP = 2		ZAD = 23		CZAS = 12
+
+OP = 3		ZAD = 45		CZAS = 19
+
+OP = 2		ZAD = 19		CZAS = 9
+
+OP = 2		ZAD = 21		CZAS = 8
+
+OP = 2		ZAD = 20		CZAS = 15
+
+OP = 1		ZAD = 15		CZAS = 15
+
+OP = 1		ZAD = 13		CZAS = 12
+
+OP = 2		ZAD = 17		CZAS = 6
+
+OP = 2		ZAD = 18		CZAS = 15
+
+OP = 1		ZAD = 11		CZAS = 14
+
+OP = 2		ZAD = 16		CZAS = 1
+
+OP = 2		ZAD = 14		CZAS = 12
+
+OP = 1		ZAD = 9		CZAS = 18
+
+OP = 2		ZAD = 12		CZAS = 11
+
+OP = 1		ZAD = 7		CZAS = 8
+
+OP = 2		ZAD = 10		CZAS = 10
+
+OP = 1		ZAD = 5		CZAS = 1
+
+OP = 2		ZAD = 8		CZAS = 19
+
+OP = 1		ZAD = 3		CZAS = 14
+
+OP = 2		ZAD = 6		CZAS = 14
+
+OP = 2		ZAD = 2		CZAS = 7
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+OP = 3		ZAD = 4		CZAS = 14
+
+NR 2 MASZYNA:
+------
+OP = 3		ZAD = 50		CZAS = 19
+
+OP = 2		ZAD = 49		CZAS = 12
+
+OP = 1		ZAD = 48		CZAS = 9
+
+OP = 1		ZAD = 47		CZAS = 19
+
+OP = 1		ZAD = 46		CZAS = 1
+
+OP = 1		ZAD = 45		CZAS = 2
+
+OP = 1		ZAD = 44		CZAS = 10
+
+OP = 2		ZAD = 43		CZAS = 19
+
+OP = 1		ZAD = 42		CZAS = 11
+
+OP = 1		ZAD = 41		CZAS = 2
+
+OP = 1		ZAD = 40		CZAS = 8
+
+OP = 1		ZAD = 39		CZAS = 18
+
+OP = 1		ZAD = 38		CZAS = 2
+
+OP = 1		ZAD = 37		CZAS = 3
+
+OP = 1		ZAD = 36		CZAS = 14
+
+OP = 3		ZAD = 35		CZAS = 11
+
+OP = 1		ZAD = 24		CZAS = 19
+
+OP = 3		ZAD = 23		CZAS = 17
+
+OP = 2		ZAD = 3		CZAS = 16
+
+OP = 2		ZAD = 4		CZAS = 4
+
+OP = 2		ZAD = 1		CZAS = 1
+
+OP = 3		ZAD = 7		CZAS = 15
+
+OP = 3		ZAD = 14		CZAS = 5
+
+OP = 3		ZAD = 18		CZAS = 14
+
+OP = 3		ZAD = 21		CZAS = 18
+
+OP = 3		ZAD = 20		CZAS = 19
+
+OP = 3		ZAD = 16		CZAS = 9
+
+OP = 3		ZAD = 2		CZAS = 11
+
+OP = 3		ZAD = 6		CZAS = 14
+
+OP = 3		ZAD = 10		CZAS = 3
+
+Szacowana optymalna dlugosc uszeregowania 4749
+Dlugosc rzeczywista generowana przez algorytm 4377
+Procent: 0.921668

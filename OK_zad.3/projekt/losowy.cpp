@@ -5,8 +5,9 @@ void algorytmLosowy(const Generator& generator)
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
 	Zadanie* tmp;									//wskaŸnik do zamieniania miejscami w wektorze
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
-	Operacja * op = new Operacja(1,98,NULL,98);
-	//sort(zadania.begin(), zadania.end());			//sortowanie tablicy po czasach gotowoœc
+	Operacja * op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
+	
+	ofstream plik("plik.txt");
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
@@ -118,16 +119,23 @@ void algorytmLosowy(const Generator& generator)
 	int dlugoscOptymalna = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++)
 	{
-		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
-			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+			/*cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
+					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	*/
+			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
 		}
 		dlugoscOptymalna += generator.dlugosc(*generator.maszyny[i]);
 	}
 	cout<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji<<endl;
+	plik<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji<<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscOptymalna<<endl;
+	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscOptymalna<<endl;
 	cout<<"Procent: "<<(float)dlugoscOptymalna/generator.dlugoscInstancji<<endl;
+	plik<<"Procent: "<<(float)dlugoscOptymalna/generator.dlugoscInstancji<<endl;
 }
