@@ -12,8 +12,9 @@ I. Generator
 [DONE] Generowanie 3 opcji d³ugoœci zadañ - od 1 do 20 - od 1 do 100 (200) - mieszane, np. po³owa zadañ od 1 do 20, po³owa od 1 do 200, itd. 
 [DONE] Generowanie d³ugoœci i iloœci przestojów (d³ugoœæ od 5 do 200) 
 [DONE] Generowanie miejsc przestojów dla wszystkich maszyn 
-* Eksport do pliku .txt 
+[DONE] Eksport do pliku .txt 
 [DONE] Optymalizacja generowanych wyników (limiter)
+*	Poprawiæ generowanie przestojów
 ***************/
 
 #include<iostream>
@@ -84,10 +85,11 @@ public:
 	*	@Argumenty:
 	*		Maszyna maszyna			-	maszyna, na której sprawdzamy czy jest miejsce
 	*		Operacja operacja		-	operacja, której poprawnoœæ sprawdzamy
+	*		int czas				-	obecny czas
 	*	@Zwraca:
 	*		bool	-	czy operacja mo¿e wejœæ na nastêpne miejsce bez kolizji z przestojem maszyny
 	********/
-	bool czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) const;
+	bool czyWejdzie(const Maszyna & maszyna, const Operacja & operacja, int czas) const;
 
 
 	/********

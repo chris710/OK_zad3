@@ -57,11 +57,11 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 
 
 
-bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja) const
+bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja, int czas) const
 {
 	bool flag = true;		//wynik
 	//obliczanie obecnej d³ugoœci uszeregowania
-	int rozmiar = 0;
+	int rozmiar = czas;
 	//this->dlugosc(maszyna);
 	//sprawdzenie
 	for( int i = 0; i<maszyna.rozpoczecie.size(); ++i)
@@ -87,26 +87,34 @@ bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) con
 
 int Generator::dlugosc(const Maszyna & maszyna) const
 {
-	int result = 0, j = 0, delay;
-		//dodawanie d³ugoœci operacji
+	int result = 0;				//liczenie czasu, wskaŸnik na obecny jego kwant
+	int j = 0;					//iterowanie przestojów
+	int delay;					//ile pozosta³o czasu gotowoœci dla danego zadania
+
+	//dodawanie d³ugoœci operacji
 	for(int i = 0; i < maszyna.uszeregowanie.size(); ++i)
 	{
-		if(maszyna.uszeregowanie[i]->numer == 0)	
+		if(maszyna.uszeregowanie[i]->numer == 0)					//dodawanie czasu gotowoœci
 		{
 			delay = maszyna.uszeregowanie[i]->parent->delay - result;
 			if(delay > 0)
 				result += delay;
 		}
-		if(this->czyWejdzie(maszyna,*maszyna.uszeregowanie[i]))
-			result += maszyna.uszeregowanie[i]->czas;
+		
+		//dodawanie czasów przestojów
+		if( maszyna.rozpoczecie[j] > result							//je¿eli pierwszy niewykonany przestój zaczyna siê za chwilê
+			&& (maszyna.rozpoczecie[j]+maszyna.dlugosc[j] < result+maszyna.uszeregowanie[i]->czas))	//oraz koñczy siê przed wykonaniem obecnej operacji
+		{													
+			result += maszyna.dlugosc[j];			//dodajemy ten przestój oraz
+			if(j<maszyna.rozpoczecie.size()-1)		//przechodzimy na nastêpny przestój je¿eli jakiœ zosta³
+				++j;
+		}
+		
+		//dodawanie czasu operacji
+		if(this->czyWejdzie(maszyna,*maszyna.uszeregowanie[i],result))
+			result += maszyna.uszeregowanie[i]->czas;		//operacja nie zawadza o przestój
 		else
-			result += maszyna.uszeregowanie[i]->czas*1.3;
-	}
-		//dodawanie d³ugoœci przestojów
-	while(result > maszyna.rozpoczecie[j] && j<maszyna.rozpoczecie.size()-1)
-	{
-		result += maszyna.dlugosc[j];
-		++j;
+			result += maszyna.uszeregowanie[i]->czas*1.3;	//je¿eli zawadza to dodajemy jej d³ugoœæ z kar¹
 	}
 		
 	return result;

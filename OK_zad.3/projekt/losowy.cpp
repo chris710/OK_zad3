@@ -1,5 +1,29 @@
 #include "losowy.h"
 
+
+
+void wybierz (int &preferred)
+{
+	/*if((0==preferred && c<=b) || (1==preferred && c<=a))
+		preferred = 2;
+	else if((1==preferred && a<=c) || (2==preferred && a<=b))
+		preferred = 0;
+	else
+		preferred = 1;*/
+	if(0==preferred)
+		preferred = rand()%2+1;
+	else if(1==preferred)
+	{
+		preferred = rand()%2;
+		if(preferred == 1)
+			preferred = 2;
+	}
+	else 
+		preferred = rand()%2;
+}
+
+
+
 void algorytmLosowy(const Generator& generator)
 {
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
@@ -55,9 +79,12 @@ void algorytmLosowy(const Generator& generator)
 			}
 
 			else if( !(zadania[zadanie]->operacje[1]->done) && 
-				generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]) && 
-				zadania[zadanie]->operacje[0]->maszyna != maszyna)	//drugie	
+				generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))	//drugie	
 			{
+				if(zadania[zadanie]->operacje[0]->maszyna == maszyna)
+				{
+					wybierz(preferred);
+				}
 				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[1]);
 				zadania[zadanie]->operacje[1]->maszyna = maszyna;
 				zadania[zadanie]->operacje[1]->done = true;
@@ -66,10 +93,14 @@ void algorytmLosowy(const Generator& generator)
 			else if((zadania[zadanie]->operacje[1]->done))			//sprawdzenie czy 2 operacja zosta³a wykonana
 			{
 				if(//!zadania[zadanie]->operacje[2]->done && 
-					generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna) && 
-					zadania[zadanie]->operacje[0]->maszyna != maszyna && 
-					zadania[zadanie]->operacje[1]->maszyna != maszyna)	//trzecie	
+					generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna))	//trzecie	
 				{
+					if(zadania[zadanie]->operacje[0]->maszyna == maszyna && 
+					zadania[zadanie]->operacje[1]->maszyna == maszyna)
+					{
+
+					}
+
 					maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[2]);
 					zadania[zadanie]->operacje[2]->maszyna = maszyna;
 					zadania[zadanie]->operacje[2]->done = true;
@@ -83,29 +114,12 @@ void algorytmLosowy(const Generator& generator)
 			{
 				zadanie = zadania.size()-1;
 
-				/*if((0==preferred && c<=b) || (1==preferred && c<=a))
-					preferred = 2;
-				else if((1==preferred && a<=c) || (2==preferred && a<=b))
-					preferred = 0;
-				else
-					preferred = 1;*/
-
 				maszyna->uszeregowanie.push_back(op);		//wpychamy zapychacz
 				
-				if(0==preferred)
-					preferred = rand()%2+1;
-				else if(1==preferred)
-				{
-					preferred = rand()%2;
-					if(preferred == 1)
-						preferred = 2;
-				}
-				else 
-					preferred = rand()%2;
+				wybierz(preferred);
 			}
 		}
 
-	//	std::cout<<"yay"<<std::endl;
 		
 	}
 
@@ -116,26 +130,27 @@ void algorytmLosowy(const Generator& generator)
 	}
 
 
-	int dlugoscOptymalna = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
+	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++)
 	{
-		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
-			/*cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	*/
+					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
 			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
 		}
-		dlugoscOptymalna += generator.dlugosc(*generator.maszyny[i]);
+		dlugosc = generator.dlugosc(*generator.maszyny[i]);
+		dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji<<endl;
-	plik<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji<<endl;
-	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscOptymalna<<endl;
-	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscOptymalna<<endl;
-	cout<<"Procent: "<<(float)dlugoscOptymalna/generator.dlugoscInstancji<<endl;
-	plik<<"Procent: "<<(float)dlugoscOptymalna/generator.dlugoscInstancji<<endl;
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji/3<<endl;
+	plik<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji/3<<endl;
+	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
+	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
+	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
+	plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
 }
