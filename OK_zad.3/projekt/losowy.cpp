@@ -5,7 +5,7 @@ void algorytmLosowy(const Generator& generator)
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
 	Zadanie* tmp;									//wskaŸnik do zamieniania miejscami w wektorze
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
-	Operacja * op = new Operacja(1,-1,NULL);
+	Operacja * op = new Operacja(1,-1,NULL,999);
 	//sort(zadania.begin(), zadania.end());			//sortowanie tablicy po czasach gotowoœc
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
