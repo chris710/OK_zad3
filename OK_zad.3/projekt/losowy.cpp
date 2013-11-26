@@ -106,11 +106,19 @@ void algorytmLosowy(const Generator& generator)
 	//	std::cout<<"yay"<<std::endl;
 		
 	}
-		for (int i=0; i<3; i++){
+	int dlugoscOptymalna = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
+	for (int i=0; i<3; i++)
+	{
 		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
-		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++){
+		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
+		{
 			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
-				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
-		}}
+					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
+					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
+		}
+		dlugoscOptymalna += generator.dlugosc(*generator.maszyny[i]);
+	}
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji<<endl;
+	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscOptymalna<<endl;
+	cout<<"Procent: "<<(float)dlugoscOptymalna/generator.dlugoscInstancji<<endl;
 }
