@@ -123,6 +123,17 @@ public:
 	**************/
 	int getTime(const Operacja & operacja) const;
 
+
+	/********
+	*	@ czysc
+	*		Funkcja usuwaj¹ca czas oczekiwania z koñca uszeregowania
+	*	@Argumenty:
+	*		Maszyna maszyna			-	maszyna na której usuwamy œmieci
+	*	@Zwraca:
+	*		nic
+	********/
+	void czysc(Maszyna & maszyna) const;
+
 };
 
 

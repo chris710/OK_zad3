@@ -2,7 +2,6 @@
 #define MASZYNA_H
 
 #include<vector>
-//#include "operacja.h"
 #include "zadanie.h"	//do obliczania d³ugoœci
 
 using namespace std;
@@ -30,9 +29,6 @@ class Maszyna				///klasa operacjaora
 		//TODO konstruktory
 		Maszyna(int numer);
 
-
-		//TODO metody
-		
 
     protected:
     private:

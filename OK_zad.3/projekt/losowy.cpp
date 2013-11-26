@@ -5,7 +5,7 @@ void algorytmLosowy(const Generator& generator)
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
 	Zadanie* tmp;									//wskaŸnik do zamieniania miejscami w wektorze
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
-	Operacja * op = new Operacja(1,-1,NULL,999);
+	Operacja * op = new Operacja(1,98,NULL,98);
 	//sort(zadania.begin(), zadania.end());			//sortowanie tablicy po czasach gotowoœc
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
@@ -37,11 +37,11 @@ void algorytmLosowy(const Generator& generator)
 			zadania[zadanie] = zadania[zadania.size()-1];
 			zadania[zadania.size()-1] = tmp;
 
-			if(zadania[zadanie]->operacje[2]->done)
+			/*if(zadania[zadanie]->operacje[2]->done)
 			{
 				zadania.pop_back();				//usuwamy zadanie, bo wszystkie jego operacje zosta³y wykonane
 				break;
-			}
+			}*/
 
 			//std::cout<<(!zadania[zadanie]->operacje[0]->done)<<" "<<(!zadania[zadanie]->operacje[1]->done && generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))<<" "<<(!zadania[zadanie]->operacje[2]->done && generator.czyMozna(*zadania[zadanie]->operacje[2],*generator.maszyny[preferred]))<<std::endl;
 			
@@ -64,7 +64,7 @@ void algorytmLosowy(const Generator& generator)
 			}
 			else if((zadania[zadanie]->operacje[1]->done))			//sprawdzenie czy 2 operacja zosta³a wykonana
 			{
-				if(!zadania[zadanie]->operacje[2]->done && 
+				if(//!zadania[zadanie]->operacje[2]->done && 
 					generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna) && 
 					zadania[zadanie]->operacje[0]->maszyna != maszyna && 
 					zadania[zadanie]->operacje[1]->maszyna != maszyna)	//trzecie	
@@ -103,9 +103,18 @@ void algorytmLosowy(const Generator& generator)
 					preferred = rand()%2;
 			}
 		}
+
 	//	std::cout<<"yay"<<std::endl;
 		
 	}
+
+	//usuwanie œmieci z koñca uszeregowania
+	for (int i=0; i<3; i++)
+	{
+		generator.czysc(*generator.maszyny[i]);
+	}
+
+
 	int dlugoscOptymalna = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++)
 	{

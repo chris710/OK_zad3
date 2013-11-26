@@ -136,6 +136,20 @@ int Generator::getTime(const Operacja & operacja) const
 }
 
 
+void Generator::czysc(Maszyna & maszyna) const
+{
+	int i = maszyna.uszeregowanie.size()-1;
+	while( maszyna.uszeregowanie[i])
+	{
+		if(maszyna.uszeregowanie[i]->numer > 2)
+			maszyna.uszeregowanie.pop_back();
+		else
+			break;
+		i--;
+	}
+}
+
+
 
 
 int random(int min, int max)
