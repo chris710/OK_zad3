@@ -97,11 +97,11 @@ public:
 	*		Funkcja sprawdzaj¹ca, czy poprzednia operacja zadania zosta³a ju¿ ukoñczona i mo¿na spokojnie ju¿ dodaæ nastêpn¹ na dan¹ maszynê
 	*	@Argumenty:
 	*		Operacja operacja		-	operacja, której poprawnoœæ sprawdzamy
-	*		Maszyna maszyna			-	maszyna na której sprawdzamy miejsce
+	*		int czas				-	czas w sprawdzanej chwili
 	*	@Zwraca:
 	*		bool	-	czy operacja mo¿e wejœæ bo poprzednia zosta³a ju¿ ukoñczona
 	********/
-	bool czyMozna(const Operacja & operacja, const Maszyna & maszyna) const;
+	bool czyMozna(const Operacja & operacja, int czas) const const;
 
 
 	/**************

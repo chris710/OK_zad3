@@ -23,6 +23,7 @@ public:
 	int nrZadania;
 	Zadanie*	parent;	//wskaŸnik na rodzica
 	Maszyna* maszyna;	//wskaŸnik na maszynê, na której jest operacja
+	int begin;			//czas rozpoczêcia w danym uszeregowaniu
 
 	//TODO konstruktory
 
@@ -35,7 +36,7 @@ public:
 	Operacja(int czas, int numer, Zadanie* zadanie, int nrZad);
 
 
-	//TODO metody operacjau
+	//TODO metody operacji
 
 };
 

@@ -52,6 +52,8 @@ void algorytmLosowy(const Generator& generator)
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
+	int czas = 0;									//obecny kwant czasu
+	int przestoj = 0;								//numer nastêpnego przestoju
 
 	while (zadania.size() != 0)
 	{
@@ -75,11 +77,22 @@ void algorytmLosowy(const Generator& generator)
 			maszyna = generator.maszyny[preferred];
 
 
-			if(!zadania[zadanie]->operacje[0]->done)										//wsadŸ pierwsz¹ je¿eli jeszcze tego nie zrobi³eœ (zawsze pasuje)
+			if( maszyna->rozpoczecie[przestoj] < czas)							//je¿eli pierwszy niewykonany przestój ju¿ siê zacz¹³
+			{													
+				czas += maszyna->dlugosc[przestoj];			//dodajemy ten przestój oraz
+				if(przestoj<maszyna->rozpoczecie.size()-1)		//przechodzimy na nastêpny przestój je¿eli jakiœ zosta³
+					++przestoj;
+				czas += maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->czas * 0.3;		//wyw³aszczanie
+			}
+
+			if(!zadania[zadanie]->operacje[0]->done && czas>=zadania[zadanie]->delay)	//wsadŸ pierwsz¹ je¿eli min¹³ czas gotowoœci
+				//generator.czyWejdzie(*maszyna, *zadania[zadanie]->operacje[0],czas))	
 			{
-				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[0]);					//wtykamy operacjê do uszeregowania
-				zadania[zadanie]->operacje[0]->maszyna = maszyna;									//ustawiamy gdzie jest dana operacja
-				zadania[zadanie]->operacje[0]->done = true;											//okreœlamy operacjê jako wykonan¹
+				czas+=zadania[zadanie]->operacje[0]->czas;							//dodajemy czas operacji do bierz¹cego
+				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[0]);	//wtykamy operacjê do uszeregowania
+				zadania[zadanie]->operacje[0]->begin = czas;						//uk³adamy czas rozpoczêcia
+				zadania[zadanie]->operacje[0]->maszyna = maszyna;					//ustawiamy gdzie jest dana operacja
+				zadania[zadanie]->operacje[0]->done = true;							//okreœlamy operacjê jako wykonan¹
 				break;															//wychodzimy z pêtli, szukamy najmniej zawalonej maszyny
 			}
 
@@ -91,8 +104,10 @@ void algorytmLosowy(const Generator& generator)
 					wybierz(preferred);
 					maszyna = generator.maszyny[preferred];
 				}
-				if(generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))
+				if(generator.czyMozna(*zadania[zadanie]->operacje[1],czas))
 				{
+					czas+=zadania[zadanie]->operacje[1]->czas;
+					zadania[zadanie]->operacje[1]->begin = czas;
 					zadania[zadanie]->operacje[1]->maszyna = maszyna;
 					zadania[zadanie]->operacje[1]->done = true;
 					maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[1]);
@@ -110,8 +125,10 @@ void algorytmLosowy(const Generator& generator)
 						preferred = wybierz(zadania[zadanie]->operacje[0]->maszyna->numer, zadania[zadanie]->operacje[1]->maszyna->numer);
 						maszyna = generator.maszyny[preferred];						//szukamy innej maszyny
 					}
-					if(generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna))
+					if(generator.czyMozna(*zadania[zadanie]->operacje[2],czas))
 					{
+						czas+=zadania[zadanie]->operacje[2]->czas;
+						zadania[zadanie]->operacje[2]->begin = czas;
 						zadania[zadanie]->operacje[2]->maszyna = maszyna;
 						zadania[zadanie]->operacje[2]->done = true;
 						bool flaga = zadania[0]->operacje[2]->done;
@@ -132,6 +149,7 @@ void algorytmLosowy(const Generator& generator)
 				zadanie = zadania.size()-1;
 
 				maszyna->uszeregowanie.push_back(op);		//wpychamy zapychacz
+				czas+=1;
 				
 				wybierz(preferred);
 			}

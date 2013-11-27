@@ -69,11 +69,12 @@ bool Generator::czyWejdzie(const Maszyna & maszyna, const Operacja & operacja, i
 }
 
 
-bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) const
+bool Generator::czyMozna(const Operacja & operacja, int czas) const
 {
 	bool flag = true;
 	if(operacja.numer == 0) return flag;
-	if(this->getTime(*operacja.parent->operacje[operacja.numer-1])-operacja.czas > this->dlugosc(maszyna))
+	Operacja *poprzednia = operacja.parent->operacje[operacja.numer-1];
+	if(czas < poprzednia->begin+poprzednia->czas)
 		flag = false;
 
 	return flag;
@@ -82,8 +83,9 @@ bool Generator::czyMozna(const Operacja & operacja, const Maszyna & maszyna) con
 
 int Generator::dlugosc(const Maszyna & maszyna) const
 {
-	int result = 0;				//liczenie czasu, wskaŸnik na obecny jego kwant
-	int j = 0;					//iterowanie przestojów
+	Operacja* ostatnia = maszyna.uszeregowanie[maszyna.uszeregowanie.size()-1];
+	int result = ostatnia->begin + ostatnia->czas;				//liczenie czasu, wskaŸnik na obecny jego kwant
+	/*int j = 0;					//iterowanie przestojów
 	int delay;					//ile pozosta³o czasu gotowoœci dla danego zadania
 
 	//dodawanie d³ugoœci operacji
@@ -110,7 +112,7 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 			result += maszyna.uszeregowanie[i]->czas;		//operacja nie zawadza o przestój
 		else
 			result += maszyna.uszeregowanie[i]->czas*1.3;	//je¿eli zawadza to dodajemy jej d³ugoœæ z kar¹
-	}
+	}*/
 		
 	return result;
 }
@@ -118,7 +120,8 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 
 int Generator::getTime(const Operacja & operacja) const
 {
-	int rozmiar = 0, i = 0, j = 0, delay;
+	int rozmiar = operacja.begin + operacja.czas;
+		/*, i = 0, j = 0, delay;
 	Maszyna* maszyna = operacja.maszyna;
 	//for(int i = 0; i<maszyna.uszeregowanie.size(); ++i)
 	while(maszyna->uszeregowanie[i] != &operacja)
@@ -137,7 +140,7 @@ int Generator::getTime(const Operacja & operacja) const
 		rozmiar += maszyna->dlugosc[j];
 		++j;
 	}
-	rozmiar += operacja.czas;
+	rozmiar += operacja.czas;*/
 	return rozmiar;
 }
 
