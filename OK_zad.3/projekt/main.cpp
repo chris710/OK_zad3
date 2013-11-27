@@ -16,8 +16,8 @@ int main()
 	int nZadan = liczba_zadan();
 	Generator generator(nZadan);
 	interfejs(generator);
-	algorytmLosowy(generator);
-	//algorytmSJF(generator);
+	//algorytmLosowy(generator);
+	algorytmSJF(generator);
 
 
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
