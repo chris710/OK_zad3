@@ -1,10 +1,5 @@
 #include "generator.h"
 
-/*******
-		TODO List
-*	pouk³adaæ te œmieci z maina
-*
-********/
 
 Generator::Generator(int nZadan)
 {
@@ -173,7 +168,7 @@ void Generator::zlacz(vector<Operacja*> & uszeregowanie) const
 		if(uszeregowanie[i]->numer > 2)
 			if(uszeregowanie[i+1]->numer > 2)
 			{
-				uszeregowanie[i]->czas += uszeregowanie[i+1]->czas;
+				uszeregowanie[i]->czas ++;//= uszeregowanie[i+1]->czas;
 				it = uszeregowanie.end()-i;
 				uszeregowanie.erase(it);
 			}
