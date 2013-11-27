@@ -2,7 +2,7 @@
 
 
 
-void wybierz (int &preferred)
+void wybierz (int &preferred)			//funkcja wybiera inn¹ woln¹ maszynê
 {
 	/*if((0==preferred && c<=b) || (1==preferred && c<=a))
 		preferred = 2;
@@ -21,6 +21,23 @@ void wybierz (int &preferred)
 	else 
 		preferred = rand()%2;
 }
+
+int wybierz (int maszyna1, int maszyna2)	//funkcja wybiera jedyn¹ woln¹ maszynê
+{
+	int result;
+	if((0==maszyna1 && 1==maszyna2) || (1==maszyna1 && 0==maszyna2))
+		result = 2;
+	else if((2==maszyna1 && 1==maszyna2) || (1==maszyna1 && 2==maszyna2))
+		result = 0;
+	else
+		result = 1;
+
+	return result;
+}
+
+
+
+
 
 
 
@@ -53,24 +70,12 @@ void algorytmLosowy(const Generator& generator)
 			preferred = 2;
 		
 
-		while(true)												//póki czegoœ nie wsadzisz i nie trzeba wybieraæ znowu maszyny losuj zadania
+		while(zadania.size() != 0)												//póki czegoœ nie wsadzisz i nie trzeba wybieraæ znowu maszyny losuj zadania
 		{
 			maszyna = generator.maszyny[preferred];
 
-			//zadanie = random(0,zadania.size());		//losowanie zadania do wykonania
-			tmp = zadania[zadanie];					//wymieniamy z ostatnim zadaniem w wektorze (do ewentualnego usuwania)
-			zadania[zadanie] = zadania[zadania.size()-1];
-			zadania[zadania.size()-1] = tmp;
 
-			/*if(zadania[zadanie]->operacje[2]->done)
-			{
-				zadania.pop_back();				//usuwamy zadanie, bo wszystkie jego operacje zosta³y wykonane
-				break;
-			}*/
-
-			//std::cout<<(!zadania[zadanie]->operacje[0]->done)<<" "<<(!zadania[zadanie]->operacje[1]->done && generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))<<" "<<(!zadania[zadanie]->operacje[2]->done && generator.czyMozna(*zadania[zadanie]->operacje[2],*generator.maszyny[preferred]))<<std::endl;
-			
-			if(!zadania[zadanie]->operacje[0]->done)		//wsadŸ pierwsze je¿eli jeszcze tego nie zrobi³eœ
+			if(!zadania[zadanie]->operacje[0]->done)										//wsadŸ pierwsz¹ je¿eli jeszcze tego nie zrobi³eœ (zawsze pasuje)
 			{
 				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[0]);					//wtykamy operacjê do uszeregowania
 				zadania[zadanie]->operacje[0]->maszyna = maszyna;									//ustawiamy gdzie jest dana operacja
@@ -78,34 +83,46 @@ void algorytmLosowy(const Generator& generator)
 				break;															//wychodzimy z pêtli, szukamy najmniej zawalonej maszyny
 			}
 
-			else if( !(zadania[zadanie]->operacje[1]->done) && 
-				generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))	//drugie	
+			else if( !(zadania[zadanie]->operacje[1]->done))					//druga 			//je¿eli drugia operacja jeszcze nie zosta³a rozpoczêta 
+																									//a pierwsza zakoñczy³a siê przed chwil¹ obecn¹
 			{
-				if(zadania[zadanie]->operacje[0]->maszyna == maszyna)
-				{
+				if(zadania[zadanie]->operacje[0]->maszyna == maszyna)								//je¿eli maszyna jest ta sama co pierwszego zadania
+				{																					//to j¹ zmieniamy na inn¹
 					wybierz(preferred);
+					maszyna = generator.maszyny[preferred];
 				}
-				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[1]);
-				zadania[zadanie]->operacje[1]->maszyna = maszyna;
-				zadania[zadanie]->operacje[1]->done = true;
-				break;
+				if(generator.czyMozna(*zadania[zadanie]->operacje[1],*generator.maszyny[preferred]))
+				{
+					zadania[zadanie]->operacje[1]->maszyna = maszyna;
+					zadania[zadanie]->operacje[1]->done = true;
+					maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[1]);
+				
+					break;
+				}
 			}
 			else if((zadania[zadanie]->operacje[1]->done))			//sprawdzenie czy 2 operacja zosta³a wykonana
 			{
-				if(//!zadania[zadanie]->operacje[2]->done && 
-					generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna))	//trzecie	
+				if(!zadania[zadanie]->operacje[2]->done)				//trzecia operacja	
 				{
-					if(zadania[zadanie]->operacje[0]->maszyna == maszyna && 
+					if(zadania[zadanie]->operacje[0]->maszyna == maszyna ||			//je¿eli operacja le¿y na maszynie na której by³a wykonana poprzednia op
 					zadania[zadanie]->operacje[1]->maszyna == maszyna)
 					{
-
+						preferred = wybierz(zadania[zadanie]->operacje[0]->maszyna->numer, zadania[zadanie]->operacje[1]->maszyna->numer);
+						maszyna = generator.maszyny[preferred];						//szukamy innej maszyny
 					}
+					if(generator.czyMozna(*zadania[zadanie]->operacje[2],*maszyna))
+					{
+						zadania[zadanie]->operacje[2]->maszyna = maszyna;
+						zadania[zadanie]->operacje[2]->done = true;
+						bool flaga = zadania[0]->operacje[2]->done;
+						maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[2]);
 
-					maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[2]);
-					zadania[zadanie]->operacje[2]->maszyna = maszyna;
-					zadania[zadanie]->operacje[2]->done = true;
-					zadania.pop_back();				//usuwamy zadanie, bo wszystkie jego operacje zosta³y wykonane
-					break;
+						tmp = zadania[zadanie];					//wymieniamy z ostatnim zadaniem w wektorze do usuwania
+						zadania[zadanie] = zadania[zadania.size()-1];
+						zadania[zadania.size()-1] = tmp;
+						zadania.pop_back();				//usuwamy zadanie, bo wszystkie jego operacje zosta³y wykonane
+						break;
+					}
 				}
 			}
 			if(zadanie>0)							//je¿eli nie dojechaliœmy do pocz¹tku wektora zadañ
@@ -123,16 +140,12 @@ void algorytmLosowy(const Generator& generator)
 		
 	}
 
-	//usuwanie œmieci z koñca uszeregowania
-	for (int i=0; i<3; i++)
-	{
-		generator.czysc(*generator.maszyny[i]);
-	}
-
-
+	
 	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++)
 	{
+		generator.czysc(*generator.maszyny[i]);			//usuwanie œmieci z koñca uszeregowania
+		generator.zlacz(generator.maszyny[i]->uszeregowanie);
 		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)

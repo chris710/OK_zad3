@@ -161,6 +161,42 @@ void Generator::czysc(Maszyna & maszyna) const
 }
 
 
+void Generator::zlacz(vector<Operacja*> & uszeregowanie) const
+{
+	
+	vector<Operacja*>::iterator it = uszeregowanie.end()-2;
+	vector<Operacja*>::iterator prev = it+1;
+
+
+	for (int i = uszeregowanie.size()-2; i>=0; --i)
+	{
+		if(uszeregowanie[i]->numer > 2)
+			if(uszeregowanie[i+1]->numer > 2)
+			{
+				uszeregowanie[i]->czas += uszeregowanie[i+1]->czas;
+				it = uszeregowanie.end()-i;
+				uszeregowanie.erase(it);
+			}
+	}
+
+	/*for(it;	it != uszeregowanie.begin(); it)
+	//while(it != uszeregowanie.end())
+	{
+		prev = it-1;
+		if((*it)->numer>2)
+		{
+			if((*prev)->numer>2)
+			{
+				(*it)->czas+=(*prev)->czas;
+
+				uszeregowanie.erase(prev);
+			}
+		}
+		else
+		++it;
+	}*/
+}
+
 
 
 int random(int min, int max)

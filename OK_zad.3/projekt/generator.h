@@ -136,6 +136,15 @@ public:
 	********/
 	void czysc(Maszyna & maszyna) const;
 
+	/*******
+	*	@ zlacz
+	*		Funkcja z³¹czaj¹ca wszysktie zapychacze na danej maszynie
+	*	@Argumenty
+	*		vector<Operacja*> uszeregowanie		-	uszeregowanie na którym z³¹czamy zapychacze
+	*	@Zwraca:
+	*		nic
+	********/
+	void zlacz(vector<Operacja*> & uszeregowanie) const;
 };
 
 
