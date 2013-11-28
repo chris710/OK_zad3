@@ -1,5 +1,6 @@
 #include "sjf.h"
 #include <cmath>
+
 void obliczanie_dlugosci(vector<int*> &dlugosci, vector<Zadanie*> zadania){
 	for (int i=0; i<zadania.size();i++){
 		int suma=0;
@@ -42,11 +43,23 @@ int czas_uszeregowania(Generator generator, int i){
 	return suma;
 }
 
+bool rozpoczecie_przestoju(const Maszyna & maszyna, int &czas, int &przestoj){
+	bool flag=false;
+	//int przypuszczalny=czas+operacja.czas;
+	for (int i=0; i<maszyna.rozpoczecie.size();i++)
+		if (czas==maszyna.rozpoczecie[i]){
+			przestoj=i;
+			flag = true;
+		}
+	return flag;
+	//cout << operacja.czas << endl;
+}
+
 bool czy_przestoj(const Maszyna & maszyna, const Operacja & operacja, int &czas, int &przestoj){
 	bool flag=false;
 	int przypuszczalny=czas+operacja.czas;
 	for (int i=0; i<maszyna.rozpoczecie.size();i++)
-		if (czas<maszyna.rozpoczecie[i] && przypuszczalny>maszyna.rozpoczecie[i]){
+		if (czas<maszyna.rozpoczecie[i] && przypuszczalny>maszyna.rozpoczecie[i]) {
 			przestoj=i;
 			flag = true;
 		}
@@ -60,6 +73,43 @@ bool czy_juz_gotowy(int gotowosc, int czas){
 		return true;
 	else
 		return false;
+}
+
+void wybierz_maszyne (int &preferred)			//funkcja wybiera inn¹ woln¹ maszynê
+{
+	if(0==preferred)
+		preferred = rand()%2+1;
+	else if(1==preferred)
+	{
+		preferred = rand()%2;
+		if(preferred == 1)
+			preferred = 2;
+	}
+	else 
+		preferred = rand()%2;
+}
+
+int wybierz_maszyne1 (int maszyna1, int maszyna2)	//funkcja wybiera jedyn¹ woln¹ maszynê
+{
+	int result;
+	if((0==maszyna1 && 1==maszyna2) || (1==maszyna1 && 0==maszyna2))
+		result = 2;
+	else if((2==maszyna1 && 1==maszyna2) || (1==maszyna1 && 2==maszyna2))
+		result = 0;
+	else
+		result = 1;
+
+	return result;
+}
+
+bool czyMoge(const Operacja & operacja, int czas) 
+{
+	bool flag = true;
+	Operacja *poprzednia = operacja.parent->operacje[operacja.numer-1];
+	if(czas < poprzednia->begin)
+		flag = false;
+
+	return flag;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +165,11 @@ void algorytmSJF(const Generator& generator)
 		if (!zadania[nrZAD]->operacje[0]->done){
 			if(czy_juz_gotowy(zadania[nrZAD]->delay, kwantCZASU[preferred]))					//wsadŸ pierwsze je¿eli jeszcze tego nie zrobi³eœ
 			{	
-				//cout << "czas=" << kwantCZASU[preferred]<< endl;
+				if(rozpoczecie_przestoju(*maszyna,kwantCZASU[preferred],przestoj)){
+					Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+					generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+					kwantCZASU[preferred]+=generator.maszyny[preferred]->dlugosc[przestoj];
+				}
 				if (czy_przestoj(*maszyna, *zadania[nrZAD]->operacje[0],kwantCZASU[preferred],przestoj)){
 						int nowy_czas = ceil(zadania[nrZAD]->operacje[0]->czas*0.3);
 						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[0]);
@@ -123,23 +177,100 @@ void algorytmSJF(const Generator& generator)
 						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
 						Operacja * przedluzenie = new Operacja(nowy_czas,0,NULL,-nrZAD);
 						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
+						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[0]->czas+nowy_czas+generator.maszyny[preferred]->dlugosc[przestoj]);
 				} else {
 				kwantCZASU[preferred]+=zadania[nrZAD]->operacje[0]->czas;
 				generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[0]);		//wtykamy operacjê do uszeregowania
 				}
+				zadania[nrZAD]->operacje[0]->begin=kwantCZASU[preferred];
 				zadania[nrZAD]->operacje[0]->maszyna = generator.maszyny[preferred];					//ustawiamy gdzie jest dana operacja
 				zadania[nrZAD]->operacje[0]->done = true;												//okreœlamy operacjê jako wykonan¹
-				zadania.erase( zadania.begin()+nrZAD); 
-				break;															//wychodzimy z pêtli, szukamy najmniej zawalonej maszyny
+			break;																//wychodzimy z pêtli, szukamy najmniej zawalonej maszyny
 			}}
+		else if (!zadania[nrZAD]->operacje[1]->done ){
+			//cout << zadania[nrZAD]->operacje[0]->maszyna << " == " << maszyna ;
+			if(zadania[nrZAD]->operacje[0]->maszyna == maszyna)										//je¿eli maszyna jest ta sama co pierwszego zadania
+				{	//cout << "ZAMIANA" ;																				//to j¹ zmieniamy na inn¹
+					wybierz_maszyne(preferred);
+					maszyna = generator.maszyny[preferred];
+				}
+			if (czyMoge(*zadania[nrZAD]->operacje[1],kwantCZASU[preferred])){
+				if(rozpoczecie_przestoju(*maszyna,kwantCZASU[preferred],przestoj)){
+					Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+					generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+					kwantCZASU[preferred]+=generator.maszyny[preferred]->dlugosc[przestoj];
+				}
+				if (czy_przestoj(*maszyna, *zadania[nrZAD]->operacje[1],kwantCZASU[preferred],przestoj)){
+						int nowy_czas = ceil(zadania[nrZAD]->operacje[1]->czas*0.3);
+						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[1]);
+						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+						Operacja * przedluzenie = new Operacja(nowy_czas,1,NULL,-nrZAD);
+						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
+						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[1]->czas + nowy_czas + generator.maszyny[preferred]->dlugosc[przestoj]);
+				} else {
+						kwantCZASU[preferred]+=zadania[nrZAD]->operacje[1]->czas;
+						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[1]);		//wtykamy operacjê do uszeregowania
+				}
+				zadania[nrZAD]->operacje[1]->begin=kwantCZASU[preferred];
+				zadania[nrZAD]->operacje[1]->maszyna = generator.maszyny[preferred];					//ustawiamy gdzie jest dana operacja
+				zadania[nrZAD]->operacje[1]->done = true;												//okreœlamy operacjê jako wykonan¹
+				
+				break;			
+			}}
+			else if (!zadania[nrZAD]->operacje[2]->done ){
+			//cout << zadania[nrZAD]->operacje[0]->maszyna << " == " << maszyna ;
+				if(zadania[nrZAD]->operacje[0]->maszyna == maszyna ||			//je¿eli operacja le¿y na maszynie na której by³a wykonana poprzednia op
+					zadania[nrZAD]->operacje[1]->maszyna == maszyna)
+					{
+						preferred = wybierz_maszyne1(zadania[nrZAD]->operacje[0]->maszyna->numer, 
+								zadania[nrZAD]->operacje[1]->maszyna->numer);		//POPRAW
+						maszyna = generator.maszyny[preferred];						//szukamy innej maszyny
+					}
+			if (czyMoge(*zadania[nrZAD]->operacje[2],kwantCZASU[preferred])){
+				if(rozpoczecie_przestoju(*maszyna,kwantCZASU[preferred],przestoj)){
+					Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+					generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+					kwantCZASU[preferred]+=generator.maszyny[preferred]->dlugosc[przestoj];
+				}
+
+				if (czy_przestoj(*maszyna, *zadania[nrZAD]->operacje[2],kwantCZASU[preferred],przestoj)){
+						int nowy_czas = ceil(zadania[nrZAD]->operacje[2]->czas*0.3);
+						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[1]);
+						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+						Operacja * przedluzenie = new Operacja(nowy_czas,2,NULL,(-nrZAD));
+						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
+						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[2]->czas + nowy_czas + generator.maszyny[preferred]->dlugosc[przestoj]);
+				} else {
+						kwantCZASU[preferred]+=zadania[nrZAD]->operacje[2]->czas;
+						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[2]);		//wtykamy operacjê do uszeregowania
+				}
+				zadania[nrZAD]->operacje[2]->begin=kwantCZASU[preferred];
+				zadania[nrZAD]->operacje[2]->maszyna = generator.maszyny[preferred];					//ustawiamy gdzie jest dana operacja
+				zadania[nrZAD]->operacje[2]->done = true;												//okreœlamy operacjê jako wykonan¹
+				zadania.erase( zadania.begin()+nrZAD); 
+				break;			
+			}}
+		
+
+
+
+
+
 
 
 			if (nrZAD < (zadania.size()-1))
 				nrZAD++;
 			else{
 				nrZAD=0;
+				if(rozpoczecie_przestoju(*maszyna,kwantCZASU[preferred],przestoj)){
+						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
+						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
+						kwantCZASU[preferred]+=generator.maszyny[preferred]->dlugosc[przestoj];
+					} else{ 
 				maszyna->uszeregowanie.push_back(zap);		//wpychamy zapychacz
-				kwantCZASU[preferred]++;
+				kwantCZASU[preferred]++;}
 				//wybieramy najmniej zawalon¹ maszynê
 				int a = czas_uszeregowania(generator,0);
 				int b = czas_uszeregowania(generator,1);
@@ -156,6 +287,7 @@ void algorytmSJF(const Generator& generator)
 
 
 	}
+	//wybierz_maszyne
 	for (int i=0; i<3; i++){
 		generator.czysc(*generator.maszyny[i]);
 	//	laczenie(generator.maszyny[i]->uszeregowanie);		
@@ -167,9 +299,10 @@ void algorytmSJF(const Generator& generator)
 			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
-	//dlugosc = generator.dlugosc(*generator.maszyny[i]);
-	//dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
-	}}
+		}
+	dlugosc = czas_uszeregowania(generator, i);
+	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
+	}
 	
 	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
