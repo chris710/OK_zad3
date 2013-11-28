@@ -4,12 +4,6 @@
 
 void wybierz (int &preferred)			//funkcja wybiera inn¹ woln¹ maszynê
 {
-	/*if((0==preferred && c<=b) || (1==preferred && c<=a))
-		preferred = 2;
-	else if((1==preferred && a<=c) || (2==preferred && a<=b))
-		preferred = 0;
-	else
-		preferred = 1;*/
 	if(0==preferred)
 		preferred = rand()%2+1;
 	else if(1==preferred)
@@ -52,8 +46,8 @@ void algorytmLosowy(const Generator& generator)
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
-	int czas = 0;									//obecny kwant czasu
-	int przestoj = 0;								//numer nastêpnego przestoju
+	int czas[3] = {0,0,0};							//obecny kwant czasu na danej maszynie
+	int przestoj[3] = {0,0,0};								//numer nastêpnego przestoju
 
 	while (zadania.size() != 0)
 	{
@@ -77,37 +71,40 @@ void algorytmLosowy(const Generator& generator)
 			maszyna = generator.maszyny[preferred];
 
 
-			if( maszyna->rozpoczecie[przestoj] < czas)							//je¿eli pierwszy niewykonany przestój ju¿ siê zacz¹³
+			if( maszyna->rozpoczecie[przestoj[preferred]] <= czas[preferred])							//je¿eli pierwszy niewykonany przestój ju¿ siê zacz¹³
 			{													
-				czas += maszyna->dlugosc[przestoj];			//dodajemy ten przestój oraz
-				if(przestoj<maszyna->rozpoczecie.size()-1)		//przechodzimy na nastêpny przestój je¿eli jakiœ zosta³
-					++przestoj;
-				czas += maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->czas * 0.3;		//wyw³aszczanie
+				czas[preferred] += maszyna->dlugosc[przestoj[preferred]];			//dodajemy ten przestój oraz
+				if(przestoj[preferred] < maszyna->rozpoczecie.size()-1)		//przechodzimy na nastêpny przestój je¿eli jakiœ zosta³
+					++przestoj[preferred];
+				czas[preferred] += maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->czas * 0.3;		//wyw³aszczanie
 			}
 
-			if(!zadania[zadanie]->operacje[0]->done && czas>=zadania[zadanie]->delay)	//wsadŸ pierwsz¹ je¿eli min¹³ czas gotowoœci
+
+
+
+			if(!zadania[zadanie]->operacje[0]->done && czas[preferred]>=zadania[zadanie]->delay)	//wsadŸ pierwsz¹ je¿eli min¹³ czas gotowoœci
 				//generator.czyWejdzie(*maszyna, *zadania[zadanie]->operacje[0],czas))	
 			{
-				czas+=zadania[zadanie]->operacje[0]->czas;							//dodajemy czas operacji do bierz¹cego
+				czas[preferred] += zadania[zadanie]->operacje[0]->czas;							//dodajemy czas operacji do bierz¹cego
 				maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[0]);	//wtykamy operacjê do uszeregowania
-				zadania[zadanie]->operacje[0]->begin = czas;						//uk³adamy czas rozpoczêcia
+				zadania[zadanie]->operacje[0]->begin = czas[preferred];						//uk³adamy czas rozpoczêcia
 				zadania[zadanie]->operacje[0]->maszyna = maszyna;					//ustawiamy gdzie jest dana operacja
 				zadania[zadanie]->operacje[0]->done = true;							//okreœlamy operacjê jako wykonan¹
 				break;															//wychodzimy z pêtli, szukamy najmniej zawalonej maszyny
 			}
 
-			else if( !(zadania[zadanie]->operacje[1]->done))					//druga 			//je¿eli drugia operacja jeszcze nie zosta³a rozpoczêta 
-																									//a pierwsza zakoñczy³a siê przed chwil¹ obecn¹
+			else if( !(zadania[zadanie]->operacje[1]->done) && (zadania[zadanie]->operacje[0]->done))//druga 			
+													//je¿eli drugia operacja jeszcze nie zosta³a rozpoczêta a pierwsza zakoñczy³a siê przed chwil¹ obecn¹
 			{
 				if(zadania[zadanie]->operacje[0]->maszyna == maszyna)								//je¿eli maszyna jest ta sama co pierwszego zadania
 				{																					//to j¹ zmieniamy na inn¹
 					wybierz(preferred);
 					maszyna = generator.maszyny[preferred];
 				}
-				if(generator.czyMozna(*zadania[zadanie]->operacje[1],czas))
+				if(generator.czyMozna(*zadania[zadanie]->operacje[1],czas[preferred]))
 				{
-					czas+=zadania[zadanie]->operacje[1]->czas;
-					zadania[zadanie]->operacje[1]->begin = czas;
+					czas[preferred] += zadania[zadanie]->operacje[1]->czas;
+					zadania[zadanie]->operacje[1]->begin = czas[preferred];
 					zadania[zadanie]->operacje[1]->maszyna = maszyna;
 					zadania[zadanie]->operacje[1]->done = true;
 					maszyna->uszeregowanie.push_back(zadania[zadanie]->operacje[1]);
@@ -122,13 +119,15 @@ void algorytmLosowy(const Generator& generator)
 					if(zadania[zadanie]->operacje[0]->maszyna == maszyna ||			//je¿eli operacja le¿y na maszynie na której by³a wykonana poprzednia op
 					zadania[zadanie]->operacje[1]->maszyna == maszyna)
 					{
-						preferred = wybierz(zadania[zadanie]->operacje[0]->maszyna->numer, zadania[zadanie]->operacje[1]->maszyna->numer);
+						preferred = wybierz(zadania[zadanie]->operacje[0]->maszyna->numer, 
+								zadania[zadanie]->operacje[1]->maszyna->numer);		//POPRAW
 						maszyna = generator.maszyny[preferred];						//szukamy innej maszyny
 					}
-					if(generator.czyMozna(*zadania[zadanie]->operacje[2],czas))
+					if(generator.czyMozna(*zadania[zadanie]->operacje[2],czas[preferred]))
 					{
-						czas+=zadania[zadanie]->operacje[2]->czas;
-						zadania[zadanie]->operacje[2]->begin = czas;
+						//cout<<"pyk"<<endl;
+						czas[preferred] += zadania[zadanie]->operacje[2]->czas;
+						zadania[zadanie]->operacje[2]->begin = czas[preferred];
 						zadania[zadanie]->operacje[2]->maszyna = maszyna;
 						zadania[zadanie]->operacje[2]->done = true;
 						bool flaga = zadania[0]->operacje[2]->done;
@@ -148,8 +147,17 @@ void algorytmLosowy(const Generator& generator)
 			{
 				zadanie = zadania.size()-1;
 
-				maszyna->uszeregowanie.push_back(op);		//wpychamy zapychacz
-				czas+=1;
+
+				//wpychanie zapychacza
+				if(maszyna->uszeregowanie.size()>1)					//je¿eli uszeregowanie zawiera wiêcej ni¿ jedn¹ operacjê
+				{
+					if(maszyna->uszeregowanie[maszyna->uszeregowanie.size()-2]->numer>2)	//i jest to zapychacz
+						maszyna->uszeregowanie[maszyna->uszeregowanie.size()-2]->czas++;	//to zwiêksz jego czas o jeden
+				}
+				else
+					maszyna->uszeregowanie.push_back(op);		//albo dodaj jako now¹ operacjê nowy zapychacz
+
+				czas[preferred] += 1;
 				
 				wybierz(preferred);
 			}
@@ -162,15 +170,16 @@ void algorytmLosowy(const Generator& generator)
 	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++)
 	{
-		generator.czysc(*generator.maszyny[i]);			//usuwanie œmieci z koñca uszeregowania
-		generator.zlacz(generator.maszyny[i]->uszeregowanie);
-		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		//generator.czysc(*generator.maszyny[i]);			//usuwanie œmieci z koñca uszeregowania
+		//generator.zlacz(generator.maszyny[i]->uszeregowanie);
+		
+		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
-			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+			/*cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
+					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	*/
 			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
@@ -178,10 +187,10 @@ void algorytmLosowy(const Generator& generator)
 		dlugosc = generator.dlugosc(*generator.maszyny[i]);
 		dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji/3<<endl;
-	plik<<"Szacowana optymalna dlugosc uszeregowania "<<generator.dlugoscInstancji/3<<endl;
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
+	plik<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
 	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
-	plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
+	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
+	plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
 }

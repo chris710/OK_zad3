@@ -39,13 +39,14 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 		for(int j=0; j<3; ++j)
 			(this->dlugoscInstancji) += this->zadania[i]->operacje[j]->czas;
 	}
-	/*for(int j = 0; j < Result->dlugosc.size(); ++j)
-			this->dlugoscInstancji += Result->dlugosc[j];*/
+	for(int j = 0; j < Result->dlugosc.size(); ++j)
+			this->dlugoscInstancji += Result->dlugosc[j];
 
 	int przedzial = (this->dlugoscInstancji/3)/Result->nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
-	for(int i = 1; i<=Result->nPrzestojow; ++i)
+	Result->rozpoczecie.push_back(przedzial);
+	for(int i = 1; i<Result->nPrzestojow; ++i)
 	{
-		Result->rozpoczecie.push_back(i*przedzial);
+		Result->rozpoczecie.push_back(przedzial*i+Result->rozpoczecie[i-1]+Result->dlugosc[i-1]);
 	}
 	return *Result;
 }
@@ -83,8 +84,14 @@ bool Generator::czyMozna(const Operacja & operacja, int czas) const
 
 int Generator::dlugosc(const Maszyna & maszyna) const
 {
-	Operacja* ostatnia = maszyna.uszeregowanie[maszyna.uszeregowanie.size()-1];
-	int result = ostatnia->begin + ostatnia->czas;				//liczenie czasu, wskaŸnik na obecny jego kwant
+	if(maszyna.uszeregowanie.size()!=0)
+	{
+		Operacja* ostatnia = maszyna.uszeregowanie[maszyna.uszeregowanie.size()-1];
+		int result = ostatnia->begin + ostatnia->czas;				//liczenie czasu, wskaŸnik na obecny jego kwant
+		return result;
+	}
+	else return 0;
+	
 	/*int j = 0;					//iterowanie przestojów
 	int delay;					//ile pozosta³o czasu gotowoœci dla danego zadania
 
@@ -113,8 +120,6 @@ int Generator::dlugosc(const Maszyna & maszyna) const
 		else
 			result += maszyna.uszeregowanie[i]->czas*1.3;	//je¿eli zawadza to dodajemy jej d³ugoœæ z kar¹
 	}*/
-		
-	return result;
 }
 
 
@@ -166,7 +171,7 @@ void Generator::zlacz(vector<Operacja*> & uszeregowanie) const
 	vector<Operacja*>::iterator prev = it+1;
 
 
-	for (int i = uszeregowanie.size()-2; i>=0; --i)
+	for (int i = uszeregowanie.size()-2; i>0; --i)
 	{
 		if(uszeregowanie[i]->numer > 2)
 			if(uszeregowanie[i+1]->numer > 2)
@@ -199,6 +204,7 @@ void Generator::zlacz(vector<Operacja*> & uszeregowanie) const
 
 int random(int min, int max)
 {
+	if(min==max)	return max;
 	int result, lower = max-min;
 	if(max == 0) return 0;
 	result = rand()%lower + min;

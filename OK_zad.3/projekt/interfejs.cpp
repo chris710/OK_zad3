@@ -80,6 +80,7 @@ void interfejs(Generator &generator)
 	int gotowosc=0;
 	for(int i = 0; i < generator.liczbaZadan; ++i){
 		generator.generujZadanie(y,z,gotowosc,i);
+		//generator.generujZadanie(5,5,2,i);			//TESTOWE
 		gotowosc+=10;
 	}
 
@@ -90,7 +91,7 @@ void interfejs(Generator &generator)
 	int czasPrzestojow=200;
 	for(int i = 0; i<3; ++i)
 			generator.generujMaszyne(y,z,czasPrzestojow);
-	
+			//generator.generujMaszyne(2,2,2);			//TESTOWE
 	cout <<"\n===========================\n\n";
 	cout <<"OPCJA czasu wykonania zadan: " << generator.dlugoscInstancji <<endl<<endl;;
 	wyswietlZadania(generator);
