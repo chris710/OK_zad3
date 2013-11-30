@@ -96,7 +96,7 @@ void interfejs(Generator &generator)
 	cout <<"OPCJA czasu wykonania zadan: " << generator.dlugoscInstancji <<endl<<endl;;
 	wyswietlZadania(generator);
 	//cout <<"OPCJA Liczba przestjow: " << liczba_przest <<endl;
-	//wyswietlMaszyny(generator);
+	wyswietlMaszyny(generator);
 
 	cout <<"\n===========================\n\n";
 }

@@ -117,17 +117,17 @@ bool czyMoge(const Operacja & operacja, int czas)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void algorytmSJF(const Generator& generator)
-{
+{	ofstream plik("plik.txt");
 	vector<Zadanie*> zadania = generator.zadania;			//tymczasowa tablica do usuwania zadañ
 	Maszyna* maszyna;										//wskaŸnik na preferowan¹ maszynê
 	vector<int*> dlugosci;						// do usuniecia
 	obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
-	cout << "=================" << endl ;
-	for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
-		cout << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
-	cout << "=================" << endl ;		// do usuniecia
-	for (int i=0;i<3;i++)
-		cout << "przestoj o= " << generator.maszyny[i]->rozpoczecie[0] << "\t i o dlugosci= " << generator.maszyny[i]->dlugosc[0] << endl << "=================" << endl;
+	//cout << "=================" << endl ;
+	//for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
+	//	cout << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
+	//cout << "=================" << endl ;		// do usuniecia
+	//for (int i=0;i<3;i++)
+	//	cout << "przestoj o= " << generator.maszyny[i]->rozpoczecie[0] << "\t i o dlugosci= " << generator.maszyny[i]->dlugosc[0] << endl << "=================" << endl;
 	Operacja * zap = new Operacja(1,98,NULL,98);				//operacja zapychacz
 	Operacja * przest = new Operacja(1,48,NULL,48);				//operacja zapychacz
 	sort(zadania.begin(), zadania.end(), rosnaco);			//sortowanie tablicy po czasach trwania calego zadania
@@ -175,7 +175,7 @@ void algorytmSJF(const Generator& generator)
 						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[0]);
 						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
 						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
-						Operacja * przedluzenie = new Operacja(nowy_czas,0,NULL,-nrZAD);
+						Operacja * przedluzenie = new Operacja(nowy_czas,0,NULL,((-1)*nrZAD));
 						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
 						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[0]->czas+nowy_czas+generator.maszyny[preferred]->dlugosc[przestoj]);
 				} else {
@@ -205,7 +205,7 @@ void algorytmSJF(const Generator& generator)
 						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[1]);
 						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
 						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
-						Operacja * przedluzenie = new Operacja(nowy_czas,1,NULL,-nrZAD);
+						Operacja * przedluzenie = new Operacja(nowy_czas,1,NULL,((-1)*nrZAD));
 						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
 						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[1]->czas + nowy_czas + generator.maszyny[preferred]->dlugosc[przestoj]);
 				} else {
@@ -239,7 +239,7 @@ void algorytmSJF(const Generator& generator)
 						generator.maszyny[preferred]->uszeregowanie.push_back(zadania[nrZAD]->operacje[1]);
 						Operacja * przest = new Operacja(generator.maszyny[preferred]->dlugosc[przestoj],48,NULL,48);
 						generator.maszyny[preferred]->uszeregowanie.push_back(przest);
-						Operacja * przedluzenie = new Operacja(nowy_czas,2,NULL,(-nrZAD));
+						Operacja * przedluzenie = new Operacja(nowy_czas,2,NULL,((-1)*nrZAD));
 						generator.maszyny[preferred]->uszeregowanie.push_back(przedluzenie);
 						kwantCZASU[preferred]+=(zadania[nrZAD]->operacje[2]->czas + nowy_czas + generator.maszyny[preferred]->dlugosc[przestoj]);
 				} else {
@@ -270,7 +270,7 @@ void algorytmSJF(const Generator& generator)
 						kwantCZASU[preferred]+=generator.maszyny[preferred]->dlugosc[przestoj];
 					} else{ 
 				maszyna->uszeregowanie.push_back(zap);		//wpychamy zapychacz
-				kwantCZASU[preferred]++;}
+				kwantCZASU[preferred]++; }
 				//wybieramy najmniej zawalon¹ maszynê
 				int a = czas_uszeregowania(generator,0);
 				int b = czas_uszeregowania(generator,1);
@@ -294,9 +294,9 @@ void algorytmSJF(const Generator& generator)
 	}
 	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++){
-		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		plik <<endl<< "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++){
-			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
 		}

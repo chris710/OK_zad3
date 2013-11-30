@@ -33,17 +33,17 @@ int main()
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
-
+	/*
 	cout<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
 	//plik<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
-	/*start=clock();
+	start=clock();
 	algorytmSJF(generator);
 	end=clock();
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
-	plik<<"Czas: "<<czas<<endl;*/
+	plik<<"Czas: "<<czas<<endl;
 
-
+	*/
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
 }
 
