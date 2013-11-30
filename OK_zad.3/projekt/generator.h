@@ -78,7 +78,17 @@ public:
 	********/
 	vector<Maszyna*> generujMaszyne(int nPrzestojowMin, int nPrzestojowMax, int czasPrzestojow);
 
-
+	/********
+	*	@ optymalnaDlugosc
+	*		Funkcja obliczajaca optymalna dlugosc dla wygrnerownych danych
+	*	@Argumenty:
+	*		-
+	*	@Zwraca:
+	*		int dlugosc	- optymalna dlugosc dla wygrnerownych danych
+	********/
+	int optymalnaDlugosc();
+	
+	
 	/********
 	*	@ czyWejdzie
 	*		Funkcja sprawdzaj¹ca, czy operacja mo¿e zostaæ umieszczona w maszynie bez kolizji z przestojem maszyny

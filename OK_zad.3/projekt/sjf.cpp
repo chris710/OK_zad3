@@ -303,8 +303,8 @@ void algorytmSJF(const Generator& generator)
 	dlugosc = czas_uszeregowania(generator, i);
 	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
-	
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/3)<<endl;
+	int x=*generator.optymalnaDlugosc();
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<< x <<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
 	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
 }

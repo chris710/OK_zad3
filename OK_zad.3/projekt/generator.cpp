@@ -58,12 +58,12 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 	for(int i=0;i<3;i++){ 
 		Result=maszyny[i];
 		int przedzial = (this->dlugoscInstancji/3)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
-		Result->rozpoczecie.push_back(przedzial);
+		int x=rand()%50+10;
+		Result->rozpoczecie.push_back(x);
 		for(int j = 1; j<Result->nPrzestojow; ++j)
 		{	
 			if (Result->dlugosc[j-1] > przedzial){
-				Result->dlugosc[j-1]=rand()%(przedzial/2);
-				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1]);
+				Result->rozpoczecie.push_back(Result->rozpoczecie[j-1] + Result->dlugosc[j-1]+67);
 			}else
 				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1]);
 		}
@@ -71,6 +71,20 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 	
 	for(int i=0;i<3;i++)
 		return maszyny;
+}
+
+int Generator::optymalnaDlugosc(){
+	for (int i=0;i<3;i++)
+	{
+		int licznik=0;
+		for (int j=0; j<maszyny[i]->uszeregowanie.size();j++)
+				if (maszyny[i]->uszeregowanie[j]->numer==48)
+					licznik++;
+		if (licznik<maszyny[i]->nPrzestojow)
+			for(int k=0;k<(maszyny[i]->nPrzestojow-licznik);k++)
+				dlugoscInstancji-=maszyny[i]->dlugosc[maszyny[i]->nPrzestojow-1-k];
+	}
+	return (dlugoscInstancji/3);
 }
 
 
