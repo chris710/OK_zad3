@@ -42,7 +42,7 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 	for(int j = 0; j < Result->dlugosc.size(); ++j)
 			this->dlugoscInstancji += Result->dlugosc[j];
 
-	int przedzial = (this->dlugoscInstancji/3)/Result->nPrzestojow;			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
+	int przedzial = (this->dlugoscInstancji/3)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
 	Result->rozpoczecie.push_back(przedzial);
 	for(int i = 1; i<Result->nPrzestojow; ++i)
 	{

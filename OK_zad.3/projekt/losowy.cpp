@@ -42,7 +42,7 @@ void algorytmLosowy(const Generator& generator)
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
 	Operacja * op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
 	
-	ofstream plik("plik.txt");
+	//ofstream plik("plik.txt");
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
@@ -174,23 +174,23 @@ void algorytmLosowy(const Generator& generator)
 		//generator.zlacz(generator.maszyny[i]->uszeregowanie);
 		
 		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
-		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		/*plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
-			/*cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	*/
+					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
 			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
-		}
+		}*/
 		dlugosc = generator.dlugosc(*generator.maszyny[i]);
 		dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
 	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
-	plik<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
+	//plik<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
+	//plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
 	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
-	plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
+	//plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
 }

@@ -4,6 +4,7 @@
 /*	NAG£ÓWEK MAIN	*/
 
 #include<iostream>
+#include<fstream>
 #include<vector>
 #include<time.h>
 
