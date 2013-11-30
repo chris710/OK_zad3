@@ -122,10 +122,10 @@ void algorytmSJF(const Generator& generator)
 	Maszyna* maszyna;										//wskaŸnik na preferowan¹ maszynê
 	vector<int*> dlugosci;						// do usuniecia
 	obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
-	//cout << "=================" << endl ;
-	//for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
-	//	cout << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
-	//cout << "=================" << endl ;		// do usuniecia
+	plik << "=================" << endl ;
+	for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
+		plik << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
+	plik << "=================" << endl ;		// do usuniecia
 	//for (int i=0;i<3;i++)
 	//	cout << "przestoj o= " << generator.maszyny[i]->rozpoczecie[0] << "\t i o dlugosci= " << generator.maszyny[i]->dlugosc[0] << endl << "=================" << endl;
 	Operacja * zap = new Operacja(1,98,NULL,98);				//operacja zapychacz

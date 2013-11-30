@@ -89,12 +89,13 @@ void interfejs(Generator &generator)
 	y=przestojeMin(x);
 	z=przestojeMax(x);
 	int czasPrzestojow=200;
-	for(int i = 0; i<3; ++i)
-			generator.generujMaszyne(y,z,czasPrzestojow);
-			//generator.generujMaszyne(2,2,2);			//TESTOWE
+
+	generator.generujMaszyne(y,z,czasPrzestojow);
+	//generator.generujMaszyne(2,2,2);			//TESTOWE
+	
 	cout <<"\n===========================\n\n";
 	cout <<"OPCJA czasu wykonania zadan: " << generator.dlugoscInstancji <<endl<<endl;;
-	wyswietlZadania(generator);
+//	wyswietlZadania(generator);
 	//cout <<"OPCJA Liczba przestjow: " << liczba_przest <<endl;
 	wyswietlMaszyny(generator);
 

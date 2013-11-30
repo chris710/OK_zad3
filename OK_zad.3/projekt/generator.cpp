@@ -23,15 +23,24 @@ void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nr
 }
 
 
-Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int czasPrzestojow)
-{
-	int numer = this->maszyny.size();
-	Maszyna* Result = new Maszyna(numer);
-	this->maszyny.push_back(Result);
-	Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
-	for (int i = 0; i < Result->nPrzestojow; ++i)
+vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int czasPrzestojow)
+{	
+	int numer;
+	Maszyna* Result;
+	for(int i = 0; i<3; ++i)
 	{
-		Result->dlugosc.push_back(random(5,czasPrzestojow));
+		numer = i;
+		Result = new Maszyna(numer);
+		this->maszyny.push_back(Result);
+		Result->nPrzestojow = random(nPrzestojowMin, nPrzestojowMax);
+		//cout << "PRZESTOJOW dla maszyny " << i+1 << " = " << Result->nPrzestojow  << endl << "- - - - - - - - - - " << endl;
+		for (int j = 0; j < Result->nPrzestojow; ++j)
+		{
+			Result->dlugosc.push_back(random(5,czasPrzestojow));
+			//cout << " przestoj nr " << j+1 << " ma dlugosc \t" << Result->dlugosc[j] <<endl;
+
+		}
+		//cout <<endl;
 	}
 	//oszacowanie d³ugoœci instancji
 	for(int i = 0; i<this->liczbaZadan; ++i)
@@ -39,16 +48,29 @@ Maszyna Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax, int cza
 		for(int j=0; j<3; ++j)
 			(this->dlugoscInstancji) += this->zadania[i]->operacje[j]->czas;
 	}
-	for(int j = 0; j < Result->dlugosc.size(); ++j)
+	for(int i=0;i<3;i++){
+		Result=maszyny[i];
+		for(int j = 0; j < Result->dlugosc.size(); ++j)
 			this->dlugoscInstancji += Result->dlugosc[j];
-
-	int przedzial = (this->dlugoscInstancji/9)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
-	Result->rozpoczecie.push_back(przedzial);
-	for(int i = 1; i<Result->nPrzestojow; ++i)
-	{
-		Result->rozpoczecie.push_back(przedzial*i+Result->rozpoczecie[i-1]+Result->dlugosc[i-1]);
+		//cout << "dlugosc po koljenej maszynie=" << this->dlugoscInstancji << endl;
 	}
-	return *Result;
+
+	for(int i=0;i<3;i++){ 
+		Result=maszyny[i];
+		int przedzial = (this->dlugoscInstancji/3)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
+		Result->rozpoczecie.push_back(przedzial);
+		for(int j = 1; j<Result->nPrzestojow; ++j)
+		{	
+			if (Result->dlugosc[j-1] > przedzial){
+				Result->dlugosc[j-1]=rand()%(przedzial/2);
+				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1]);
+			}else
+				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1]);
+		}
+		}
+	
+	for(int i=0;i<3;i++)
+		return maszyny;
 }
 
 
