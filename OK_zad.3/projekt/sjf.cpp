@@ -304,7 +304,7 @@ void algorytmSJF(const Generator& generator)
 	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
 	
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/3)<<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
+	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
 }
