@@ -2,6 +2,7 @@
 
 
 
+
 void wybierz (int &preferred)			//funkcja wybiera inn¹ woln¹ maszynê
 {
 	if(0==preferred)
@@ -31,7 +32,20 @@ int wybierz (int maszyna1, int maszyna2)	//funkcja wybiera jedyn¹ woln¹ maszynê
 
 
 
-
+int optymalnadlugosc(Generator generator){
+	int x=generator.dlugoscInstancji;
+	for (int i=0;i<3;i++)
+	{
+		int licznik=0;
+		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size();j++)
+				if (generator.maszyny[i]->uszeregowanie[j]->numer==48)
+					licznik++;
+		if (licznik<generator.maszyny[i]->nPrzestojow)
+			for(int k=0;k<(generator.maszyny[i]->nPrzestojow-licznik);k++)
+				x-=generator.maszyny[i]->dlugosc[generator.maszyny[i]->nPrzestojow-1-k];
+	}
+	return (x/3);
+}
 
 
 
@@ -187,10 +201,14 @@ void algorytmLosowy(const Generator& generator)
 		dlugosc = generator.dlugosc(*generator.maszyny[i]);
 		dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
-	//plik<<"Szacowana optymalna dlugosc uszeregowania "<<(generator.dlugoscInstancji/9)<<endl;
+
+	int x=optymalnadlugosc(generator);
+	//cout<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
+
+	cout<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
+	//plik<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
 	//plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
-	//plik<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/9)<<endl;
+	cout<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
+	//plik<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 }

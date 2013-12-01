@@ -112,6 +112,21 @@ bool czyMoge(const Operacja & operacja, int czas)
 	return flag;
 }
 
+int optymalnaDlugosc(Generator generator){
+	int x=generator.dlugoscInstancji;
+	for (int i=0;i<3;i++)
+	{
+		int licznik=0;
+		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size();j++)
+				if (generator.maszyny[i]->uszeregowanie[j]->numer==48)
+					licznik++;
+		if (licznik<generator.maszyny[i]->nPrzestojow)
+			for(int k=0;k<(generator.maszyny[i]->nPrzestojow-licznik);k++)
+				x-=generator.maszyny[i]->dlugosc[generator.maszyny[i]->nPrzestojow-1-k];
+	}
+	return (x/3);
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////            ALGORYTM SJF            ///////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -303,8 +318,9 @@ void algorytmSJF(const Generator& generator)
 	dlugosc = czas_uszeregowania(generator, i);
 	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
-	int x=*generator.optymalnaDlugosc();
-	cout<<"Szacowana optymalna dlugosc uszeregowania "<< x <<endl;
+	int x=optymalnaDlugosc(generator);
+	//cout<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
+	cout<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	cout<<"Procent: "<<(float)dlugoscRealna/(generator.dlugoscInstancji/3)<<endl;
+	cout<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 }

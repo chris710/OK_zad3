@@ -73,19 +73,7 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 		return maszyny;
 }
 
-int Generator::optymalnaDlugosc(){
-	for (int i=0;i<3;i++)
-	{
-		int licznik=0;
-		for (int j=0; j<maszyny[i]->uszeregowanie.size();j++)
-				if (maszyny[i]->uszeregowanie[j]->numer==48)
-					licznik++;
-		if (licznik<maszyny[i]->nPrzestojow)
-			for(int k=0;k<(maszyny[i]->nPrzestojow-licznik);k++)
-				dlugoscInstancji-=maszyny[i]->dlugosc[maszyny[i]->nPrzestojow-1-k];
-	}
-	return (dlugoscInstancji/3);
-}
+
 
 
 
