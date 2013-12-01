@@ -37,11 +37,12 @@ int optymalnadlugosc(Generator generator){											// sprawdzamy czy jakis prz
 	for (int i=0;i<3;i++)															// dla 3 maszyn
 	{	
 		int licznik=0;
-		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size();j++)				//przechodzimy po calym uszeregowaniu
-				if (generator.maszyny[i]->uszeregowanie[j]->numer==48)				// i sprawdzamy ilosc przestojow
-					licznik++;
-		if (licznik<generator.maszyny[i]->nPrzestojow)								// nastepnie sprawdzamy czy liczba wykorzystanych przestojow 
-																					// jest mniejsza od liczby przestojow ogolem na maszynie
+		int ostatni=generator.maszyny[i]->uszeregowanie.size()-1;
+		int dlugosc=generator.maszyny[i]->uszeregowanie[ostatni]->begin + generator.maszyny[i]->uszeregowanie[ostatni]->czas;
+		for(int j=0; j<generator.maszyny[i]->nPrzestojow; j++)								// nastepnie sprawdzamy liczbe niewykorzystanych przestojow 
+			if (generator.maszyny[i]->rozpoczecie[j] > dlugosc)
+				licznik++;
+		if (licznik<generator.maszyny[i]->nPrzestojow)
 			for(int k=0;k<(generator.maszyny[i]->nPrzestojow-licznik);k++)			//jesli tak to odejmujemy czas niewykrozystanych przestojow
 				x-=generator.maszyny[i]->dlugosc[generator.maszyny[i]->nPrzestojow-1-k];	// od dlugosci instancji
 	}
@@ -57,7 +58,7 @@ void algorytmLosowy(const Generator& generator)
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
 	Operacja * op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
 	
-	//ofstream plik("plik.txt");
+	ofstream plik("plik.txt");
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
@@ -189,23 +190,23 @@ void algorytmLosowy(const Generator& generator)
 		//generator.zlacz(generator.maszyny[i]->uszeregowanie);
 		
 		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
-		/*plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
-			cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
-					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
+		//	cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+		//			<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
+		//			<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
 			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
 					<< "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
 					<< "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl<<endl;	
-		}*/
-		dlugosc = generator.dlugosc(*generator.maszyny[i]);
+		}
+		int ostatni=generator.maszyny[i]->uszeregowanie.size()-1;
+		dlugosc = generator.maszyny[i]->uszeregowanie[ostatni]->begin + generator.maszyny[i]->uszeregowanie[ostatni]->czas;
 		dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
 
 	int x=optymalnadlugosc(generator);
-	//cout<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
-
+	cout<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
 	cout<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
 	//plik<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
 	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
