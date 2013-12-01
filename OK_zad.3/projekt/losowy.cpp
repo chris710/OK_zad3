@@ -32,19 +32,20 @@ int wybierz (int maszyna1, int maszyna2)	//funkcja wybiera jedyn¹ woln¹ maszynê
 
 
 
-int optymalnadlugosc(Generator generator){
-	int x=generator.dlugoscInstancji;
-	for (int i=0;i<3;i++)
-	{
+int optymalnadlugosc(Generator generator){											// sprawdzamy czy jakis przestoj zostal niewykrozystany
+	int x=generator.dlugoscInstancji;												// podstawiamy pod x wartosc dlugosci instancji
+	for (int i=0;i<3;i++)															// dla 3 maszyn
+	{	
 		int licznik=0;
-		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size();j++)
-				if (generator.maszyny[i]->uszeregowanie[j]->numer==48)
+		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size();j++)				//przechodzimy po calym uszeregowaniu
+				if (generator.maszyny[i]->uszeregowanie[j]->numer==48)				// i sprawdzamy ilosc przestojow
 					licznik++;
-		if (licznik<generator.maszyny[i]->nPrzestojow)
-			for(int k=0;k<(generator.maszyny[i]->nPrzestojow-licznik);k++)
-				x-=generator.maszyny[i]->dlugosc[generator.maszyny[i]->nPrzestojow-1-k];
+		if (licznik<generator.maszyny[i]->nPrzestojow)								// nastepnie sprawdzamy czy liczba wykorzystanych przestojow 
+																					// jest mniejsza od liczby przestojow ogolem na maszynie
+			for(int k=0;k<(generator.maszyny[i]->nPrzestojow-licznik);k++)			//jesli tak to odejmujemy czas niewykrozystanych przestojow
+				x-=generator.maszyny[i]->dlugosc[generator.maszyny[i]->nPrzestojow-1-k];	// od dlugosci instancji
 	}
-	return (x/3);
+	return (x/3);																	// wynik juz tu dzielimy na 3 (liczba maszyn)
 }
 
 
