@@ -52,6 +52,7 @@ public:
 
 	//TODO metody
 
+	void zeruj();
 
 	/********
 	*	@ generujZadanie

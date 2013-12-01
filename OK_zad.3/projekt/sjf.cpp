@@ -132,15 +132,15 @@ int optymalnaDlugosc(Generator generator){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void algorytmSJF(const Generator& generator)
-{	ofstream plik("plik.txt");
+{	//ofstream plik("plik.txt");
 	vector<Zadanie*> zadania = generator.zadania;			//tymczasowa tablica do usuwania zadañ
 	Maszyna* maszyna;										//wskaŸnik na preferowan¹ maszynê
 	vector<int*> dlugosci;						// do usuniecia
 	obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
-	plik << "=================" << endl ;
-	for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
-		plik << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
-	plik << "=================" << endl ;		// do usuniecia
+	//plik << "=================" << endl ;
+	//for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
+	//	plik << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
+	//plik << "=================" << endl ;		// do usuniecia
 	//for (int i=0;i<3;i++)
 	//	cout << "przestoj o= " << generator.maszyny[i]->rozpoczecie[0] << "\t i o dlugosci= " << generator.maszyny[i]->dlugosc[0] << endl << "=================" << endl;
 	Operacja * zap = new Operacja(1,98,NULL,98);				//operacja zapychacz
@@ -309,12 +309,12 @@ void algorytmSJF(const Generator& generator)
 	}
 	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania
 	for (int i=0; i<3; i++){
-		plik <<endl<< "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
-		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++){
-			plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
-				 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
-				 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
-		}
+	//	plik <<endl<< "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+	//	for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++){
+	//		plik << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 
+	//			 << "\t\tZAD = " << (generator.maszyny[i]->uszeregowanie[j]->nrZadania)+1 
+	//			 << "\t\tCZAS = " << generator.maszyny[i]->uszeregowanie[j]->czas << endl;
+	//	}
 	dlugosc = czas_uszeregowania(generator, i);
 	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}

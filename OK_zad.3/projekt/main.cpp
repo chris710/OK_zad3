@@ -7,7 +7,7 @@
 *	wykonaæ pomiary czasu dla obu algorytmów
 *
 ***************/
-
+void zerwoanie(Generator genrator);
 void algorytmLosowy(const Generator& generator);
 
 int main()
@@ -25,6 +25,17 @@ int main()
 	Generator generator(nZadan);
 	interfejs(generator);
 	
+		cout<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
+	//plik<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
+	start=clock();
+	algorytmSJF(generator);
+	end=clock();
+    czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
+    cout<<"Czas: "<<czas<<endl;
+	plik<<"Czas: "<<czas<<endl;
+
+	generator.zeruj();
+
 	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
 	//plik<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
 	start=clock();
@@ -33,16 +44,11 @@ int main()
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
-	/*
-	cout<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
-	//plik<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
-	start=clock();
-	algorytmSJF(generator);
-	end=clock();
-    czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
-    cout<<"Czas: "<<czas<<endl;
-	plik<<"Czas: "<<czas<<endl;
-	*/
+
+	//generator.zeruj();
+	
+
+	
 	
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
 }

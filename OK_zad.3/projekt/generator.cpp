@@ -9,6 +9,20 @@ Generator::Generator(int nZadan)
 }
 
 
+void Generator::zeruj(){
+	for (int i=0;i<3;i++)
+		for (int j=0;j<this->maszyny[i]->uszeregowanie.size();j++)
+			this->maszyny[i]->uszeregowanie.pop_back();
+	for (int i=0;i<this->zadania.size();i++)
+		for (int j=0;j<3;j++)
+		{
+			this->zadania[i]->operacje[j]->begin=0;
+			this->zadania[i]->operacje[j]->done=false;
+			this->zadania[i]->operacje[j]->maszyna=NULL;
+		}
+		
+}
+
 
 void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad)
 {
