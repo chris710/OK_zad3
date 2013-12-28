@@ -24,20 +24,9 @@ int main()
 	cout<<"//////////////	GENEROWANIE ZADAN	///////////////////"<<endl;
 	Generator generator(nZadan);
 	interfejs(generator);
-	
-		cout<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
-	//plik<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
-	start=clock();
-	algorytmSJF(generator);
-	end=clock();
-    czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
-    cout<<"Czas: "<<czas<<endl;
-	plik<<"Czas: "<<czas<<endl;
-
-	generator.zeruj();
 
 	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
-	//plik<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
+	
 	start=clock();
 	algorytmLosowy(generator);
 	end=clock();

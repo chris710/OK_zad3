@@ -93,7 +93,7 @@ void interfejs(Generator &generator)
 	generator.generujMaszyne(y,z,czasPrzestojow);
 	//generator.generujMaszyne(2,2,2);			//TESTOWE
 	
-	wyswietlZadania(generator);
+	//wyswietlZadania(generator);
 	cout <<"\n===========================\n\n";
 	cout <<"DLUGOSC INSTANCJI: " << generator.dlugoscInstancji <<endl<<endl;
 	wyswietlMaszyny(generator);

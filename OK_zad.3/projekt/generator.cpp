@@ -62,6 +62,7 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 		for(int j=0; j<3; ++j)
 			(this->dlugoscInstancji) += this->zadania[i]->operacje[j]->czas;
 	}
+		int do_przestojow=dlugoscInstancji/3;
 	for(int i=0;i<3;i++){
 		Result=maszyny[i];
 		for(int j = 0; j < Result->dlugosc.size(); ++j)
@@ -71,18 +72,15 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 
 	for(int i=0;i<3;i++){ 
 		Result=maszyny[i];
-		int przedzial = (this->dlugoscInstancji/3)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
-		int x=rand()%50+10;
+		int przedzial = (do_przestojow)/(Result->nPrzestojow+1);			//d³ugoœæ na jednej maszynie podzielona przez iloœæ przestojów
+		int x=rand()%przedzial;
 		Result->rozpoczecie.push_back(x);
 		for(int j = 1; j<Result->nPrzestojow; ++j)
 		{	
-			if (Result->dlugosc[j-1] > przedzial){
-				Result->rozpoczecie.push_back(Result->rozpoczecie[j-1] + Result->dlugosc[j-1]+67);
-			}else
-				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1]);
+			Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1] + Result->dlugosc[j-1]);
 		}
-		}
-	
+		
+	}
 	for(int i=0;i<3;i++)
 		return maszyny;
 }

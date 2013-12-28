@@ -132,11 +132,11 @@ int optymalnaDlugosc(Generator generator){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void algorytmSJF(const Generator& generator)
-{	//ofstream plik("plik.txt");
+{	ofstream plik("plik1.txt");
 	vector<Zadanie*> zadania = generator.zadania;			//tymczasowa tablica do usuwania zadañ
 	Maszyna* maszyna;										//wskaŸnik na preferowan¹ maszynê
 	vector<int*> dlugosci;						// do usuniecia
-	obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
+	//obliczanie_dlugosci(dlugosci,zadania);		// do usuniecia
 	//plik << "=================" << endl ;
 	//for (int  i=0; i< dlugosci.size();i++)		// do usuniecia
 	//	plik << "dl=" << *dlugosci[i] << "\tGOT="<< generator.zadania[i]->delay << endl;			
@@ -155,10 +155,11 @@ void algorytmSJF(const Generator& generator)
 	
 	while (zadania.size() != 0)
 	{														
-		int a = czas_uszeregowania(generator,0);			//wybieramy najmniej zawalon¹ maszynê
-		int b = czas_uszeregowania(generator,1);
-		int c = czas_uszeregowania(generator,2);
-		//cout << "A=" <<a<< endl;
+		int a = kwantCZASU[0];//czas_uszeregowania(generator,0);			//wybieramy najmniej zawalon¹ maszynê
+		int b = kwantCZASU[1];//czas_uszeregowania(generator,1);
+		int c = kwantCZASU[2];//czas_uszeregowania(generator,2);
+		//cout << "A=" <<a<< "\tB="<< b<<"\tC=" << c << endl;
+		//cout << "A=" <<kwantCZASU[0]<< "\tB="<< kwantCZASU[1] <<"\tC=" << kwantCZASU[2] << endl;
 		if(a<=b && a<=c)
 			preferred = 0;
 		else if(b<=a && b<=c)
@@ -239,7 +240,7 @@ void algorytmSJF(const Generator& generator)
 					zadania[nrZAD]->operacje[1]->maszyna == maszyna)
 					{
 						preferred = wybierz_maszyne1(zadania[nrZAD]->operacje[0]->maszyna->numer, 
-								zadania[nrZAD]->operacje[1]->maszyna->numer);		//POPRAW
+								zadania[nrZAD]->operacje[1]->maszyna->numer);		//
 						maszyna = generator.maszyny[preferred];						//szukamy innej maszyny
 					}
 			if (czyMoge(*zadania[nrZAD]->operacje[2],kwantCZASU[preferred])){
@@ -287,9 +288,9 @@ void algorytmSJF(const Generator& generator)
 				maszyna->uszeregowanie.push_back(zap);		//wpychamy zapychacz
 				kwantCZASU[preferred]++; }
 				//wybieramy najmniej zawalon¹ maszynê
-				int a = czas_uszeregowania(generator,0);
-				int b = czas_uszeregowania(generator,1);
-				int c = czas_uszeregowania(generator,2);
+				int a = kwantCZASU[0];//czas_uszeregowania(generator,0);			//wybieramy najmniej zawalon¹ maszynê
+				int b = kwantCZASU[1];//czas_uszeregowania(generator,1);
+				int c = kwantCZASU[2];//czas_uszeregowania(generator,2);
 				//cout << "A=" <<a<< endl;
 				if(a<=b && a<=c)
 					preferred = 0;
@@ -319,8 +320,9 @@ void algorytmSJF(const Generator& generator)
 	dlugoscRealna = (dlugoscRealna > dlugosc) ? dlugoscRealna : dlugosc;
 	}
 	int x=optymalnaDlugosc(generator);
-	//cout<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
-	cout<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
-	cout<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
-	cout<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
+	plik<<"//////////////	ALGORYTM SJF	///////////////////"<<endl;
+	plik<<"Szacowana optymalna dlugosc uszeregowania "<< generator.dlugoscInstancji/3 <<endl;
+	plik<<"Obliczona optymalna dlugosc uszeregowania "<< x <<endl;
+	plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
+	plik<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 }

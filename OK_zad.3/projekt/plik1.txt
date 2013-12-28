@@ -1,0 +1,5 @@
+//////////////	ALGORYTM SJF	///////////////////
+Szacowana optymalna dlugosc uszeregowania 658
+Obliczona optymalna dlugosc uszeregowania 181
+Dlugosc rzeczywista generowana przez algorytm 245
+Procent: 1.35359
