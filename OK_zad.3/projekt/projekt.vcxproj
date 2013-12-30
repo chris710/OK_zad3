@@ -113,6 +113,7 @@
     </ClInclude>
     <ClInclude Include="operacja.h" />
     <ClInclude Include="sjf.h" />
+    <ClInclude Include="sw.h" />
     <ClInclude Include="zadanie.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
