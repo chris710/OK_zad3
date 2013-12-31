@@ -18,18 +18,18 @@ int ktora_maszyna(const Generator& generator)
 int wartosc_kary(const Maszyna & maszyna, int nr_przestoju){
 	int start, kara, i=0;
 	start = maszyna.rozpoczecie[nr_przestoju];
-		while (maszyna.uszeregowanie[i]->begin < start)
+		while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
 			i++;
-	kara = 0.3 * maszyna.uszeregowanie[i+1]->czas;
+	kara = 0.3 * maszyna.uszeregowanie[i]->czas;
 	return kara;
 }
 
 int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju){
 	int start, czas, i=0;
 	start = maszyna.rozpoczecie[nr_przestoju];
-		while (maszyna.uszeregowanie[i]->begin < start)
+		while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
 			i++;
-		czas = start - (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas);
+		czas = start - (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas);
 
 	return czas;
 }
@@ -48,6 +48,10 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie){
 		return dlugosc;
 }
 
+
+void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania){
+
+}
 
 void wyrzazanie(const Generator& generator){
 	// VECTOR USZEREGOWAN ???

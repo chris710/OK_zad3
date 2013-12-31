@@ -47,25 +47,27 @@
 *	-wyznaczenie maksymalnego czasu wy¿arzania (wykres)
 ******************************************************/
 
-																			//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
-																			//=========================================================================
-void wyrzazanie(const Generator& generator);								//		***					---	glowny algorytm
-
-int ktora_maszyna(const Generator& generator);								//		DONE				wybiera maszyne do poprawy
-
-int wartosc_kary(const Maszyna & maszyna, int nr_przestoju);				//		todo				podaje wartosc liczbowa kary na n-tym przestoju
+																				//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
+																				//=========================================================================
+void wyrzazanie(const Generator& generator);									//		***					---	glowny algorytm
 	
-int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju);								//		todo				czas pomiedzy koncem zadania poprzedniego a przestojem
+int ktora_maszyna(const Generator& generator);									//		DONE				wybiera maszyne do poprawy
 
-bool czy_mozna(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);	//							sprawdza czy mozna zamienic dane operacje 
+int wartosc_kary(const Maszyna & maszyna, int nr_przestoju);					//		DONE				podaje wartosc liczbowa kary na n-tym przestoju
+	
+int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju);				//		DONE				czas pomiedzy koncem zadania poprzedniego a przestojem
 
-void zamiana(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);		//							zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+bool czy_mozna(int zad_1, int zad_2, int nr_masz, const Generator& generator);	//							sprawdza czy mozna zamienic dane operacje 
 
-int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 					//		todo				moze sie przydaæ do poczatkowej optymalizacji
+void zamiana(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);			//							zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
 
-vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);		//							ustawienie zadan po zamianie
+int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						//		DONE				moze sie przydaæ do poczatkowej optymalizacji
 
-int czas_uszeregowania(vector<Operacja*> & uszeregowanie);					//		todo				podaje wynik czasowy uszeregowania
+vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);			//							ustawienie zadan po zamianie
+
+int czas_uszeregowania(vector<Operacja*> & uszeregowanie);						//		DONE				podaje wynik czasowy uszeregowania
+
+void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania);		//		przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
 
 
 
