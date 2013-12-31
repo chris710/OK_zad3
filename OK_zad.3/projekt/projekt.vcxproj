@@ -83,6 +83,7 @@
     </ClCompile>
     <ClCompile Include="operacja.cpp" />
     <ClCompile Include="sjf.cpp" />
+    <ClCompile Include="sw.cpp" />
     <ClCompile Include="zadanie.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

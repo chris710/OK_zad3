@@ -47,4 +47,29 @@
 *	-wyznaczenie maksymalnego czasu wy¿arzania (wykres)
 ******************************************************/
 
+																			//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
+																			//=========================================================================
+void wyrzazanie(const Generator& generator);								//		***					---	glowny algorytm
+
+int ktora_maszyna(const Generator& generator);								//		DONE				wybiera maszyne do poprawy
+
+int wartosc_kary(const Maszyna & maszyna, int nr_przestoju);				//							podaje wartosc liczbowa kary na n-tym przestoju
+	
+int czas_do_przestoju(const Maszyna & maszyna);								//							czas pomiedzy koncem zadania poprzedniego a przestojem
+
+bool czy_mozna(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);	//							sprawdza czy mozna zamienic dane operacje 
+
+void zamiana(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);		//							zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+
+int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 					//							moze sie przydaæ do poczatkowej optymalizacji
+
+vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);		//							ustawienie zadan po zamianie
+
+int czas_uszeregowania(vector<Operacja*> & uszeregowanie);					//							podaje wynik czasowy uszeregowania
+
+
+
+
+
+
 

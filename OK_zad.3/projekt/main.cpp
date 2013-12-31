@@ -1,5 +1,6 @@
 #include "main.h"
-#include "sjf.h"
+#include "sw.h"
+
 /*		MAIN		*/
 
 /**************
@@ -33,6 +34,9 @@ int main()
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
+
+	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
+	wyrzazanie(generator);
 
 	//generator.zeruj();
 	
