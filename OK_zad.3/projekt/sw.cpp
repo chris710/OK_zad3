@@ -73,21 +73,41 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 }
 
 void zamiana(int zad_1,	int zad_2, Maszyna & maszyna, Generator& generator) {
-	if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {
-		Operacja* tmp = maszyna.uszeregowanie[zad_1];
+	if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
+		Operacja* tmp = maszyna.uszeregowanie[zad_1];					//zamieniamy operacje ze sob¹ miejscami
 		maszyna.uszeregowanie[zad_1] = maszyna.uszeregowanie[zad_2];
 		maszyna.uszeregowanie[zad_2] = tmp;
-		obliczenie_uszeregowania(maszyna);
+
+		obliczenie_uszeregowania(maszyna);								//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 	}
-	return;
+	return;									//je¿eli nie s¹ spe³nione to nic nie robimy
 }
 
-bool czy_mozna(int zad_1, int zad_2, int nr_masz, const Generator& generator) {
+bool czy_mozna(int zad_1, int zad_2, int nr_maszyny, const Generator& generator) {
 	return true;
 }
 
 void obliczenie_uszeregowania(Maszyna & maszyna) {
-
+	int czas = 0;							//obecny kwant czasu
+	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
+	for(int i = 1; i < maszyna.uszeregowanie.size(); ++i) {
+		if(czas != (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i]->begin)) { //je¿eli czas siê nie zgadza
+			int czas_przestoju;				//czas rozpoczêcia ka¿dego kolejnego przestoju
+			int nastepny_przestoj = 0;		////numer nastêpnego przestoju
+			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {									//przestoje
+				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
+				if ( czas > czas_przestoju && czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {
+					if ( czas != (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i]->begin*0.3 + maszyna.dlugosc[nastepny_przestoj]))
+						break;
+					nastepny_przestoj++;
+				}
+				else
+					break;
+		}
+		else {
+			czas += maszyna.uszeregowanie[i]->begin;
+		}
+	}
 }
 
 void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
