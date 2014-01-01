@@ -98,14 +98,17 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
 //////          GLOWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void wyrzazanie(const Generator& generator, int czas_losowego){
+void wyrzazanie(const Generator& generator, int tablica[]){
 	// VECTOR USZEREGOWAN ???
 	Maszyna* maszyna;
-	int temperatura, krok;	// ?
+	int granica=tablica[0] , optimum=tablica[1] , krok=10;	// ?
+
+	// jakas petla {
 
 	maszyna = generator.maszyny[ktora_maszyna(generator)];
-	cout << ktora_maszyna(generator);
-	
+	cout << " Maszyna do poprawy to: " << ktora_maszyna(generator) << endl;
+	cout << granica << " " << optimum << endl;
+		
 	/// zapychacze
 
 

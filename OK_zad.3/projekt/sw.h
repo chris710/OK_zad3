@@ -67,7 +67,7 @@
 //		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 //=========================================================================
 //		***					---	glowny algorytm
-void wyrzazanie(const Generator& generator, int czas_losowego);									
+void wyrzazanie(const Generator& generator, int tablica[]);									
 	
 //	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 int ktora_maszyna(const Generator& generator);									
