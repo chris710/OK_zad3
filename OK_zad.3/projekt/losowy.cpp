@@ -51,7 +51,7 @@ int optymalnadlugosc(Generator generator){											// sprawdzamy czy jakis prz
 
 
 
-void algorytmLosowy(const Generator& generator)
+int algorytmLosowy(const Generator& generator)
 {
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
 	Zadanie* tmp;									//wskaŸnik do zamieniania miejscami w wektorze
@@ -245,4 +245,6 @@ void algorytmLosowy(const Generator& generator)
 	//plik<<"Dlugosc rzeczywista generowana przez algorytm "<<dlugoscRealna<<endl;
 	cout<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 	//plik<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
+
+	return dlugoscRealna;
 }

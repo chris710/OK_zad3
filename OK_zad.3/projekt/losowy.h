@@ -16,6 +16,6 @@
 *	
 ***********/
 
-void algorytmLosowy(const Generator& generator);
+int algorytmLosowy(const Generator& generator);			// zwraca czas najdluzszego uszeregowania
 
 #endif //LOSOWY_H

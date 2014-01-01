@@ -9,7 +9,7 @@
 *
 ***************/
 void zerwoanie(Generator genrator);
-void algorytmLosowy(const Generator& generator);
+int algorytmLosowy(const Generator& generator);
 
 int main()
 {
@@ -29,14 +29,14 @@ int main()
 	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
 	
 	start=clock();
-	algorytmLosowy(generator);
+	int czas_algorytmu = algorytmLosowy(generator);
 	end=clock();
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
 
 	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
-	wyrzazanie(generator);
+	wyrzazanie(generator, czas_algorytmu);
 
 	//generator.zeruj();
 	

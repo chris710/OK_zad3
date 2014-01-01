@@ -67,7 +67,7 @@
 //		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 //=========================================================================
 //		***					---	glowny algorytm
-void wyrzazanie(const Generator& generator);									
+void wyrzazanie(const Generator& generator, int czas_losowego);									
 	
 //	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 int ktora_maszyna(const Generator& generator);									
@@ -86,7 +86,7 @@ int max_kara_od_przestoju(const Maszyna & maszyna);
 //	[STUB]		sprawdza czy mozna zamienic dane operacje 
 bool czy_mozna(int zad_1,							//zadanie pierwsze
 				int zad_2,							//zadanie drugie
-				int nr_masz,						//?
+				int nr_maszyny,						//nr maszyny
 				const Generator& generator);		//generator z danymi
 
 //	[DONE]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
@@ -105,8 +105,8 @@ void obliczenie_uszeregowania(Maszyna & maszyna);
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowanie
 
 //	przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
-void sortowanie(vector<Operacja*> & uszeregowanie,	//?
-				vector<int*> & zadania);			//?
+void sortowanie(vector<Operacja*> & uszeregowanie,	//	uszeregowanie na danej maszynie
+				vector<int*> & zadania);			//  vector z posortowanymi numerami zadan 
 
 
 
