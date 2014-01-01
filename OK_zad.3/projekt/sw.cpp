@@ -37,6 +37,27 @@ int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju) {
 	return czas;						//zwracamy ten czas
 }
 
+int max_kara_od_przestoju(const Maszyna & maszyna) {
+	int result;							//numer operacji do wywalenia
+	int max = 0;						//najwiêksza strata czasu
+	int tmp;							//zmienna tymczasowa do obecnej straty czasu
+	int nr_przestoju;					//przestoj, na którym tracimy najwiêcej
+	
+	for(int i = 0; i<maszyna.nPrzestojow; ++i) {//szukamy numeru najgorszego w skutkach przestoju
+		tmp = wartosc_kary(maszyna,i);
+		if (tmp > max) {
+			max = tmp;
+			nr_przestoju = i;
+		}
+	}
+	int i = 0;							//zerowanie i
+	int start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
+	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
+		i++;							//szukamy operacji, która nachodzi na przestój
+	result = i;							//ta operacja nam przeszkadza najbardziej
+	return result;
+}
+
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie) {
 	int licznik=0;
 	for (int i=0; i<uszeregowanie.size(); i++)
