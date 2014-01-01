@@ -64,29 +64,48 @@
 		-zale¿noœæ poprawy wyników od iloœci przestojów (po³¹czyæ te 2?)
 ******************************************************/
 
-																				//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
-																				//=========================================================================
-void wyrzazanie(const Generator& generator);									//		***					---	glowny algorytm
+//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
+//=========================================================================
+//		***					---	glowny algorytm
+void wyrzazanie(const Generator& generator);									
 	
-int ktora_maszyna(const Generator& generator);									//		DONE				wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
+//	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
+int ktora_maszyna(const Generator& generator);									
 
-int wartosc_kary(const Maszyna & maszyna, int nr_przestoju);					//		DONE				podaje wartosc liczbowa kary na n-tym przestoju
+//	[DONE]		podaje wartosc liczbowa kary na n-tym przestoju
+int wartosc_kary(const Maszyna & maszyna,			//maszyna na której znajduje siê przestój
+				int nr_przestoju);					//numer przestoju
 	
-int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju);				//		DONE				czas pomiedzy koncem zadania poprzedzaj¹cego przestój a tym przestojem
+//	[DONE]		czas pomiedzy koncem zadania poprzedzaj¹cego przestój a tym przestojem
+int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
+					int nr_przestoju);				//numer przestoju
 
-int max_kara_od_przestoju(const Maszyna & maszyna);								//							zwraca czas miejsca, gdzie traci siê najwiêcej na przestoju
+//				zwraca czas miejsca, gdzie traci siê najwiêcej na przestoju
+int max_kara_od_przestoju(const Maszyna & maszyna);								
 
-bool czy_mozna(int zad_1, int zad_2, int nr_masz, const Generator& generator);	//							sprawdza czy mozna zamienic dane operacje 
+//				sprawdza czy mozna zamienic dane operacje 
+bool czy_mozna(int zad_1,							//zadanie pierwsze
+				int zad_2,							//zadanie drugie
+				int nr_masz,						//?
+				const Generator& generator);		//generator z danymi
 
-void zamiana(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);			//							zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+//				zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+void zamiana(int zad_1,								//zadanie pierwsze
+			int zad_2,								//zadanie drugie
+			vector<Operacja*> & uszeregowanie);		//wektor, na którym zamieniamy operacje
 
-int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						//		DONE				fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
+//	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
+int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						
 
-vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);			//							ustawienie zadan po zamianie
+//				ustawienie zadan po zamianie
+vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);			
 
-int czas_uszeregowania(vector<Operacja*> & uszeregowanie);						//		DONE				podaje wynik czasowy uszeregowania (czemu nie podajemy maszyny?)
+//	[DONE]	podaje wynik czasowy uszeregowania 
+int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowanie
 
-void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania);		//		przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
+//		przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
+void sortowanie(vector<Operacja*> & uszeregowanie,	//?
+				vector<int*> & zadania);			//?
 
 
 
