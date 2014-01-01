@@ -72,6 +72,23 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 		return dlugosc;					//zwracamy czas zakoñczenia ostatniej operacji (aka d³ugoœæ uszeregowania na danej maszynie)
 }
 
+void zamiana(int zad_1,	int zad_2, Maszyna & maszyna, Generator& generator) {
+	if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {
+		Operacja* tmp = maszyna.uszeregowanie[zad_1];
+		maszyna.uszeregowanie[zad_1] = maszyna.uszeregowanie[zad_2];
+		maszyna.uszeregowanie[zad_2] = tmp;
+		obliczenie_uszeregowania(maszyna);
+	}
+	return;
+}
+
+bool czy_mozna(int zad_1, int zad_2, int nr_masz, const Generator& generator) {
+	return true;
+}
+
+void obliczenie_uszeregowania(Maszyna & maszyna) {
+
+}
 
 void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
 

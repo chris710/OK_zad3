@@ -83,22 +83,23 @@ int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
 //	[DONE]		zwraca numer operacji, na której traci siê najwiêcej na przestoju
 int max_kara_od_przestoju(const Maszyna & maszyna);								
 
-//				sprawdza czy mozna zamienic dane operacje 
+//	[STUB]		sprawdza czy mozna zamienic dane operacje 
 bool czy_mozna(int zad_1,							//zadanie pierwsze
 				int zad_2,							//zadanie drugie
 				int nr_masz,						//?
 				const Generator& generator);		//generator z danymi
 
-//				zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+//	[DONE]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
 void zamiana(int zad_1,								//zadanie pierwsze
 			int zad_2,								//zadanie drugie
-			vector<Operacja*> & uszeregowanie);		//wektor, na którym zamieniamy operacje
+			Maszyna & maszyna,						//maszyna, na której zamieniamy operacje
+			Generator& generator);
 
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						
 
-//				ustawienie zadan po zamianie
-vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);			
+//	[STUB]		ustawienie zadan po zamianie
+void obliczenie_uszeregowania(Maszyna & maszyna);			
 
 //	[DONE]	podaje wynik czasowy uszeregowania 
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowanie
