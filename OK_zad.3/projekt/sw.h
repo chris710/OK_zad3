@@ -7,8 +7,14 @@
 ////////////////////////////////////////////////////////
 /******************************************************
 *				PROJEKT/UWAGI/INFORMACJE
-*	-(?) jakie s¹ niezbêdne elementy algorytmu
-*	-(?) w jaki sposób go zaimplementowaæ
+*	[INPROG] (?) jakie s¹ niezbêdne elementy algorytmu
+		-wektor/tablica "miejsc potencjalnej poprawy"
+		-zmienna przechowywuj¹ca najlepszy wynik
+		-"temperatura" oraz wspó³czynnik jej obni¿ania 
+			(po³¹czyæ jakoœ ten wspó³czynnik z tolerancj¹ na marnowany czas na przestojach?)
+		-
+*	[FIXED] (?) w jaki sposób go zaimplementowaæ
+		[]Patrz poni¿ej
 *	- kroki algorytmu (dostosowaæ?): 
 		- znajdŸ miejsca gdzie mo¿na poprawiæ wynik
 			"miejca potencjalnej poprawy"
@@ -31,41 +37,54 @@
 		h) zmniejszenie "temperatury" (u nas d³ugoœci 
 			uszeregowania)
 		i) powtarzamy
-	-(?) czym jest "miejsce startowe"?
-	-(?) w jaki sposób wyznaczaæ s¹siednie uszeregowania
-*
-*
+*	[FIXED] (?) czym jest "miejsce startowe"?
+		[]Miejsce startowe to pocz¹tkowe uszeregowanie operacji (za pomoc¹ algorytmu losowego)
+*	[FIXED] (?) w jaki sposób wyznaczaæ s¹siednie uszeregowania
+		[]Dziêki przestawianiu operacji wyznaczonych przez s¹siednie "miejsca potencjalnej poprawy"
+
 ******************************************************/
 ///////////////////////////////////////////////////////
 /******************************************************
 *						TODO LIST
-*	-klasa wy¿arzania(czy warto?)
-*	-metody/procedury (które potrzebne?)
-		-sprawdzenie czy operacja pasuje w dane miejsce
-*	-weryfikacja i pomiar czasu
-*	-prezentacja wyników (którymi parametrami badamy?)
-*	-wyznaczenie maksymalnego czasu wy¿arzania (wykres)
+*	[FIXED] klasa wy¿arzania(czy warto?)
+		[]Nie, algorytm opiera siê na procedurach
+*	[INPROG] metody/procedury (które potrzebne?) (lista gotowa?)
+		[]Patrz poni¿ej
+*	-weryfikacja i pomiar czasu 
+		-uœrednianie co najmniej 3-krotne
+		-pamiêtaj o automatyzacji testów!
+*	-prezentacja wyników (którymi parametrami badamy?)(co najmniej 5)
+		-wyznaczenie optymalnego czasu wy¿arzania (wykres)
+		-wykres z³o¿onoœci algorytmu w zale¿noœci od d³ugoœci instancji(czyli iloœci zadañ)
+			(!opcjonalne/trudne, bo trzeba by liczyæ tak d³ugo a¿ algorytm nie zejdzie 
+			poni¿ej pewnego pu³apu a nie jak normalnie, puœciæ na wyznaczony z góry czas)
+		-zale¿noœæ poprawy (stosunku uszeregowania poprawionego do pocz¹tkowego) od d³ugoœci zadañ
+		-zale¿noœæ poprawy od iloœci zadañ (po³¹czyæ te 2?)
+		-zale¿noœæ poprawy wyników od d³ugoœci przestojów
+		-zale¿noœæ poprawy wyników od iloœci przestojów (po³¹czyæ te 2?)
 ******************************************************/
 
 																				//		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 																				//=========================================================================
 void wyrzazanie(const Generator& generator);									//		***					---	glowny algorytm
 	
-int ktora_maszyna(const Generator& generator);									//		DONE				wybiera maszyne do poprawy
+int ktora_maszyna(const Generator& generator);									//		DONE				wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 
 int wartosc_kary(const Maszyna & maszyna, int nr_przestoju);					//		DONE				podaje wartosc liczbowa kary na n-tym przestoju
 	
-int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju);				//		DONE				czas pomiedzy koncem zadania poprzedniego a przestojem
+int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju);				//		DONE				czas pomiedzy koncem zadania poprzedzaj¹cego przestój a tym przestojem
+
+int max_kara_od_przestoju(const Maszyna & maszyna);								//							zwraca czas miejsca, gdzie traci siê najwiêcej na przestoju
 
 bool czy_mozna(int zad_1, int zad_2, int nr_masz, const Generator& generator);	//							sprawdza czy mozna zamienic dane operacje 
 
 void zamiana(int zad_1, int zad_2, vector<Operacja*> & uszeregowanie);			//							zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
 
-int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						//		DONE				moze sie przydaæ do poczatkowej optymalizacji
+int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						//		DONE				fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 
 vector<Operacja*> obliczenie_uszeregowania(const Maszyna & maszyna);			//							ustawienie zadan po zamianie
 
-int czas_uszeregowania(vector<Operacja*> & uszeregowanie);						//		DONE				podaje wynik czasowy uszeregowania
+int czas_uszeregowania(vector<Operacja*> & uszeregowanie);						//		DONE				podaje wynik czasowy uszeregowania (czemu nie podajemy maszyny?)
 
 void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania);		//		przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
 
