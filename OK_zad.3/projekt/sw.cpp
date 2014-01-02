@@ -90,14 +90,14 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 		return dlugosc;					//zwracamy czas zakoñczenia ostatniej operacji (aka d³ugoœæ uszeregowania na danej maszynie)
 }
 
-void zamiana(int zad_1,	int zad_2, Maszyna & maszyna, Generator& generator) {
-	//if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
-		Operacja* tmp = maszyna.uszeregowanie[zad_1];					//zamieniamy operacje ze sob¹ miejscami
-		maszyna.uszeregowanie[zad_1] = maszyna.uszeregowanie[zad_2];
-		maszyna.uszeregowanie[zad_2] = tmp;
+void zamiana( Operacja & aaa, Operacja & bbb, Maszyna & maszyna) {
+	if(mozna_zamienic(aaa, bbb)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
+		Operacja tmp = aaa;					//zamieniamy operacje ze sob¹ miejscami
+		aaa = bbb;
+		bbb = tmp;
 
 		obliczenie_uszeregowania(maszyna);								//obliczamy czasy pozosta³ych operacji w uszeregowaniu
-//	}
+	}
 																		//je¿eli nie s¹ spe³nione to nic nie robimy
 }
 

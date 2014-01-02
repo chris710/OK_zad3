@@ -91,10 +91,9 @@ bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb);
 int miejsce_w_uszer(int nr_ZAD);
 
 //	***[STUB]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
-void zamiana(int zad_1,								//zadanie pierwsze
-			int zad_2,								//zadanie drugie
-			Maszyna & maszyna,						//maszyna, na której zamieniamy operacje
-			Generator& generator);
+void zamiana(	Operacja & aaa,							// operacja wczesniejsza
+				Operacja & bbb,							// operacja pozniejsza
+				Maszyna & maszyna);						//maszyna, na której zamieniamy operacje
 
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 
