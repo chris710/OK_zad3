@@ -80,7 +80,7 @@ int wartosc_kary(const Maszyna & maszyna,			//maszyna na której znajduje siê prz
 int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
 					int nr_przestoju);				//numer przestoju
 
-//	[DONE]		zwraca numer operacji, na której traci siê najwiêcej na przestoju
+//	[DONE]		zwraca numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju
 int max_kara_od_przestoju(const Maszyna & maszyna);								
 
 //	[STUB]		sprawdza czy mozna zamienic dane operacje 

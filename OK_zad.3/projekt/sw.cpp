@@ -21,8 +21,11 @@ int wartosc_kary(const Maszyna & maszyna, int nr_przestoju) {
 	int start, kara, i=0;
 	start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
 
-	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
+	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
 		i++;							//szukamy operacji, która nachodzi na przestój
+		if (i==maszyna.uszeregowanie.size())
+			return 0;
+	}	
 	kara = 0.3 * maszyna.uszeregowanie[i]->czas;		
 	return kara;						//zwracamy 30% jej d³ugoœci
 }
@@ -30,8 +33,11 @@ int wartosc_kary(const Maszyna & maszyna, int nr_przestoju) {
 int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju) {
 	int start, czas, i=0;
 	start = maszyna.rozpoczecie[nr_przestoju];
-		while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
+		while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
 			i++;						//szukamy operacji, która nachodzi na przestój
+		if (i==maszyna.uszeregowanie.size())
+			return 0;
+	}		
 		czas = start - (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas);
 										//liczymy czas od zakoñczenia operacji poprzedzaj¹cej to przestoju
 	return czas;						//zwracamy ten czas
@@ -52,16 +58,20 @@ int max_kara_od_przestoju(const Maszyna & maszyna) {
 	}
 	int i = 0;							//zerowanie i
 	int start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
-	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start)
+	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
 		i++;							//szukamy operacji, która nachodzi na przestój
+		if (i==maszyna.uszeregowanie.size())
+			cout << "blad";
+			break;
+	}
 	result = i;							//ta operacja nam przeszkadza najbardziej
 	return result;
 }
 
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie) {
 	int licznik=0;
-	for (int i=0; i<uszeregowanie.size(); i++)
-		if (uszeregowanie[i]->numer==48)
+	for (int i=1; i<uszeregowanie.size(); i++)
+		if (uszeregowanie[i]->numer==98)
 			licznik++;
 	return licznik;
 }
@@ -125,19 +135,33 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
 void wyrzazanie(const Generator& generator, int tablica[]){
 	// VECTOR USZEREGOWAN ???
 	Maszyna* maszyna;
-	int granica=tablica[0] , optimum=tablica[1] , krok=10;	// ?
+	int granica=tablica[0] , optimum=tablica[1] , krok;	// ?
+	krok = 0.02 * (granica - optimum);
+
+	for (int i=0; i<generator.liczbaZadan; ++i)
+		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
 
 	// jakas petla {
+	int nr_maszyny = ktora_maszyna(generator);
+	maszyna = generator.maszyny[nr_maszyny];
+	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
+	cout << " Liczba zapychaczy na niej to: " << liczba_zapychaczy(maszyna->uszeregowanie) << endl;
+	cout << " Nr operacji w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
 
-	maszyna = generator.maszyny[ktora_maszyna(generator)];
-	cout << " Maszyna do poprawy to: " << ktora_maszyna(generator) << endl;
-	cout << granica << " " << optimum << endl;
-		
+
 	/// zapychacze
+
 
 
 	/// na ktore zamienic
 
-	/// wybor najlepszego
 
-}
+
+
+
+
+
+
+	// granica -= krok;		 }	// koniec petli
+
+	/// wybor najlepszego

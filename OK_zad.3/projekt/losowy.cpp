@@ -56,7 +56,7 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 	vector<Zadanie*> zadania = generator.zadania;	//tymczasowa tablica do usuwania zadañ
 	Zadanie* tmp;									//wskaŸnik do zamieniania miejscami w wektorze
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
-	Operacja * op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
+
 	
 	ofstream plik("plik.txt");
 
@@ -71,9 +71,9 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 		zadanie = zadania.size()-1;					//przegl¹damy wektor od koñca
 
 		//wybieramy najmniej zawalon¹ maszynê
-		int a = generator.dlugosc(*generator.maszyny[0]);
-		int b = generator.dlugosc(*generator.maszyny[1]);
-		int c = generator.dlugosc(*generator.maszyny[2]);
+		int a = czas[0];
+		int b = czas[1];
+		int c = czas[2];
 
 		if(a<=b && a<=c)
 			preferred = 0;
@@ -192,19 +192,21 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 			else									// a je¿eli tak to losujemy now¹ maszynê
 			{
 				zadanie = zadania.size()-1;
-
-
 				//wpychanie zapychacza
-				if(maszyna->uszeregowanie.size()>1)					//je¿eli uszeregowanie zawiera wiêcej ni¿ jedn¹ operacjê
+				if(maszyna->uszeregowanie.size()>0)				//je¿eli uszeregowanie zawiera wiêcej ni¿ jedn¹ operacjê
 				{
-					if(maszyna->uszeregowanie[maszyna->uszeregowanie.size()-2]->numer>2)	//i jest to zapychacz
-						maszyna->uszeregowanie[maszyna->uszeregowanie.size()-2]->czas++;	//to zwiêksz jego czas o jeden
+					if(maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->numer>3)	//i jest to zapychacz
+						maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->czas += 1;	//to zwiêksz jego czas o jeden			
+					else{
+						Operacja  *op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
+						maszyna->uszeregowanie.push_back(op);	
+					}
 				}
-				else
+				else{
+					Operacja  *op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
 					maszyna->uszeregowanie.push_back(op);		//albo dodaj jako now¹ operacjê nowy zapychacz
-
-				czas[preferred] += 1;
-				
+				}
+				czas[preferred] += 1;				
 				wybierz(preferred);
 			}
 		}
@@ -219,8 +221,8 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 		//generator.czysc(*generator.maszyny[i]);			//usuwanie œmieci z koñca uszeregowania
 		//generator.zlacz(generator.maszyny[i]->uszeregowanie);
 		
-		cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
-		//plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
+		plik << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
 		for (int j=0; j<generator.maszyny[i]->uszeregowanie.size(); j++)
 		{
 		//	cout << "OP = " << (generator.maszyny[i]->uszeregowanie[j]->numer)+1 

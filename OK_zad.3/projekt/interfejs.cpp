@@ -88,7 +88,7 @@ void interfejs(Generator &generator)
 	x=liczba_przestojow();
 	y=przestojeMin(x);
 	z=przestojeMax(x);
-	int czasPrzestojow=200;
+	int czasPrzestojow=100;
 
 	generator.generujMaszyne(y,z,czasPrzestojow);
 	//generator.generujMaszyne(2,2,2);			//TESTOWE

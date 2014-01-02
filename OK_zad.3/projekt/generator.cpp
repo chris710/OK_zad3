@@ -77,7 +77,12 @@ vector<Maszyna*> Generator::generujMaszyne(int nPrzestojowMin,int nPrzestojowMax
 		Result->rozpoczecie.push_back(x);
 		for(int j = 1; j<Result->nPrzestojow; ++j)
 		{	
-			Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1] + Result->dlugosc[j-1]);
+			if (Result->dlugosc[j-1] > przedzial){
+				int zet = rand()%(przedzial);
+				Result->rozpoczecie.push_back(Result->rozpoczecie[j-1] + Result->dlugosc[j-1]+zet+60);
+ 			}else
+ 				Result->rozpoczecie.push_back(przedzial + Result->rozpoczecie[j-1] + Result->dlugosc[j-1]);
+
 		}
 		
 	}
