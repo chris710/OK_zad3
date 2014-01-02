@@ -26,6 +26,7 @@ int main()
 	Generator generator(nZadan);
 	interfejs(generator);
 
+
 	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
 	
 	start=clock();
@@ -35,6 +36,7 @@ int main()
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
 
+	cout << endl << endl;
 	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
 	wyrzazanie(generator, tab);
 

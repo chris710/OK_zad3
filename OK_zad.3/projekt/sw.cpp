@@ -165,3 +165,5 @@ void wyrzazanie(const Generator& generator, int tablica[]){
 	// granica -= krok;		 }	// koniec petli
 
 	/// wybor najlepszego
+
+}
