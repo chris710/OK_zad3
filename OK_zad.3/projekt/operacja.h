@@ -21,7 +21,7 @@ public:
 	bool done;		//flaga ukoñczenia operacji czyli ¿e kolejna mo¿e siê zacz¹æ
 	int numer;		//która jest to operacja zadania
 	int nrZadania;
-	Zadanie*	parent;	//wskaŸnik na rodzica
+	Zadanie*	parent;	//wskaŸnik na zadanie, które posiada dan¹ operacjê
 	Maszyna* maszyna;	//wskaŸnik na maszynê, na której jest operacja
 	int begin;			//czas rozpoczêcia w danym uszeregowaniu
 

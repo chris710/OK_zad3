@@ -151,7 +151,7 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) 
 //////          GLOWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void wyrzazanie(const Generator& generator, int tablica[]){
+void wyzarzanie(const Generator& generator, int tablica[]){
 	// VECTOR USZEREGOWAN 
 	vector <Operacja*> zadania;
 	Maszyna* maszyna;

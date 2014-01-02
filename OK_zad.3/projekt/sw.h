@@ -68,7 +68,7 @@
 //		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 //=========================================================================
 //		***					---	glowny algorytm
-void wyrzazanie(const Generator& generator, int tablica[]);									
+void wyzarzanie(const Generator& generator, int tablica[]);									
 	
 //	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 int ktora_maszyna(const Generator& generator);									
@@ -102,7 +102,7 @@ int liczba_zapychaczy(vector<Operacja*> & uszeregowanie);
 //	[]			liczy laczny czas wszystkich zapychaczy na maszynie
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
-//	[STUB]		ustawienie zadan po zamianie
+//	[DONE]		ustawienie zadan po zamianie
 void obliczenie_uszeregowania(Maszyna & maszyna);			
 
 //	[DONE]	podaje wynik czasowy uszeregowania 

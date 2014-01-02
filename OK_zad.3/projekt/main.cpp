@@ -38,7 +38,7 @@ int main()
 
 	cout << endl << endl;
 	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
-	wyrzazanie(generator, tab);
+	wyzarzanie(generator, tab);
 
 	//generator.zeruj();
 	
