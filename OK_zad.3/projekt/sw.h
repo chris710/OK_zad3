@@ -1,5 +1,6 @@
 #include<iostream>
 #include "generator.h"
+#include<algorithm>	
 
 
 ////////////////////////////////////////////////////////

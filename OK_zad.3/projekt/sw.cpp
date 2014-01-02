@@ -132,8 +132,19 @@ void obliczenie_uszeregowania(Maszyna & maszyna) {
 	}
 }
 
-void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
+bool rosnaco(Operacja *const a, Operacja *const b)
+{
+	int asuma=0, bsuma=0;
+	asuma+=a->czas;
+	bsuma+=b->czas;
+    return asuma < bsuma;
+}
 
+void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) {
+	for (int i=0; i<uszeregowanie.size(); i++)
+		if (uszeregowanie[i]->numer < 3)
+			zadania.push_back(uszeregowanie[i]);
+	sort(zadania.begin(), zadania.end(), rosnaco);			//sortowanie vectora po czasach trwania operacji w uszeregowaniu
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -141,13 +152,16 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<int*> & zadania) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void wyrzazanie(const Generator& generator, int tablica[]){
-	// VECTOR USZEREGOWAN ???
+	// VECTOR USZEREGOWAN 
+	vector <Operacja*> zadania;
 	Maszyna* maszyna;
 	int granica=tablica[0] , optimum=tablica[1] , krok;	// ?
 	krok = 0.02 * (granica - optimum);
-
-	for (int i=0; i<generator.liczbaZadan; ++i)
+/*
+	for (int i=0; i<generator.liczbaZadan; ++i)																// wypisanie czasow gotowosci wsyzstkich zadan
 		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
+*/
+
 
 	// jakas petla {
 	int nr_maszyny = ktora_maszyna(generator);
@@ -155,8 +169,10 @@ void wyrzazanie(const Generator& generator, int tablica[]){
 	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
 	cout << " Liczba zapychaczy na niej to: " << liczba_zapychaczy(maszyna->uszeregowanie) << endl;
 	cout << " CZAS zapychaczy na niej to: " << czas_zapychaczy(maszyna->uszeregowanie) << endl;
-	cout << " Nr operacji w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
+	cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
 
+	sortowanie(maszyna->uszeregowanie, zadania);
+	cout << " Pierwszy lement ma czas to: " << zadania[0]->czas << endl;
 
 	/// zapychacze
 
@@ -166,10 +182,7 @@ void wyrzazanie(const Generator& generator, int tablica[]){
 
 
 
-
-
-
-
+	
 
 	// granica -= krok;		 }	// koniec petli
 
