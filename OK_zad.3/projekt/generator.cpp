@@ -66,7 +66,7 @@ void Generator::wyswietl() {
 			czas = op->begin + op->czas;											//liczymy obecny czas
 			if(przestoje) {															//sprawdamy czy jesteœmy na przestoju
 				left = czas - this->maszyny[i]->rozpoczecie[nastepny_przestoj];
-				if(czas > 0)
+				if(left > 0)
 					na_przestoju = true;
 			}
 			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
