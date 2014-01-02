@@ -8,6 +8,24 @@ Generator::Generator(int nZadan)
 
 }
 
+Generator::Generator()
+{
+	this->liczbaZadan = 5;
+	int gotowosc = 0;
+	for(int i = 0; i < this->liczbaZadan; ++i){
+		
+		generujZadanie(6,6,gotowosc,i);			//TESTOWE
+		gotowosc+=10;
+	}
+	for(int i = 0; i<3; ++i) {
+		Maszyna *maszyna = new Maszyna(i);
+		maszyna->nPrzestojow = 1;
+		maszyna->rozpoczecie.push_back(20);
+		maszyna->dlugosc.push_back(1);
+		this->maszyny.push_back(maszyna);
+	}
+	this->dlugoscInstancji = 0;
+}
 
 void Generator::zeruj(){
 	for (int i=0;i<3;i++)
@@ -25,31 +43,50 @@ void Generator::zeruj(){
 
 
 void Generator::wyswietl() {
-	int czas;
-	int nastepny_przestoj = 0;
-	bool przestoje = true;
+	int czas;						//obecny kwant czasu
+	int nastepny_przestoj = 0;		//numer nastêpnego przestoju na maszynie
+	bool przestoje = true;			//czy jeszcze s¹ jakieœ przestoje na maszynie
+	bool na_przestoju = false;		//czy dana operacja koliduje z przestojem
+	int left;						//ile z operacji zosta³o wykonane przed przestojem
+
 	cout<<"///////////////////////////////////////"<<endl;
 	cout<<"\t\t Wyniki: "<<endl;
-	for(int i = 0; i<3; ++i) {
-		nastepny_przestoj = 0;
+	for(int i = 0; i<3; ++i) {														//dla ka¿dej z 3 maszyn
+		nastepny_przestoj = 0;														//zerujemy na pocz¹tku dane o przestojach
 		przestoje = true;
-		for(int j = 0; j<this->maszyny[i]->uszeregowanie.size(); ++j) {
+
+		for(int j = 0; j<this->maszyny[i]->uszeregowanie.size(); ++j) {				//dla ka¿dej operacji maszyny
+			na_przestoju = false;
 			Operacja* op = this->maszyny[i]->uszeregowanie[j];
-			if(op->nrZadania >4)
+			if(op->nrZadania >4)													//je¿eli to zapychacz to wypisujemy "Z"
 				cout<<"Z";
-			else
+			else																	//je¿eli to operacja to wypisujemy numer jej zadania
 				cout<<op->nrZadania +1;
-			for(int k =0; k<op->czas/2; ++k)
-				cout<<" ";
-			czas = op->begin + op->czas;
-			if(przestoje)
-			if(this->maszyny[i]->rozpoczecie[nastepny_przestoj]< czas) {
-				cout<<"P";
-				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]/2; ++k)
+
+			czas = op->begin + op->czas;											//liczymy obecny czas
+			if(przestoje) {															//sprawdamy czy jesteœmy na przestoju
+				left = czas - this->maszyny[i]->rozpoczecie[nastepny_przestoj];
+				if(czas > 0)
+					na_przestoju = true;
+			}
+			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
+				for(int k =0; k<left; ++k) {										//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako spacje
+					cout<<".";
+				}
+				cout<<"P";															//wypisujemy przestój
+				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]; ++k)
 					cout<<" ";
 				nastepny_przestoj++;
-				if(nastepny_przestoj>=this->maszyny[i]->nPrzestojow)
-					przestoje = false;
+				if(nastepny_przestoj>=this->maszyny[i]->nPrzestojow)				//je¿eli by³ to ostatni przestój na danej maszynie
+					przestoje = false;												//to to odnotowujemy
+
+				cout<<op->nrZadania +1;
+				for(int k =0; (k<op->czas*1.3 - left); ++k)						//wypisujemy resztê operacji
+					cout<<".";
+			}
+			else {
+				for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ (jej po³owê) jako spacje
+					cout<<".";
 			}
 		}
 		cout<<endl;

@@ -46,6 +46,12 @@ public:
 	********/
 	Generator(int nZadan);
 
+	/********
+	*	@Pusty konstruktor
+	*		zawraca instancjê testow¹
+	*
+	*********/
+	Generator();
 
 	//TODO destruktor
 

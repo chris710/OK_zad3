@@ -20,11 +20,11 @@ int main()
     ofstream plik;
 
 	//ofstream plik("plik.txt",ios::app);
-
-	int nZadan = liczba_zadan(), tab[2] = {0, 0};
+	int tab[2] = {0, 0};
+	//int nZadan = liczba_zadan();
 	cout<<"//////////////	GENEROWANIE ZADAN	///////////////////"<<endl;
-	Generator generator(nZadan);
-	interfejs(generator);
+	Generator generator = Generator();
+	//interfejs(generator);
 
 
 	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;

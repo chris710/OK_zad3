@@ -22,7 +22,7 @@ class Maszyna				///klasa operacjaora
 		//TODO pola klasy
 		int numer;							//numer maszyny
 		int nPrzestojow;					//iloœæ przestojów
-		vector<int> rozpoczecie;			//wskaŸnik na wektor z czasami rozpoczêcia czasów przestoj
+		vector<int> rozpoczecie;			//wskaŸnik na wektor z czasami rozpoczêcia czasów przestojów
 		vector<int> dlugosc;				//wskaŸnik na wektor z czasami trwania czasów przestoju
 		vector<Operacja*> uszeregowanie;	//wektor zawieraj¹cy uszeregowanie operacji
 
