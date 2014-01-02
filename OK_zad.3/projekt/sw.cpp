@@ -91,18 +91,36 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 }
 
 void zamiana(int zad_1,	int zad_2, Maszyna & maszyna, Generator& generator) {
-	if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
+	//if(czy_mozna(zad_1,zad_2,maszyna.numer,generator)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
 		Operacja* tmp = maszyna.uszeregowanie[zad_1];					//zamieniamy operacje ze sob¹ miejscami
 		maszyna.uszeregowanie[zad_1] = maszyna.uszeregowanie[zad_2];
 		maszyna.uszeregowanie[zad_2] = tmp;
 
 		obliczenie_uszeregowania(maszyna);								//obliczamy czasy pozosta³ych operacji w uszeregowaniu
-	}
-	return;									//je¿eli nie s¹ spe³nione to nic nie robimy
+//	}
+																		//je¿eli nie s¹ spe³nione to nic nie robimy
 }
 
-bool czy_mozna(int zad_1, int zad_2, int nr_maszyny, const Generator& generator) {
-	return true;
+bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb) {
+	bool w_pierwsza = true;
+	if(aaa.numer == 0){
+		if (bbb.parent->delay > aaa.begin)
+			w_pierwsza = false;
+	}
+	else{
+		Operacja *poprzednia = bbb.parent->operacje[bbb.numer-1];
+		if ( (poprzednia->begin + poprzednia->czas) > aaa.begin )
+			w_pierwsza = false;
+	}
+	return w_pierwsza;
+
+}
+
+int miejsce_w_uszer(int nr_ZAD){
+	int miejsce=0;
+
+
+	return miejsce;
 }
 
 void obliczenie_uszeregowania(Maszyna & maszyna) {
@@ -172,7 +190,7 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
 
 	sortowanie(maszyna->uszeregowanie, zadania);
-	cout << " Pierwszy lement ma czas to: " << zadania[0]->czas << endl;
+	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
 	/// zapychacze
 

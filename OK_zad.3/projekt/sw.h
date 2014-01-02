@@ -84,13 +84,13 @@ int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
 //	[DONE]		zwraca numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju
 int max_kara_od_przestoju(const Maszyna & maszyna);								
 
-//	[STUB]		sprawdza czy mozna zamienic dane operacje 
-bool czy_mozna(int zad_1,							//zadanie pierwsze
-				int zad_2,							//zadanie drugie
-				int nr_maszyny,						//nr maszyny
-				const Generator& generator);		//generator z danymi
+//	***[STUB]		sprawdza czy mozna zamienic dane operacje 
+bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb);
 
-//	[DONE]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+//	***[]		wyznacza miesjce w uszeregowaniu oepracji danego zadania
+int miejsce_w_uszer(int nr_ZAD);
+
+//	***[STUB]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
 void zamiana(int zad_1,								//zadanie pierwsze
 			int zad_2,								//zadanie drugie
 			Maszyna & maszyna,						//maszyna, na której zamieniamy operacje
@@ -99,7 +99,7 @@ void zamiana(int zad_1,								//zadanie pierwsze
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
-//	[]			liczy laczny czas wszystkich zapychaczy na maszynie
+//	[DONE]			liczy laczny czas wszystkich zapychaczy na maszynie
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
 //	[DONE]		ustawienie zadan po zamianie
@@ -108,7 +108,7 @@ void obliczenie_uszeregowania(Maszyna & maszyna);
 //	[DONE]	podaje wynik czasowy uszeregowania 
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowanie
 
-//	przydatne ?			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
+//	[DONE]			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
 void sortowanie(vector<Operacja*> & uszeregowanie,	//	uszeregowanie na danej maszynie
 				vector<int*> & zadania);			//  vector z posortowanymi numerami zadan 
 
