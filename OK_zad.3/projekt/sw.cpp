@@ -170,18 +170,18 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void wyzarzanie(const Generator& generator, int tablica[]){
-	// VECTOR USZEREGOWAN 
+
 	vector <Operacja*> zadania;
 	Maszyna* maszyna;
-	int granica=tablica[0] , optimum=tablica[1] , krok;	// ?
-	krok = 0.02 * (granica - optimum);
+	int granica=tablica[0] , optimum=tablica[1] , krok;	
+	krok = 0.01 * (granica - optimum);
 /*
 	for (int i=0; i<generator.liczbaZadan; ++i)																// wypisanie czasow gotowosci wsyzstkich zadan
 		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
 */
 
 
-	// jakas petla {
+//	while (granica > optimum) {
 	int nr_maszyny = ktora_maszyna(generator);
 	maszyna = generator.maszyny[nr_maszyny];
 	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
@@ -204,6 +204,6 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 	// granica -= krok;		 }	// koniec petli
 
-	/// wybor najlepszego
+	// wybor najlepszego
 
 }
