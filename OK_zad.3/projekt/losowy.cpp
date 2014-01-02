@@ -209,10 +209,7 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 				czas[preferred] += 1;				
 				wybierz(preferred);
 			}
-		}
-
-		
-	}
+	}}
 
 	
 	int dlugosc = 0, dlugoscRealna = 0;	//do obliczania w³aœciwej d³ugoœci uszeergowania

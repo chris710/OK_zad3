@@ -96,7 +96,10 @@ void zamiana(int zad_1,								//zadanie pierwsze
 			Generator& generator);
 
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
-int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 						
+int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 
+
+//	[]			liczy laczny czas wszystkich zapychaczy na maszynie
+int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
 //	[STUB]		ustawienie zadan po zamianie
 void obliczenie_uszeregowania(Maszyna & maszyna);			

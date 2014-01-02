@@ -76,6 +76,14 @@ int liczba_zapychaczy(vector<Operacja*> & uszeregowanie) {
 	return licznik;
 }
 
+int czas_zapychaczy(vector<Operacja*> & uszeregowanie){
+	int suma=0;
+	for (int i=1; i<uszeregowanie.size(); i++)
+		if (uszeregowanie[i]->numer==98)
+			suma += uszeregowanie[i]->czas;
+	return suma;
+}
+
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 		int ostatni=uszeregowanie.size()-1;
 		int dlugosc = uszeregowanie[ostatni]->begin + uszeregowanie[ostatni]->czas;
@@ -146,6 +154,7 @@ void wyrzazanie(const Generator& generator, int tablica[]){
 	maszyna = generator.maszyny[nr_maszyny];
 	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
 	cout << " Liczba zapychaczy na niej to: " << liczba_zapychaczy(maszyna->uszeregowanie) << endl;
+	cout << " CZAS zapychaczy na niej to: " << czas_zapychaczy(maszyna->uszeregowanie) << endl;
 	cout << " Nr operacji w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
 
 
