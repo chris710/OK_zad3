@@ -24,6 +24,25 @@ void Generator::zeruj(){
 }
 
 
+void Generator::wyswietl() {
+	cout<<"///////////////////////////////////////"<<endl;
+	cout<<"\t\t Wyniki: "<<endl;
+	for(int i = 0; i<3; ++i) {
+		for(int j = 0; j<this->maszyny[i]->uszeregowanie.size(); ++j) {
+			Operacja* op = this->maszyny[i]->uszeregowanie[j];
+			if(op->nrZadania >3)
+				cout<<"P";
+			else
+				cout<<op->nrZadania;
+			for(int k =0; k<op->czas; ++k)
+				cout<<" ";
+		}
+		cout<<endl;
+	}
+	cout<<endl<<endl;
+}
+
+
 void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad)
 {
 	Zadanie* Result = new Zadanie();

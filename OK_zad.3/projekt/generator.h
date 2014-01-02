@@ -52,7 +52,21 @@ public:
 
 	//TODO metody
 
+	/********
+	*	@ zeruj
+	*		Funkcja wyzerowuje stan uszeregowania, pozwalaj¹c na ponowne u¿ycie danych
+	*	@Zwraca:
+	*		nic
+	********/
 	void zeruj();
+
+	/********
+	*	@ wyswietl
+	*		Funkcja prezentuje w ³adny sposób wyniki obecnego uszeregowania
+	*	@Zwraca:
+	*		nic
+	********/
+	void wyswietl();
 
 	/********
 	*	@ generujZadanie

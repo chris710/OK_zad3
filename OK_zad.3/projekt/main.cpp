@@ -35,6 +35,7 @@ int main()
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
+	generator.wyswietl();
 
 	cout << endl << endl;
 	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
