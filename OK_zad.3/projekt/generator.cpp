@@ -25,17 +25,32 @@ void Generator::zeruj(){
 
 
 void Generator::wyswietl() {
+	int czas;
+	int nastepny_przestoj = 0;
+	bool przestoje = true;
 	cout<<"///////////////////////////////////////"<<endl;
 	cout<<"\t\t Wyniki: "<<endl;
 	for(int i = 0; i<3; ++i) {
+		nastepny_przestoj = 0;
+		przestoje = true;
 		for(int j = 0; j<this->maszyny[i]->uszeregowanie.size(); ++j) {
 			Operacja* op = this->maszyny[i]->uszeregowanie[j];
-			if(op->nrZadania >3)
-				cout<<"P";
+			if(op->nrZadania >4)
+				cout<<"Z";
 			else
-				cout<<op->nrZadania;
-			for(int k =0; k<op->czas; ++k)
+				cout<<op->nrZadania +1;
+			for(int k =0; k<op->czas/2; ++k)
 				cout<<" ";
+			czas = op->begin + op->czas;
+			if(przestoje)
+			if(this->maszyny[i]->rozpoczecie[nastepny_przestoj]< czas) {
+				cout<<"P";
+				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]/2; ++k)
+					cout<<" ";
+				nastepny_przestoj++;
+				if(nastepny_przestoj>=this->maszyny[i]->nPrzestojow)
+					przestoje = false;
+			}
 		}
 		cout<<endl;
 	}
