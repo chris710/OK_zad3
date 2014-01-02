@@ -45,11 +45,11 @@ int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju) {
 
 int max_kara_od_przestoju(const Maszyna & maszyna) {
 	int result;							//numer operacji do wywalenia
-	int max = 0;						//najwiêksza strata czasu
+	int max = -1;						//najwiêksza strata czasu
 	int tmp;							//zmienna tymczasowa do obecnej straty czasu
 	int nr_przestoju;					//przestoj, na którym tracimy najwiêcej
 	
-	for(int i = 0; i<maszyna.nPrzestojow; ++i) {//szukamy numeru najgorszego w skutkach przestoju
+	for(int i = 0; i<maszyna.nPrzestojow; i++) {//szukamy numeru najgorszego w skutkach przestoju
 		tmp = wartosc_kary(maszyna,i);
 		if (tmp > max) {
 			max = tmp;

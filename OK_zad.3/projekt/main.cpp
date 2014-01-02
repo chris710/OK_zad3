@@ -27,7 +27,7 @@ int main()
 	//interfejs(generator);
 
 
-	cout<<"//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
+	cout<<"\n//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
 	
 	start=clock();
 	algorytmLosowy(generator, tab);

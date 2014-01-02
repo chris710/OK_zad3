@@ -14,7 +14,7 @@ Generator::Generator()
 	int gotowosc = 0;
 	for(int i = 0; i < this->liczbaZadan; ++i){
 		
-		generujZadanie(6,6,gotowosc,i);			//TESTOWE
+		generujZadanie(3,6,gotowosc,i);			//TESTOWE
 		gotowosc+=10;
 	}
 	for(int i = 0; i<3; ++i) {
@@ -24,7 +24,12 @@ Generator::Generator()
 		maszyna->dlugosc.push_back(1);
 		this->maszyny.push_back(maszyna);
 	}
-	this->dlugoscInstancji = 0;
+	this->dlugoscInstancji = 3;
+
+	for (int i=0; i<this->liczbaZadan; ++i)	{															// wypisanie czasow gotowosci wsyzstkich zadan
+		cout << "zadanie nr " << i << " jest gotowe o: " << this->zadania[i]->delay << endl;
+		this->dlugoscInstancji += (this->zadania[i]->operacje[0]->czas + this->zadania[i]->operacje[1]->czas + this->zadania[i]->operacje[2]->czas);
+	}
 }
 
 void Generator::zeruj(){

@@ -100,7 +100,7 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 
 
 
-			if(!zadania[zadanie]->operacje[0]->done && czas[preferred]>=zadania[zadanie]->delay)	//wsadŸ pierwsz¹ je¿eli min¹³ czas gotowoœci
+			if ( (!zadania[zadanie]->operacje[0]->done) && (czas[preferred]>=zadania[zadanie]->delay))	//wsadŸ pierwsz¹ je¿eli min¹³ czas gotowoœci
 				//generator.czyWejdzie(*maszyna, *zadania[zadanie]->operacje[0],czas))	
 				{	
 					if( maszyna->rozpoczecie[przestoj[preferred]] < (czas[preferred]+zadania[zadanie]->operacje[0]->czas) && !koniec_przestojow[preferred])							//je¿eli pierwszy niewykonany przestój ju¿ siê zacz¹³
