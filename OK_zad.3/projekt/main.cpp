@@ -38,8 +38,8 @@ int main()
 	generator.wyswietl();
 
 	cout << endl << endl;
-	cout<<"//////////////	WYRZAZANIE SYMULOWANE	///////////////////"<<endl;
-	wyzarzanie(generator, tab);
+	cout<<"//////////////	WYZARZANIE SYMULOWANE	///////////////////"<<endl;
+	//wyzarzanie(generator, tab, krok);
 
 	//generator.zeruj();
 	

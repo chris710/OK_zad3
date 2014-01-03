@@ -189,7 +189,7 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) 
 //////          GLOWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void wyzarzanie(const Generator& generator, int tablica[]){
+int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	/***********
 	*		TODO
 	*	-krok zmniejszania temperatury jako argument funkcji
@@ -225,8 +225,7 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 	vector <Operacja*> zadania;																				// wektor do fukcji sortowanie 
 	Maszyna* maszyna;																						// wskaznik na dana maszyne
-	int granica=tablica[0] , optimum=tablica[1] , krok;														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
-	krok = 0.01 * (granica - optimum);																		// przykladowy krok
+	int granica=tablica[0] , optimum=tablica[1];														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
 /*
 	for (int i=0; i<generator.liczbaZadan; ++i)																// wypisanie czasow gotowosci wsyzstkich zadan
 		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
@@ -276,5 +275,5 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	// granica -= krok;		 }	// koniec petli
 
 	// wybor najlepszego
-
+	return 0;
 }

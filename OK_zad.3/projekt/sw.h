@@ -1,6 +1,7 @@
 #include<iostream>
 #include "generator.h"
 #include<algorithm>	
+#include<time.h>            //do liczb pseudolosowych
 
 
 ////////////////////////////////////////////////////////
@@ -68,7 +69,9 @@
 //		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 //=========================================================================
 //		***					---	glowny algorytm
-void wyzarzanie(const Generator& generator, int tablica[]);				//[TODO]OPISZ ARGUMENTY					
+int wyzarzanie(const Generator& generator,			//generator z danymi
+				int tablica[],						//pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
+				int krok);							//[TODO]OPISZ ARGUMENTY					
 	
 //	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 int ktora_maszyna(const Generator& generator);									
