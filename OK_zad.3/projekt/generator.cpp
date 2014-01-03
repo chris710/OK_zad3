@@ -15,7 +15,7 @@ Generator::Generator()
 	for(int i = 0; i < this->liczbaZadan; ++i){
 		
 		generujZadanie(3,6,gotowosc,i);			//TESTOWE
-		gotowosc+=10;
+		gotowosc+=5;
 	}
 	for(int i = 0; i<3; ++i) {
 		Maszyna *maszyna = new Maszyna(i);
