@@ -164,7 +164,7 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
 	
-	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+	obliczenie_uszeregowania(kopia_uszeregowania, maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 
 /*	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
@@ -183,30 +183,30 @@ int miejsce_w_uszer(int nr_ZAD){
 	return miejsce;
 }
 
-void obliczenie_uszeregowania(Maszyna & maszyna) {
+void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna) {
 	int czas = 0;																							//obecny kwant czasu
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
-	for(int i = 1; i < maszyna.uszeregowanie.size(); ++i) {
-		if(czas != (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas)) {
+	for(int i = 1; i < uszeregowanie.size(); ++i) {
+		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {
 																											//je¿eli czas siê nie zgadza
 			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
 				if ( czas > czas_przestoju ) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
 															//jesteœmy obecnie na przestoju
-					if ( czas != (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj])) {
+					if ( czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj])) {
 																			//jesteœmy na przestoju i czas siê nie zgadza
-						maszyna.uszeregowanie[i]->begin = czas + maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas*0.3 
+						uszeregowanie[i]->begin = czas + uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 
 							+ maszyna.dlugosc[nastepny_przestoj];			//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
 					}														//poprzedniej operacji
 					nastepny_przestoj++;
-					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*maszyna.uszeregowanie[i]->czas; //tylko 0.3 bo resztê dodajemy póŸniej
+					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas; //tylko 0.3 bo resztê dodajemy póŸniej
 				}
 				else						//czas siê zgadza
-					maszyna.uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
+					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
 		}
-		czas += maszyna.uszeregowanie[i]->czas;								//przesuwamy kwant czasu
+		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu
 	}
 }
 
