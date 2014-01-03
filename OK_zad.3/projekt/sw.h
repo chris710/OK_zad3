@@ -93,7 +93,7 @@ void zamiana(	int aaa,										// operacja wczesniejsza
 				vector<Operacja*> & kopia_uszeregowania );			// uszeregowanie, w którym zamieniamy operacje
 
 //	***[STUB]		sprawdza czy mozna zamienic dane operacje 
-bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna);
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) ;
 
 //	***[]		wyznacza miesjce w uszeregowaniu oepracji danego zadania
 int miejsce_w_uszer(int nr_ZAD);

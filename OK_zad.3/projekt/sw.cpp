@@ -132,7 +132,7 @@ void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
 		*uszeregowanie[bbb] = tmp;
 }
 
-bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna) {
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 	if(maszyna.uszeregowanie[aaa]->numer == 0){
 		if (maszyna.uszeregowanie[bbb]->parent->delay > maszyna.uszeregowanie[aaa]->begin)
 			return false;
@@ -152,8 +152,9 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna) {
 /*	
 	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 
-	// czas uszeregowania
-	// porownanie z  temperatura
+	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
+	if (nowa_dlugosc > temperatura )
+		return false;
 
 	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
 	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
@@ -262,7 +263,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	if (!mozna_zamienic(0,0, *maszyna))
+	if (!mozna_zamienic(0,0, *maszyna, granica))
 		cout << "NIE MOZNA ZAMIENIC" << endl;
 	
 	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
