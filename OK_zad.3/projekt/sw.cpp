@@ -100,6 +100,10 @@ int czas_zapychaczy(vector<Operacja*> & uszeregowanie){
 	return suma;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 		int ostatni=uszeregowanie.size()-1;
 		int dlugosc = uszeregowanie[ostatni]->begin + uszeregowanie[ostatni]->czas;
@@ -199,7 +203,7 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 //	while (granica > optimum) {
 	int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
-	int pozostaly_czas = -2;
+	int pozostaly_czas = -2;														// jesli -2 to oznacza blad    wyzej tez tak jest
 	int nr_maszyny = ktora_maszyna(generator);
 	maszyna = generator.maszyny[nr_maszyny];
 	int max_zap = max_zapychacz(maszyna->uszeregowanie);
@@ -208,29 +212,36 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	if (przestoj[1] >= 0 )
 		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);
 
-	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
-	cout << " Liczba zapychaczy na niej to: " << liczba_zapychaczy(maszyna->uszeregowanie) << endl;
-	cout << " CZAS zapychaczy na niej to: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-
-	cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
-	cout << " wartosc kary dla tej oepracji to: " << przestoj[1] << endl;
-	cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
-	cout << " Pozostaly czas to: " << pozostaly_czas << endl;
+	cout << " Maszyna: " << nr_maszyny << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
+	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
 	cout << " MAX zapychacz ma wartosc: " << max_zap << endl;
 
-
-	sortowanie(maszyna->uszeregowanie, zadania);
-	//cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
-
-	/// zapychacze
-
-
-
-	/// na ktore zamienic
-
-
+//	sortowanie(maszyna->uszeregowanie, zadania);
+//	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
 	
+	
+	/// na ktore zamienic			!!!
+
+	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+	{	//	zamiana na zasadzie wrzucenia zadania												// ZROB Z NIM PORZADEK
+		//	dluzszego? krotszego ? LOSOWEGO <- ? 
+
+		
+
+	}
+	else 																						// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+	{	//	zamiana na zasadzie dopasowania do pozostalego czasu,								// TO Z NIA ZROB PORZADEK
+		//	ew nastpeniewrzucenie najkrotszego mozliwego (dla malej kary)																							
+		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
+		cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
+		cout << " Pozostaly czas to: " << pozostaly_czas << endl;
+
+	}
+	
+
+
+		
 
 	// granica -= krok;		 }	// koniec petli
 
