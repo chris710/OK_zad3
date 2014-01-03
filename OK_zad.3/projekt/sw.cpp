@@ -187,10 +187,18 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	int czas = 0;																							//obecny kwant czasu
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
+	int zapychacz = 0;																						//ile potrzeba zapychacza
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
-	for(int i = 1; i < uszeregowanie.size(); ++i) {
-		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {
-																											//je¿eli czas siê nie zgadza
+	for(int i = 1; i < uszeregowanie.size(); ++i) {															//dla ka¿dej operacji na maszynie
+		zapychacz = 0;
+		while(warunki(*uszeregowanie[i],czas)) {															//sprawdzenie poprawnoœci
+			zapychacz++;
+		}
+		Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
+		vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
+		uszeregowanie.insert(it,op);																//wk³adanie go do wektora
+		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
+																											
 			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
 				if ( czas > czas_przestoju ) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
@@ -277,7 +285,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	if (!mozna_zamienic(0,1, *maszyna, granica))
+	if (!mozna_zamienic(0,4, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
 	
 	
