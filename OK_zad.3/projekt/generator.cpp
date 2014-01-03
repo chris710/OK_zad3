@@ -12,9 +12,16 @@ Generator::Generator()
 {
 	this->liczbaZadan = 5;
 	int gotowosc = 0;
-	for(int i = 0; i < this->liczbaZadan; ++i){
-		
-		generujZadanie(3,6,gotowosc,i);			//TESTOWE
+
+	Zadanie* Result = new Zadanie();			//pierwsze zadanie
+	this->zadania.push_back(Result);
+	Result->delay = 0;
+	Result->operacje[0] = new Operacja(10, 0, Result, 0);
+	Result->operacje[1] = new Operacja(8, 1, Result, 0);
+	Result->operacje[2] = new Operacja(8, 2, Result, 0);
+
+	for(int i = 1; i < this->liczbaZadan; ++i){
+		generujZadanie(6,6,gotowosc,i);			//TESTOWE
 		gotowosc+=5;
 	}
 	for(int i = 0; i<3; ++i) {
@@ -103,6 +110,11 @@ void Generator::wyswietl() {
 			}
 			}
 		cout<<endl;
+		}
+	
+	cout<<endl<<"Czasy gotowoœci"<<endl;
+	for(int j = 0; j<this->liczbaZadan; ++j) {
+			cout<<j+1<<":"<<this->zadania[j]->delay<<" ";
 		}
 	cout<<endl<<endl;
 	}
