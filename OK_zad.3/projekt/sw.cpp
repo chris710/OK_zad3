@@ -221,8 +221,9 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 	
 	
-	/// na ktore zamienic			!!!
-
+	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
+	
+	//[TODO]dodaæ zapychacze do wektora miejsc poprawy
 	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
 	{	//	zamiana na zasadzie wrzucenia zadania												// ZROB Z NIM PORZADEK
 		//	dluzszego? krotszego ? LOSOWEGO <- ? 

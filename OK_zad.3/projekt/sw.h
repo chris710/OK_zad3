@@ -68,7 +68,7 @@
 //		kolumna DONE		ZREZYGNOWALEM Z WIELKICH OPISOW
 //=========================================================================
 //		***					---	glowny algorytm
-void wyzarzanie(const Generator& generator, int tablica[]);									
+void wyzarzanie(const Generator& generator, int tablica[]);				//[TODO]OPISZ ARGUMENTY					
 	
 //	[DONE]		wybiera maszyne do poprawy (z najd³u¿szym uszeregowaniem)
 int ktora_maszyna(const Generator& generator);									
