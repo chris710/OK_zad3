@@ -199,11 +199,13 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 						maszyna->uszeregowanie[maszyna->uszeregowanie.size()-1]->czas += 1;	//to zwiêksz jego czas o jeden			
 					else{
 						Operacja  *op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
+						op->begin=czas[preferred];
 						maszyna->uszeregowanie.push_back(op);	
 					}
 				}
 				else{
 					Operacja  *op = new Operacja(1,98,NULL,98);		//deklaracja zapychacza
+					op->begin=czas[preferred];
 					maszyna->uszeregowanie.push_back(op);		//albo dodaj jako now¹ operacjê nowy zapychacz
 				}
 				czas[preferred] += 1;				

@@ -52,6 +52,7 @@ void Generator::wyswietl() {
 	int nastepny_przestoj = 0;		//numer nastêpnego przestoju na maszynie
 	bool przestoje = true;			//czy jeszcze s¹ jakieœ przestoje na maszynie
 	bool na_przestoju = false;		//czy dana operacja koliduje z przestojem
+	bool zapychacz =false;
 	int left;						//ile z operacji zosta³o wykonane przed przestojem
 
 	cout<<"///////////////////////////////////////"<<endl;
@@ -71,11 +72,14 @@ void Generator::wyswietl() {
 			czas = op->begin + op->czas;											//liczymy obecny czas
 			if(przestoje) {															//sprawdamy czy jesteœmy na przestoju
 				left = czas - this->maszyny[i]->rozpoczecie[nastepny_przestoj];
-				if(left > 0)
+				if(left > 0){
 					na_przestoju = true;
-			}
+					if(op->numer >4)
+						zapychacz =true ;
+
+				}}
 			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
-				for(int k =0; k<left; ++k) {										//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako spacje
+				for(int k =0; k<left; ++k) {										//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
 					cout<<".";
 				}
 				cout<<"P";															//wypisujemy przestój
@@ -84,20 +88,23 @@ void Generator::wyswietl() {
 				nastepny_przestoj++;
 				if(nastepny_przestoj>=this->maszyny[i]->nPrzestojow)				//je¿eli by³ to ostatni przestój na danej maszynie
 					przestoje = false;												//to to odnotowujemy
-
-				cout<<op->nrZadania +1;
-				for(int k =0; (k<op->czas*1.3 - left); ++k)						//wypisujemy resztê operacji
-					cout<<".";
+				if (!zapychacz){
+					cout<<op->nrZadania +1;
+					for(int k =0; k < op->czas*0.3; ++k)						//wypisujemy resztê operacji
+						cout<<".";
+					zapychacz=false;
+				}
+				na_przestoju=false;
 			}
 			else {
 				for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ (jej po³owê) jako spacje
 					cout<<".";
 			}
-		}
+			}
 		cout<<endl;
-	}
+		}
 	cout<<endl<<endl;
-}
+	}
 
 
 void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad)
