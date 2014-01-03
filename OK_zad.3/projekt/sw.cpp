@@ -100,6 +100,21 @@ int czas_zapychaczy(vector<Operacja*> & uszeregowanie){
 	return suma;
 }
 
+bool rosnaco(Operacja *const a, Operacja *const b)
+{
+	int asuma=0, bsuma=0;
+	asuma+=a->czas;
+	bsuma+=b->czas;
+    return asuma < bsuma;
+}
+
+void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) {
+	for (int i=0; i<uszeregowanie.size(); i++)
+		if (uszeregowanie[i]->numer < 3)
+			zadania.push_back(uszeregowanie[i]);
+	sort(zadania.begin(), zadania.end(), rosnaco);			//sortowanie vectora po czasach trwania operacji w uszeregowaniu
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -107,50 +122,60 @@ int czas_zapychaczy(vector<Operacja*> & uszeregowanie){
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 		int ostatni=uszeregowanie.size()-1;
 		int dlugosc = uszeregowanie[ostatni]->begin + uszeregowanie[ostatni]->czas;
-		return dlugosc;					//zwracamy czas zakoñczenia ostatniej operacji (aka d³ugoœæ uszeregowania na danej maszynie)
+		return dlugosc;																				//zwracamy czas zakoñczenia ostatniej operacji (aka d³ugoœæ uszeregowania na danej maszynie)
 }
 
-void zamiana( Operacja & aaa, Operacja & bbb, Maszyna & maszyna) {
-	if(mozna_zamienic(aaa, bbb)) {				//je¿eli spe³nione s¹ warunki poprawnoœci
-		Operacja tmp = aaa;					//zamieniamy operacje ze sob¹ miejscami
-		aaa = bbb;
-		bbb = tmp;
-
-		obliczenie_uszeregowania(maszyna);								//obliczamy czasy pozosta³ych operacji w uszeregowaniu
-	}
-																		//je¿eli nie s¹ spe³nione to nic nie robimy
+void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
+		
+		Operacja tmp = *uszeregowanie[aaa];																			//zamieniamy operacje ze sob¹ miejscami
+		uszeregowanie[aaa] = uszeregowanie[bbb];
+		*uszeregowanie[bbb] = tmp;
 }
 
-bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb) {
-	bool w_pierwsza = true;
-	if(aaa.numer == 0){
-		if (bbb.parent->delay > aaa.begin)
-			w_pierwsza = false;
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna) {
+	if(maszyna.uszeregowanie[aaa]->numer == 0){
+		if (maszyna.uszeregowanie[bbb]->parent->delay > maszyna.uszeregowanie[aaa]->begin)
+			return false;
 	}
 	else{
-		Operacja *poprzednia = bbb.parent->operacje[bbb.numer-1];
-		if ( (poprzednia->begin + poprzednia->czas) > aaa.begin )
-			w_pierwsza = false;
+		int nr =maszyna.uszeregowanie[bbb]->numer-1;
+		Operacja *poprzednia = maszyna.uszeregowanie[bbb]->parent->operacje[nr];
+		if ( (poprzednia->begin + poprzednia->czas) > maszyna.uszeregowanie[aaa]->begin )
+			return false;
 	}
-	return w_pierwsza;
 
+	vector <Operacja*> kopia_uszeregowania;	
+	for (int i=0; i< maszyna.uszeregowanie.size(); i++)
+		kopia_uszeregowania.push_back(maszyna.uszeregowanie[i]);
+
+	zamiana(aaa, bbb, kopia_uszeregowania);
+/*	
+	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+
+	// czas uszeregowania
+	// porownanie z  temperatura
+
+	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
+	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
+		maszyna.uszeregowanie.push_back(kopia_uszeregowania[i]);
+	// koniec?
+*/
+	return true;
 }
 
 int miejsce_w_uszer(int nr_ZAD){
 	int miejsce=0;
-
-
 	return miejsce;
 }
 
 void obliczenie_uszeregowania(Maszyna & maszyna) {
-	int czas = 0;							//obecny kwant czasu
-	int czas_przestoju;						//czas rozpoczêcia ka¿dego kolejnego przestoju
-	int nastepny_przestoj = 0;				//numer nastêpnego przestoju
+	int czas = 0;																							//obecny kwant czasu
+	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
+	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
 	for(int i = 1; i < maszyna.uszeregowanie.size(); ++i) {
 		if(czas != (maszyna.uszeregowanie[i-1]->begin + maszyna.uszeregowanie[i-1]->czas)) {
-															//je¿eli czas siê nie zgadza
+																											//je¿eli czas siê nie zgadza
 			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
 				if ( czas > czas_przestoju ) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
@@ -170,20 +195,7 @@ void obliczenie_uszeregowania(Maszyna & maszyna) {
 	}
 }
 
-bool rosnaco(Operacja *const a, Operacja *const b)
-{
-	int asuma=0, bsuma=0;
-	asuma+=a->czas;
-	bsuma+=b->czas;
-    return asuma < bsuma;
-}
 
-void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) {
-	for (int i=0; i<uszeregowanie.size(); i++)
-		if (uszeregowanie[i]->numer < 3)
-			zadania.push_back(uszeregowanie[i]);
-	sort(zadania.begin(), zadania.end(), rosnaco);			//sortowanie vectora po czasach trwania operacji w uszeregowaniu
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////          GLOWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
@@ -250,7 +262,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	
+	if (!mozna_zamienic(0,0, *maszyna))
+		cout << "NIE MOZNA ZAMIENIC" << endl;
 	
 	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
 	

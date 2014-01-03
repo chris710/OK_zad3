@@ -85,18 +85,19 @@ int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
 					int nr_przestoju);				//numer przestoju
 
 //	[DONE]		zwraca numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju
-void operacja_z_max_kara(const Maszyna & maszyna, int przestoj[]);								
+void operacja_z_max_kara(const Maszyna & maszyna, int przestoj[]);	
+
+//	***[STUB]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
+void zamiana(	int aaa,										// operacja wczesniejsza
+				int bbb,										// operacja pozniejsza
+				vector<Operacja*> & kopia_uszeregowania );			// uszeregowanie, w którym zamieniamy operacje
 
 //	***[STUB]		sprawdza czy mozna zamienic dane operacje 
-bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb);
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna);
 
 //	***[]		wyznacza miesjce w uszeregowaniu oepracji danego zadania
 int miejsce_w_uszer(int nr_ZAD);
 
-//	***[STUB]		zamienia 2 operacje (inf. dod.) na danej maszynie jedna operacja zadania)
-void zamiana(	Operacja & aaa,							// operacja wczesniejsza
-				Operacja & bbb,							// operacja pozniejsza
-				Maszyna & maszyna);						//maszyna, na której zamieniamy operacje
 
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 

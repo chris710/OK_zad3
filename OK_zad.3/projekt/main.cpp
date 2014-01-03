@@ -39,7 +39,8 @@ int main()
 
 	cout << endl << endl;
 	cout<<"//////////////	WYZARZANIE SYMULOWANE	///////////////////"<<endl;
-	//wyzarzanie(generator, tab, krok);
+	int krok=1;
+	wyzarzanie(generator, tab, krok);
 
 	//generator.zeruj();
 	
