@@ -112,7 +112,7 @@ void Generator::wyswietl() {
 		cout<<endl;
 		}
 	
-	cout<<endl<<"Czasy gotowoœci"<<endl;
+	cout<<endl<<"Czasy gotowosci"<<endl;
 	for(int j = 0; j<this->liczbaZadan; ++j) {
 			cout<<j+1<<":"<<this->zadania[j]->delay<<" ";
 		}

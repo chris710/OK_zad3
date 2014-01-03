@@ -41,6 +41,7 @@ int main()
 	cout<<"//////////////	WYZARZANIE SYMULOWANE	///////////////////"<<endl;
 	int krok=1;
 	wyzarzanie(generator, tab, krok);
+	generator.wyswietl();
 
 	//generator.zeruj();
 	

@@ -164,9 +164,9 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
 	
-/*	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 
-	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
+/*	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
 		return false;
 
