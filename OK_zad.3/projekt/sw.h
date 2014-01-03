@@ -82,7 +82,7 @@ int czas_do_przestoju(const Maszyna & maszyna,		//maszyna z przestojem
 					int nr_przestoju);				//numer przestoju
 
 //	[DONE]		zwraca numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju
-int max_kara_od_przestoju(const Maszyna & maszyna);								
+void operacja_z_max_kara(const Maszyna & maszyna, int przestoj[]);								
 
 //	***[STUB]		sprawdza czy mozna zamienic dane operacje 
 bool mozna_zamienic(const Operacja & aaa, const Operacja & bbb);
@@ -99,7 +99,7 @@ void zamiana(	Operacja & aaa,							// operacja wczesniejsza
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
 //	[DONE]			liczy max czas przestoju na maszynie
-int max_zapychacz(vector<Operacja*> & uszeregowanie)
+int max_zapychacz(vector<Operacja*> & uszeregowanie);
 
 //	[DONE]			liczy laczny czas wszystkich zapychaczy na maszynie
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 

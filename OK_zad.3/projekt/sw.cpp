@@ -18,16 +18,47 @@ int ktora_maszyna(const Generator& generator)
 }
 
 int wartosc_kary(const Maszyna & maszyna, int nr_przestoju) {
-	int start, kara, i=0;
+	int start, kara=0, i=0;
 	start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
 
 	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
 		i++;							//szukamy operacji, która nachodzi na przestój
 		if (i==maszyna.uszeregowanie.size())
 			return 0;
-	}	
-	kara = 0.3 * maszyna.uszeregowanie[i]->czas;		
+	}
+	if (maszyna.uszeregowanie[i]->numer != 98)
+		kara = 0.3 * maszyna.uszeregowanie[i]->czas;		
 	return kara;						//zwracamy 30% jej d³ugoœci
+}
+
+void operacja_z_max_kara(const Maszyna & maszyna, int przestoj[]) {
+	int result;							//numer operacji do wywalenia
+	int max = -1;						//najwiêksza strata czasu
+	int tmp;							//zmienna tymczasowa do obecnej straty czasu
+	int nr_przestoju;					//przestoj, na którym tracimy najwiêcej
+	
+	for(int i = 0; i<maszyna.nPrzestojow; i++) {//szukamy numeru najgorszego w skutkach przestoju
+		tmp = wartosc_kary(maszyna,i);
+		if (tmp > max) {
+			max = tmp;
+			nr_przestoju = i;
+		}
+	}
+	if (max > 0){
+		przestoj[1] = max;
+		przestoj[2] = nr_przestoju;
+	}
+	int i = 0;							//zerowanie i
+	int start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
+	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
+		i++;							//szukamy operacji, która nachodzi na przestój
+		if (i==maszyna.uszeregowanie.size()){
+			cout << "blad";
+			break;
+		}
+	}
+	przestoj[0] = i;							//ta operacja nam przeszkadza najbardziej
+
 }
 
 int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju) {
@@ -43,30 +74,6 @@ int czas_do_przestoju(const Maszyna & maszyna, int nr_przestoju) {
 	return czas;						//zwracamy ten czas
 }
 
-int max_kara_od_przestoju(const Maszyna & maszyna) {
-	int result;							//numer operacji do wywalenia
-	int max = -1;						//najwiêksza strata czasu
-	int tmp;							//zmienna tymczasowa do obecnej straty czasu
-	int nr_przestoju;					//przestoj, na którym tracimy najwiêcej
-	
-	for(int i = 0; i<maszyna.nPrzestojow; i++) {//szukamy numeru najgorszego w skutkach przestoju
-		tmp = wartosc_kary(maszyna,i);
-		if (tmp > max) {
-			max = tmp;
-			nr_przestoju = i;
-		}
-	}
-	int i = 0;							//zerowanie i
-	int start = maszyna.rozpoczecie[nr_przestoju];//czas rozpoczêcia szukanego przestoju
-	while ( (maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) < start){
-		i++;							//szukamy operacji, która nachodzi na przestój
-		if (i==maszyna.uszeregowanie.size())
-			cout << "blad";
-			break;
-	}
-	result = i;							//ta operacja nam przeszkadza najbardziej
-	return result;
-}
 
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie) {
 	int licznik=0;
@@ -74,6 +81,15 @@ int liczba_zapychaczy(vector<Operacja*> & uszeregowanie) {
 		if (uszeregowanie[i]->numer==98)
 			licznik++;
 	return licznik;
+}
+
+int max_zapychacz(vector<Operacja*> & uszeregowanie) {
+	int max=0;
+	for (int i=1; i<uszeregowanie.size(); i++)
+		if (uszeregowanie[i]->numer==98)
+			if ( uszeregowanie[i]->czas > max)
+				max = uszeregowanie[i]->czas;
+	return max;
 }
 
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie){
@@ -182,15 +198,29 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 
 //	while (granica > optimum) {
+	int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
+	int pozostaly_czas = -2;
 	int nr_maszyny = ktora_maszyna(generator);
 	maszyna = generator.maszyny[nr_maszyny];
+	int max_zap = max_zapychacz(maszyna->uszeregowanie);
+
+	operacja_z_max_kara(*maszyna, przestoj);
+	if (przestoj[1] >= 0 )
+		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);
+
 	cout << " Maszyna do poprawy to: " << nr_maszyny << endl;
 	cout << " Liczba zapychaczy na niej to: " << liczba_zapychaczy(maszyna->uszeregowanie) << endl;
-	cout << " CZAS zapychaczy na niej to: " << czas_zapychaczy(maszyna->uszeregowanie) << endl;
-	cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << max_kara_od_przestoju(*maszyna) << endl;
+	cout << " CZAS zapychaczy na niej to: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
+
+	cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
+	cout << " wartosc kary dla tej oepracji to: " << przestoj[1] << endl;
+	cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
+	cout << " Pozostaly czas to: " << pozostaly_czas << endl;
+	cout << " MAX zapychacz ma wartosc: " << max_zap << endl;
+
 
 	sortowanie(maszyna->uszeregowanie, zadania);
-	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
+	//cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
 	/// zapychacze
 
