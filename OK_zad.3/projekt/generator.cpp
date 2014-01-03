@@ -79,9 +79,9 @@ void Generator::wyswietl() {
 
 				}}
 			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
-				for(int k =0; k<left; ++k) {										//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
-					cout<<".";
-				}
+				for(int k =0; k < op->czas*1.3-left; ++k)						//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
+						cout<<".";
+				
 				cout<<"P";															//wypisujemy przestój
 				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]; ++k)
 					cout<<" ";
@@ -90,8 +90,9 @@ void Generator::wyswietl() {
 					przestoje = false;												//to to odnotowujemy
 				if (!zapychacz){
 					cout<<op->nrZadania +1;
-					for(int k =0; k < op->czas*0.3; ++k)						//wypisujemy resztê operacji
+					for(int k =0; k<left; ++k) {										//wypisujemy resztê operacji
 						cout<<".";
+					}
 					zapychacz=false;
 				}
 				na_przestoju=false;

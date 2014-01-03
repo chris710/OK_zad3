@@ -46,6 +46,6 @@ int main()
 
 	
 	
-	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get(); cin.get();
+	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get();
 }
 
