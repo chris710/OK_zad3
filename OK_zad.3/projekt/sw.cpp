@@ -147,6 +147,9 @@ void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
 }
 
 bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
+	if(maszyna.uszeregowanie[bbb]->numer >5 )
+		return false;
+
 	if(maszyna.uszeregowanie[bbb]->numer == 0){
 		if (maszyna.uszeregowanie[bbb]->parent->delay > maszyna.uszeregowanie[aaa]->begin)
 			return false;
@@ -279,13 +282,13 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);					//jesli tak to sprawdzamy jaki mamy czas do tego przestoju
 
 	cout << " Maszyna: " << nr_maszyny << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
-	cout << " MAX zapychacz ma wartosc: " << max_zap << endl;
+	//cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
+	//cout << " MAX zapychacz ma wartosc: " << max_zap << endl;
 
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	if (!mozna_zamienic(0,4, *maszyna, granica))
+	if (!mozna_zamienic(0,3, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
 	
 	
