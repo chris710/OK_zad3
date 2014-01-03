@@ -117,10 +117,6 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowani
 //	[DONE]			posortowane nr zadan wedlug czasu trwania operacji w uszeregowaniu na danej maszynie
 void sortowanie(vector<Operacja*> & uszeregowanie,	//	uszeregowanie na danej maszynie
 				vector<int*> & zadania);			//  vector z posortowanymi numerami zadan 
-
-
-
-
-
-
-
+//	[DONE]		sprawdza czy operacja w danym miejscu spe³nia warunki uszeregowania w job shopie
+bool warunki(const Operacja & bbb,					//sprawdzana operacja
+			int czas);								//sprawdzany czas, w którym ma zacz¹æ siê operacja bbb

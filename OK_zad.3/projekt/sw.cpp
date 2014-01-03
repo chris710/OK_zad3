@@ -115,6 +115,20 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) 
 	sort(zadania.begin(), zadania.end(), rosnaco);			//sortowanie vectora po czasach trwania operacji w uszeregowaniu
 }
 
+bool warunki(const Operacja & bbb, int czas) {
+	bool w_pierwsza = true;
+	if(bbb.numer == 0){
+		if (bbb.parent->delay > czas)
+			w_pierwsza = false;
+	}
+	else{
+		Operacja *poprzednia = bbb.parent->operacje[bbb.numer-1];
+		if ( (poprzednia->begin + poprzednia->czas) > czas )
+			w_pierwsza = false;
+	}
+	return w_pierwsza;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -133,7 +147,7 @@ void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
 }
 
 bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
-	if(maszyna.uszeregowanie[aaa]->numer == 0){
+	if(maszyna.uszeregowanie[bbb]->numer == 0){
 		if (maszyna.uszeregowanie[bbb]->parent->delay > maszyna.uszeregowanie[aaa]->begin)
 			return false;
 	}
