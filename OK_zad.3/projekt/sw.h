@@ -98,6 +98,9 @@ void zamiana(	Operacja & aaa,							// operacja wczesniejsza
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
 int liczba_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
+//	[DONE]			liczy max czas przestoju na maszynie
+int max_zapychacz(vector<Operacja*> & uszeregowanie)
+
 //	[DONE]			liczy laczny czas wszystkich zapychaczy na maszynie
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
