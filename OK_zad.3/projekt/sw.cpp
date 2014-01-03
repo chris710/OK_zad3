@@ -193,18 +193,22 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	/***********
 	*		TODO
 	*	-krok zmniejszania temperatury jako argument funkcji
-	*	-szukanie najgorszego przestoju
-	*	-kombinowanie z przestojami póki nie osi¹gniemy punktu tolerancji (uzale¿niæ go od temperatury)
-	*	-kombinowanie z zapychaczami
-	*		-szukanie losowego na start
-	*		-próba zamiany kolejnych s¹siadów tej operacji z lewej i z prawej
-	*		-sprawdzanie czy s¹siedzi znajduj¹ siê w granicach uszeregowania
-	*		-wsadzenie póŸniejszej operacji na wczeœniejsze miejsce
-	*		-przeliczenie wszysktich operacji nastêpuj¹cych po tej wczeœniejszej (ju¿ przestawionej), a¿ do odkrycia miejsca startowego operacji póŸniejszej
-	*		-sprawdzenie czy wczeœniejsza operacja mo¿e wejœæ na póŸniejsze miejsce
-	*		-je¿eli nie mo¿e to kontynuujemy pêtle zgodnie ze wzorem (n to numer zapychacza): n-1,n+1; n-1,n+2, n-2,n+1, n-2,n+2 itd...
-	*		-kontynuowanie pêtli póki nie osi¹gniemy oczekiwanej poprawy (podaæ jako argument?)
-	*	-kolejny wybór maszyny, a¿ do skoñczenia siê czasu
+	*	CO PETLE:
+	*		- wybor najgorszej maszyny
+	*		- sprawdzenie czy gorszy jest przestoj czy zapychacz
+	*	
+	*	*** kombinowanie z przestojami 
+	*			
+	*	*** kombinowanie z zapychaczami
+	*			-szukanie najdluzszego na start z mozliwych
+	*			-próba zamiany kolejnych s¹siadów tej operacji z lewej i z prawej
+	*			-sprawdzanie czy s¹siedzi znajduj¹ siê w granicach uszeregowania
+	*			-wsadzenie póŸniejszej operacji na wczeœniejsze miejsce
+	*			-przeliczenie wszysktich operacji nastêpuj¹cych po tej wczeœniejszej (ju¿ przestawionej), a¿ do odkrycia miejsca startowego operacji póŸniejszej
+	*			-sprawdzenie czy wczeœniejsza operacja mo¿e wejœæ na póŸniejsze miejsce
+	*			-je¿eli nie mo¿e to kontynuujemy pêtle zgodnie ze wzorem (n to numer zapychacza): n-1,n+1; n-1,n+2, n-2,n+1, n-2,n+2 itd...
+	*			-kontynuowanie pêtli póki nie osi¹gniemy oczekiwanej poprawy (podaæ jako argument?)
+	*			-po nieudanej probie zmieniamy wartosc na false w tablicy mozliwosci pracy z danym przestojem
 	*	-zapisywanie najlepszego uszeregowania do wyniku
 	***********/
 
