@@ -142,7 +142,7 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
 		
 		Operacja tmp = *uszeregowanie[aaa];																			//zamieniamy operacje ze sob¹ miejscami
-		uszeregowanie[aaa] = uszeregowanie[bbb];
+		*uszeregowanie[aaa] = *uszeregowanie[bbb];
 		*uszeregowanie[bbb] = tmp;
 }
 
@@ -163,8 +163,8 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 		kopia_uszeregowania.push_back(maszyna.uszeregowanie[i]);
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
-/*	
-	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+	
+/*	obliczenie_uszeregowania(maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
@@ -174,7 +174,7 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
 		maszyna.uszeregowanie.push_back(kopia_uszeregowania[i]);
 	// koniec?
-*/
+*/ 
 	return true;
 }
 
@@ -277,13 +277,20 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	if (!mozna_zamienic(0,0, *maszyna, granica))
-		cout << "NIE MOZNA ZAMIENIC" << endl;
+	if (!mozna_zamienic(0,1, *maszyna, granica))
+		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
+	
+	
+	
+	
+	
+	
+	
 	
 	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
 	
 	//[TODO]dodaæ zapychacze do wektora miejsc poprawy
-	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+/*	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
 	{	//	zamiana na zasadzie wrzucenia zadania												// ZROB Z NIM PORZADEK
 		//	dluzszego? krotszego ? LOSOWEGO <- ? 
 
@@ -299,7 +306,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 
 	}
 	
-
+*/
 	// granica -= krok;		 }	// koniec petli
 
 	// wybor najlepszego

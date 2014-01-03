@@ -21,8 +21,8 @@ Generator::Generator()
 	Result->operacje[2] = new Operacja(8, 2, Result, 0);
 
 	for(int i = 1; i < this->liczbaZadan; ++i){
-		generujZadanie(6,6,gotowosc,i);			//TESTOWE
-		gotowosc+=5;
+		generujZadanie(3,6,gotowosc,i);			//TESTOWE
+		//gotowosc+=5;
 	}
 	for(int i = 0; i<3; ++i) {
 		Maszyna *maszyna = new Maszyna(i);
