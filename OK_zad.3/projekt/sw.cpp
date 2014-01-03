@@ -191,26 +191,26 @@ void sortowanie(vector<Operacja*> & uszeregowanie, vector<Operacja*> & zadania) 
 
 void wyzarzanie(const Generator& generator, int tablica[]){
 
-	vector <Operacja*> zadania;
-	Maszyna* maszyna;
-	int granica=tablica[0] , optimum=tablica[1] , krok;	
-	krok = 0.01 * (granica - optimum);
+	vector <Operacja*> zadania;																				// wektor do fukcji sortowanie 
+	Maszyna* maszyna;																						// wskaznik na dana maszyne
+	int granica=tablica[0] , optimum=tablica[1] , krok;														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
+	krok = 0.01 * (granica - optimum);																		// przykladowy krok
 /*
 	for (int i=0; i<generator.liczbaZadan; ++i)																// wypisanie czasow gotowosci wsyzstkich zadan
 		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
 */
 
 
-//	while (granica > optimum) {
+//	while (granica > optimum) {														// petla
 	int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
 	int pozostaly_czas = -2;														// jesli -2 to oznacza blad    wyzej tez tak jest
-	int nr_maszyny = ktora_maszyna(generator);
-	maszyna = generator.maszyny[nr_maszyny];
-	int max_zap = max_zapychacz(maszyna->uszeregowanie);
+	int nr_maszyny = ktora_maszyna(generator);										// wybieramy najmniej zawalona maszyne
+	maszyna = generator.maszyny[nr_maszyny];										// i przypisujemy na nia wskaznik
+	int max_zap = max_zapychacz(maszyna->uszeregowanie);							// najdluzszy zapychacza na tej maszynie
 
-	operacja_z_max_kara(*maszyna, przestoj);
-	if (przestoj[1] >= 0 )
-		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);
+	operacja_z_max_kara(*maszyna, przestoj);										// zwraca w przestoj[3] kolejno: numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju; wartosc kary dla tej oepracji;	nr_przestoju z kara;
+	if (przestoj[1] >= 0 )															// sprawdzamy czy istnieje przestoj z kara
+		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);					//jesli tak to sprawdzamy jaki mamy czas do tego przestoju
 
 	cout << " Maszyna: " << nr_maszyny << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
 	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
@@ -231,7 +231,7 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 		
 
 	}
-	else 																						// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+		else 																					// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 	{	//	zamiana na zasadzie dopasowania do pozostalego czasu,								// TO Z NIA ZROB PORZADEK
 		//	ew nastpeniewrzucenie najkrotszego mozliwego (dla malej kary)																							
 		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
@@ -240,9 +240,6 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 
 	}
 	
-
-
-		
 
 	// granica -= krok;		 }	// koniec petli
 
