@@ -198,6 +198,7 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	*		- sprawdzenie czy gorszy jest przestoj czy zapychacz
 	*	
 	*	*** kombinowanie z przestojami 
+	*			-zamieniamy kolidujaca operacja z bedaca po przestoju liczona od konca uszeregowania krotsza od kolidujacej
 	*			
 	*	*** kombinowanie z zapychaczami
 	*			-szukanie najdluzszego na start z mozliwych
@@ -211,6 +212,15 @@ void wyzarzanie(const Generator& generator, int tablica[]){
 	*			-po nieudanej probie zmieniamy wartosc na false w tablicy mozliwosci pracy z danym przestojem
 	*	-zapisywanie najlepszego uszeregowania do wyniku
 	***********/
+
+	/*
+	petle:
+		- z czasem
+		- tak dlugo az nie poprawimy najgorszej maszyny (bedzie inna najgorsza)
+		- z zapychaczami
+		- z przestojami
+
+	*/
 
 
 	vector <Operacja*> zadania;																				// wektor do fukcji sortowanie 
