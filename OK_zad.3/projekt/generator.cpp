@@ -72,7 +72,7 @@ void Generator::wyswietl() {
 			na_przestoju = false;
 			Operacja* op = this->maszyny[i]->uszeregowanie[j];
 			if(op->nrZadania >4)													//je¿eli to zapychacz to wypisujemy "Z"
-				cout<<"Z";
+				cout<<"Zp";
 			else																	//je¿eli to operacja to wypisujemy numer jej zadania
 				cout<<op->nrZadania +1<<op->numer+1;
 

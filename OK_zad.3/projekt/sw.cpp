@@ -202,7 +202,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
 	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
-		if(!uszeregowanie[i]->nrZadania>3) {	
+		if(!uszeregowanie[i]->numer > 3) {	
 			while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
 				zapychacz++;
 			}
