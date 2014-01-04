@@ -15,19 +15,6 @@ using namespace std;
 
 
 
-
-/***********
-*	@ czas_wykonania
-*		funkcja pokazuj¹ca mo¿liwe opcje wyboru zakresu losowanych liczb dla czasów wykonania operacji
-*	@ Argumenty:
-*		
-*	@ Zwraca:
-*		wybran¹ opjê			
-* 
-***********/
-int czas_wykonania();
-
-
 /*********
 *	@ liczba_zadan
 *		wczytuje od u¿ytkownika liczbê zadañ dla generatora
@@ -39,11 +26,11 @@ int liczba_zadan();
 
 /***********
 *	@ liczba_przestojow
-*		funkcja pokazuj¹ca mo¿liwe opcje wyboru liczby losowanych przestojow
+*		wczytuje od u¿ytkownika liczbê losowanych przestojow
 *	@ Argumenty:
 *		
 *	@ Zwraca:
-*		wybran¹ opjê	
+*		wybran¹ przestojów podan¹ przez usera	
 * 
 ***********/
 int liczba_przestojow();
@@ -58,9 +45,6 @@ int liczba_przestojow();
 * 
 ***********/
 
-int przestojeMin(int wybor);
-int przestojeMax(int wybor);
-
 
 /***********
 *	@ interfejs
@@ -74,7 +58,7 @@ int przestojeMax(int wybor);
 ***********/
 
 
-void interfejs(Generator & generator);
+void interfejs(Generator & generator, int nPrzestojow);
 
 
 
