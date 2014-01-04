@@ -26,10 +26,15 @@ int wartosc_kary(const Maszyna & maszyna, int nr_przestoju) {
 		if (i==maszyna.uszeregowanie.size())
 			return 0;
 	}
+
+	if ((maszyna.uszeregowanie[i]->begin + maszyna.uszeregowanie[i]->czas) == start)
+		return 0;
+
 	if (maszyna.uszeregowanie[i]->numer != 98)
 		kara = 0.3 * maszyna.uszeregowanie[i]->czas;		
 	return kara;						//zwracamy 30% jej d³ugoœci
 }
+
 
 void operacja_z_max_kara(const Maszyna & maszyna, int przestoj[]) {
 	int result;							//numer operacji do wywalenia
@@ -169,11 +174,11 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 	
 	if (!obliczenie_uszeregowania(kopia_uszeregowania, maszyna))																//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 		return false;
-/*		
+		
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
 		return false;
-*/
+
 	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
 	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
 		maszyna.uszeregowanie.push_back(kopia_uszeregowania[i]);
@@ -259,123 +264,206 @@ bool porownaj(vector<int> a, vector<int> b) {
 	return a[0]<b[0];
 }
 
+bool wedlug_p(vector <int> a, vector <int> b)
+{
+	int asuma=0, bsuma=0;
+	asuma+=a[0];
+	bsuma+=b[0];
+    return asuma > bsuma;
+}
+
+void sortowanie_przestojow(vector<vector<int> > & przestoje, Maszyna & maszyna){
+	for(int i = 0; i<maszyna.nPrzestojow; i++) {//szukamy numeru najgorszego w skutkach przestoju
+		vector <int> ten;
+		int kara = wartosc_kary(maszyna,i);
+		if ( kara == 0 )
+			continue;
+
+		ten.push_back( kara );
+		int j = 0;						
+		int start = maszyna.rozpoczecie[i];														//czas rozpoczêcia szukanego przestoju
+		while ( (maszyna.uszeregowanie[j]->begin + maszyna.uszeregowanie[j]->czas) < start){
+			j++;																				//szukamy operacji, która nachodzi na przestój
+			if (i==maszyna.uszeregowanie.size()){
+				break;
+			}
+		}
+		ten.push_back(j);
+		przestoje.push_back(ten);
+	}
+
+	sort(przestoje.begin(), przestoje.end(), wedlug_p);
+
+}
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////          GLOWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
+//////          G£ÓWNY ALGORYTM           ////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int wyzarzanie(const Generator& generator, int tablica[], int krok) {
-	/***********
-	*		TODO
-	*	-krok zmniejszania temperatury jako argument funkcji
-	*	CO PETLE:
-	*		- wybor najgorszej maszyny
-	*		- sprawdzenie czy gorszy jest przestoj czy zapychacz
-	*	
-	*	*** kombinowanie z przestojami 
-	*			-zamieniamy kolidujaca operacja z bedaca po przestoju liczona od konca uszeregowania krotsza od kolidujacej
-	*			
-	*	*** kombinowanie z zapychaczami
-	*			-szukanie najdluzszego na start z mozliwych
-	*			-próba zamiany kolejnych s¹siadów tej operacji z lewej i z prawej
-	*			-sprawdzanie czy s¹siedzi znajduj¹ siê w granicach uszeregowania
-	*			-wsadzenie póŸniejszej operacji na wczeœniejsze miejsce
-	*			-przeliczenie wszysktich operacji nastêpuj¹cych po tej wczeœniejszej (ju¿ przestawionej), a¿ do odkrycia miejsca startowego operacji póŸniejszej
-	*			-sprawdzenie czy wczeœniejsza operacja mo¿e wejœæ na póŸniejsze miejsce
-	*			-je¿eli nie mo¿e to kontynuujemy pêtle zgodnie ze wzorem (n to numer zapychacza): n-1,n+1; n-1,n+2, n-2,n+1, n-2,n+2 itd...
-	*			-kontynuowanie pêtli póki nie osi¹gniemy oczekiwanej poprawy (podaæ jako argument?)
-	*			-po nieudanej probie zmieniamy wartosc na false w tablicy mozliwosci pracy z danym przestojem
-	*	-zapisywanie najlepszego uszeregowania do wyniku
+    /***********
+    *                                ~~~~~~~~<[[ TODO ]]>~~~~~~~~
+    *    [DONE]krok zmniejszania temperatury jako argument funkcji
+    *    [DONE]zapisanie do 3 intów d³ugoœci uszeregowania ka¿dej z maszyn
+    *    PÊTLA Z CZASEM:
+    *       [DONE]wybór najgorszej maszyny
+    *       PÊTLA Z MASZYN¥
+    *             [DONE]kontynuowanie pêtli póki nie osi¹gniemy oczekiwanej poprawy (tzn. czas uszeregowania na danej maszynie musi byæ lepszy od czasu uszeregowania na 2-giej najgorszej maszynie
+    *              [DONE]sprawdzenie czy gorszy jest przestój czy zapychacz
+    *    
+    *             PÊTLA Z PRZESTOJAMI (je¿eli najgorszy jest przestój)
+    *                    -próbujemy zamieniæ koliduj¹c¹ operacja z bêdac¹ po przestoju liczona od koñca uszeregowania krótsza od koliduj¹cej
+    *            -je¿eli ¿adna zamiana nie poprawia czasu/nie jest mo¿liwa to przechodzimy na nastêpny przestój w posortowanym wektorze najgorszych przestojów do skutku
+    *             PÊTLA Z ZAPYCHACZAMI (je¿eli najgorszy jest zapychacz)
+    *            -szukanie najgorszego zapychacza z mo¿liwych na start
+    *            -próba zamiany kolejnych s¹siadów tej operacji z lewej i z prawej
+    *            -sprawdzanie czy s¹siedzi znajduj¹ siê w granicach uszeregowania
+    *            -wsadzenie póŸniejszej operacji na wczeœniejsze miejsce
+    *            -przeliczenie wszysktich operacji nastêpuj¹cych po tej wczeœniejszej (ju¿ przestawionej), a¿ do odkrycia miejsca startowego operacji póŸniejszej
+    *            -sprawdzenie czy wczeœniejsza operacja mo¿e wejœæ na póŸniejsze miejsce
+    *            -je¿eli nie mo¿e to kontynuujemy pêtle zgodnie ze wzorem (n to numer zapychacza):  n-1 z n+1, n+2…; n-2 z n+1 itd.
+    *            [PRZENIESIONE]sprawdzamy czy osi¹gniêty wynik jest lepszy od obecnej temperatury, je¿eli nie to zaniechujemy zmiany
+    *     [DONE]je¿eli nast¹pi³a poprawa wzglêdem poprzedniego najlepszego wyniku to zapisujemy czas uszeregowania na drugiej najgorszej maszynie jako tymczasowe najlepsze uszergowanie (wynik to int)
+    *     [DONE]zmniejszamy temperaturê o krok
+    *     [DONE]najlepszy czas uszeregowania zwracany jako wynik
+    ***********/
 
-	petle:
-		- z czasem
-		- tak dlugo az nie poprawimy najgorszej maszyny (bedzie inna najgorsza)
-		- z zapychaczami
-		- z przestojami
+	srand(NULL);																								//zmienne do liczenia czasu
+	clock_t start;
+	clock_t koniec;
+	float czas=0;
+	int wynik;    																							// najlepszy tymczasowy wynik (póŸniej jest zwracany jako ostateczny)
+	Maszyna* maszyna;                   																		// wskaznik na maszynê która bêdzie obrabiana
+	int granica=tablica[0] , optimum=tablica[1];       														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
 
-	***********/
+	start=clock();         													       						    //rozpoczynamy odliczanie czasu
+	while (czas < 60) {						       															// PÊTLA Z CZASEM
 
+		int dlugosc0 = czas_uszeregowania(generator.maszyny[0]->uszeregowanie);								 
+		int dlugosc1 = czas_uszeregowania(generator.maszyny[1]->uszeregowanie);								//LICZENIE CZASÓW MASZYN
+		int dlugosc2 = czas_uszeregowania(generator.maszyny[2]->uszeregowanie);
 
+		bool mozliwa_poprawa = true;
+		int najgorsza_maszyna = ktora_maszyna(generator);													// wybieramy najbardziej zawalona maszyne
+		maszyna = generator.maszyny[najgorsza_maszyna];														// przypisujemy wskaznik na najgorsza maszyne
+		int czas_drugiej_najgorszej;																		// czas drugiej najgorszej
 	
-	
-	
-	vector <Operacja*> zadania;														// wektor do fukcji sortowanie 
-	Maszyna* maszyna;																// wskaznik na dana maszyne
-	int granica=tablica[0] , optimum=tablica[1];									// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
+		if((dlugosc0>dlugosc1 && dlugosc0<dlugosc2) || (dlugosc0<dlugosc1 && dlugosc0>dlugosc2))
+			czas_drugiej_najgorszej = dlugosc0;
+		if((dlugosc1>dlugosc2 && dlugosc1<dlugosc0) || (dlugosc1>dlugosc0 && dlugosc1<dlugosc2))
+			czas_drugiej_najgorszej = dlugosc1;
+		else
+			czas_drugiej_najgorszej = dlugosc2;
 
-
-
-//	while (granica > optimum) {														// petla
-	int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
-	int pozostaly_czas = -2;														// jesli -2 to oznacza blad    wyzej tez tak jest
-	int nr_maszyny = ktora_maszyna(generator);										// wybieramy najmniej zawalona maszyne
-	maszyna = generator.maszyny[nr_maszyny];										// i przypisujemy na nia wskaznik
-	int max_zap = max_zapychacz(maszyna->uszeregowanie);							// najdluzszy zapychacza na tej maszynie
-
-	operacja_z_max_kara(*maszyna, przestoj);										// zwraca w przestoj[3] kolejno: numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju; wartosc kary dla tej oepracji;	nr_przestoju z kara;
-	if (przestoj[1] >= 0 )															// sprawdzamy czy istnieje przestoj z kara
-		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);					//jesli tak to sprawdzamy jaki mamy czas do tego przestoju
-
-	cout << " Maszyna: " << nr_maszyny << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
-	cout << " MAX zapychacz ma wartosc: " << max_zap << endl << endl;
-
-	vector<vector<int> > zapychacze;
-	sortowanie_zapychaczy(zapychacze, maszyna->uszeregowanie);
-
-	if (!mozna_zamienic(2,3, *maszyna, granica))
-		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
-
-	
-//////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
-	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
-	{	// ZAPYCHACZE
-
-
-//		// zmiana zapychacza!
-
-		int miejsce = miejsce_w_uszer(max_zap, *maszyna);
-
-		bool zamieniono=false;
-		for (int i=miejsce-1; i>=0; i--){
-			for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
-				if (maszyna->uszeregowanie[j]->numer != 98)
-					if (mozna_zamienic(i,j, *maszyna, granica)){
-						cout << endl << "ZAMIENIONO" << endl << endl;
-						zamieniono=true;
-					}
-			if (zamieniono==true)
-				break;
-		}
-
-	
-	}
-		else 																					// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
-	{	 // PRZESTOJE											
+		bool koniec_zap = false, koniec_przest = false;		
 		
-		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
-		cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
-		cout << " Pozostaly czas to: " << pozostaly_czas << endl;
+		while (czas_uszeregowania(generator.maszyny[najgorsza_maszyna]->uszeregowanie) > czas_drugiej_najgorszej) {            //PÊTLA Z MASZYN¥
 
 
-//		//zmiana przestoju !!!
+			cout << " Maszyna: " << najgorsza_maszyna 
+				 << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) 
+				 <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
 
-		bool zamieniono=false;
-		for (int i=(maszyna->uszeregowanie.size()-1); i>przestoj[0]; i--){
-			if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoj[0]])
-				if (mozna_zamienic(przestoj[0],i, *maszyna, granica)){
-						cout << endl << "ZAMIENIONO" << endl << endl;
-						zamieniono=true;
-					}		
-			if (zamieniono==true)
+//			int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
+//			int pozostaly_czas = -2;														// jesli -2 to oznacza blad    wyzej tez tak jest
+//			int max_zap = max_zapychacz(maszyna->uszeregowanie);							// najdluzszy zapychacza na tej maszynie
+//			operacja_z_max_kara(*maszyna, przestoj);										// zwraca w przestoj[3] kolejno: numer operacji W USZEREGOWANIU, na której traci siê najwiêcej na przestoju; wartosc kary dla tej oepracji;	nr_przestoju z kara;
+//			if (przestoj[1] >= 0 )															// sprawdzamy czy istnieje przestoj z kara
+//				pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);					//jesli tak to sprawdzamy jaki mamy czas do tego przestoju
+//			cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
+//			cout << " MAX zapychacz ma wartosc: " << max_zap << endl << endl;
+
+			vector<vector<int> > zapychacze;																
+			sortowanie_zapychaczy(zapychacze, maszyna->uszeregowanie);										// sortujemy zapychacze poz wzgledem dlugosci ich trwania
+
+			vector<vector<int> > przestoje;
+			sortowanie_przestojow(przestoje, *maszyna);														// sortujemy przestoje poz wzgledem dlugosci ich trwania
+
+			if (przestoje.size()==0){
+				koniec_zap=true;
+				koniec_przest=true;
+			}
+
+/*			cout << endl;
+			for (int i=0; i<przestoje.size(); i++){
+				for (int j=0; j<2; j++)														// WYPISYWANIE POSORTWANYCH PRZESTOJOW
+					cout << przestoje[i][j] << "\t" ;
+				cout << endl;
+			}													
+
+			if (!mozna_zamienic(2,3, *maszyna, czas_drugiej_najgorszej))					// PROBNA ZAMIANA
+				cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;			*/
+
+	
+	//////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+														
+			if ( (koniec_zap == false) && (zapychacze[0][0] >= przestoje[0][0])  )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+			{	// ZAPYCHACZE
+				bool zamieniono=false;
+				int ktory = 0;
+				while ( (zamieniono == false) && (ktory < zapychacze.size()) ){
+					int miejsce = zapychacze[ktory][1];
+					for (int i=miejsce-1; i>=0; i--){
+						for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
+							if (maszyna->uszeregowanie[j]->numer != 98)
+								if (mozna_zamienic(i,j, *maszyna, granica)){
+									cout << endl << "ZAMIENIONO" << endl << endl;
+									zamieniono=true;
+								}
+					}	// koniec for
+					ktory++;
+				}	//koniec while
+
+				if(zamieniono == false)
+					koniec_zap = true;
+				else
+					koniec_zap = false;
+			}	//koniec zapychaczy
+			else if ( koniec_przest == false)																			// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+			{	 // PRZESTOJE											
+				int ktory=0;
+				bool zamieniono=false;
+/*				cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
+				cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
+				cout << " Pozostaly czas to: " << pozostaly_czas << endl;										*/
+				while ( (zamieniono == false) && (ktory < przestoje.size()) ){
+					for (int i=(maszyna->uszeregowanie.size()-1); i>przestoje[ktory][1]; i--){
+						if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoje[ktory][0]])
+							if (mozna_zamienic(przestoje[ktory][0],i, *maszyna, granica)){
+								cout << endl << "ZAMIENIONO" << endl << endl;
+								zamieniono=true;
+							}
+					}
+					ktory++;
+				}
+					if(zamieniono == false)
+						koniec_zap = true;
+					else
+						koniec_zap = false;
+
+				} //koniec pêtli z przestojami
+			if (koniec_zap==true && koniec_przest==true){
+				mozliwa_poprawa=false;
 				break;
-		}
+			}
 
-	}
-*/
+			}  //koniec pêtli z maszyn¹
+		if (czas_uszeregowania(maszyna->uszeregowanie) < czas_drugiej_najgorszej )
+			wynik = czas_drugiej_najgorszej;									//zmiana NAJGORSZEGO CZASU (CZYLI DRUGIEJ MASZYNY)
+		else
+			wynik = czas_uszeregowania(maszyna->uszeregowanie);
+     	koniec=clock();
+		czas=(float)(koniec-start)/CLOCKS_PER_SEC;							//obliczanie bie¿¹cego czasu
+		if (mozliwa_poprawa==false)
+			cout << "****************** NIEMOZLIWA POPRAWA ****************** " << endl << endl;
+			break;
+	}    // koniec pêtli z czasem
 
-	// wybor najlepszego
-	return 0;
+   //ZWRACANIE WYNIKU (NAJLEPSZEGO NAPOTKANEGO PO DRODZE CZASU NAJGORSZEJ MASZYNY)
+   cout << " NASZ WYNIK TO = " <<wynik <<endl;
+   return wynik;
 }
