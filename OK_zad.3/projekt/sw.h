@@ -119,3 +119,11 @@ void sortowanie(vector<Operacja*> & uszeregowanie,	//	uszeregowanie na danej mas
 //	[DONE]		sprawdza czy operacja w danym miejscu spe³nia warunki uszeregowania w job shopie
 bool warunki(const Operacja & bbb,					//sprawdzana operacja
 			int czas);								//sprawdzany czas, w którym ma zacz¹æ siê operacja bbb
+
+
+
+//	[MACIEJ]			posortowane przestoje wedlug kary z informacja
+void sortowanie_przestojow (vector<vector<int*>> & przestoje, vector<Operacja*> & uszeregowanie);
+
+//	[KRZESIMIR]			posortowane zapychacze wedlug dlugosci ich trwania w wektorze nr zapychaczy w uszeregowaniu
+void sortowanie_zapychaczy(vector<int*> & zapychacze, vector<Operacja*> & uszeregowanie);

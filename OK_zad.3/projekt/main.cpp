@@ -1,6 +1,7 @@
 #include "main.h"
 #include "sw.h"
 
+
 /*		MAIN		*/
 
 /**************
@@ -27,8 +28,7 @@ int main()
 	//interfejs(generator);
 
 
-	cout<<"\n//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;
-	
+	cout<<"\n//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;	
 	start=clock();
 	algorytmLosowy(generator, tab);
 	end=clock();
@@ -43,11 +43,11 @@ int main()
 	wyzarzanie(generator, tab, krok);
 	generator.wyswietl();
 
-	//generator.zeruj();
-	
-
 	
 	
+	
+	
+	//generator.zeruj();	
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get();
 }
 

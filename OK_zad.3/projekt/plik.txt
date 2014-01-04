@@ -1,12 +1,14 @@
 NR 0 MASZYNA:
 ------
-OP = 1		ZAD = 5		CZAS = 4
+OP = 1		ZAD = 5		CZAS = 3
 
-OP = 2		ZAD = 3		CZAS = 4
+OP = 1		ZAD = 2		CZAS = 4
 
-OP = 2		ZAD = 2		CZAS = 3
+OP = 2		ZAD = 3		CZAS = 5
 
-OP = 2		ZAD = 4		CZAS = 5
+OP = 99		ZAD = 99		CZAS = 1
+
+OP = 3		ZAD = 4		CZAS = 5
 
 OP = 99		ZAD = 99		CZAS = 10
 
@@ -16,24 +18,24 @@ NR 1 MASZYNA:
 ------
 OP = 1		ZAD = 4		CZAS = 4
 
-OP = 1		ZAD = 2		CZAS = 3
+OP = 1		ZAD = 1		CZAS = 10
 
-OP = 2		ZAD = 5		CZAS = 4
+OP = 3		ZAD = 5		CZAS = 3
 
-OP = 3		ZAD = 3		CZAS = 4
+OP = 3		ZAD = 3		CZAS = 3
 
-OP = 2		ZAD = 1		CZAS = 8
+OP = 3		ZAD = 2		CZAS = 3
 
 NR 2 MASZYNA:
 ------
-OP = 1		ZAD = 3		CZAS = 3
+OP = 1		ZAD = 3		CZAS = 5
 
-OP = 1		ZAD = 1		CZAS = 10
+OP = 2		ZAD = 5		CZAS = 3
 
-OP = 3		ZAD = 5		CZAS = 4
+OP = 2		ZAD = 4		CZAS = 5
 
-OP = 3		ZAD = 4		CZAS = 3
+OP = 2		ZAD = 2		CZAS = 4
 
-OP = 3		ZAD = 2		CZAS = 3
+OP = 2		ZAD = 1		CZAS = 8
 
 //////////////	ALGORYTM LOSOWY	///////////////////

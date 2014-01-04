@@ -72,9 +72,9 @@ void Generator::wyswietl() {
 			na_przestoju = false;
 			Operacja* op = this->maszyny[i]->uszeregowanie[j];
 			if(op->nrZadania >4)													//je¿eli to zapychacz to wypisujemy "Z"
-				cout<<"Zp";
+				cout<<"Z";
 			else																	//je¿eli to operacja to wypisujemy numer jej zadania
-				cout<<op->nrZadania +1<<op->numer+1;
+				cout<<op->nrZadania +1;
 
 			czas = op->begin + op->czas;											//liczymy obecny czas
 			if(przestoje) {															//sprawdamy czy jesteœmy na przestoju
