@@ -233,7 +233,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 			}
 			if(uszeregowanie[i]->numer == 1) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
 				Operacja *nastepna = uszeregowanie[i]->parent->operacje[2];
-				if ( nastepna->begin > czas + uszeregowanie[i]->czas )		
+				if ( nastepna->begin >= czas + uszeregowanie[i]->czas )		
 					return false;									//je¿eli tak to giñ
 			}
 		}
