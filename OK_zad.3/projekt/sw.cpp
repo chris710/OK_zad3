@@ -202,7 +202,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
 	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
-		if(!uszeregowanie[i]->numer > 3) {	
+		if(uszeregowanie[i]->numer < 3) {	
 			while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
 				zapychacz++;
 			}
@@ -231,9 +231,9 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				else						//czas siê zgadza
 					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
 			}
-			if(uszeregowanie[i]->numer == 1) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
-				Operacja *nastepna = uszeregowanie[i]->parent->operacje[2];
-				if ( nastepna->begin >= czas + uszeregowanie[i]->czas )		
+			if(uszeregowanie[i]->numer == 1 || uszeregowanie[i]->numer == 0) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
+				Operacja *nastepna = uszeregowanie[i]->parent->operacje[uszeregowanie[i]->numer+1];
+				if ( nastepna->begin < (czas + uszeregowanie[i]->czas) )		
 					return false;									//je¿eli tak to giñ
 			}
 		}
