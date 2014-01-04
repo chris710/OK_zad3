@@ -167,9 +167,10 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
 	
-	obliczenie_uszeregowania(kopia_uszeregowania, maszyna);																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
-
-/*	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
+	if (!obliczenie_uszeregowania(kopia_uszeregowania, maszyna)																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+		return false;
+/*		
+	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
 		return false;
 */
@@ -290,8 +291,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 		pozostaly_czas = czas_do_przestoju(*maszyna, przestoj[2]);					//jesli tak to sprawdzamy jaki mamy czas do tego przestoju
 
 	cout << " Maszyna: " << nr_maszyny << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-	//cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
-	//cout << " MAX zapychacz ma wartosc: " << max_zap << endl;
+	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
+	cout << " MAX zapychacz ma wartosc: " << max_zap << endl << endl;
 
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
@@ -299,33 +300,38 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	if (!mozna_zamienic(2,3, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
 	
-	
-	
-	
-	
-	
-	
-	
-	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
-	
-	//[TODO]dodaæ zapychacze do wektora miejsc poprawy
-/*		if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
-	{	//	zamiana na zasadzie dopasowania do pozostalego czasu,								// TO Z NIA ZROB PORZADEK
-		//	ew nastpeniewrzucenie najkrotszego mozliwego (dla malej kary)	
 
+/*	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+	{	// ZAPYCHACZE
 
+		int miejsce=0;
+		while (miejsce < maszyna->uszeregowanie.size()){
+			if (maszyna->uszeregowanie[miejsce]->numer == 98)
+				if (max_zap == maszyna->uszeregowanie[miejsce]->czas)
+					break;
+		miejsce++;
+		}
 
+		// cout << "miejsce=" << miejsce << endl;
+
+		for (int i=0; i<10; i++){
+			for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++){
+
+			}
+		}
+
+	
 
 		
 
 	}
 		else 																					// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
-	{	 // próbujemy zamieniæ koliduj¹c¹ operacja z bêdac¹ po przestoju liczon¹
-		 // od koñca uszeregowania krótsza od koliduj¹cej											
+	{	 // PRZESTOJE											
 
-		for (int i=(przestoj[0]+1); i<maszyna->uszeregowanie.size(); i++)
+		for (int i=(maszyna->uszeregowanie.size()-1); i>przestoj[0]; i++)
 			if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoj[0]])
-				mozna_zamienic(przestoj[0], i, *maszyna, granica);
+				if (!mozna_zamienic(przestoj[0],i, *maszyna, granica))
+					cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
 
 
 		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
@@ -334,8 +340,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 
 	}
 	
-	
-*/
+*/	
+
 	// granica -= krok;		 }	// koniec petli
 
 	// wybor najlepszego
