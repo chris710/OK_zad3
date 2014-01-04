@@ -1,29 +1,6 @@
 #include "interfejs.h"
 
 
-/**************
-		TODO List
-*	dostosowaæ funkcje do nowych metod klas
-*
-*
-**************/
-
-
-int czas_wykonania()
-{
-	int wybor;
-	cout << "Wybierz czas wykonania operacji: \n  1) od 1 do 20 \n  2) od 1 do 200 \n  3) mieszane" << endl;
-	cin >> wybor;
-	return wybor;
-}
-
-int liczba_przestojow()
-{
-	int wybor;
-	cout << "Wybierz liczbe przestojow: \n  1) od 1 do 10 \n  2) od 10 do 50 \n  3) od 1 do 50" << endl;
-	cin >> wybor;
-	return wybor;
-}
 
 
 int liczba_zadan()
@@ -35,62 +12,38 @@ int liczba_zadan()
 }
 
 
-int przestojeMin(int wybor)
+int liczba_przestojow()
 {
-	if (wybor==2)
-		return 10;
-	else 
-		return 1;
-}
-
-int przestojeMax(int wybor)
-{
-	if (wybor==1)
-		return 10;
-	else 
-		return 50;
-}
-
-int czasOpMin(int wybor)
-{
-	return 1;
-}
-
-int czasOpMax(int wybor)
-{
-	if (wybor==1)
-		return 20;
-	else if (wybor==2)
-		return 200;
-	else 
-		return 100;
+	int wybor;
+	cout << "Wybierz liczbe przestojow: " ;
+	cin >> wybor;
+	return wybor;
 }
 
 
-void interfejs(Generator &generator)
+
+
+void interfejs(Generator &generator, int nPrzestojow)
 {
 	cout << "\n======== GENERATOR ========\n\n";
 	int liczba_zadan = generator.liczbaZadan;
 	int x,y,z;
 
 	//generujemy zadania
-	x=czas_wykonania();
-	y=czasOpMin(x);
-	z=czasOpMax(x);
+	y=1;
+	z=50;
 	int gotowosc=0;
-	for(int i = 0; i < generator.liczbaZadan; ++i){
+	for(int i = 0; i < generator.liczbaZadan; ++i){				//generowanie zadañ
 		generator.generujZadanie(y,z,gotowosc,i);
 		//generator.generujZadanie(5,5,2,i);			//TESTOWE
 		gotowosc+=10;
 	}
 
 	//generujemy przestoje dla 3 maszyn
-	x=liczba_przestojow();
-	y=przestojeMin(x);
-	z=przestojeMax(x);
+	x=nPrzestojow;
 	int czasPrzestojow=100;
 
-	generator.generujMaszyne(y,z,czasPrzestojow);
+	generator.generujMaszyne(x,x,czasPrzestojow);
 	//generator.generujMaszyne(2,2,2);			//TESTOWE
 	
 	//wyswietlZadania(generator);
