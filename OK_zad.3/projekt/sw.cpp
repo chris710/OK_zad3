@@ -384,10 +384,11 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			sortowanie_przestojow(przestoje, *maszyna);														// sortujemy przestoje poz wzgledem dlugosci ich trwania
 
 			if (przestoje.size()==0){
-				koniec_zap=true;
+				//koniec_zap=true;
 				koniec_przest=true;
 			}
-
+			if (zapychacze.size()==0)
+				koniec_zap=true;
 /*			cout << endl;
 			for (int i=0; i<przestoje.size(); i++){
 				for (int j=0; j<2; j++)														// WYPISYWANIE POSORTWANYCH PRZESTOJOW
@@ -402,7 +403,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	//////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 														
-			if ( (koniec_zap == false) && (zapychacze[0][0] >= przestoje[0][0])  )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+			if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] >= przestoje[0][0])  ) || (koniec_zap == false && koniec_przest == true))// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
 			{	// ZAPYCHACZE
 				bool zamieniono=false;
 				int ktory = 0;
@@ -424,7 +425,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 				else
 					koniec_zap = false;
 			}	//koniec zapychaczy
-			else if ( koniec_przest == false)																			// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+			if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] < przestoje[0][0])  ) || (koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 			{	 // PRZESTOJE											
 				int ktory=0;
 				bool zamieniono=false;
