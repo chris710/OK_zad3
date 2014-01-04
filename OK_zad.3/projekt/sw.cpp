@@ -187,7 +187,7 @@ int miejsce_w_uszer(int nr_ZAD){
 }
 
 void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna) {
-	int czas = 0;																							//obecny kwant czasu
+	int czas = uszeregowanie[0]->begin + uszeregowanie[0]->czas;																							//obecny kwant czasu
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
 	int zapychacz = 0;																						//ile potrzeba zapychacza
@@ -195,18 +195,21 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
 	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
-		while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
-			zapychacz++;
-		}
-		if(zapychacz !=0) {
-			Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
-			vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
-			uszeregowanie.insert(it,op);																//wk³adanie go do wektora
-			++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
-		}
-		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
+		if(!uszeregowanie[i]->nrZadania>3) {	
+			while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
+				zapychacz++;
+			}
+			if(zapychacz !=0) {
+				Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
+				vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
+				uszeregowanie.insert(it,op);																//wk³adanie go do wektora
+				++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
+				czas +=	zapychacz;									//dodajemy d³ugoœæ zapychacza do czasu
+			}
+		
+			if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
 																											
-			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
+				//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
 				if ( czas > czas_przestoju ) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
 															//jesteœmy obecnie na przestoju
@@ -220,8 +223,9 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				}
 				else						//czas siê zgadza
 					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
+			}
 		}
-		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu
+		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
 	}
 }
 
