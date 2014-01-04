@@ -108,7 +108,7 @@ int max_zapychacz(vector<Operacja*> & uszeregowanie);
 int czas_zapychaczy(vector<Operacja*> & uszeregowanie); 
 
 //	[DONE]		ustawienie zadan po zamianie
-void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna);			
+bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna);			
 
 //	[DONE]	podaje wynik czasowy uszeregowania 
 int czas_uszeregowania(vector<Operacja*> & uszeregowanie);	//badane uszeregowanie

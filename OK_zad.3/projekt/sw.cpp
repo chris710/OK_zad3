@@ -167,7 +167,7 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
 	
-	if (!obliczenie_uszeregowania(kopia_uszeregowania, maszyna)																	//obliczamy czasy pozosta³ych operacji w uszeregowaniu
+	if (!obliczenie_uszeregowania(kopia_uszeregowania, maszyna))																//obliczamy czasy pozosta³ych operacji w uszeregowaniu
 		return false;
 /*		
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
@@ -187,7 +187,7 @@ int miejsce_w_uszer(int nr_ZAD){
 	return miejsce;
 }
 
-void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna) {
+bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszyna) {
 	int czas = uszeregowanie[0]->begin + uszeregowanie[0]->czas;																							//obecny kwant czasu
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
@@ -225,9 +225,15 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				else						//czas siê zgadza
 					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
 			}
+			if(uszeregowanie[i]->numer == 1) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
+				Operacja *nastepna = uszeregowanie[i]->parent->operacje[2];
+				if ( nastepna->begin > czas + uszeregowanie[i]->czas )		
+					return false;									//je¿eli tak to giñ
+			}
 		}
 		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
 	}
+	return true;
 }
 
 
