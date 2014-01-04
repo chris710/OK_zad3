@@ -22,8 +22,8 @@ int main()
 
 	//ofstream plik("plik.txt",ios::app);
 	int tab[2] = {0, 0};
-	int nZadan = liczba_zadan();
-	int nPrzestojow = liczba_przestojow();
+	int nZadan = 30;//liczba_zadan();
+	int nPrzestojow = 5;//liczba_przestojow();
 	cout<<"//////////////	GENEROWANIE ZADAN	///////////////////"<<endl;
 	Generator generator = Generator(nZadan);
 	interfejs(generator, nPrzestojow);

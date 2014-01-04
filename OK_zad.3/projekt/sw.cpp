@@ -230,8 +230,9 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 						uszeregowanie[i]->begin = czas + uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 
 							+ maszyna.dlugosc[nastepny_przestoj];			//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
 					}														//poprzedniej operacji
-					nastepny_przestoj++;
 					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas; //tylko 0.3 bo resztê dodajemy póŸniej
+					nastepny_przestoj++;
+					
 				}
 				else						//czas siê zgadza
 					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
