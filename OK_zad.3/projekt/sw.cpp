@@ -447,10 +447,10 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 						koniec_zap = false;
 
 				} //koniec pêtli z przestojami
-			if (koniec_zap==true && koniec_przest==true){
-				mozliwa_poprawa=false;
-				break;
-			}
+				if (koniec_zap==true && koniec_przest==true){
+					mozliwa_poprawa=false;
+					break;
+				}
 
 			}  //koniec pêtli z maszyn¹
 		if (czas_uszeregowania(maszyna->uszeregowanie) < czas_drugiej_najgorszej )
@@ -459,9 +459,10 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			wynik = czas_uszeregowania(maszyna->uszeregowanie);
      	koniec=clock();
 		czas=(float)(koniec-start)/CLOCKS_PER_SEC;							//obliczanie bie¿¹cego czasu
-		if (mozliwa_poprawa==false)
+		if (mozliwa_poprawa==false) {
 			cout << "****************** NIEMOZLIWA POPRAWA ****************** " << endl << endl;
 			break;
+		}
 	}    // koniec pêtli z czasem
 
    //ZWRACANIE WYNIKU (NAJLEPSZEGO NAPOTKANEGO PO DRODZE CZASU NAJGORSZEJ MASZYNY)
