@@ -182,8 +182,14 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 	return true;
 }
 
-int miejsce_w_uszer(int nr_ZAD){
-	int miejsce=0;
+int miejsce_w_uszer(int wartosc_zapychacza, Maszyna & maszyna){
+		int miejsce=0;
+		while (miejsce < maszyna.uszeregowanie.size()){
+			if (maszyna.uszeregowanie[miejsce]->numer == 98)
+				if (wartosc_zapychacza == maszyna.uszeregowanie[miejsce]->czas)
+					break;
+		miejsce++;
+		}
 	return miejsce;
 }
 
@@ -264,25 +270,23 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	*			-kontynuowanie pêtli póki nie osi¹gniemy oczekiwanej poprawy (podaæ jako argument?)
 	*			-po nieudanej probie zmieniamy wartosc na false w tablicy mozliwosci pracy z danym przestojem
 	*	-zapisywanie najlepszego uszeregowania do wyniku
-	***********/
 
-	/*
 	petle:
 		- z czasem
 		- tak dlugo az nie poprawimy najgorszej maszyny (bedzie inna najgorsza)
 		- z zapychaczami
 		- z przestojami
 
-	*/
+	***********/
 
 
-	vector <Operacja*> zadania;																				// wektor do fukcji sortowanie 
-	Maszyna* maszyna;																						// wskaznik na dana maszyne
-	int granica=tablica[0] , optimum=tablica[1];														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
-/*
-	for (int i=0; i<generator.liczbaZadan; ++i)																// wypisanie czasow gotowosci wsyzstkich zadan
-		cout << "zadanie nr " << i << " jest gotowe o: " << generator.zadania[i]->delay << endl;
-*/
+	
+	
+	
+	vector <Operacja*> zadania;														// wektor do fukcji sortowanie 
+	Maszyna* maszyna;																// wskaznik na dana maszyne
+	int granica=tablica[0] , optimum=tablica[1];									// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
+
 
 
 //	while (granica > optimum) {														// petla
@@ -300,55 +304,59 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
 	cout << " MAX zapychacz ma wartosc: " << max_zap << endl << endl;
 
-//	sortowanie(maszyna->uszeregowanie, zadania);
-//	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
+
 
 	if (!mozna_zamienic(2,3, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
-	
 
-/*	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+	
+//////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
 	{	// ZAPYCHACZE
 
-		int miejsce=0;
-		while (miejsce < maszyna->uszeregowanie.size()){
-			if (maszyna->uszeregowanie[miejsce]->numer == 98)
-				if (max_zap == maszyna->uszeregowanie[miejsce]->czas)
-					break;
-		miejsce++;
-		}
 
-		// cout << "miejsce=" << miejsce << endl;
+//		// zmiana zapychacza!
 
-		for (int i=0; i<10; i++){
-			for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++){
+		int miejsce = miejsce_w_uszer(max_zap, *maszyna);
 
-			}
+		bool zamieniono=false;
+		for (int i=miejsce-1; i>=0; i--){
+			for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
+				if (maszyna->uszeregowanie[j]->numer != 98)
+					if (mozna_zamienic(i,j, *maszyna, granica)){
+						cout << endl << "ZAMIENIONO" << endl << endl;
+						zamieniono=true;
+					}
+			if (zamieniono==true)
+				break;
 		}
 
 	
-
-		
-
 	}
 		else 																					// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 	{	 // PRZESTOJE											
-
-		for (int i=(maszyna->uszeregowanie.size()-1); i>przestoj[0]; i++)
-			if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoj[0]])
-				if (!mozna_zamienic(przestoj[0],i, *maszyna, granica))
-					cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
-
-
+		
 		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
 		cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
 		cout << " Pozostaly czas to: " << pozostaly_czas << endl;
 
-	}
-	
-*/	
 
-	// granica -= krok;		 }	// koniec petli
+//		//zmiana przestoju !!!
+
+		bool zamieniono=false;
+		for (int i=(maszyna->uszeregowanie.size()-1); i>przestoj[0]; i--){
+			if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoj[0]])
+				if (mozna_zamienic(przestoj[0],i, *maszyna, granica)){
+						cout << endl << "ZAMIENIONO" << endl << endl;
+						zamieniono=true;
+					}		
+			if (zamieniono==true)
+				break;
+		}
+
+	}
+*/
 
 	// wybor najlepszego
 	return 0;

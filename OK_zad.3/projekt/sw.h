@@ -94,8 +94,8 @@ void zamiana(	int aaa,										// operacja wczesniejsza
 //	***[STUB]		sprawdza czy mozna zamienic dane operacje 
 bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) ;
 
-//	***[]		wyznacza miesjce w uszeregowaniu oepracji danego zadania
-int miejsce_w_uszer(int nr_ZAD);
+//	***[]		wyznacza miesjce w uszeregowaniu danego zapychacza
+int miejsce_w_uszer(int wartosc_zapychacza, Maszyna & maszyna);
 
 
 //	[DONE]		fajna statystyka //moze sie przydaæ do poczatkowej optymalizacji
