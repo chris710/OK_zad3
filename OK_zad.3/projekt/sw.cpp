@@ -172,12 +172,12 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 /*	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
 	if (nowa_dlugosc > temperatura )
 		return false;
-
+*/
 	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
 	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
 		maszyna.uszeregowanie.push_back(kopia_uszeregowania[i]);
 	// koniec?
-*/ 
+ 
 	return true;
 }
 
@@ -303,21 +303,31 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	/// na ktore zamienic!!!	 //w pierwszej iteracji zamieniamy najbli¿sze operacje po obu stronach "miejsca", w przypadku niepowodzenia rozszerzamy poszukiwany zakres
 	
 	//[TODO]dodaæ zapychacze do wektora miejsc poprawy
-/*	if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
-	{	//	zamiana na zasadzie wrzucenia zadania												// ZROB Z NIM PORZADEK
-		//	dluzszego? krotszego ? LOSOWEGO <- ? 
+/*		if ( max_zap >= przestoj[1] )																// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+	{	//	zamiana na zasadzie dopasowania do pozostalego czasu,								// TO Z NIA ZROB PORZADEK
+		//	ew nastpeniewrzucenie najkrotszego mozliwego (dla malej kary)	
+
+
+
 
 		
 
 	}
 		else 																					// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
-	{	//	zamiana na zasadzie dopasowania do pozostalego czasu,								// TO Z NIA ZROB PORZADEK
-		//	ew nastpeniewrzucenie najkrotszego mozliwego (dla malej kary)																							
+	{	 // próbujemy zamieniæ koliduj¹c¹ operacja z bêdac¹ po przestoju liczon¹
+		 // od koñca uszeregowania krótsza od koliduj¹cej											
+
+		for (int i=(przestoj[0]+1); i<maszyna->uszeregowanie.size(); i++)
+			if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoj[0]])
+				mozna_zamienic(przestoj[0], i, *maszyna, granica);
+
+
 		cout << " Nr operacji DO POPRAWY w  uszeregowaniu to: " << przestoj[0]+1 << endl;
 		cout << " nr_przestoju z kara to: " << przestoj[2]+1<< endl;
 		cout << " Pozostaly czas to: " << pozostaly_czas << endl;
 
 	}
+	
 	
 */
 	// granica -= krok;		 }	// koniec petli
