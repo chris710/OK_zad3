@@ -123,7 +123,10 @@ bool warunki(const Operacja & bbb,					//sprawdzana operacja
 
 
 //	[MACIEJ]			posortowane przestoje wedlug kary z informacja
-void sortowanie_przestojow (vector<vector<int*>> & przestoje, vector<Operacja*> & uszeregowanie);
+void sortowanie_przestojow (vector<vector<int*> > & przestoje, vector<Operacja*> & uszeregowanie);
 
 //	[KRZESIMIR]			posortowane zapychacze wedlug dlugosci ich trwania w wektorze nr zapychaczy w uszeregowaniu
-void sortowanie_zapychaczy(vector<int*> & zapychacze, vector<Operacja*> & uszeregowanie);
+void sortowanie_zapychaczy(vector<vector<int> > & zapychacze, vector<Operacja*> & uszeregowanie);
+
+//	[DONE]				predykat sortuj¹cy
+bool porownaj(vector<int> a, vector<int> b);

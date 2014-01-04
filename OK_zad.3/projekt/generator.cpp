@@ -86,9 +86,14 @@ void Generator::wyswietl() {
 
 				}}
 			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
-				for(int k =0; k < op->czas*1.3-left; ++k)						//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
+				if (!zapychacz){
+					for(int k =0; k < op->czas*1.3-left; ++k)						//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
+							cout<<".";
+				}
+				else {
+					for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ zapychacz
 						cout<<".";
-				
+				}
 				cout<<"P";															//wypisujemy przestój
 				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]; ++k)
 					cout<<" ";
@@ -105,7 +110,7 @@ void Generator::wyswietl() {
 				na_przestoju=false;
 			}
 			else {
-				for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ (jej po³owê) jako spacje
+				for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ
 					cout<<".";
 			}
 			}

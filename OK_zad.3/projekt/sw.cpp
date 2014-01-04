@@ -242,6 +242,23 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	return true;
 }
 
+void sortowanie_zapychaczy(vector<vector<int> > & zapychacze, vector<Operacja*> & uszeregowanie) {
+	
+	for(int i = 0; i<uszeregowanie.size(); ++i) {			//dodawanie zapychaczy do wektora
+		if(uszeregowanie[i]->numer >4) {
+			vector<int> nowy;
+			nowy.push_back(uszeregowanie[i]->czas);
+			nowy.push_back(i);
+			zapychacze.push_back(nowy);
+		}
+	}
+	sort(zapychacze.begin(),zapychacze.end(),porownaj);		//sortowanie
+}
+
+bool porownaj(vector<int> a, vector<int> b) {
+	return a[0]<b[0];
+}
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -304,7 +321,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	cout << " wartosc kary dla tej operacji to: " << przestoj[1] << endl;
 	cout << " MAX zapychacz ma wartosc: " << max_zap << endl << endl;
 
-
+	vector<vector<int> > zapychacze;
+	sortowanie_zapychaczy(zapychacze, maszyna->uszeregowanie);
 
 	if (!mozna_zamienic(2,3, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
