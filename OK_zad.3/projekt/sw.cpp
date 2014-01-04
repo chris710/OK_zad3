@@ -198,10 +198,12 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 		while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
 			zapychacz++;
 		}
-		Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
-		vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
-		uszeregowanie.insert(it,op);																//wk³adanie go do wektora
-		++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
+		if(zapychacz !=0) {
+			Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
+			vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
+			uszeregowanie.insert(it,op);																//wk³adanie go do wektora
+			++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
+		}
 		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
 																											
 			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
