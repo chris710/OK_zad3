@@ -191,15 +191,17 @@ void obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
 	int zapychacz = 0;																						//ile potrzeba zapychacza
+	int dlugosc = uszeregowanie.size();																		//obecna d³ugoœæ uszeregowania
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
-	for(int i = 1; i < uszeregowanie.size(); ++i) {															//dla ka¿dej operacji na maszynie
+	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
-		while(warunki(*uszeregowanie[i],czas)) {															//sprawdzenie poprawnoœci
+		while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
 			zapychacz++;
 		}
 		Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
 		vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
 		uszeregowanie.insert(it,op);																//wk³adanie go do wektora
+		++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
 		if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
 																											
 			//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
@@ -288,7 +290,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 //	sortowanie(maszyna->uszeregowanie, zadania);
 //	cout << " Pierwszy element ma czas: " << zadania[0]->czas << endl;
 
-	if (!mozna_zamienic(0,3, *maszyna, granica))
+	if (!mozna_zamienic(2,3, *maszyna, granica))
 		cout << endl << "NIE MOZNA ZAMIENIC" << endl << endl;
 	
 	
