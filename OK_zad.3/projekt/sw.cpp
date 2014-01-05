@@ -360,7 +360,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	
 		if((dlugosc0>dlugosc1 && dlugosc0<dlugosc2) || (dlugosc0<dlugosc1 && dlugosc0>dlugosc2))
 			czas_drugiej_najgorszej = dlugosc0;
-		if((dlugosc1>dlugosc2 && dlugosc1<dlugosc0) || (dlugosc1>dlugosc0 && dlugosc1<dlugosc2))
+		else if((dlugosc1>dlugosc2 && dlugosc1<dlugosc0) || (dlugosc1>dlugosc0 && dlugosc1<dlugosc2))
 			czas_drugiej_najgorszej = dlugosc1;
 		else
 			czas_drugiej_najgorszej = dlugosc2;
