@@ -203,6 +203,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	int czas_przestoju;																						//czas rozpoczêcia ka¿dego kolejnego przestoju
 	int nastepny_przestoj = 0;																				//numer nastêpnego przestoju
 	int zapychacz = 0;																						//ile potrzeba zapychacza
+	bool czyPrzestoje = true;																				//flaga czy zosta³y jakieœ przestoje
 	int dlugosc = uszeregowanie.size();																		//obecna d³ugoœæ uszeregowania
 	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
 	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
@@ -223,7 +224,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 																											
 				//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
-				if ( czas > czas_przestoju ) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
+				if ( czas > czas_przestoju &&  czyPrzestoje) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
 															//jesteœmy obecnie na przestoju
 					if ( czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj])) {
 																			//jesteœmy na przestoju i czas siê nie zgadza
@@ -231,7 +232,10 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 							+ maszyna.dlugosc[nastepny_przestoj];			//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
 					}														//poprzedniej operacji
 					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas; //tylko 0.3 bo resztê dodajemy póŸniej
-					nastepny_przestoj++;
+					if(maszyna.nPrzestojow=(nastepny_przestoj+1))		//je¿eli skoñczy³y siê przestoje
+						czyPrzestoje = false;							//to podnosimy flagê ich braku
+					if(czyPrzestoje)
+						nastepny_przestoj++;
 					
 				}
 				else						//czas siê zgadza
@@ -365,7 +369,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 
 ///////////////////    druga petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		while (czas_uszeregowania(generator.maszyny[najgorsza_maszyna]->uszeregowanie) > czas_drugiej_najgorszej) {            //PÊTLA Z MASZYN¥
+		while (czas_uszeregowania(generator.maszyny[najgorsza_maszyna]->uszeregowanie) >= czas_drugiej_najgorszej) {            //PÊTLA Z MASZYN¥
 
 
 			cout << " Maszyna: " << najgorsza_maszyna 
