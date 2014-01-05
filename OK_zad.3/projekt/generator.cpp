@@ -12,22 +12,23 @@ Generator::Generator()
 {
 	this->liczbaZadan = 5;
 	int gotowosc = 0;
-
+/*
 	Zadanie* Result = new Zadanie();			//pierwsze zadanie
 	this->zadania.push_back(Result);
 	Result->delay = 0;
 	Result->operacje[0] = new Operacja(10, 0, Result, 0);
 	Result->operacje[1] = new Operacja(8, 1, Result, 0);
 	Result->operacje[2] = new Operacja(8, 2, Result, 0);
-
-	for(int i = 1; i < this->liczbaZadan; ++i){
-		generujZadanie(3,6,gotowosc,i);			//TESTOWE
+*/
+	for(int i = 0; i < this->liczbaZadan; ++i){
+		generujZadanie(5, 5,gotowosc,i);			//TESTOWE
 		//gotowosc+=5;
 	}
+
 	for(int i = 0; i<3; ++i) {
 		Maszyna *maszyna = new Maszyna(i);
 		maszyna->nPrzestojow = 1;
-		maszyna->rozpoczecie.push_back(20);
+		maszyna->rozpoczecie.push_back(30);
 		maszyna->dlugosc.push_back(1);
 		this->maszyny.push_back(maszyna);
 	}
@@ -38,6 +39,8 @@ Generator::Generator()
 		this->dlugoscInstancji += (this->zadania[i]->operacje[0]->czas + this->zadania[i]->operacje[1]->czas + this->zadania[i]->operacje[2]->czas);
 	}
 }
+
+
 
 void Generator::zeruj(){
 	for (int i=0;i<3;i++)
@@ -52,6 +55,8 @@ void Generator::zeruj(){
 		}
 		
 }
+
+
 
 
 void Generator::wyswietl() {
@@ -121,11 +126,7 @@ void Generator::wyswietl() {
 		int dlugosc = this->maszyny[i]->uszeregowanie[ostatni]->begin + this->maszyny[i]->uszeregowanie[ostatni]->czas;
 		cout<<"M"<<i<<" dlugosc: "<<dlugosc<<"\t";
 	}
-	cout<<endl<<"Czasy gotowosci"<<endl;
-	for(int j = 0; j<this->liczbaZadan; ++j) {
-			cout<<j+1<<":"<<this->zadania[j]->delay<<" ";
-		}
-	cout<<endl<<endl;
+
 	}
 
 

@@ -11,6 +11,7 @@
 ***************/
 void zerwoanie(Generator genrator);
 void algorytmLosowy(const Generator& generator,  int tablica[]);
+void uszereguj(const Generator& generator, int tablica[]) ;
 
 int main()
 {
@@ -31,7 +32,8 @@ int main()
 
 	cout<<"\n//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;	
 	start=clock();
-	algorytmLosowy(generator, tab);
+	//algorytmLosowy(generator, tab);
+	uszereguj(generator, tab);
 	end=clock();
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;

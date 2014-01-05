@@ -250,3 +250,57 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 	tablica[1]=dlugoscRealna;
 
 }
+
+
+
+
+void uszereguj(const Generator& generator, int tablica[]) {
+	vector<Zadanie*> zadania = generator.zadania;									//tymczasowa tablica do usuwania zadañ
+	
+	generator.maszyny[0]->uszeregowanie.push_back(zadania[0]->operacje[0]);
+		zadania[0]->operacje[0]->begin = 0;
+	generator.maszyny[0]->uszeregowanie.push_back(zadania[1]->operacje[1]);
+	zadania[1]->operacje[1]->begin = 5;
+{ Operacja  *op = new Operacja(5,98,NULL,98);								//deklaracja zapychacza
+  op->begin=10;
+	generator.maszyny[0]->uszeregowanie.push_back(op);	}
+	generator.maszyny[0]->uszeregowanie.push_back(zadania[2]->operacje[2]);
+		zadania[2]->operacje[2]->begin = 15;
+	generator.maszyny[0]->uszeregowanie.push_back(zadania[3]->operacje[2]);
+		zadania[3]->operacje[2]->begin = 20;
+{ Operacja  *op = new Operacja(5,98,NULL,98);								//deklaracja zapychacza
+  op->begin=25;
+	generator.maszyny[0]->uszeregowanie.push_back(op);	}
+	generator.maszyny[0]->uszeregowanie.push_back(zadania[4]->operacje[2]);
+		zadania[4]->operacje[2]->begin = 30;
+
+	generator.maszyny[1]->uszeregowanie.push_back(zadania[1]->operacje[0]);
+		zadania[1]->operacje[0]->begin = 0;
+	generator.maszyny[1]->uszeregowanie.push_back(zadania[2]->operacje[0]);
+		zadania[2]->operacje[0]->begin = 5;
+	generator.maszyny[1]->uszeregowanie.push_back(zadania[0]->operacje[1]);
+		zadania[0]->operacje[1]->begin = 10;
+	generator.maszyny[1]->uszeregowanie.push_back(zadania[3]->operacje[1]);
+		zadania[3]->operacje[1]->begin = 15;
+	generator.maszyny[1]->uszeregowanie.push_back(zadania[4]->operacje[1]);
+		zadania[4]->operacje[1]->begin = 20;
+
+	generator.maszyny[2]->uszeregowanie.push_back(zadania[3]->operacje[0]);
+		zadania[3]->operacje[0]->begin = 0;
+	generator.maszyny[2]->uszeregowanie.push_back(zadania[4]->operacje[0]);
+		zadania[4]->operacje[0]->begin = 5;
+	generator.maszyny[2]->uszeregowanie.push_back(zadania[2]->operacje[1]);
+		zadania[2]->operacje[1]->begin = 10;
+	generator.maszyny[2]->uszeregowanie.push_back(zadania[0]->operacje[2]);
+		zadania[0]->operacje[2]->begin = 15;
+{ Operacja  *op = new Operacja(7,98,NULL,98);								//deklaracja zapychacza
+  op->begin=20;
+	generator.maszyny[2]->uszeregowanie.push_back(op);	}
+	generator.maszyny[2]->uszeregowanie.push_back(zadania[1]->operacje[2]);
+		zadania[1]->operacje[2]->begin = 27;
+
+	tablica[0]=25;
+	tablica[1]=37;
+
+
+}
