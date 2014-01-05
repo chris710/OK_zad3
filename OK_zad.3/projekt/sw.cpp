@@ -340,6 +340,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	Maszyna* maszyna;                   																		// wskaznik na maszynê która bêdzie obrabiana
 	int granica=tablica[0] , optimum=tablica[1];       														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
 
+///////////////////    pierwsza petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	start=clock();         													       						    //rozpoczynamy odliczanie czasu
 	while (czas < 60) {						       															// PÊTLA Z CZASEM
 
@@ -360,14 +362,15 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			czas_drugiej_najgorszej = dlugosc2;
 
 		bool koniec_zap = false, koniec_przest = false;		
-		
+
+///////////////////    druga petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		while (czas_uszeregowania(generator.maszyny[najgorsza_maszyna]->uszeregowanie) > czas_drugiej_najgorszej) {            //PÊTLA Z MASZYN¥
 
 
 			cout << " Maszyna: " << najgorsza_maszyna 
 				 << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) 
 				 <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-
 //			int przestoj[3] = {-2,-2,-2};													// [0]-> nr_operacji na ktorej jest przestoj	[1]-> wartosc kary dla tej oepracji		[2]-> nr_przestoju z kara;
 //			int pozostaly_czas = -2;														// jesli -2 to oznacza blad    wyzej tez tak jest
 //			int max_zap = max_zapychacz(maszyna->uszeregowanie);							// najdluzszy zapychacza na tej maszynie
@@ -383,10 +386,9 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			vector<vector<int> > przestoje;
 			sortowanie_przestojow(przestoje, *maszyna);														// sortujemy przestoje poz wzgledem dlugosci ich trwania
 
-			if (przestoje.size()==0){
-				//koniec_zap=true;
+			if (przestoje.size()==0)
 				koniec_przest=true;
-			}
+
 			if (zapychacze.size()==0)
 				koniec_zap=true;
 /*			cout << endl;
@@ -425,6 +427,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 				else
 					koniec_zap = false;
 			}	//koniec zapychaczy
+
+
 			if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] < przestoje[0][0])  ) || (koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 			{	 // PRZESTOJE											
 				int ktory=0;
@@ -443,12 +447,14 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 					ktory++;
 				}
 					if(zamieniono == false)
-						koniec_zap = true;
+						koniec_przest = true;
 					else
-						koniec_zap = false;
+						koniec_przest = false;
 
 				} //koniec pêtli z przestojami
-				if (koniec_zap==true && koniec_przest==true){
+				
+			
+			if (koniec_zap==true && koniec_przest==true){
 					mozliwa_poprawa=false;
 					break;
 				}
