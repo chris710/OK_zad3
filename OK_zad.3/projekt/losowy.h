@@ -15,7 +15,8 @@
 *	wykonywanie operacji na ró¿nych maszynach
 *	
 ***********/
-void algorytmLosowy(const Generator& generator, int tablica[]);			// zwraca czas najdluzszego uszeregowania
+void algorytmLosowy(const Generator& generator, int tablica[]);			
+void algorytmLosowy2(const Generator& generator, int tablica[]);	
 void uszereguj(const Generator& generator, int tablica[]);
 
 #endif //LOSOWY_H

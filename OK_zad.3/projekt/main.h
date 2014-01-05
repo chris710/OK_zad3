@@ -14,5 +14,7 @@ using namespace std;
 #include "zadanie.h"
 #include "operacja.h"
 #include "interfejs.h"
+#include "sw.h"
+#include "losowy.h"
 
 #endif //MAIN_H

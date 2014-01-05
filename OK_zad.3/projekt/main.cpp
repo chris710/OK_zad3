@@ -1,5 +1,5 @@
 #include "main.h"
-#include "sw.h"
+
 
 
 /*		MAIN		*/
@@ -23,17 +23,17 @@ int main()
 
 	//ofstream plik("plik.txt",ios::app);
 	int tab[2] = {0, 0};
-	int nZadan = 30;//liczba_zadan();
-	int nPrzestojow = 5;//liczba_przestojow();
+	int nZadan = 8;//liczba_zadan();
+	int nPrzestojow = 2;//liczba_przestojow();
 	cout<<"//////////////	GENEROWANIE ZADAN	///////////////////"<<endl;
-	Generator generator = Generator();
-	//interfejs(generator, nPrzestojow);
+	Generator generator = Generator(nZadan);
+	interfejs(generator, nPrzestojow);
 
 
 	cout<<"\n//////////////	ALGORYTM LOSOWY	///////////////////"<<endl;	
 	start=clock();
-	//algorytmLosowy(generator, tab);
-	uszereguj(generator, tab);
+	algorytmLosowy2(generator, tab);
+	//uszereguj(generator, tab);
 	end=clock();
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
