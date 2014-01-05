@@ -417,8 +417,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 					int miejsce = zapychacze[ktory][1];
 					for (int i=miejsce-1; i>=0; i--){
 						for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
-							if (maszyna->uszeregowanie[j]->numer != 98)
-								if (mozna_zamienic(i,j, *maszyna, granica)){
+							if ( (maszyna->uszeregowanie[i]->numer != 98) && (maszyna->uszeregowanie[j]->numer != 98) )
+								if (mozna_zamienic(i,j, *maszyna, czas_drugiej_najgorszej)){
 									cout << endl << "ZAMIENIONO" << endl << endl;
 									zamieniono=true;
 								}
@@ -443,7 +443,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 				while ( (zamieniono == false) && (ktory < przestoje.size()) ){
 					for (int i=(maszyna->uszeregowanie.size()-1); i>przestoje[ktory][1]; i--){
 						if (maszyna->uszeregowanie[i] < maszyna->uszeregowanie[przestoje[ktory][0]])
-							if (mozna_zamienic(przestoje[ktory][0],i, *maszyna, granica)){
+							if (mozna_zamienic(przestoje[ktory][0],i, *maszyna, czas_drugiej_najgorszej)){
 								cout << endl << "ZAMIENIONO" << endl << endl;
 								zamieniono=true;
 							}
