@@ -116,7 +116,11 @@ void Generator::wyswietl() {
 			}
 		cout<<endl;
 		}
-	
+	for(int i = 0; i<3; ++i) {														//dla ka¿dej z 3 maszyn
+		int ostatni=this->maszyny[i]->uszeregowanie.size()-1;
+		int dlugosc = this->maszyny[i]->uszeregowanie[ostatni]->begin + this->maszyny[i]->uszeregowanie[ostatni]->czas;
+		cout<<"M"<<i<<" dlugosc: "<<dlugosc<<"\t";
+	}
 	cout<<endl<<"Czasy gotowosci"<<endl;
 	for(int j = 0; j<this->liczbaZadan; ++j) {
 			cout<<j+1<<":"<<this->zadania[j]->delay<<" ";
