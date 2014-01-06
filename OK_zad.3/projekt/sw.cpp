@@ -205,8 +205,8 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	int zapychacz = 0;																						//ile potrzeba zapychacza
 	bool czyPrzestoje = true;																				//flaga czy zosta³y jakieœ przestoje
 	int dlugosc = uszeregowanie.size();																		//obecna d³ugoœæ uszeregowania
-	//for(vector<Operacja*>::iterator it = maszyna.uszeregowanie.begin(); it != maszyna.uszeregowanie.end(); it++) {
-	for(int i = 1; i < dlugosc; ++i) {															//dla ka¿dej operacji na maszynie
+
+	for(int i = 1; i < dlugosc; ++i) {																		//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
 		if(uszeregowanie[i]->numer < 3) {	
 			while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
@@ -218,6 +218,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				uszeregowanie.insert(it,op);																//wk³adanie go do wektora
 				++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
 				czas +=	zapychacz;									//dodajemy d³ugoœæ zapychacza do czasu
+				dlugosc++;
 			}
 		
 			if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
@@ -246,8 +247,14 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				if ( nastepna->begin < (czas + uszeregowanie[i]->czas) )		
 					return false;									//je¿eli tak to giñ
 			}
-		}
 		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
+		}
+		else{
+			uszeregowanie.erase(uszeregowanie.begin() + i); 
+			i--;
+			dlugosc--;
+		}
+
 	}
 	return true;
 }
