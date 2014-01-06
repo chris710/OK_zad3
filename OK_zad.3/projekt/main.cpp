@@ -50,7 +50,11 @@ int main()
 
 	cout << endl << endl;
 	cout<<"//////////////	WYZARZANIE SYMULOWANE	///////////////////"<<endl;
-	int krok=1;
+	int krok;
+	cout << endl << "Podaj krok: " ;
+	cin >> krok;
+	cout << endl;
+
 	wyzarzanie(generator, tab, krok);
 	//generator.wyswietl();
 

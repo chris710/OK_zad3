@@ -342,7 +342,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
     *     [DONE]zmniejszamy temperaturê o krok
     *     [DONE]najlepszy czas uszeregowania zwracany jako wynik
     ***********/
-
+	const int max_czas =15;
 	srand(NULL);																								//zmienne do liczenia czasu
 	clock_t start;
 	clock_t koniec;
@@ -354,7 +354,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 ///////////////////    pierwsza petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	start=clock();         													       						    //rozpoczynamy odliczanie czasu
-	while (czas < 60) {						       															// PÊTLA Z CZASEM
+	while (czas < max_czas) {						       															// PÊTLA Z CZASEM
 
 		int dlugosc0 = czas_uszeregowania(generator.maszyny[0]->uszeregowanie);								 
 		int dlugosc1 = czas_uszeregowania(generator.maszyny[1]->uszeregowanie);								//LICZENIE CZASÓW MASZYN
@@ -466,9 +466,15 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 				
 			
 			if (koniec_zap==true && koniec_przest==true){
-					mozliwa_poprawa=false;
-					break;
+					//mozliwa_poprawa=false;
+					cout << " Nie udalo sie " << endl;
+					czas_drugiej_najgorszej += krok;
 				}
+
+			koniec=clock();
+			czas=(float)(koniec-start)/CLOCKS_PER_SEC;
+			if (czas < max_czas)
+				mozliwa_poprawa==false;
 
 			}  //koniec pêtli z maszyn¹
 		if (czas_uszeregowania(maszyna->uszeregowanie) < czas_drugiej_najgorszej )
