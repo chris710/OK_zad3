@@ -519,8 +519,8 @@ void uszereguj(const Generator& generator, int tablica[]) {
 	generator.maszyny[2]->uszeregowanie.push_back(zadania[1]->operacje[2]);
 		zadania[1]->operacje[2]->begin = 27;
 
-	tablica[0]=25;
-	tablica[1]=37;
+	tablica[0]=37;
+	tablica[1]=25;
 
 
 }

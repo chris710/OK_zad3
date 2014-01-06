@@ -484,6 +484,6 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 	}    // koniec pêtli z czasem
 
    //ZWRACANIE WYNIKU (NAJLEPSZEGO NAPOTKANEGO PO DRODZE CZASU NAJGORSZEJ MASZYNY)
-   cout << " NASZ WYNIK TO = " <<wynik <<endl;
+   cout << " NASZ WYNIK TO = " <<wynik <<endl << endl;
    return wynik;
 }
