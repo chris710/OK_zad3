@@ -60,8 +60,8 @@
 		-wykres z³o¿onoœci algorytmu w zale¿noœci od d³ugoœci instancji(czyli iloœci zadañ)
 			(!opcjonalne/trudne, bo trzeba by liczyæ tak d³ugo a¿ algorytm nie zejdzie 
 			poni¿ej pewnego pu³apu a nie jak normalnie, puœciæ na wyznaczony z góry czas)
-		-zale¿noœæ iloœci/poprawy (stosunku uszeregowania poprawionego do pocz¹tkowego) od d³ugoœci zadañ
-		-zale¿noœæ poprawy wyników od d³ugoœci/iloœci przestojów
+		-zale¿noœæ iloœci/poprawy (stosunku uszeregowania poprawionego do pocz¹tkowego) od iloœci zadañ
+		-zale¿noœæ poprawy wyników od iloœci przestojów
 		-zale¿noœæ czasów/poprawy od kroków zmniejszania temperatury
 ******************************************************/
 

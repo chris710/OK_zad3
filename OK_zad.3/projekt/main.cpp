@@ -46,7 +46,7 @@ int main()
     czas=(float)(end-start)/CLOCKS_PER_SEC;     //wyœwietlanie czasu
     cout<<"Czas: "<<czas<<endl;
 	plik<<"Czas: "<<czas<<endl;
-	//generator.wyswietl();
+	generator.wyswietl();
 
 	cout << endl << endl;
 	cout<<"//////////////	WYZARZANIE SYMULOWANE	///////////////////"<<endl;
@@ -56,13 +56,11 @@ int main()
 	cout << endl;
 
 	wyzarzanie(generator, tab, krok);
-	//generator.wyswietl();
+	generator.wyswietl();
 
 	cout << "Wynik poprzedni to: " << tab[1] << endl;
 
-	
-	
-	
+
 	
 	//generator.zeruj();	
 	cout << "\n\nNacisnij klawisz, aby zakonczyc"; cin.get();cin.get();

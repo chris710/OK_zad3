@@ -66,20 +66,25 @@ void Generator::wyswietl() {
 	bool na_przestoju = false;		//czy dana operacja koliduje z przestojem
 	bool zapychacz =false;
 	int left;						//ile z operacji zosta³o wykonane przed przestojem
+	ofstream plik("graficznie.txt");//plik tekstowy z wynikiem
 
-	cout<<"///////////////////////////////////////"<<endl;
-	cout<<"\t\t Wyniki: "<<endl;
+	//cout<<"///////////////////////////////////////"<<endl;
+	plik<<"///////////////////////////////////////"<<endl;
+	plik<<"Ostatnia cyfra ka¿dego zadania to numer operacji danego zadania okreœlonego pocz¹tkowymi cyframi. Pierwsze 3 maszyny to wynik dzia³ania algorytmu losowego, a pozosta³e 3 zosta³y potraktowane symulowanym wy¿arzaniem"<<endl;
+	//cout<<"\t\t Wyniki: "<<endl;
+	plik<<"\t\t Wyniki: "<<endl;
 	for(int i = 0; i<3; ++i) {														//dla ka¿dej z 3 maszyn
+		plik<<"Maszyna "<<i+1<<"\t";
 		nastepny_przestoj = 0;														//zerujemy na pocz¹tku dane o przestojach
 		przestoje = true;
 
 		for(int j = 0; j<this->maszyny[i]->uszeregowanie.size(); ++j) {				//dla ka¿dej operacji maszyny
 			na_przestoju = false;
 			Operacja* op = this->maszyny[i]->uszeregowanie[j];
-			if(op->nrZadania >4)													//je¿eli to zapychacz to wypisujemy "Z"
-				cout<<"Zp";
+			if(op->numer >4)													//je¿eli to zapychacz to wypisujemy "Z"
+				plik<<"Zp";
 			else																	//je¿eli to operacja to wypisujemy numer jej zadania
-				cout<<op->nrZadania +1<<op->numer+1;
+				plik<<op->nrZadania +1<<op->numer+1;
 
 			czas = op->begin + op->czas;											//liczymy obecny czas
 			if(przestoje) {															//sprawdamy czy jesteœmy na przestoju
@@ -93,22 +98,22 @@ void Generator::wyswietl() {
 			if(na_przestoju) {														//je¿eli jesteœmy na przestoju
 				if (!zapychacz){
 					for(int k =0; k < op->czas*1.3-left; ++k)						//wypisujemy d³ugoœæ która pozosta³a przed przestojem jako kropki
-							cout<<".";
+							plik<<".";
 				}
 				else {
 					for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ zapychacz
-						cout<<".";
+						plik<<".";
 				}
-				cout<<"P";															//wypisujemy przestój
+				plik<<"P";															//wypisujemy przestój
 				for(int k =0; k<this->maszyny[i]->dlugosc[nastepny_przestoj]; ++k)
-					cout<<" ";
+					plik<<" ";
 				nastepny_przestoj++;
 				if(nastepny_przestoj>=this->maszyny[i]->nPrzestojow)				//je¿eli by³ to ostatni przestój na danej maszynie
 					przestoje = false;												//to to odnotowujemy
 				if (!zapychacz){
-					cout<<op->nrZadania +1<<op->numer+1;
+					plik<<op->nrZadania +1<<op->numer+1;
 					for(int k =0; k<left; ++k) {										//wypisujemy resztê operacji
-						cout<<".";
+						plik<<".";
 					}
 					zapychacz=false;
 				}
@@ -116,18 +121,18 @@ void Generator::wyswietl() {
 			}
 			else {
 				for(int k =0; k<op->czas; ++k)									//wypisujemy d³ugoœæ
-					cout<<".";
+					plik<<".";
 			}
 			}
-		cout<<endl;
+		plik<<endl;
 		}
 	for(int i = 0; i<3; ++i) {														//dla ka¿dej z 3 maszyn
 		int ostatni=this->maszyny[i]->uszeregowanie.size()-1;
 		int dlugosc = this->maszyny[i]->uszeregowanie[ostatni]->begin + this->maszyny[i]->uszeregowanie[ostatni]->czas;
-		cout<<"M"<<i<<" dlugosc: "<<dlugosc<<"\t";
+		plik<<"M"<<i<<" dlugosc: "<<dlugosc<<"\t";
 	}
-
-	}
+	//close(plik);
+}
 
 
 void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nrZad)
