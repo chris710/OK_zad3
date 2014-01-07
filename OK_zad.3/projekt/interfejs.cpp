@@ -49,7 +49,7 @@ void interfejs(Generator &generator, int nPrzestojow)
 	//wyswietlZadania(generator);
 	cout <<"\n===========================\n\n";
 	cout <<"DLUGOSC INSTANCJI: " << generator.dlugoscInstancji <<endl<<endl;
-	wyswietlMaszyny(generator);
+	//wyswietlMaszyny(generator);
 
 	cout <<"\n===========================\n\n";
 }
