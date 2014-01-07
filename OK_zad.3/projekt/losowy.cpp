@@ -248,7 +248,7 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 	//plik<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 	tablica[0]=x;
 	tablica[1]=dlugoscRealna;
-
+	plik.close();
 }
 
 
@@ -467,7 +467,7 @@ void algorytmLosowy2(const Generator& generator, int tablica[])
 	//plik<<"Procent: "<<(float)dlugoscRealna/(x)<<endl;
 	tablica[0]=x;
 	tablica[1]=dlugoscRealna;
-
+	plik.close();
 }
 
 

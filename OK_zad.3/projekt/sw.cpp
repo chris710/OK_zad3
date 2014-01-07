@@ -214,6 +214,7 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 			}
 			if(zapychacz !=0) {
 				Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
+				op->begin=czas;
 				vector<Operacja*>::iterator it = uszeregowanie.begin()+i;
 				uszeregowanie.insert(it,op);																//wk³adanie go do wektora
 				++i;													//omijamy zapychacz i przechodzimy do nastêpnej operacji
@@ -342,7 +343,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
     *     [DONE]zmniejszamy temperaturê o krok
     *     [DONE]najlepszy czas uszeregowania zwracany jako wynik
     ***********/
-	const float max_czas =9999999;
+	const float max_czas =10;
 	ofstream pliki("pliki.txt");
 	srand(NULL);																								//zmienne do liczenia czasu
 	clock_t start;

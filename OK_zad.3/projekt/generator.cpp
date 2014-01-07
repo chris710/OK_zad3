@@ -66,7 +66,9 @@ void Generator::wyswietl() {
 	bool na_przestoju = false;		//czy dana operacja koliduje z przestojem
 	bool zapychacz =false;
 	int left;						//ile z operacji zosta³o wykonane przed przestojem
-	ofstream plik("graficznie.txt");//plik tekstowy z wynikiem
+	ofstream plik;//plik tekstowy z wynikiem
+
+	plik.open("graficznie.txt",ios::app);
 
 	//cout<<"///////////////////////////////////////"<<endl;
 	plik<<"///////////////////////////////////////"<<endl;
@@ -131,7 +133,7 @@ void Generator::wyswietl() {
 		int dlugosc = this->maszyny[i]->uszeregowanie[ostatni]->begin + this->maszyny[i]->uszeregowanie[ostatni]->czas;
 		plik<<"M"<<i<<" dlugosc: "<<dlugosc<<"\t";
 	}
-	//close(plik);
+	plik.close();
 }
 
 

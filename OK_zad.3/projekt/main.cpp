@@ -20,7 +20,7 @@ int main()
     clock_t end;
     float czas;
     ofstream plik;
-
+	plik.open("graficznie.txt",ios::trunc);
 	//ofstream plik("plik.txt",ios::app);
 	int tab[2] = {0, 0};
 	
