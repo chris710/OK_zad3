@@ -92,7 +92,7 @@ void zamiana(	int aaa,										// operacja wczesniejsza
 				vector<Operacja*> & kopia_uszeregowania );			// uszeregowanie, w którym zamieniamy operacje
 
 //	***[STUB]		sprawdza czy mozna zamienic dane operacje 
-bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) ;
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura, int wynik);
 
 //	***[]		wyznacza miesjce w uszeregowaniu danego zapychacza
 int miejsce_w_uszer(int wartosc_zapychacza, Maszyna & maszyna);

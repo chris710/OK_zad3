@@ -141,7 +141,7 @@ void Generator::generujZadanie(int minDlugosc, int maxDlugosc, int delay, int nr
 {
 	Zadanie* Result = new Zadanie();
 	this->zadania.push_back(Result);
-	Result->delay = random(0,delay);
+	Result->delay = delay;
 	Result->operacje[0] = new Operacja(random(minDlugosc, maxDlugosc), 0, Result, nrZad);
 	Result->operacje[1] = new Operacja(random(minDlugosc, maxDlugosc), 1, Result, nrZad);
 	Result->operacje[2] = new Operacja(random(minDlugosc, maxDlugosc), 2, Result, nrZad);

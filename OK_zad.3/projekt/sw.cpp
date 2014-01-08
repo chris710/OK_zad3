@@ -185,7 +185,7 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 		return false;
 		
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
-	if (nowa_dlugosc >= temperatura )
+	if ( (nowa_dlugosc >= temperatura ) || (czas_uszeregowania(maszyna.uszeregowanie) == nowa_dlugosc) )
 		return false;
 
 /*	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
@@ -408,7 +408,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 
 //////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 																	
-			if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] >= przestoje[0][0])  ) || (koniec_zap == false && koniec_przest == true))// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+			//if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] >= przestoje[0][0])  ) || (koniec_zap == false && koniec_przest == true))// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
 			{	// ZAPYCHACZE
 				bool zamieniono=false;
 				int ktory = 0;
@@ -418,15 +418,16 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 						for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
 							if ( (maszyna->uszeregowanie[i]->numer != 98) && (maszyna->uszeregowanie[j]->numer != 98) ){
 								if (mozna_zamienic(i,j, *maszyna, do_poprawy)){
-									cout << endl << "ZAMIENIONO" << endl << endl;
+									cout << endl << "ZAPYCHACZE" << endl << endl;
 									zamieniono=true;
-								koniec=clock();
-								czas=(float)(koniec-start)/CLOCKS_PER_SEC;
-								float a = czas_uszeregowania(maszyna->uszeregowanie);
-								pliki << czas << "\t" << (a/granica) << endl;
-								do_poprawy  -= krok;
-								break;
-								}}
+									koniec=clock();
+									czas=(float)(koniec-start)/CLOCKS_PER_SEC;
+									float a = czas_uszeregowania(maszyna->uszeregowanie);
+									pliki << czas << "\t" << (a/granica) << endl;
+									do_poprawy  -= krok;
+									break;
+								}
+							}
 							if(zamieniono==true)
 								break;
 					}	// koniec for
@@ -440,7 +441,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			}	//koniec zapychaczy
 
 
-			if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] < przestoje[0][0])  ) || (koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+			//if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] < przestoje[0][0])  ) || (koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 			{	 // PRZESTOJE											
 				int ktory=0;
 				bool zamieniono=false;
@@ -449,7 +450,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 						if (maszyna->uszeregowanie[i]->czas < maszyna->uszeregowanie[przestoje[ktory][1]]->czas){
 							float b = czas_uszeregowania(maszyna->uszeregowanie);
 							if (mozna_zamienic(przestoje[ktory][1],i, *maszyna, do_poprawy)){
-								cout << endl << "ZAMIENIONO" << endl << endl;
+								cout << endl << "PRZESTOJE" << endl << endl;
 								zamieniono=true;
 								koniec=clock();
 								czas=(float)(koniec-start)/CLOCKS_PER_SEC;
@@ -458,7 +459,8 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 								pliki << czas << "\t" << (a/granica) << endl;
 								do_poprawy -= krok;
 								break;
-							}}
+							}
+						}
 					}
 					ktory++;
 				}
@@ -484,11 +486,13 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 			if (czas > max_czas)
 				break;
 
+
 			}  //koniec pêtli z maszyn¹
 			int worst= ktora_maszyna(generator);
 			wynik = czas_uszeregowania(generator.maszyny[worst]->uszeregowanie);
      		koniec=clock();
 			czas=(float)(koniec-start)/CLOCKS_PER_SEC;							//obliczanie bie¿¹cego czasu
+
 
 	}    // koniec pêtli z czasem
 
