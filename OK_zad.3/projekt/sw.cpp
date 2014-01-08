@@ -145,7 +145,6 @@ int czas_uszeregowania(vector<Operacja*> & uszeregowanie) {
 }
 
 void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
-		
 		Operacja tmp = *uszeregowanie[aaa];																			//zamieniamy operacje ze sob¹ miejscami
 		*uszeregowanie[aaa] = *uszeregowanie[bbb];
 		*uszeregowanie[bbb] = tmp;
@@ -166,9 +165,19 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 			return false;
 	}
 
-	vector <Operacja*> kopia_uszeregowania;	
-	for (int i=0; i< maszyna.uszeregowanie.size(); i++)
-		kopia_uszeregowania.push_back(maszyna.uszeregowanie[i]);
+	vector <Operacja* >kopia_uszeregowania;
+	for (int i=0; i< maszyna.uszeregowanie.size(); i++){
+		int dlugosc=maszyna.uszeregowanie[i]->czas;
+		int oper=maszyna.uszeregowanie[i]->numer;
+		int zad=maszyna.uszeregowanie[i]->nrZadania;
+		Operacja  *op = new Operacja(dlugosc,oper,NULL,zad);	
+		op->parent=maszyna.uszeregowanie[i]->parent;
+		op->begin=maszyna.uszeregowanie[i]->begin;
+		op->done=maszyna.uszeregowanie[i]->done;
+		op->maszyna=maszyna.uszeregowanie[i]->maszyna;
+		kopia_uszeregowania.push_back(op);					
+		
+	}
 
 	zamiana(aaa, bbb, kopia_uszeregowania);
 	
@@ -176,13 +185,25 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 		return false;
 		
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
-	if (nowa_dlugosc > temperatura )
+	if (nowa_dlugosc >= temperatura )
 		return false;
 
-	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
+/*	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
 	for (int i=0; i< kopia_uszeregowania.size(); i++)													// wstawiamy nowe uszeregowanie
 		maszyna.uszeregowanie.push_back(kopia_uszeregowania[i]);
-	// koniec?
+	// koniec?  */
+
+	maszyna.uszeregowanie.clear();	
+	for (int i=0; i< kopia_uszeregowania.size(); i++){
+		int dlugosc=kopia_uszeregowania[i]->czas;
+		int oper=kopia_uszeregowania[i]->numer;
+		int zad=kopia_uszeregowania[i]->nrZadania;
+		Operacja  *op = new Operacja(dlugosc,oper,NULL,zad);	
+		op->parent=kopia_uszeregowania[i]->parent;
+		op->begin=kopia_uszeregowania[i]->begin;
+		maszyna.uszeregowanie.push_back(op);					
+		
+	}
  
 	return true;
 }
@@ -221,34 +242,36 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				czas +=	zapychacz;									//dodajemy d³ugoœæ zapychacza do czasu
 				dlugosc++;
 			}
-		
-			if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {								//je¿eli czas siê nie zgadza
+			
+			if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {														//je¿eli czas siê nie zgadza
 																											
 				//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
 				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
-				if ( czas > czas_przestoju &&  czyPrzestoje) {//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
-															//jesteœmy obecnie na przestoju
+				if ( czas > czas_przestoju &&  czyPrzestoje) {	//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
+																																		//jesteœmy obecnie na przestoju
 					if ( czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj])) {
-																			//jesteœmy na przestoju i czas siê nie zgadza
+																																		//jesteœmy na przestoju i czas siê nie zgadza
 						uszeregowanie[i]->begin = czas + uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 
-							+ maszyna.dlugosc[nastepny_przestoj];			//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
-					}														//poprzedniej operacji
-					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas; //tylko 0.3 bo resztê dodajemy póŸniej
-					if(maszyna.nPrzestojow==(nastepny_przestoj+1))		//je¿eli skoñczy³y siê przestoje
-						czyPrzestoje = false;							//to podnosimy flagê ich braku
+							+ maszyna.dlugosc[nastepny_przestoj];																		//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
+					}																													//poprzedniej operacji
+					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas;											//tylko 0.3 bo resztê dodajemy póŸniej
+					if(maszyna.nPrzestojow==(nastepny_przestoj+1))																		//je¿eli skoñczy³y siê przestoje
+						czyPrzestoje = false;																							//to podnosimy flagê ich braku
 					if(czyPrzestoje)
 						nastepny_przestoj++;
 					
 				}
 				else						//czas siê zgadza
 					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
-			}
+			} //koniec czegos ;o
+
 			if(uszeregowanie[i]->numer == 1 || uszeregowanie[i]->numer == 0) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
 				Operacja *nastepna = uszeregowanie[i]->parent->operacje[uszeregowanie[i]->numer+1];
 				if ( nastepna->begin < (czas + uszeregowanie[i]->czas) )		
 					return false;									//je¿eli tak to giñ
 			}
-		czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
+			uszeregowanie[i]->begin=czas;
+			czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
 		}
 		else{
 			uszeregowanie.erase(uszeregowanie.begin() + i); 
@@ -343,7 +366,9 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
     *     [DONE]zmniejszamy temperaturê o krok
     *     [DONE]najlepszy czas uszeregowania zwracany jako wynik
     ***********/
-	const float max_czas =10;
+
+	const float max_czas =15;
+
 	ofstream pliki("pliki.txt");
 	srand(NULL);																								//zmienne do liczenia czasu
 	clock_t start;
@@ -415,6 +440,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 								czas=(float)(koniec-start)/CLOCKS_PER_SEC;
 								float a = czas_uszeregowania(maszyna->uszeregowanie);
 								pliki << czas << "\t" << (a/granica) << endl;
+								do_poprawy  = czas_uszeregowania(maszyna->uszeregowanie);
 								break;
 								}}
 							if(zamieniono==true)
@@ -446,6 +472,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 								float a = czas_uszeregowania(maszyna->uszeregowanie);
 								//cout << "\t" << a;
 								pliki << czas << "\t" << (a/granica) << endl;
+								do_poprawy = czas_uszeregowania(maszyna->uszeregowanie);
 								break;
 							}}
 					}
@@ -465,7 +492,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 					do_poprawy += krok;
 					koniec_zap = false;
 					koniec_przest = false;	
-					//cout << do_poprawy << endl;
+					cout << do_poprawy << endl;
 				}
 
 			koniec=clock();
