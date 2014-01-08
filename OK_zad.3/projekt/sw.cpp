@@ -150,7 +150,7 @@ void zamiana( int  aaa, int  bbb, vector<Operacja*> & uszeregowanie ) {
 		*uszeregowanie[bbb] = tmp;
 }
 
-bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
+bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura, int best) {
 	if(maszyna.uszeregowanie[bbb]->numer >5 )
 		return false;
 
@@ -185,7 +185,7 @@ bool mozna_zamienic(int aaa, int bbb, Maszyna & maszyna, int temperatura) {
 		return false;
 		
 	int nowa_dlugosc = czas_uszeregowania(kopia_uszeregowania);
-	if ( (nowa_dlugosc >= temperatura ) || (czas_uszeregowania(maszyna.uszeregowanie) == nowa_dlugosc) )
+	if ( (nowa_dlugosc >= temperatura ) || (czas_uszeregowania(maszyna.uszeregowanie) == nowa_dlugosc) || (best == nowa_dlugosc ))
 		return false;
 
 /*	maszyna.uszeregowanie.clear();																		// zerujemy uszeregowanie na maszynie
@@ -351,64 +351,58 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
     *     [DONE]najlepszy czas uszeregowania zwracany jako wynik
     ***********/
 
-	const float max_czas =15;
+	const float max_czas =10;
 
 	ofstream pliki("pliki.txt");
 	srand(NULL);																								//zmienne do liczenia czasu
 	clock_t start;
 	clock_t koniec;
-	float czas=0;
-	int wynik;    																							// najlepszy tymczasowy wynik (póŸniej jest zwracany jako ostateczny)
-	Maszyna* maszyna;                   																		// wskaznik na maszynê która bêdzie obrabiana
-	int granica=tablica[1] , optimum=tablica[0];       														// TABLICA pierwszy element to czas uszeregowania algorytmu losowego, a drugi to optimum ponizej ktorego na pewno nie zejdziemy
+	float czas=0;   																							// najlepszy tymczasowy wynik (póŸniej jest zwracany jako ostateczny)
+	Maszyna* maszyna;                   																		// wskaznik na maszynê która bêdzie obrabiana    							
+	int best=999999, granica=tablica[1];
 	//cout <<  granica << "\t" << optimum;
 ///////////////////    pierwsza petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	start=clock();         													       						    //rozpoczynamy odliczanie czasu
-	while (czas < max_czas) {						       															// PÊTLA Z CZASEM
-
-		int dlugosc0 = czas_uszeregowania(generator.maszyny[0]->uszeregowanie);								 
-		int dlugosc1 = czas_uszeregowania(generator.maszyny[1]->uszeregowanie);								//LICZENIE CZASÓW MASZYN
-		int dlugosc2 = czas_uszeregowania(generator.maszyny[2]->uszeregowanie);
+	while (czas < max_czas) {						       													// PÊTLA Z CZASEM
 
 		bool mozliwa_poprawa = true;
 		int najgorsza_maszyna = ktora_maszyna(generator);													// wybieramy najbardziej zawalona maszyne
 		maszyna = generator.maszyny[najgorsza_maszyna];														// przypisujemy wskaznik na najgorsza maszyne
 		int czas_drugiej_najgorszej;																		// czas drugiej najgorszej
 	
+		{
+		int dlugosc0 = czas_uszeregowania(generator.maszyny[0]->uszeregowanie);								 
+		int dlugosc1 = czas_uszeregowania(generator.maszyny[1]->uszeregowanie);								//LICZENIE CZASÓW MASZYN
+		int dlugosc2 = czas_uszeregowania(generator.maszyny[2]->uszeregowanie);
+
 		if((dlugosc0>dlugosc1 && dlugosc0<dlugosc2) || (dlugosc0<dlugosc1 && dlugosc0>dlugosc2))
 			czas_drugiej_najgorszej = dlugosc0;
 		else if((dlugosc1>dlugosc2 && dlugosc1<dlugosc0) || (dlugosc1>dlugosc0 && dlugosc1<dlugosc2))
 			czas_drugiej_najgorszej = dlugosc1;
 		else
 			czas_drugiej_najgorszej = dlugosc2;
-
+		}
 		int do_poprawy = czas_drugiej_najgorszej;
+
 
 ///////////////////    druga petla       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		bool koniec_zap = false, koniec_przest = false;	
 		while (czas_uszeregowania(generator.maszyny[najgorsza_maszyna]->uszeregowanie) >= czas_drugiej_najgorszej) {            //PÊTLA Z MASZYN¥
 
-//			cout << " Maszyna: " << najgorsza_maszyna 
-//				 << ", liczba zapychaczy: " << liczba_zapychaczy(maszyna->uszeregowanie) 
-//				 <<", CZAS zapychaczy: " << czas_zapychaczy(maszyna->uszeregowanie) << endl << endl;
-
-
 			vector<vector<int> > zapychacze;																
 			sortowanie_zapychaczy(zapychacze, maszyna->uszeregowanie);										// sortujemy zapychacze poz wzgledem dlugosci ich trwania
-
 			vector<vector<int> > przestoje;
 			sortowanie_przestojow(przestoje, *maszyna);														// sortujemy przestoje poz wzgledem dlugosci ich trwania
 
 			if (przestoje.size()==0)
 				koniec_przest=true;
-
 			if (zapychacze.size()==0)
 				koniec_zap=true;
 
 //////          zapychacz vs przestoj           //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 																	
-			//if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] >= przestoje[0][0])  ) || (koniec_zap == false && koniec_przest == true))// JESLI ZAPYCHACZ JEST WIEKSZY OD KARY 
+			if (koniec_zap == false)	// JESLI ZAPYCHACZ
 			{	// ZAPYCHACZE
 				bool zamieniono=false;
 				int ktory = 0;
@@ -417,86 +411,99 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 					for (int i=miejsce-1; i>=0; i--){
 						for (int j=miejsce+1; j<maszyna->uszeregowanie.size();j++)
 							if ( (maszyna->uszeregowanie[i]->numer != 98) && (maszyna->uszeregowanie[j]->numer != 98) ){
-								if (mozna_zamienic(i,j, *maszyna, do_poprawy)){
+								if (mozna_zamienic(i,j, *maszyna, do_poprawy,best)){
 									cout << endl << "ZAPYCHACZE" << endl << endl;
 									zamieniono=true;
-									koniec=clock();
-									czas=(float)(koniec-start)/CLOCKS_PER_SEC;
 									float a = czas_uszeregowania(maszyna->uszeregowanie);
 									pliki << czas << "\t" << (a/granica) << endl;
 									do_poprawy  -= krok;
+									int obecny = czas_uszeregowania(generator.maszyny[ktora_maszyna(generator)]->uszeregowanie);
+									if ( best > obecny )
+										best = obecny;
+
 									break;
-								}
-							}
+								} //endif
+							} //endif
 							if(zamieniono==true)
 								break;
 					}	// koniec for
 					ktory++;
 				}	//koniec while
-
-				if(zamieniono == false)
-					koniec_zap = true;
-				else
-					koniec_zap = false;
+				koniec_zap = true;
 			}	//koniec zapychaczy
 
 
-			//if ( ((koniec_zap == false && koniec_przest == false) && (zapychacze[0][0] < przestoje[0][0])  ) || (koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
+			if ((koniec_zap == true && koniec_przest == false))// JESLI KARA JEST WIEKSZA OD ZAPYCHACZA 
 			{	 // PRZESTOJE											
 				int ktory=0;
 				bool zamieniono=false;
 				while ( (zamieniono == false) && (ktory < przestoje.size()) ){
 					for (int i=(maszyna->uszeregowanie.size()-1); i>przestoje[ktory][1]; i--){
 						if (maszyna->uszeregowanie[i]->czas < maszyna->uszeregowanie[przestoje[ktory][1]]->czas){
-							float b = czas_uszeregowania(maszyna->uszeregowanie);
-							if (mozna_zamienic(przestoje[ktory][1],i, *maszyna, do_poprawy)){
+							if (mozna_zamienic(przestoje[ktory][1],i, *maszyna, do_poprawy,best)){
 								cout << endl << "PRZESTOJE" << endl << endl;
 								zamieniono=true;
-								koniec=clock();
-								czas=(float)(koniec-start)/CLOCKS_PER_SEC;
 								float a = czas_uszeregowania(maszyna->uszeregowanie);
-								//cout << "\t" << a;
 								pliki << czas << "\t" << (a/granica) << endl;
 								do_poprawy -= krok;
+								int obecny = czas_uszeregowania(generator.maszyny[ktora_maszyna(generator)]->uszeregowanie);
+								if ( best > obecny )
+									best = obecny;
+
 								break;
 							}
 						}
 					}
 					ktory++;
 				}
-					if(zamieniono == false)
-						koniec_przest = true;
-					else
-						koniec_przest = false;
-
-				} //koniec pêtli z przestojami
+				koniec_przest = true;
+			} //koniec z przestojami
 				
-			
-			if (koniec_zap==true && koniec_przest==true){
+				
+				// sprawdzenie czasu
+				koniec=clock();
+				czas=(float)(koniec-start)/CLOCKS_PER_SEC;
+				if (czas > max_czas)
+					break;
+
+				// zwiekszenie kroku
+				if (koniec_zap==true && koniec_przest==true){
 					//mozliwa_poprawa=false;
 					//cout << " Nie udalo sie " << endl;
 					do_poprawy += krok;
 					koniec_zap = false;
 					koniec_przest = false;	
-					cout << do_poprawy << endl;
-				}
-
-			koniec=clock();
-			czas=(float)(koniec-start)/CLOCKS_PER_SEC;
-			if (czas > max_czas)
-				break;
-
+					cout << do_poprawy << endl;				}
+				
 
 			}  //koniec pêtli z maszyn¹
-			int worst= ktora_maszyna(generator);
-			wynik = czas_uszeregowania(generator.maszyny[worst]->uszeregowanie);
+			
+		
      		koniec=clock();
 			czas=(float)(koniec-start)/CLOCKS_PER_SEC;							//obliczanie bie¿¹cego czasu
 
 
+
+			int minimum=0;
+			int worst= ktora_maszyna(generator);
+			//wynik = czas_uszeregowania(generator.maszyny[worst]->uszeregowanie);
+			for (int i=0; i<generator.maszyny[worst]->nPrzestojow; i++)
+				minimum += generator.maszyny[worst]->dlugosc[i];
+			for (int i=0; i<generator.maszyny[worst]->uszeregowanie.size(); i++)
+				if(generator.maszyny[worst]->uszeregowanie[i]->numer != 98)
+					minimum += generator.maszyny[worst]->uszeregowanie[i]->czas;
+			cout << " NASZE OPTIMUM TO = " <<minimum <<endl;
 	}    // koniec pêtli z czasem
 
-	
+
+
+   //ZWRACANIE WYNIKU (NAJLEPSZEGO NAPOTKANEGO PO DRODZE CZASU NAJGORSZEJ MASZYNY)
+
+	cout << " NASZ WYNIK TO = " << best <<endl << endl;
+
+   return best;
+}
+
 /*	for (int i=0; i<3; i++)
 	{		
 		//cout << "NR " << i << " MASZYNA:" << endl<<"------"<<endl;
@@ -509,7 +516,3 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 		}
 	}
 */
-   //ZWRACANIE WYNIKU (NAJLEPSZEGO NAPOTKANEGO PO DRODZE CZASU NAJGORSZEJ MASZYNY)
-   cout << " NASZ WYNIK TO = " <<wynik <<endl << endl;
-   return wynik;
-}

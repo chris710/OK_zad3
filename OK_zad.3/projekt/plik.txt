@@ -1,6017 +1,913 @@
 NR 0 MASZYNA:
 ------
-OP = 1		ZAD = 2		CZAS = 17
+OP = 1		ZAD = 1		CZAS = 2
 
-OP = 1		ZAD = 679		CZAS = 39
+OP = 99		ZAD = 99		CZAS = 8
 
-OP = 1		ZAD = 554		CZAS = 35
+OP = 1		ZAD = 2		CZAS = 19
 
-OP = 1		ZAD = 846		CZAS = 19
+OP = 1		ZAD = 3		CZAS = 49
 
-OP = 1		ZAD = 829		CZAS = 42
+OP = 1		ZAD = 8		CZAS = 11
 
-OP = 1		ZAD = 398		CZAS = 44
+OP = 1		ZAD = 9		CZAS = 39
 
-OP = 1		ZAD = 968		CZAS = 4
+OP = 1		ZAD = 16		CZAS = 26
 
-OP = 1		ZAD = 754		CZAS = 28
+OP = 1		ZAD = 19		CZAS = 20
 
-OP = 1		ZAD = 642		CZAS = 45
+OP = 1		ZAD = 21		CZAS = 24
 
-OP = 1		ZAD = 357		CZAS = 30
+OP = 1		ZAD = 23		CZAS = 19
 
-OP = 1		ZAD = 610		CZAS = 38
+OP = 1		ZAD = 25		CZAS = 39
 
-OP = 1		ZAD = 551		CZAS = 3
+OP = 1		ZAD = 37		CZAS = 15
 
-OP = 1		ZAD = 371		CZAS = 13
+OP = 1		ZAD = 39		CZAS = 39
 
-OP = 1		ZAD = 762		CZAS = 19
+OP = 1		ZAD = 43		CZAS = 43
 
-OP = 1		ZAD = 606		CZAS = 26
+OP = 1		ZAD = 50		CZAS = 41
 
-OP = 1		ZAD = 419		CZAS = 21
+OP = 1		ZAD = 54		CZAS = 13
 
-OP = 1		ZAD = 356		CZAS = 48
+OP = 1		ZAD = 56		CZAS = 12
 
-OP = 1		ZAD = 615		CZAS = 4
+OP = 1		ZAD = 57		CZAS = 13
 
-OP = 1		ZAD = 601		CZAS = 18
+OP = 1		ZAD = 58		CZAS = 31
 
-OP = 1		ZAD = 622		CZAS = 46
+OP = 1		ZAD = 71		CZAS = 49
 
-OP = 1		ZAD = 468		CZAS = 41
-
-OP = 1		ZAD = 354		CZAS = 13
-
-OP = 1		ZAD = 317		CZAS = 13
-
-OP = 1		ZAD = 420		CZAS = 15
-
-OP = 1		ZAD = 316		CZAS = 29
-
-OP = 1		ZAD = 948		CZAS = 1
-
-OP = 1		ZAD = 603		CZAS = 46
-
-OP = 1		ZAD = 817		CZAS = 18
-
-OP = 1		ZAD = 854		CZAS = 7
-
-OP = 1		ZAD = 682		CZAS = 16
-
-OP = 1		ZAD = 446		CZAS = 12
-
-OP = 1		ZAD = 331		CZAS = 2
-
-OP = 1		ZAD = 414		CZAS = 11
-
-OP = 1		ZAD = 954		CZAS = 18
-
-OP = 1		ZAD = 608		CZAS = 11
-
-OP = 1		ZAD = 309		CZAS = 44
-
-OP = 1		ZAD = 638		CZAS = 44
-
-OP = 1		ZAD = 784		CZAS = 4
-
-OP = 1		ZAD = 668		CZAS = 49
-
-OP = 1		ZAD = 484		CZAS = 2
-
-OP = 1		ZAD = 473		CZAS = 29
-
-OP = 1		ZAD = 628		CZAS = 12
-
-OP = 1		ZAD = 893		CZAS = 46
-
-OP = 1		ZAD = 570		CZAS = 29
-
-OP = 1		ZAD = 849		CZAS = 6
-
-OP = 1		ZAD = 509		CZAS = 16
-
-OP = 1		ZAD = 862		CZAS = 41
-
-OP = 1		ZAD = 861		CZAS = 22
-
-OP = 1		ZAD = 517		CZAS = 33
-
-OP = 1		ZAD = 535		CZAS = 17
-
-OP = 1		ZAD = 464		CZAS = 35
-
-OP = 1		ZAD = 528		CZAS = 6
-
-OP = 1		ZAD = 397		CZAS = 39
-
-OP = 1		ZAD = 684		CZAS = 22
-
-OP = 1		ZAD = 590		CZAS = 8
-
-OP = 1		ZAD = 498		CZAS = 38
-
-OP = 1		ZAD = 759		CZAS = 24
-
-OP = 1		ZAD = 661		CZAS = 47
-
-OP = 1		ZAD = 646		CZAS = 14
-
-OP = 1		ZAD = 577		CZAS = 35
-
-OP = 1		ZAD = 488		CZAS = 4
-
-OP = 1		ZAD = 451		CZAS = 10
-
-OP = 1		ZAD = 449		CZAS = 40
-
-OP = 1		ZAD = 851		CZAS = 35
-
-OP = 1		ZAD = 827		CZAS = 37
-
-OP = 1		ZAD = 629		CZAS = 7
-
-OP = 1		ZAD = 607		CZAS = 9
-
-OP = 1		ZAD = 565		CZAS = 15
-
-OP = 1		ZAD = 376		CZAS = 37
-
-OP = 1		ZAD = 908		CZAS = 41
-
-OP = 1		ZAD = 418		CZAS = 10
-
-OP = 1		ZAD = 374		CZAS = 13
-
-OP = 1		ZAD = 634		CZAS = 18
-
-OP = 1		ZAD = 466		CZAS = 18
-
-OP = 1		ZAD = 452		CZAS = 47
-
-OP = 1		ZAD = 546		CZAS = 18
-
-OP = 1		ZAD = 405		CZAS = 38
-
-OP = 1		ZAD = 429		CZAS = 17
-
-OP = 1		ZAD = 776		CZAS = 11
-
-OP = 1		ZAD = 504		CZAS = 20
-
-OP = 1		ZAD = 368		CZAS = 2
-
-OP = 1		ZAD = 367		CZAS = 21
-
-OP = 1		ZAD = 953		CZAS = 4
-
-OP = 1		ZAD = 966		CZAS = 14
-
-OP = 1		ZAD = 671		CZAS = 11
-
-OP = 1		ZAD = 734		CZAS = 29
-
-OP = 1		ZAD = 702		CZAS = 45
-
-OP = 1		ZAD = 640		CZAS = 45
-
-OP = 1		ZAD = 725		CZAS = 42
-
-OP = 1		ZAD = 884		CZAS = 29
-
-OP = 1		ZAD = 573		CZAS = 41
-
-OP = 1		ZAD = 891		CZAS = 6
-
-OP = 1		ZAD = 740		CZAS = 2
-
-OP = 1		ZAD = 722		CZAS = 33
-
-OP = 1		ZAD = 697		CZAS = 15
-
-OP = 1		ZAD = 586		CZAS = 36
-
-OP = 1		ZAD = 541		CZAS = 47
-
-OP = 1		ZAD = 940		CZAS = 7
-
-OP = 1		ZAD = 723		CZAS = 30
-
-OP = 1		ZAD = 544		CZAS = 11
-
-OP = 1		ZAD = 520		CZAS = 27
-
-OP = 1		ZAD = 482		CZAS = 13
-
-OP = 1		ZAD = 481		CZAS = 5
-
-OP = 1		ZAD = 614		CZAS = 4
-
-OP = 1		ZAD = 479		CZAS = 20
-
-OP = 1		ZAD = 624		CZAS = 47
-
-OP = 1		ZAD = 877		CZAS = 48
-
-OP = 1		ZAD = 592		CZAS = 26
-
-OP = 1		ZAD = 428		CZAS = 4
-
-OP = 1		ZAD = 388		CZAS = 10
-
-OP = 1		ZAD = 961		CZAS = 10
-
-OP = 1		ZAD = 383		CZAS = 40
-
-OP = 1		ZAD = 369		CZAS = 3
-
-OP = 1		ZAD = 365		CZAS = 28
-
-OP = 1		ZAD = 941		CZAS = 15
-
-OP = 1		ZAD = 850		CZAS = 24
-
-OP = 1		ZAD = 360		CZAS = 32
-
-OP = 1		ZAD = 353		CZAS = 43
-
-OP = 1		ZAD = 958		CZAS = 42
-
-OP = 1		ZAD = 921		CZAS = 2
-
-OP = 1		ZAD = 791		CZAS = 17
-
-OP = 1		ZAD = 588		CZAS = 14
-
-OP = 1		ZAD = 524		CZAS = 7
-
-OP = 1		ZAD = 425		CZAS = 37
-
-OP = 1		ZAD = 609		CZAS = 25
-
-OP = 1		ZAD = 811		CZAS = 43
-
-OP = 1		ZAD = 878		CZAS = 30
-
-OP = 1		ZAD = 819		CZAS = 27
-
-OP = 1		ZAD = 808		CZAS = 9
-
-OP = 1		ZAD = 698		CZAS = 48
-
-OP = 1		ZAD = 604		CZAS = 39
-
-OP = 1		ZAD = 526		CZAS = 41
-
-OP = 1		ZAD = 672		CZAS = 37
-
-OP = 1		ZAD = 887		CZAS = 21
-
-OP = 1		ZAD = 412		CZAS = 23
-
-OP = 1		ZAD = 975		CZAS = 12
-
-OP = 1		ZAD = 404		CZAS = 16
-
-OP = 1		ZAD = 379		CZAS = 7
-
-OP = 1		ZAD = 373		CZAS = 5
-
-OP = 1		ZAD = 363		CZAS = 24
-
-OP = 1		ZAD = 717		CZAS = 10
-
-OP = 1		ZAD = 593		CZAS = 42
-
-OP = 1		ZAD = 918		CZAS = 30
-
-OP = 1		ZAD = 899		CZAS = 39
-
-OP = 1		ZAD = 574		CZAS = 34
-
-OP = 1		ZAD = 824		CZAS = 13
-
-OP = 1		ZAD = 708		CZAS = 35
-
-OP = 1		ZAD = 476		CZAS = 6
-
-OP = 1		ZAD = 463		CZAS = 28
-
-OP = 1		ZAD = 582		CZAS = 4
-
-OP = 1		ZAD = 454		CZAS = 38
-
-OP = 1		ZAD = 750		CZAS = 3
-
-OP = 1		ZAD = 527		CZAS = 35
-
-OP = 1		ZAD = 550		CZAS = 48
-
-OP = 1		ZAD = 669		CZAS = 16
-
-OP = 1		ZAD = 758		CZAS = 45
-
-OP = 1		ZAD = 664		CZAS = 14
-
-OP = 1		ZAD = 521		CZAS = 38
-
-OP = 1		ZAD = 989		CZAS = 19
-
-OP = 1		ZAD = 457		CZAS = 43
-
-OP = 1		ZAD = 352		CZAS = 3
-
-OP = 1		ZAD = 351		CZAS = 8
-
-OP = 1		ZAD = 350		CZAS = 25
-
-OP = 1		ZAD = 739		CZAS = 35
-
-OP = 1		ZAD = 923		CZAS = 33
-
-OP = 1		ZAD = 857		CZAS = 27
-
-OP = 1		ZAD = 346		CZAS = 10
-
-OP = 1		ZAD = 553		CZAS = 38
-
-OP = 1		ZAD = 886		CZAS = 18
-
-OP = 1		ZAD = 510		CZAS = 39
-
-OP = 1		ZAD = 338		CZAS = 7
-
-OP = 1		ZAD = 926		CZAS = 2
-
-OP = 1		ZAD = 337		CZAS = 29
-
-OP = 1		ZAD = 745		CZAS = 5
-
-OP = 1		ZAD = 334		CZAS = 42
-
-OP = 1		ZAD = 529		CZAS = 27
-
-OP = 1		ZAD = 670		CZAS = 17
-
-OP = 1		ZAD = 585		CZAS = 30
-
-OP = 1		ZAD = 515		CZAS = 45
-
-OP = 1		ZAD = 548		CZAS = 19
-
-OP = 1		ZAD = 890		CZAS = 24
-
-OP = 1		ZAD = 788		CZAS = 10
-
-OP = 1		ZAD = 785		CZAS = 4
-
-OP = 1		ZAD = 312		CZAS = 30
-
-OP = 1		ZAD = 644		CZAS = 31
-
-OP = 1		ZAD = 621		CZAS = 18
-
-OP = 1		ZAD = 704		CZAS = 45
-
-OP = 1		ZAD = 307		CZAS = 24
-
-OP = 1		ZAD = 305		CZAS = 26
-
-OP = 1		ZAD = 801		CZAS = 20
-
-OP = 1		ZAD = 304		CZAS = 17
-
-OP = 1		ZAD = 655		CZAS = 48
-
-OP = 1		ZAD = 752		CZAS = 35
-
-OP = 1		ZAD = 830		CZAS = 43
-
-OP = 1		ZAD = 832		CZAS = 13
-
-OP = 1		ZAD = 916		CZAS = 45
-
-OP = 1		ZAD = 600		CZAS = 42
-
-OP = 1		ZAD = 299		CZAS = 16
-
-OP = 1		ZAD = 296		CZAS = 39
-
-OP = 1		ZAD = 295		CZAS = 40
-
-OP = 1		ZAD = 774		CZAS = 40
-
-OP = 1		ZAD = 594		CZAS = 43
-
-OP = 1		ZAD = 898		CZAS = 46
-
-OP = 1		ZAD = 895		CZAS = 31
-
-OP = 1		ZAD = 290		CZAS = 45
-
-OP = 1		ZAD = 842		CZAS = 2
-
-OP = 1		ZAD = 639		CZAS = 41
-
-OP = 1		ZAD = 285		CZAS = 39
-
-OP = 1		ZAD = 649		CZAS = 18
-
-OP = 1		ZAD = 283		CZAS = 5
-
-OP = 1		ZAD = 597		CZAS = 6
-
-OP = 1		ZAD = 282		CZAS = 41
-
-OP = 1		ZAD = 681		CZAS = 45
-
-OP = 1		ZAD = 275		CZAS = 41
-
-OP = 1		ZAD = 738		CZAS = 25
-
-OP = 1		ZAD = 268		CZAS = 7
-
-OP = 1		ZAD = 876		CZAS = 25
-
-OP = 1		ZAD = 262		CZAS = 6
-
-OP = 1		ZAD = 260		CZAS = 17
-
-OP = 1		ZAD = 259		CZAS = 11
-
-OP = 1		ZAD = 258		CZAS = 47
-
-OP = 1		ZAD = 764		CZAS = 35
-
-OP = 1		ZAD = 718		CZAS = 20
-
-OP = 1		ZAD = 256		CZAS = 42
-
-OP = 1		ZAD = 252		CZAS = 7
-
-OP = 1		ZAD = 251		CZAS = 22
-
-OP = 1		ZAD = 248		CZAS = 18
-
-OP = 1		ZAD = 912		CZAS = 3
-
-OP = 1		ZAD = 247		CZAS = 32
-
-OP = 1		ZAD = 245		CZAS = 27
-
-OP = 1		ZAD = 645		CZAS = 44
-
-OP = 1		ZAD = 244		CZAS = 13
-
-OP = 1		ZAD = 242		CZAS = 42
-
-OP = 1		ZAD = 652		CZAS = 13
-
-OP = 1		ZAD = 238		CZAS = 25
-
-OP = 1		ZAD = 716		CZAS = 28
-
-OP = 1		ZAD = 235		CZAS = 45
-
-OP = 1		ZAD = 699		CZAS = 35
-
-OP = 1		ZAD = 949		CZAS = 9
-
-OP = 1		ZAD = 813		CZAS = 31
-
-OP = 1		ZAD = 228		CZAS = 44
-
-OP = 1		ZAD = 225		CZAS = 39
-
-OP = 1		ZAD = 787		CZAS = 17
-
-OP = 1		ZAD = 222		CZAS = 27
-
-OP = 1		ZAD = 219		CZAS = 23
-
-OP = 1		ZAD = 712		CZAS = 18
-
-OP = 1		ZAD = 214		CZAS = 7
-
-OP = 1		ZAD = 211		CZAS = 45
-
-OP = 1		ZAD = 207		CZAS = 48
-
-OP = 1		ZAD = 203		CZAS = 28
-
-OP = 1		ZAD = 711		CZAS = 48
-
-OP = 1		ZAD = 767		CZAS = 26
-
-OP = 1		ZAD = 863		CZAS = 12
-
-OP = 1		ZAD = 786		CZAS = 45
-
-OP = 1		ZAD = 193		CZAS = 47
-
-OP = 1		ZAD = 844		CZAS = 13
-
-OP = 1		ZAD = 744		CZAS = 48
-
-OP = 1		ZAD = 188		CZAS = 44
-
-OP = 1		ZAD = 184		CZAS = 27
-
-OP = 1		ZAD = 855		CZAS = 10
-
-OP = 1		ZAD = 770		CZAS = 35
-
-OP = 1		ZAD = 868		CZAS = 13
-
-OP = 1		ZAD = 889		CZAS = 16
-
-OP = 1		ZAD = 179		CZAS = 48
-
-OP = 1		ZAD = 176		CZAS = 12
-
-OP = 1		ZAD = 174		CZAS = 45
-
-OP = 1		ZAD = 170		CZAS = 40
-
-OP = 1		ZAD = 164		CZAS = 34
-
-OP = 1		ZAD = 885		CZAS = 20
-
-OP = 1		ZAD = 156		CZAS = 30
-
-OP = 1		ZAD = 155		CZAS = 47
-
-OP = 1		ZAD = 152		CZAS = 48
-
-OP = 1		ZAD = 148		CZAS = 25
-
-OP = 1		ZAD = 146		CZAS = 15
-
-OP = 1		ZAD = 902		CZAS = 5
-
-OP = 1		ZAD = 825		CZAS = 7
-
-OP = 1		ZAD = 144		CZAS = 3
-
-OP = 1		ZAD = 143		CZAS = 16
-
-OP = 1		ZAD = 141		CZAS = 28
-
-OP = 1		ZAD = 139		CZAS = 39
-
-OP = 1		ZAD = 937		CZAS = 33
-
-OP = 1		ZAD = 133		CZAS = 47
-
-OP = 1		ZAD = 128		CZAS = 43
-
-OP = 1		ZAD = 125		CZAS = 48
-
-OP = 1		ZAD = 119		CZAS = 32
-
-OP = 1		ZAD = 112		CZAS = 20
-
-OP = 1		ZAD = 103		CZAS = 10
-
-OP = 1		ZAD = 932		CZAS = 19
-
-OP = 1		ZAD = 99		CZAS = 13
-
-OP = 1		ZAD = 97		CZAS = 30
-
-OP = 1		ZAD = 96		CZAS = 40
-
-OP = 1		ZAD = 95		CZAS = 45
-
-OP = 1		ZAD = 93		CZAS = 27
-
-OP = 1		ZAD = 90		CZAS = 8
-
-OP = 1		ZAD = 89		CZAS = 28
-
-OP = 1		ZAD = 985		CZAS = 48
-
-OP = 1		ZAD = 85		CZAS = 42
-
-OP = 1		ZAD = 81		CZAS = 18
-
-OP = 1		ZAD = 80		CZAS = 32
-
-OP = 1		ZAD = 76		CZAS = 47
-
-OP = 1		ZAD = 73		CZAS = 15
-
-OP = 1		ZAD = 70		CZAS = 24
-
-OP = 1		ZAD = 977		CZAS = 15
-
-OP = 1		ZAD = 950		CZAS = 20
-
-OP = 1		ZAD = 60		CZAS = 42
-
-OP = 1		ZAD = 947		CZAS = 23
-
-OP = 1		ZAD = 999		CZAS = 41
-
-OP = 1		ZAD = 55		CZAS = 6
-
-OP = 1		ZAD = 53		CZAS = 22
-
-OP = 1		ZAD = 51		CZAS = 24
-
-OP = 1		ZAD = 48		CZAS = 8
-
-OP = 1		ZAD = 47		CZAS = 27
-
-OP = 1		ZAD = 45		CZAS = 49
-
-OP = 1		ZAD = 41		CZAS = 27
-
-OP = 1		ZAD = 38		CZAS = 39
-
-OP = 1		ZAD = 33		CZAS = 43
-
-OP = 1		ZAD = 30		CZAS = 32
-
-OP = 1		ZAD = 25		CZAS = 42
-
-OP = 1		ZAD = 22		CZAS = 25
-
-OP = 1		ZAD = 20		CZAS = 39
-
-OP = 1		ZAD = 16		CZAS = 25
-
-OP = 1		ZAD = 13		CZAS = 27
-
-OP = 1		ZAD = 10		CZAS = 23
-
-OP = 1		ZAD = 5		CZAS = 18
-
-OP = 99		ZAD = 99		CZAS = 230
-
-OP = 2		ZAD = 1000		CZAS = 14
-
-OP = 2		ZAD = 998		CZAS = 47
-
-OP = 2		ZAD = 997		CZAS = 13
-
-OP = 2		ZAD = 996		CZAS = 20
-
-OP = 2		ZAD = 992		CZAS = 8
-
-OP = 2		ZAD = 991		CZAS = 15
-
-OP = 2		ZAD = 990		CZAS = 3
-
-OP = 2		ZAD = 988		CZAS = 2
-
-OP = 2		ZAD = 987		CZAS = 44
-
-OP = 2		ZAD = 979		CZAS = 21
-
-OP = 2		ZAD = 974		CZAS = 39
-
-OP = 2		ZAD = 972		CZAS = 44
-
-OP = 2		ZAD = 964		CZAS = 33
-
-OP = 2		ZAD = 960		CZAS = 5
-
-OP = 2		ZAD = 959		CZAS = 35
-
-OP = 2		ZAD = 957		CZAS = 47
-
-OP = 2		ZAD = 955		CZAS = 36
-
-OP = 2		ZAD = 952		CZAS = 41
-
-OP = 2		ZAD = 946		CZAS = 30
-
-OP = 2		ZAD = 944		CZAS = 29
-
-OP = 2		ZAD = 942		CZAS = 38
-
-OP = 2		ZAD = 939		CZAS = 35
-
-OP = 2		ZAD = 938		CZAS = 48
-
-OP = 2		ZAD = 936		CZAS = 45
-
-OP = 2		ZAD = 933		CZAS = 39
-
-OP = 2		ZAD = 920		CZAS = 33
-
-OP = 2		ZAD = 919		CZAS = 4
-
-OP = 2		ZAD = 917		CZAS = 22
-
-OP = 2		ZAD = 915		CZAS = 20
-
-OP = 2		ZAD = 914		CZAS = 34
-
-OP = 2		ZAD = 911		CZAS = 41
-
-OP = 2		ZAD = 907		CZAS = 45
-
-OP = 2		ZAD = 905		CZAS = 22
-
-OP = 2		ZAD = 901		CZAS = 29
-
-OP = 2		ZAD = 900		CZAS = 42
-
-OP = 2		ZAD = 896		CZAS = 18
-
-OP = 2		ZAD = 894		CZAS = 31
-
-OP = 2		ZAD = 892		CZAS = 47
-
-OP = 2		ZAD = 888		CZAS = 36
-
-OP = 2		ZAD = 881		CZAS = 4
-
-OP = 2		ZAD = 879		CZAS = 14
-
-OP = 2		ZAD = 872		CZAS = 15
-
-OP = 2		ZAD = 871		CZAS = 1
-
-OP = 2		ZAD = 865		CZAS = 23
-
-OP = 2		ZAD = 860		CZAS = 28
-
-OP = 2		ZAD = 858		CZAS = 11
-
-OP = 2		ZAD = 856		CZAS = 24
-
-OP = 2		ZAD = 853		CZAS = 26
-
-OP = 2		ZAD = 852		CZAS = 38
-
-OP = 2		ZAD = 848		CZAS = 42
-
-OP = 2		ZAD = 845		CZAS = 46
-
-OP = 2		ZAD = 843		CZAS = 26
-
-OP = 2		ZAD = 839		CZAS = 28
-
-OP = 2		ZAD = 833		CZAS = 44
-
-OP = 2		ZAD = 828		CZAS = 40
-
-OP = 2		ZAD = 826		CZAS = 11
-
-OP = 2		ZAD = 823		CZAS = 20
-
-OP = 2		ZAD = 821		CZAS = 47
-
-OP = 2		ZAD = 820		CZAS = 25
-
-OP = 2		ZAD = 818		CZAS = 5
-
-OP = 2		ZAD = 815		CZAS = 24
-
-OP = 2		ZAD = 814		CZAS = 21
-
-OP = 2		ZAD = 810		CZAS = 29
-
-OP = 2		ZAD = 807		CZAS = 23
-
-OP = 2		ZAD = 805		CZAS = 14
-
-OP = 2		ZAD = 803		CZAS = 21
-
-OP = 2		ZAD = 802		CZAS = 39
-
-OP = 2		ZAD = 798		CZAS = 17
-
-OP = 2		ZAD = 793		CZAS = 2
-
-OP = 2		ZAD = 781		CZAS = 33
-
-OP = 2		ZAD = 775		CZAS = 42
-
-OP = 2		ZAD = 773		CZAS = 26
-
-OP = 2		ZAD = 771		CZAS = 29
-
-OP = 2		ZAD = 766		CZAS = 21
-
-OP = 2		ZAD = 763		CZAS = 2
-
-OP = 2		ZAD = 761		CZAS = 28
-
-OP = 2		ZAD = 760		CZAS = 31
-
-OP = 2		ZAD = 757		CZAS = 24
-
-OP = 2		ZAD = 756		CZAS = 20
-
-OP = 2		ZAD = 749		CZAS = 1
-
-OP = 2		ZAD = 746		CZAS = 31
-
-OP = 2		ZAD = 743		CZAS = 7
-
-OP = 2		ZAD = 737		CZAS = 28
-
-OP = 2		ZAD = 736		CZAS = 46
-
-OP = 2		ZAD = 735		CZAS = 8
-
-OP = 2		ZAD = 733		CZAS = 39
-
-OP = 2		ZAD = 731		CZAS = 49
-
-OP = 2		ZAD = 728		CZAS = 46
-
-OP = 2		ZAD = 724		CZAS = 24
-
-OP = 2		ZAD = 720		CZAS = 45
-
-OP = 2		ZAD = 719		CZAS = 20
-
-OP = 2		ZAD = 714		CZAS = 47
-
-OP = 2		ZAD = 709		CZAS = 5
-
-OP = 2		ZAD = 707		CZAS = 47
-
-OP = 2		ZAD = 696		CZAS = 22
-
-OP = 2		ZAD = 695		CZAS = 25
-
-OP = 2		ZAD = 694		CZAS = 33
-
-OP = 2		ZAD = 689		CZAS = 40
-
-OP = 2		ZAD = 687		CZAS = 38
-
-OP = 2		ZAD = 683		CZAS = 20
-
-OP = 2		ZAD = 680		CZAS = 19
-
-OP = 2		ZAD = 678		CZAS = 6
-
-OP = 2		ZAD = 677		CZAS = 13
-
-OP = 2		ZAD = 675		CZAS = 9
-
-OP = 2		ZAD = 674		CZAS = 5
-
-OP = 2		ZAD = 667		CZAS = 13
-
-OP = 2		ZAD = 666		CZAS = 23
-
-OP = 2		ZAD = 665		CZAS = 22
-
-OP = 2		ZAD = 663		CZAS = 11
-
-OP = 2		ZAD = 662		CZAS = 42
-
-OP = 2		ZAD = 660		CZAS = 45
-
-OP = 2		ZAD = 659		CZAS = 12
-
-OP = 2		ZAD = 658		CZAS = 35
-
-OP = 2		ZAD = 654		CZAS = 45
-
-OP = 2		ZAD = 648		CZAS = 49
-
-OP = 2		ZAD = 647		CZAS = 37
-
-OP = 2		ZAD = 637		CZAS = 16
-
-OP = 2		ZAD = 636		CZAS = 16
-
-OP = 2		ZAD = 627		CZAS = 43
-
-OP = 2		ZAD = 623		CZAS = 22
-
-OP = 2		ZAD = 620		CZAS = 37
-
-OP = 2		ZAD = 619		CZAS = 39
-
-OP = 2		ZAD = 613		CZAS = 29
-
-OP = 2		ZAD = 605		CZAS = 19
-
-OP = 2		ZAD = 602		CZAS = 19
-
-OP = 2		ZAD = 599		CZAS = 7
-
-OP = 2		ZAD = 596		CZAS = 40
-
-OP = 2		ZAD = 591		CZAS = 49
-
-OP = 2		ZAD = 589		CZAS = 48
-
-OP = 2		ZAD = 587		CZAS = 21
-
-OP = 2		ZAD = 584		CZAS = 15
-
-OP = 2		ZAD = 583		CZAS = 44
-
-OP = 2		ZAD = 578		CZAS = 43
-
-OP = 2		ZAD = 575		CZAS = 10
-
-OP = 2		ZAD = 572		CZAS = 12
-
-OP = 2		ZAD = 569		CZAS = 44
-
-OP = 2		ZAD = 567		CZAS = 17
-
-OP = 2		ZAD = 564		CZAS = 46
-
-OP = 2		ZAD = 561		CZAS = 2
-
-OP = 2		ZAD = 557		CZAS = 20
-
-OP = 2		ZAD = 549		CZAS = 10
-
-OP = 2		ZAD = 547		CZAS = 43
-
-OP = 2		ZAD = 545		CZAS = 49
-
-OP = 2		ZAD = 543		CZAS = 43
-
-OP = 2		ZAD = 540		CZAS = 47
-
-OP = 2		ZAD = 533		CZAS = 16
-
-OP = 2		ZAD = 532		CZAS = 15
-
-OP = 2		ZAD = 525		CZAS = 6
-
-OP = 2		ZAD = 523		CZAS = 15
-
-OP = 2		ZAD = 522		CZAS = 20
-
-OP = 2		ZAD = 519		CZAS = 17
-
-OP = 2		ZAD = 518		CZAS = 33
-
-OP = 2		ZAD = 516		CZAS = 45
-
-OP = 2		ZAD = 512		CZAS = 40
-
-OP = 2		ZAD = 508		CZAS = 18
-
-OP = 2		ZAD = 507		CZAS = 40
-
-OP = 2		ZAD = 506		CZAS = 5
-
-OP = 2		ZAD = 502		CZAS = 41
-
-OP = 2		ZAD = 501		CZAS = 34
-
-OP = 2		ZAD = 499		CZAS = 4
-
-OP = 2		ZAD = 497		CZAS = 8
-
-OP = 2		ZAD = 493		CZAS = 20
-
-OP = 2		ZAD = 492		CZAS = 44
-
-OP = 2		ZAD = 491		CZAS = 40
-
-OP = 2		ZAD = 489		CZAS = 35
-
-OP = 2		ZAD = 487		CZAS = 21
-
-OP = 2		ZAD = 474		CZAS = 19
-
-OP = 2		ZAD = 467		CZAS = 44
-
-OP = 2		ZAD = 462		CZAS = 48
-
-OP = 2		ZAD = 459		CZAS = 42
-
-OP = 2		ZAD = 455		CZAS = 47
-
-OP = 2		ZAD = 450		CZAS = 21
-
-OP = 2		ZAD = 445		CZAS = 31
-
-OP = 2		ZAD = 443		CZAS = 13
-
-OP = 2		ZAD = 441		CZAS = 42
-
-OP = 2		ZAD = 438		CZAS = 31
-
-OP = 2		ZAD = 437		CZAS = 33
-
-OP = 2		ZAD = 436		CZAS = 28
-
-OP = 2		ZAD = 432		CZAS = 31
-
-OP = 2		ZAD = 430		CZAS = 3
-
-OP = 2		ZAD = 422		CZAS = 6
-
-OP = 2		ZAD = 417		CZAS = 39
-
-OP = 2		ZAD = 410		CZAS = 27
-
-OP = 2		ZAD = 407		CZAS = 29
-
-OP = 2		ZAD = 406		CZAS = 41
-
-OP = 2		ZAD = 401		CZAS = 46
-
-OP = 2		ZAD = 396		CZAS = 9
-
-OP = 2		ZAD = 395		CZAS = 10
-
-OP = 2		ZAD = 394		CZAS = 13
-
-OP = 2		ZAD = 393		CZAS = 33
-
-OP = 2		ZAD = 392		CZAS = 31
-
-OP = 2		ZAD = 389		CZAS = 15
-
-OP = 2		ZAD = 386		CZAS = 34
-
-OP = 2		ZAD = 385		CZAS = 9
-
-OP = 2		ZAD = 382		CZAS = 32
-
-OP = 2		ZAD = 380		CZAS = 20
-
-OP = 2		ZAD = 378		CZAS = 4
-
-OP = 2		ZAD = 372		CZAS = 14
-
-OP = 2		ZAD = 370		CZAS = 2
-
-OP = 2		ZAD = 366		CZAS = 49
-
-OP = 2		ZAD = 364		CZAS = 20
-
-OP = 2		ZAD = 362		CZAS = 38
-
-OP = 2		ZAD = 355		CZAS = 40
-
-OP = 2		ZAD = 349		CZAS = 21
-
-OP = 2		ZAD = 345		CZAS = 43
-
-OP = 2		ZAD = 343		CZAS = 18
-
-OP = 2		ZAD = 339		CZAS = 15
-
-OP = 2		ZAD = 336		CZAS = 30
-
-OP = 2		ZAD = 333		CZAS = 19
-
-OP = 2		ZAD = 332		CZAS = 37
-
-OP = 2		ZAD = 330		CZAS = 4
-
-OP = 2		ZAD = 329		CZAS = 25
-
-OP = 2		ZAD = 328		CZAS = 12
-
-OP = 2		ZAD = 327		CZAS = 41
-
-OP = 2		ZAD = 325		CZAS = 49
-
-OP = 2		ZAD = 322		CZAS = 30
-
-OP = 2		ZAD = 320		CZAS = 17
-
-OP = 2		ZAD = 315		CZAS = 32
-
-OP = 2		ZAD = 311		CZAS = 12
-
-OP = 2		ZAD = 310		CZAS = 12
-
-OP = 2		ZAD = 308		CZAS = 31
-
-OP = 2		ZAD = 306		CZAS = 17
-
-OP = 2		ZAD = 301		CZAS = 45
-
-OP = 2		ZAD = 293		CZAS = 13
-
-OP = 2		ZAD = 291		CZAS = 28
-
-OP = 2		ZAD = 288		CZAS = 28
-
-OP = 2		ZAD = 287		CZAS = 35
-
-OP = 2		ZAD = 286		CZAS = 45
-
-OP = 2		ZAD = 277		CZAS = 46
-
-OP = 2		ZAD = 272		CZAS = 44
-
-OP = 2		ZAD = 271		CZAS = 29
-
-OP = 2		ZAD = 269		CZAS = 9
-
-OP = 2		ZAD = 265		CZAS = 30
-
-OP = 2		ZAD = 263		CZAS = 8
-
-OP = 2		ZAD = 261		CZAS = 7
-
-OP = 2		ZAD = 255		CZAS = 37
-
-OP = 2		ZAD = 250		CZAS = 8
-
-OP = 2		ZAD = 249		CZAS = 48
-
-OP = 2		ZAD = 237		CZAS = 19
-
-OP = 2		ZAD = 232		CZAS = 13
-
-OP = 2		ZAD = 231		CZAS = 15
-
-OP = 2		ZAD = 230		CZAS = 10
-
-OP = 2		ZAD = 229		CZAS = 6
-
-OP = 2		ZAD = 227		CZAS = 33
-
-OP = 2		ZAD = 226		CZAS = 13
-
-OP = 2		ZAD = 221		CZAS = 29
-
-OP = 2		ZAD = 218		CZAS = 48
-
-OP = 2		ZAD = 216		CZAS = 7
-
-OP = 2		ZAD = 215		CZAS = 31
-
-OP = 2		ZAD = 213		CZAS = 33
-
-OP = 2		ZAD = 210		CZAS = 44
-
-OP = 2		ZAD = 209		CZAS = 44
-
-OP = 2		ZAD = 206		CZAS = 47
-
-OP = 2		ZAD = 201		CZAS = 33
-
-OP = 2		ZAD = 194		CZAS = 13
-
-OP = 2		ZAD = 191		CZAS = 45
-
-OP = 2		ZAD = 186		CZAS = 10
-
-OP = 2		ZAD = 180		CZAS = 44
-
-OP = 2		ZAD = 172		CZAS = 35
-
-OP = 2		ZAD = 167		CZAS = 38
-
-OP = 2		ZAD = 165		CZAS = 20
-
-OP = 2		ZAD = 163		CZAS = 3
-
-OP = 2		ZAD = 162		CZAS = 45
-
-OP = 2		ZAD = 160		CZAS = 5
-
-OP = 2		ZAD = 154		CZAS = 44
-
-OP = 2		ZAD = 153		CZAS = 24
-
-OP = 2		ZAD = 151		CZAS = 45
-
-OP = 2		ZAD = 142		CZAS = 43
-
-OP = 2		ZAD = 140		CZAS = 21
-
-OP = 2		ZAD = 136		CZAS = 24
-
-OP = 2		ZAD = 135		CZAS = 19
-
-OP = 2		ZAD = 132		CZAS = 46
-
-OP = 2		ZAD = 129		CZAS = 44
-
-OP = 2		ZAD = 124		CZAS = 46
-
-OP = 2		ZAD = 118		CZAS = 4
-
-OP = 2		ZAD = 116		CZAS = 43
-
-OP = 2		ZAD = 113		CZAS = 6
-
-OP = 2		ZAD = 111		CZAS = 16
-
-OP = 2		ZAD = 110		CZAS = 17
-
-OP = 2		ZAD = 108		CZAS = 20
-
-OP = 2		ZAD = 106		CZAS = 24
-
-OP = 2		ZAD = 104		CZAS = 18
-
-OP = 2		ZAD = 102		CZAS = 2
-
-OP = 2		ZAD = 101		CZAS = 41
-
-OP = 2		ZAD = 98		CZAS = 49
-
-OP = 2		ZAD = 94		CZAS = 46
-
-OP = 2		ZAD = 91		CZAS = 37
-
-OP = 2		ZAD = 83		CZAS = 13
-
-OP = 2		ZAD = 82		CZAS = 19
-
-OP = 2		ZAD = 79		CZAS = 36
-
-OP = 2		ZAD = 78		CZAS = 29
-
-OP = 2		ZAD = 77		CZAS = 7
-
-OP = 2		ZAD = 63		CZAS = 12
-
-OP = 2		ZAD = 61		CZAS = 11
-
-OP = 2		ZAD = 58		CZAS = 48
-
-OP = 2		ZAD = 54		CZAS = 47
-
-OP = 2		ZAD = 52		CZAS = 29
-
-OP = 2		ZAD = 46		CZAS = 48
-
-OP = 2		ZAD = 43		CZAS = 48
-
-OP = 2		ZAD = 40		CZAS = 13
-
-OP = 2		ZAD = 34		CZAS = 20
-
-OP = 2		ZAD = 32		CZAS = 20
-
-OP = 2		ZAD = 31		CZAS = 47
-
-OP = 2		ZAD = 28		CZAS = 22
-
-OP = 2		ZAD = 24		CZAS = 18
-
-OP = 2		ZAD = 23		CZAS = 9
-
-OP = 2		ZAD = 21		CZAS = 39
-
-OP = 2		ZAD = 19		CZAS = 20
-
-OP = 2		ZAD = 12		CZAS = 8
-
-OP = 2		ZAD = 9		CZAS = 25
-
-OP = 2		ZAD = 7		CZAS = 16
-
-OP = 2		ZAD = 6		CZAS = 28
-
-OP = 2		ZAD = 4		CZAS = 17
-
-OP = 2		ZAD = 3		CZAS = 9
-
-OP = 2		ZAD = 1		CZAS = 44
-
-OP = 3		ZAD = 995		CZAS = 3
-
-OP = 3		ZAD = 994		CZAS = 7
-
-OP = 3		ZAD = 993		CZAS = 22
-
-OP = 3		ZAD = 986		CZAS = 44
-
-OP = 3		ZAD = 984		CZAS = 12
-
-OP = 3		ZAD = 983		CZAS = 47
-
-OP = 3		ZAD = 982		CZAS = 38
-
-OP = 3		ZAD = 981		CZAS = 11
-
-OP = 3		ZAD = 980		CZAS = 36
-
-OP = 3		ZAD = 978		CZAS = 46
-
-OP = 3		ZAD = 976		CZAS = 34
-
-OP = 3		ZAD = 973		CZAS = 32
-
-OP = 3		ZAD = 971		CZAS = 25
-
-OP = 3		ZAD = 970		CZAS = 5
-
-OP = 3		ZAD = 969		CZAS = 47
-
-OP = 3		ZAD = 967		CZAS = 23
-
-OP = 3		ZAD = 965		CZAS = 10
-
-OP = 3		ZAD = 963		CZAS = 8
-
-OP = 3		ZAD = 962		CZAS = 35
-
-OP = 3		ZAD = 956		CZAS = 48
-
-OP = 3		ZAD = 951		CZAS = 13
-
-OP = 3		ZAD = 945		CZAS = 46
-
-OP = 3		ZAD = 943		CZAS = 23
-
-OP = 3		ZAD = 935		CZAS = 1
-
-OP = 3		ZAD = 934		CZAS = 8
-
-OP = 3		ZAD = 931		CZAS = 13
-
-OP = 3		ZAD = 930		CZAS = 33
-
-OP = 3		ZAD = 929		CZAS = 42
-
-OP = 3		ZAD = 928		CZAS = 1
-
-OP = 3		ZAD = 927		CZAS = 42
-
-OP = 3		ZAD = 925		CZAS = 10
-
-OP = 3		ZAD = 924		CZAS = 47
-
-OP = 3		ZAD = 922		CZAS = 26
-
-OP = 3		ZAD = 913		CZAS = 43
-
-OP = 3		ZAD = 910		CZAS = 35
-
-OP = 3		ZAD = 909		CZAS = 9
-
-OP = 3		ZAD = 906		CZAS = 40
-
-OP = 3		ZAD = 904		CZAS = 49
-
-OP = 3		ZAD = 903		CZAS = 5
-
-OP = 3		ZAD = 897		CZAS = 40
-
-OP = 3		ZAD = 883		CZAS = 24
-
-OP = 3		ZAD = 882		CZAS = 15
-
-OP = 3		ZAD = 880		CZAS = 24
-
-OP = 3		ZAD = 875		CZAS = 8
-
-OP = 3		ZAD = 874		CZAS = 28
-
-OP = 3		ZAD = 873		CZAS = 21
-
-OP = 3		ZAD = 870		CZAS = 27
-
-OP = 3		ZAD = 869		CZAS = 35
-
-OP = 3		ZAD = 867		CZAS = 15
-
-OP = 3		ZAD = 866		CZAS = 12
-
-OP = 3		ZAD = 864		CZAS = 3
-
-OP = 3		ZAD = 859		CZAS = 34
-
-OP = 3		ZAD = 847		CZAS = 32
-
-OP = 3		ZAD = 841		CZAS = 11
-
-OP = 3		ZAD = 840		CZAS = 27
-
-OP = 3		ZAD = 838		CZAS = 6
-
-OP = 3		ZAD = 837		CZAS = 15
-
-OP = 3		ZAD = 836		CZAS = 20
-
-OP = 3		ZAD = 835		CZAS = 5
-
-OP = 3		ZAD = 834		CZAS = 18
-
-OP = 3		ZAD = 831		CZAS = 9
-
-OP = 3		ZAD = 822		CZAS = 1
-
-OP = 3		ZAD = 816		CZAS = 16
-
-OP = 3		ZAD = 812		CZAS = 16
-
-OP = 3		ZAD = 809		CZAS = 29
-
-OP = 3		ZAD = 806		CZAS = 17
-
-OP = 3		ZAD = 804		CZAS = 41
-
-OP = 3		ZAD = 800		CZAS = 27
-
-OP = 3		ZAD = 799		CZAS = 12
-
-OP = 3		ZAD = 797		CZAS = 32
-
-OP = 3		ZAD = 796		CZAS = 47
-
-OP = 3		ZAD = 795		CZAS = 45
-
-OP = 3		ZAD = 794		CZAS = 48
-
-OP = 3		ZAD = 792		CZAS = 34
-
-OP = 3		ZAD = 790		CZAS = 43
-
-OP = 3		ZAD = 789		CZAS = 9
-
-OP = 3		ZAD = 783		CZAS = 42
-
-OP = 3		ZAD = 782		CZAS = 37
-
-OP = 3		ZAD = 780		CZAS = 22
-
-OP = 3		ZAD = 779		CZAS = 21
-
-OP = 3		ZAD = 778		CZAS = 8
-
-OP = 3		ZAD = 777		CZAS = 38
-
-OP = 3		ZAD = 772		CZAS = 31
-
-OP = 3		ZAD = 769		CZAS = 31
-
-OP = 3		ZAD = 768		CZAS = 6
-
-OP = 3		ZAD = 765		CZAS = 8
-
-OP = 3		ZAD = 755		CZAS = 38
-
-OP = 3		ZAD = 753		CZAS = 8
-
-OP = 3		ZAD = 751		CZAS = 24
-
-OP = 3		ZAD = 748		CZAS = 27
-
-OP = 3		ZAD = 747		CZAS = 13
-
-OP = 3		ZAD = 742		CZAS = 15
-
-OP = 3		ZAD = 741		CZAS = 26
-
-OP = 3		ZAD = 732		CZAS = 25
-
-OP = 3		ZAD = 730		CZAS = 17
-
-OP = 3		ZAD = 729		CZAS = 4
-
-OP = 3		ZAD = 727		CZAS = 19
-
-OP = 3		ZAD = 726		CZAS = 6
-
-OP = 3		ZAD = 721		CZAS = 34
-
-OP = 3		ZAD = 715		CZAS = 18
-
-OP = 3		ZAD = 713		CZAS = 24
-
-OP = 3		ZAD = 710		CZAS = 13
-
-OP = 3		ZAD = 706		CZAS = 41
-
-OP = 3		ZAD = 705		CZAS = 33
-
-OP = 3		ZAD = 703		CZAS = 12
-
-OP = 3		ZAD = 701		CZAS = 34
-
-OP = 3		ZAD = 700		CZAS = 47
-
-OP = 3		ZAD = 693		CZAS = 26
-
-OP = 3		ZAD = 692		CZAS = 38
-
-OP = 3		ZAD = 691		CZAS = 16
-
-OP = 3		ZAD = 690		CZAS = 37
-
-OP = 3		ZAD = 688		CZAS = 19
-
-OP = 3		ZAD = 686		CZAS = 37
-
-OP = 3		ZAD = 685		CZAS = 16
-
-OP = 3		ZAD = 676		CZAS = 48
-
-OP = 3		ZAD = 673		CZAS = 10
-
-OP = 3		ZAD = 657		CZAS = 37
-
-OP = 3		ZAD = 656		CZAS = 26
-
-OP = 3		ZAD = 653		CZAS = 49
-
-OP = 3		ZAD = 651		CZAS = 9
-
-OP = 3		ZAD = 650		CZAS = 23
-
-OP = 3		ZAD = 643		CZAS = 34
-
-OP = 3		ZAD = 641		CZAS = 41
-
-OP = 3		ZAD = 635		CZAS = 12
-
-OP = 3		ZAD = 633		CZAS = 9
-
-OP = 3		ZAD = 632		CZAS = 11
-
-OP = 3		ZAD = 631		CZAS = 43
-
-OP = 3		ZAD = 630		CZAS = 27
-
-OP = 3		ZAD = 626		CZAS = 33
-
-OP = 3		ZAD = 625		CZAS = 44
-
-OP = 3		ZAD = 618		CZAS = 47
-
-OP = 3		ZAD = 617		CZAS = 17
-
-OP = 3		ZAD = 616		CZAS = 31
-
-OP = 3		ZAD = 612		CZAS = 32
-
-OP = 3		ZAD = 611		CZAS = 42
-
-OP = 3		ZAD = 598		CZAS = 48
-
-OP = 3		ZAD = 595		CZAS = 3
-
-OP = 3		ZAD = 581		CZAS = 8
-
-OP = 3		ZAD = 580		CZAS = 26
-
-OP = 3		ZAD = 579		CZAS = 14
-
-OP = 3		ZAD = 576		CZAS = 22
-
-OP = 3		ZAD = 571		CZAS = 26
-
-OP = 3		ZAD = 568		CZAS = 48
-
-OP = 3		ZAD = 566		CZAS = 16
-
-OP = 3		ZAD = 563		CZAS = 9
-
-OP = 3		ZAD = 562		CZAS = 26
-
-OP = 3		ZAD = 560		CZAS = 25
-
-OP = 3		ZAD = 559		CZAS = 17
-
-OP = 3		ZAD = 558		CZAS = 45
-
-OP = 3		ZAD = 556		CZAS = 37
-
-OP = 3		ZAD = 555		CZAS = 7
-
-OP = 3		ZAD = 552		CZAS = 23
-
-OP = 3		ZAD = 542		CZAS = 11
-
-OP = 3		ZAD = 539		CZAS = 35
-
-OP = 3		ZAD = 538		CZAS = 5
-
-OP = 3		ZAD = 537		CZAS = 23
-
-OP = 3		ZAD = 536		CZAS = 9
-
-OP = 3		ZAD = 534		CZAS = 8
-
-OP = 3		ZAD = 531		CZAS = 20
-
-OP = 3		ZAD = 530		CZAS = 26
-
-OP = 3		ZAD = 514		CZAS = 48
-
-OP = 3		ZAD = 513		CZAS = 21
-
-OP = 3		ZAD = 511		CZAS = 36
-
-OP = 3		ZAD = 505		CZAS = 43
-
-OP = 3		ZAD = 503		CZAS = 7
-
-OP = 3		ZAD = 500		CZAS = 4
-
-OP = 3		ZAD = 496		CZAS = 20
-
-OP = 3		ZAD = 495		CZAS = 35
-
-OP = 3		ZAD = 494		CZAS = 7
-
-OP = 3		ZAD = 490		CZAS = 31
-
-OP = 3		ZAD = 486		CZAS = 2
-
-OP = 3		ZAD = 485		CZAS = 28
-
-OP = 3		ZAD = 483		CZAS = 9
-
-OP = 3		ZAD = 480		CZAS = 34
-
-OP = 3		ZAD = 478		CZAS = 24
-
-OP = 3		ZAD = 477		CZAS = 32
-
-OP = 3		ZAD = 475		CZAS = 15
-
-OP = 3		ZAD = 472		CZAS = 43
-
-OP = 3		ZAD = 471		CZAS = 34
-
-OP = 3		ZAD = 470		CZAS = 18
-
-OP = 3		ZAD = 469		CZAS = 43
-
-OP = 3		ZAD = 465		CZAS = 21
-
-OP = 3		ZAD = 461		CZAS = 18
-
-OP = 3		ZAD = 460		CZAS = 22
-
-OP = 3		ZAD = 458		CZAS = 20
-
-OP = 3		ZAD = 456		CZAS = 42
-
-OP = 3		ZAD = 453		CZAS = 44
-
-OP = 3		ZAD = 448		CZAS = 31
-
-OP = 3		ZAD = 447		CZAS = 26
-
-OP = 3		ZAD = 444		CZAS = 3
-
-OP = 3		ZAD = 442		CZAS = 24
-
-OP = 3		ZAD = 440		CZAS = 31
-
-OP = 3		ZAD = 439		CZAS = 5
-
-OP = 3		ZAD = 435		CZAS = 3
-
-OP = 3		ZAD = 434		CZAS = 21
-
-OP = 3		ZAD = 433		CZAS = 25
-
-OP = 3		ZAD = 431		CZAS = 23
-
-OP = 3		ZAD = 427		CZAS = 38
-
-OP = 3		ZAD = 426		CZAS = 36
-
-OP = 3		ZAD = 424		CZAS = 27
-
-OP = 3		ZAD = 423		CZAS = 9
-
-OP = 3		ZAD = 421		CZAS = 16
-
-OP = 3		ZAD = 416		CZAS = 44
-
-OP = 3		ZAD = 415		CZAS = 16
-
-OP = 3		ZAD = 413		CZAS = 26
-
-OP = 3		ZAD = 411		CZAS = 12
-
-OP = 3		ZAD = 409		CZAS = 24
-
-OP = 3		ZAD = 408		CZAS = 4
-
-OP = 3		ZAD = 403		CZAS = 4
-
-OP = 3		ZAD = 402		CZAS = 21
-
-OP = 3		ZAD = 400		CZAS = 11
-
-OP = 3		ZAD = 399		CZAS = 4
-
-OP = 3		ZAD = 391		CZAS = 12
-
-OP = 3		ZAD = 390		CZAS = 46
-
-OP = 3		ZAD = 387		CZAS = 33
-
-OP = 3		ZAD = 384		CZAS = 32
-
-OP = 3		ZAD = 381		CZAS = 45
-
-OP = 3		ZAD = 377		CZAS = 35
-
-OP = 3		ZAD = 375		CZAS = 46
-
-OP = 3		ZAD = 361		CZAS = 23
-
-OP = 3		ZAD = 359		CZAS = 49
-
-OP = 3		ZAD = 358		CZAS = 15
-
-OP = 3		ZAD = 348		CZAS = 3
-
-OP = 3		ZAD = 347		CZAS = 16
-
-OP = 3		ZAD = 344		CZAS = 39
-
-OP = 3		ZAD = 342		CZAS = 28
-
-OP = 3		ZAD = 341		CZAS = 41
-
-OP = 3		ZAD = 340		CZAS = 43
-
-OP = 3		ZAD = 335		CZAS = 8
-
-OP = 3		ZAD = 326		CZAS = 20
-
-OP = 3		ZAD = 324		CZAS = 11
-
-OP = 3		ZAD = 323		CZAS = 35
-
-OP = 3		ZAD = 321		CZAS = 20
-
-OP = 3		ZAD = 319		CZAS = 37
-
-OP = 3		ZAD = 318		CZAS = 29
-
-OP = 3		ZAD = 314		CZAS = 1
-
-OP = 3		ZAD = 313		CZAS = 28
-
-OP = 3		ZAD = 303		CZAS = 12
-
-OP = 3		ZAD = 302		CZAS = 5
-
-OP = 3		ZAD = 300		CZAS = 33
-
-OP = 3		ZAD = 298		CZAS = 14
-
-OP = 3		ZAD = 297		CZAS = 18
-
-OP = 3		ZAD = 294		CZAS = 12
-
-OP = 3		ZAD = 292		CZAS = 10
-
-OP = 3		ZAD = 289		CZAS = 25
-
-OP = 3		ZAD = 284		CZAS = 23
-
-OP = 3		ZAD = 281		CZAS = 5
-
-OP = 3		ZAD = 280		CZAS = 41
-
-OP = 3		ZAD = 279		CZAS = 15
-
-OP = 3		ZAD = 278		CZAS = 17
-
-OP = 3		ZAD = 276		CZAS = 26
-
-OP = 3		ZAD = 274		CZAS = 49
-
-OP = 3		ZAD = 273		CZAS = 45
-
-OP = 3		ZAD = 270		CZAS = 38
-
-OP = 3		ZAD = 267		CZAS = 44
-
-OP = 3		ZAD = 266		CZAS = 49
-
-OP = 3		ZAD = 264		CZAS = 37
-
-OP = 3		ZAD = 257		CZAS = 12
-
-OP = 3		ZAD = 254		CZAS = 35
-
-OP = 3		ZAD = 253		CZAS = 38
-
-OP = 3		ZAD = 246		CZAS = 17
-
-OP = 3		ZAD = 243		CZAS = 22
-
-OP = 3		ZAD = 241		CZAS = 17
-
-OP = 3		ZAD = 240		CZAS = 9
-
-OP = 3		ZAD = 239		CZAS = 17
-
-OP = 3		ZAD = 236		CZAS = 7
-
-OP = 3		ZAD = 234		CZAS = 27
-
-OP = 3		ZAD = 233		CZAS = 32
-
-OP = 3		ZAD = 224		CZAS = 13
-
-OP = 3		ZAD = 223		CZAS = 5
-
-OP = 3		ZAD = 220		CZAS = 17
-
-OP = 3		ZAD = 217		CZAS = 2
-
-OP = 3		ZAD = 212		CZAS = 38
-
-OP = 3		ZAD = 208		CZAS = 32
-
-OP = 3		ZAD = 205		CZAS = 31
-
-OP = 3		ZAD = 204		CZAS = 30
-
-OP = 3		ZAD = 202		CZAS = 23
-
-OP = 3		ZAD = 200		CZAS = 17
-
-OP = 3		ZAD = 199		CZAS = 42
-
-OP = 3		ZAD = 198		CZAS = 6
-
-OP = 3		ZAD = 197		CZAS = 37
-
-OP = 3		ZAD = 196		CZAS = 30
-
-OP = 3		ZAD = 195		CZAS = 45
-
-OP = 3		ZAD = 192		CZAS = 16
-
-OP = 3		ZAD = 190		CZAS = 38
-
-OP = 3		ZAD = 189		CZAS = 22
-
-OP = 3		ZAD = 187		CZAS = 11
-
-OP = 3		ZAD = 185		CZAS = 17
-
-OP = 3		ZAD = 183		CZAS = 16
-
-OP = 3		ZAD = 182		CZAS = 13
-
-OP = 3		ZAD = 181		CZAS = 27
-
-OP = 3		ZAD = 178		CZAS = 2
-
-OP = 3		ZAD = 177		CZAS = 2
-
-OP = 3		ZAD = 175		CZAS = 10
-
-OP = 3		ZAD = 173		CZAS = 38
-
-OP = 3		ZAD = 171		CZAS = 33
-
-OP = 3		ZAD = 169		CZAS = 19
-
-OP = 3		ZAD = 168		CZAS = 34
-
-OP = 3		ZAD = 166		CZAS = 18
-
-OP = 3		ZAD = 161		CZAS = 23
-
-OP = 3		ZAD = 159		CZAS = 30
-
-OP = 3		ZAD = 158		CZAS = 6
-
-OP = 3		ZAD = 157		CZAS = 13
-
-OP = 3		ZAD = 150		CZAS = 23
-
-OP = 3		ZAD = 149		CZAS = 47
-
-OP = 3		ZAD = 147		CZAS = 24
-
-OP = 3		ZAD = 145		CZAS = 9
-
-OP = 3		ZAD = 138		CZAS = 40
-
-OP = 3		ZAD = 137		CZAS = 10
-
-OP = 3		ZAD = 134		CZAS = 43
-
-OP = 3		ZAD = 131		CZAS = 45
-
-OP = 3		ZAD = 130		CZAS = 3
-
-OP = 3		ZAD = 127		CZAS = 32
-
-OP = 3		ZAD = 126		CZAS = 14
-
-OP = 3		ZAD = 123		CZAS = 18
-
-OP = 3		ZAD = 122		CZAS = 1
-
-OP = 3		ZAD = 121		CZAS = 4
-
-OP = 3		ZAD = 120		CZAS = 44
-
-OP = 3		ZAD = 117		CZAS = 28
-
-OP = 3		ZAD = 115		CZAS = 37
-
-OP = 3		ZAD = 114		CZAS = 15
-
-OP = 3		ZAD = 109		CZAS = 11
-
-OP = 3		ZAD = 107		CZAS = 5
-
-OP = 3		ZAD = 105		CZAS = 2
-
-OP = 3		ZAD = 100		CZAS = 30
-
-OP = 3		ZAD = 92		CZAS = 18
-
-OP = 3		ZAD = 88		CZAS = 28
-
-OP = 3		ZAD = 87		CZAS = 39
-
-OP = 3		ZAD = 86		CZAS = 29
-
-OP = 3		ZAD = 84		CZAS = 19
-
-OP = 3		ZAD = 75		CZAS = 9
-
-OP = 3		ZAD = 74		CZAS = 28
-
-OP = 3		ZAD = 72		CZAS = 24
-
-OP = 3		ZAD = 71		CZAS = 29
-
-OP = 3		ZAD = 69		CZAS = 43
-
-OP = 3		ZAD = 68		CZAS = 25
-
-OP = 3		ZAD = 67		CZAS = 20
-
-OP = 3		ZAD = 66		CZAS = 35
-
-OP = 3		ZAD = 65		CZAS = 45
-
-OP = 3		ZAD = 64		CZAS = 41
-
-OP = 3		ZAD = 62		CZAS = 14
-
-OP = 3		ZAD = 59		CZAS = 15
-
-OP = 3		ZAD = 57		CZAS = 44
-
-OP = 3		ZAD = 56		CZAS = 18
-
-OP = 3		ZAD = 50		CZAS = 38
-
-OP = 3		ZAD = 49		CZAS = 36
-
-OP = 3		ZAD = 44		CZAS = 30
-
-OP = 3		ZAD = 42		CZAS = 13
-
-OP = 3		ZAD = 39		CZAS = 19
-
-OP = 3		ZAD = 37		CZAS = 31
-
-OP = 3		ZAD = 36		CZAS = 48
-
-OP = 3		ZAD = 35		CZAS = 21
-
-OP = 3		ZAD = 29		CZAS = 47
-
-OP = 3		ZAD = 27		CZAS = 15
-
-OP = 3		ZAD = 26		CZAS = 37
-
-OP = 3		ZAD = 18		CZAS = 21
-
-OP = 3		ZAD = 17		CZAS = 39
-
-OP = 3		ZAD = 15		CZAS = 6
-
-OP = 3		ZAD = 14		CZAS = 8
-
-OP = 3		ZAD = 11		CZAS = 47
-
-OP = 3		ZAD = 8		CZAS = 29
-
-NR 1 MASZYNA:
-------
-OP = 1		ZAD = 1		CZAS = 35
-
-OP = 1		ZAD = 892		CZAS = 35
-
-OP = 1		ZAD = 828		CZAS = 31
-
-OP = 1		ZAD = 483		CZAS = 11
-
-OP = 1		ZAD = 440		CZAS = 26
-
-OP = 1		ZAD = 416		CZAS = 37
-
-OP = 1		ZAD = 935		CZAS = 12
-
-OP = 1		ZAD = 401		CZAS = 25
-
-OP = 1		ZAD = 733		CZAS = 1
-
-OP = 1		ZAD = 881		CZAS = 37
-
-OP = 1		ZAD = 979		CZAS = 38
-
-OP = 1		ZAD = 345		CZAS = 18
-
-OP = 1		ZAD = 922		CZAS = 5
-
-OP = 1		ZAD = 952		CZAS = 32
-
-OP = 1		ZAD = 869		CZAS = 35
-
-OP = 1		ZAD = 662		CZAS = 25
-
-OP = 1		ZAD = 394		CZAS = 45
-
-OP = 1		ZAD = 915		CZAS = 10
-
-OP = 1		ZAD = 713		CZAS = 11
-
-OP = 1		ZAD = 506		CZAS = 21
-
-OP = 1		ZAD = 518		CZAS = 36
-
-OP = 1		ZAD = 324		CZAS = 25
-
-OP = 1		ZAD = 831		CZAS = 16
-
-OP = 1		ZAD = 490		CZAS = 30
-
-OP = 1		ZAD = 566		CZAS = 33
-
-OP = 1		ZAD = 598		CZAS = 40
-
-OP = 1		ZAD = 564		CZAS = 15
-
-OP = 1		ZAD = 533		CZAS = 18
-
-OP = 1		ZAD = 453		CZAS = 11
-
-OP = 1		ZAD = 335		CZAS = 38
-
-OP = 1		ZAD = 519		CZAS = 2
-
-OP = 1		ZAD = 330		CZAS = 6
-
-OP = 1		ZAD = 311		CZAS = 14
-
-OP = 1		ZAD = 714		CZAS = 45
-
-OP = 1		ZAD = 766		CZAS = 20
-
-OP = 1		ZAD = 956		CZAS = 9
-
-OP = 1		ZAD = 875		CZAS = 13
-
-OP = 1		ZAD = 450		CZAS = 7
-
-OP = 1		ZAD = 595		CZAS = 36
-
-OP = 1		ZAD = 438		CZAS = 7
-
-OP = 1		ZAD = 963		CZAS = 12
-
-OP = 1		ZAD = 439		CZAS = 22
-
-OP = 1		ZAD = 654		CZAS = 18
-
-OP = 1		ZAD = 630		CZAS = 13
-
-OP = 1		ZAD = 545		CZAS = 4
-
-OP = 1		ZAD = 480		CZAS = 28
-
-OP = 1		ZAD = 780		CZAS = 8
-
-OP = 1		ZAD = 756		CZAS = 46
-
-OP = 1		ZAD = 578		CZAS = 33
-
-OP = 1		ZAD = 920		CZAS = 49
-
-OP = 1		ZAD = 567		CZAS = 15
-
-OP = 1		ZAD = 687		CZAS = 22
-
-OP = 1		ZAD = 497		CZAS = 11
-
-OP = 1		ZAD = 905		CZAS = 20
-
-OP = 1		ZAD = 477		CZAS = 4
-
-OP = 1		ZAD = 437		CZAS = 6
-
-OP = 1		ZAD = 433		CZAS = 2
-
-OP = 1		ZAD = 427		CZAS = 10
-
-OP = 1		ZAD = 970		CZAS = 28
-
-OP = 1		ZAD = 395		CZAS = 32
-
-OP = 1		ZAD = 728		CZAS = 28
-
-OP = 1		ZAD = 511		CZAS = 6
-
-OP = 1		ZAD = 436		CZAS = 16
-
-OP = 1		ZAD = 434		CZAS = 9
-
-OP = 1		ZAD = 382		CZAS = 39
-
-OP = 1		ZAD = 635		CZAS = 29
-
-OP = 1		ZAD = 650		CZAS = 19
-
-OP = 1		ZAD = 591		CZAS = 46
-
-OP = 1		ZAD = 663		CZAS = 11
-
-OP = 1		ZAD = 392		CZAS = 15
-
-OP = 1		ZAD = 924		CZAS = 24
-
-OP = 1		ZAD = 962		CZAS = 44
-
-OP = 1		ZAD = 648		CZAS = 14
-
-OP = 1		ZAD = 402		CZAS = 31
-
-OP = 1		ZAD = 904		CZAS = 17
-
-OP = 1		ZAD = 765		CZAS = 23
-
-OP = 1		ZAD = 377		CZAS = 18
-
-OP = 1		ZAD = 424		CZAS = 5
-
-OP = 1		ZAD = 375		CZAS = 48
-
-OP = 1		ZAD = 673		CZAS = 17
-
-OP = 1		ZAD = 409		CZAS = 19
-
-OP = 1		ZAD = 929		CZAS = 49
-
-OP = 1		ZAD = 768		CZAS = 39
-
-OP = 1		ZAD = 659		CZAS = 40
-
-OP = 1		ZAD = 616		CZAS = 26
-
-OP = 1		ZAD = 543		CZAS = 32
-
-OP = 1		ZAD = 370		CZAS = 35
-
-OP = 1		ZAD = 777		CZAS = 44
-
-OP = 1		ZAD = 852		CZAS = 43
-
-OP = 1		ZAD = 513		CZAS = 17
-
-OP = 1		ZAD = 532		CZAS = 33
-
-OP = 1		ZAD = 458		CZAS = 47
-
-OP = 1		ZAD = 834		CZAS = 9
-
-OP = 1		ZAD = 677		CZAS = 44
-
-OP = 1		ZAD = 993		CZAS = 22
-
-OP = 1		ZAD = 731		CZAS = 28
-
-OP = 1		ZAD = 623		CZAS = 48
-
-OP = 1		ZAD = 555		CZAS = 25
-
-OP = 1		ZAD = 812		CZAS = 46
-
-OP = 1		ZAD = 703		CZAS = 25
-
-OP = 1		ZAD = 512		CZAS = 18
-
-OP = 1		ZAD = 487		CZAS = 27
-
-OP = 1		ZAD = 462		CZAS = 8
-
-OP = 1		ZAD = 688		CZAS = 21
-
-OP = 1		ZAD = 423		CZAS = 28
-
-OP = 1		ZAD = 448		CZAS = 45
-
-OP = 1		ZAD = 403		CZAS = 3
-
-OP = 1		ZAD = 426		CZAS = 29
-
-OP = 1		ZAD = 384		CZAS = 34
-
-OP = 1		ZAD = 693		CZAS = 33
-
-OP = 1		ZAD = 793		CZAS = 49
-
-OP = 1		ZAD = 361		CZAS = 36
-
-OP = 1		ZAD = 355		CZAS = 19
-
-OP = 1		ZAD = 472		CZAS = 46
-
-OP = 1		ZAD = 913		CZAS = 27
-
-OP = 1		ZAD = 809		CZAS = 11
-
-OP = 1		ZAD = 944		CZAS = 33
-
-OP = 1		ZAD = 741		CZAS = 15
-
-OP = 1		ZAD = 386		CZAS = 33
-
-OP = 1		ZAD = 407		CZAS = 1
-
-OP = 1		ZAD = 400		CZAS = 42
-
-OP = 1		ZAD = 818		CZAS = 22
-
-OP = 1		ZAD = 973		CZAS = 40
-
-OP = 1		ZAD = 651		CZAS = 34
-
-OP = 1		ZAD = 626		CZAS = 28
-
-OP = 1		ZAD = 789		CZAS = 2
-
-OP = 1		ZAD = 575		CZAS = 2
-
-OP = 1		ZAD = 542		CZAS = 18
-
-OP = 1		ZAD = 500		CZAS = 11
-
-OP = 1		ZAD = 494		CZAS = 47
-
-OP = 1		ZAD = 727		CZAS = 33
-
-OP = 1		ZAD = 539		CZAS = 13
-
-OP = 1		ZAD = 406		CZAS = 38
-
-OP = 1		ZAD = 387		CZAS = 6
-
-OP = 1		ZAD = 380		CZAS = 23
-
-OP = 1		ZAD = 761		CZAS = 27
-
-OP = 1		ZAD = 579		CZAS = 47
-
-OP = 1		ZAD = 799		CZAS = 32
-
-OP = 1		ZAD = 835		CZAS = 24
-
-OP = 1		ZAD = 871		CZAS = 11
-
-OP = 1		ZAD = 658		CZAS = 28
-
-OP = 1		ZAD = 563		CZAS = 41
-
-OP = 1		ZAD = 474		CZAS = 45
-
-OP = 1		ZAD = 378		CZAS = 29
-
-OP = 1		ZAD = 547		CZAS = 13
-
-OP = 1		ZAD = 686		CZAS = 38
-
-OP = 1		ZAD = 748		CZAS = 12
-
-OP = 1		ZAD = 736		CZAS = 26
-
-OP = 1		ZAD = 538		CZAS = 36
-
-OP = 1		ZAD = 561		CZAS = 28
-
-OP = 1		ZAD = 445		CZAS = 44
-
-OP = 1		ZAD = 747		CZAS = 12
-
-OP = 1		ZAD = 471		CZAS = 37
-
-OP = 1		ZAD = 467		CZAS = 4
-
-OP = 1		ZAD = 441		CZAS = 1
-
-OP = 1		ZAD = 432		CZAS = 35
-
-OP = 1		ZAD = 349		CZAS = 29
-
-OP = 1		ZAD = 909		CZAS = 43
-
-OP = 1		ZAD = 568		CZAS = 4
-
-OP = 1		ZAD = 557		CZAS = 15
-
-OP = 1		ZAD = 933		CZAS = 20
-
-OP = 1		ZAD = 342		CZAS = 42
-
-OP = 1		ZAD = 872		CZAS = 36
-
-OP = 1		ZAD = 507		CZAS = 6
-
-OP = 1		ZAD = 340		CZAS = 20
-
-OP = 1		ZAD = 336		CZAS = 41
-
-OP = 1		ZAD = 332		CZAS = 29
-
-OP = 1		ZAD = 707		CZAS = 36
-
-OP = 1		ZAD = 327		CZAS = 42
-
-OP = 1		ZAD = 617		CZAS = 47
-
-OP = 1		ZAD = 323		CZAS = 22
-
-OP = 1		ZAD = 319		CZAS = 26
-
-OP = 1		ZAD = 318		CZAS = 26
-
-OP = 1		ZAD = 930		CZAS = 6
-
-OP = 1		ZAD = 572		CZAS = 13
-
-OP = 1		ZAD = 310		CZAS = 13
-
-OP = 1		ZAD = 839		CZAS = 14
-
-OP = 1		ZAD = 653		CZAS = 3
-
-OP = 1		ZAD = 633		CZAS = 37
-
-OP = 1		ZAD = 596		CZAS = 37
-
-OP = 1		ZAD = 605		CZAS = 40
-
-OP = 1		ZAD = 643		CZAS = 41
-
-OP = 1		ZAD = 303		CZAS = 20
-
-OP = 1		ZAD = 701		CZAS = 41
-
-OP = 1		ZAD = 972		CZAS = 41
-
-OP = 1		ZAD = 690		CZAS = 33
-
-OP = 1		ZAD = 870		CZAS = 38
-
-OP = 1		ZAD = 867		CZAS = 31
-
-OP = 1		ZAD = 301		CZAS = 37
-
-OP = 1		ZAD = 298		CZAS = 47
-
-OP = 1		ZAD = 584		CZAS = 24
-
-OP = 1		ZAD = 928		CZAS = 32
-
-OP = 1		ZAD = 556		CZAS = 45
-
-OP = 1		ZAD = 873		CZAS = 1
-
-OP = 1		ZAD = 660		CZAS = 43
-
-OP = 1		ZAD = 292		CZAS = 16
-
-OP = 1		ZAD = 291		CZAS = 7
-
-OP = 1		ZAD = 289		CZAS = 21
-
-OP = 1		ZAD = 936		CZAS = 29
-
-OP = 1		ZAD = 798		CZAS = 45
-
-OP = 1		ZAD = 888		CZAS = 1
-
-OP = 1		ZAD = 833		CZAS = 31
-
-OP = 1		ZAD = 284		CZAS = 33
-
-OP = 1		ZAD = 281		CZAS = 27
-
-OP = 1		ZAD = 280		CZAS = 45
-
-OP = 1		ZAD = 276		CZAS = 18
-
-OP = 1		ZAD = 274		CZAS = 25
-
-OP = 1		ZAD = 271		CZAS = 19
-
-OP = 1		ZAD = 269		CZAS = 24
-
-OP = 1		ZAD = 265		CZAS = 23
-
-OP = 1		ZAD = 882		CZAS = 15
-
-OP = 1		ZAD = 689		CZAS = 29
-
-OP = 1		ZAD = 695		CZAS = 44
-
-OP = 1		ZAD = 647		CZAS = 48
-
-OP = 1		ZAD = 1000		CZAS = 12
-
-OP = 1		ZAD = 253		CZAS = 29
-
-OP = 1		ZAD = 249		CZAS = 38
-
-OP = 1		ZAD = 246		CZAS = 46
-
-OP = 1		ZAD = 757		CZAS = 43
-
-OP = 1		ZAD = 715		CZAS = 17
-
-OP = 1		ZAD = 243		CZAS = 47
-
-OP = 1		ZAD = 241		CZAS = 1
-
-OP = 1		ZAD = 240		CZAS = 45
-
-OP = 1		ZAD = 237		CZAS = 34
-
-OP = 1		ZAD = 234		CZAS = 44
-
-OP = 1		ZAD = 841		CZAS = 44
-
-OP = 1		ZAD = 232		CZAS = 13
-
-OP = 1		ZAD = 694		CZAS = 5
-
-OP = 1		ZAD = 231		CZAS = 30
-
-OP = 1		ZAD = 227		CZAS = 36
-
-OP = 1		ZAD = 224		CZAS = 12
-
-OP = 1		ZAD = 917		CZAS = 18
-
-OP = 1		ZAD = 955		CZAS = 9
-
-OP = 1		ZAD = 753		CZAS = 35
-
-OP = 1		ZAD = 220		CZAS = 17
-
-OP = 1		ZAD = 216		CZAS = 2
-
-OP = 1		ZAD = 215		CZAS = 34
-
-OP = 1		ZAD = 212		CZAS = 23
-
-OP = 1		ZAD = 210		CZAS = 11
-
-OP = 1		ZAD = 209		CZAS = 19
-
-OP = 1		ZAD = 206		CZAS = 40
-
-OP = 1		ZAD = 204		CZAS = 10
-
-OP = 1		ZAD = 202		CZAS = 48
-
-OP = 1		ZAD = 866		CZAS = 38
-
-OP = 1		ZAD = 201		CZAS = 4
-
-OP = 1		ZAD = 199		CZAS = 38
-
-OP = 1		ZAD = 198		CZAS = 48
-
-OP = 1		ZAD = 195		CZAS = 34
-
-OP = 1		ZAD = 190		CZAS = 42
-
-OP = 1		ZAD = 185		CZAS = 45
-
-OP = 1		ZAD = 182		CZAS = 14
-
-OP = 1		ZAD = 181		CZAS = 41
-
-OP = 1		ZAD = 180		CZAS = 42
-
-OP = 1		ZAD = 177		CZAS = 39
-
-OP = 1		ZAD = 173		CZAS = 35
-
-OP = 1		ZAD = 172		CZAS = 1
-
-OP = 1		ZAD = 171		CZAS = 30
-
-OP = 1		ZAD = 166		CZAS = 24
-
-OP = 1		ZAD = 163		CZAS = 46
-
-OP = 1		ZAD = 848		CZAS = 37
-
-OP = 1		ZAD = 159		CZAS = 15
-
-OP = 1		ZAD = 983		CZAS = 45
-
-OP = 1		ZAD = 150		CZAS = 43
-
-OP = 1		ZAD = 145		CZAS = 44
-
-OP = 1		ZAD = 142		CZAS = 5
-
-OP = 1		ZAD = 140		CZAS = 27
-
-OP = 1		ZAD = 138		CZAS = 8
-
-OP = 1		ZAD = 137		CZAS = 38
-
-OP = 1		ZAD = 136		CZAS = 19
-
-OP = 1		ZAD = 135		CZAS = 1
-
-OP = 1		ZAD = 134		CZAS = 16
-
-OP = 1		ZAD = 132		CZAS = 32
-
-OP = 1		ZAD = 129		CZAS = 42
-
-OP = 1		ZAD = 126		CZAS = 13
-
-OP = 1		ZAD = 124		CZAS = 18
-
-OP = 1		ZAD = 122		CZAS = 6
-
-OP = 1		ZAD = 121		CZAS = 10
-
-OP = 1		ZAD = 120		CZAS = 10
-
-OP = 1		ZAD = 117		CZAS = 2
-
-OP = 1		ZAD = 116		CZAS = 3
-
-OP = 1		ZAD = 115		CZAS = 15
-
-OP = 1		ZAD = 113		CZAS = 6
-
-OP = 1		ZAD = 111		CZAS = 13
-
-OP = 1		ZAD = 925		CZAS = 32
-
-OP = 1		ZAD = 108		CZAS = 9
-
-OP = 1		ZAD = 106		CZAS = 47
-
-OP = 1		ZAD = 102		CZAS = 9
-
-OP = 1		ZAD = 100		CZAS = 26
-
-OP = 1		ZAD = 927		CZAS = 48
-
-OP = 1		ZAD = 965		CZAS = 15
-
-OP = 1		ZAD = 88		CZAS = 2
-
-OP = 1		ZAD = 87		CZAS = 31
-
-OP = 1		ZAD = 865		CZAS = 27
-
-OP = 1		ZAD = 86		CZAS = 36
-
-OP = 1		ZAD = 83		CZAS = 32
+OP = 1		ZAD = 76		CZAS = 34
 
 OP = 1		ZAD = 79		CZAS = 37
 
-OP = 1		ZAD = 75		CZAS = 48
+OP = 1		ZAD = 94		CZAS = 38
 
-OP = 1		ZAD = 71		CZAS = 30
+OP = 1		ZAD = 98		CZAS = 9
 
-OP = 1		ZAD = 69		CZAS = 4
+OP = 1		ZAD = 99		CZAS = 8
 
-OP = 1		ZAD = 68		CZAS = 32
+OP = 1		ZAD = 97		CZAS = 44
 
-OP = 1		ZAD = 64		CZAS = 29
+OP = 1		ZAD = 106		CZAS = 12
 
-OP = 1		ZAD = 62		CZAS = 45
+OP = 1		ZAD = 107		CZAS = 5
 
-OP = 1		ZAD = 58		CZAS = 43
+OP = 1		ZAD = 105		CZAS = 16
 
-OP = 1		ZAD = 57		CZAS = 32
+OP = 1		ZAD = 109		CZAS = 21
 
-OP = 1		ZAD = 52		CZAS = 17
+OP = 1		ZAD = 111		CZAS = 38
 
-OP = 1		ZAD = 50		CZAS = 37
+OP = 1		ZAD = 115		CZAS = 6
 
-OP = 1		ZAD = 46		CZAS = 19
+OP = 1		ZAD = 114		CZAS = 7
 
-OP = 1		ZAD = 43		CZAS = 16
+OP = 1		ZAD = 122		CZAS = 21
 
-OP = 1		ZAD = 42		CZAS = 44
+OP = 1		ZAD = 124		CZAS = 24
 
-OP = 1		ZAD = 39		CZAS = 26
+OP = 1		ZAD = 127		CZAS = 29
 
-OP = 1		ZAD = 37		CZAS = 2
+OP = 1		ZAD = 130		CZAS = 34
 
-OP = 1		ZAD = 36		CZAS = 20
+OP = 1		ZAD = 133		CZAS = 8
 
-OP = 1		ZAD = 32		CZAS = 14
+OP = 1		ZAD = 120		CZAS = 18
 
-OP = 1		ZAD = 31		CZAS = 38
+OP = 1		ZAD = 144		CZAS = 25
 
-OP = 1		ZAD = 27		CZAS = 37
+OP = 1		ZAD = 141		CZAS = 32
 
-OP = 1		ZAD = 23		CZAS = 32
+OP = 1		ZAD = 148		CZAS = 40
 
-OP = 1		ZAD = 21		CZAS = 48
+OP = 1		ZAD = 137		CZAS = 42
 
-OP = 1		ZAD = 19		CZAS = 43
+OP = 1		ZAD = 91		CZAS = 13
 
-OP = 1		ZAD = 14		CZAS = 23
+OP = 1		ZAD = 87		CZAS = 32
 
-OP = 1		ZAD = 11		CZAS = 23
+OP = 1		ZAD = 80		CZAS = 32
 
-OP = 1		ZAD = 9		CZAS = 1
+OP = 1		ZAD = 69		CZAS = 12
 
-OP = 1		ZAD = 8		CZAS = 1
+OP = 1		ZAD = 52		CZAS = 42
 
-OP = 1		ZAD = 7		CZAS = 15
+OP = 1		ZAD = 47		CZAS = 25
 
-OP = 1		ZAD = 986		CZAS = 2
+OP = 1		ZAD = 33		CZAS = 38
 
-OP = 99		ZAD = 99		CZAS = 22
+OP = 1		ZAD = 10		CZAS = 10
 
-OP = 1		ZAD = 980		CZAS = 3
+OP = 2		ZAD = 149		CZAS = 24
 
-OP = 99		ZAD = 99		CZAS = 199
+OP = 2		ZAD = 150		CZAS = 11
 
-OP = 1		ZAD = 995		CZAS = 23
+OP = 2		ZAD = 147		CZAS = 3
 
-OP = 2		ZAD = 994		CZAS = 20
+OP = 2		ZAD = 146		CZAS = 9
 
-OP = 2		ZAD = 985		CZAS = 15
+OP = 2		ZAD = 145		CZAS = 18
 
-OP = 2		ZAD = 984		CZAS = 37
+OP = 2		ZAD = 142		CZAS = 43
 
-OP = 2		ZAD = 982		CZAS = 2
+OP = 2		ZAD = 134		CZAS = 11
 
-OP = 2		ZAD = 981		CZAS = 21
+OP = 2		ZAD = 129		CZAS = 16
 
-OP = 2		ZAD = 978		CZAS = 1
+OP = 2		ZAD = 128		CZAS = 14
 
-OP = 2		ZAD = 977		CZAS = 22
+OP = 2		ZAD = 126		CZAS = 48
 
-OP = 2		ZAD = 976		CZAS = 17
+OP = 2		ZAD = 123		CZAS = 5
 
-OP = 2		ZAD = 971		CZAS = 25
+OP = 2		ZAD = 121		CZAS = 22
 
-OP = 2		ZAD = 969		CZAS = 42
+OP = 2		ZAD = 119		CZAS = 16
 
-OP = 2		ZAD = 967		CZAS = 2
+OP = 2		ZAD = 118		CZAS = 38
 
-OP = 2		ZAD = 966		CZAS = 44
+OP = 2		ZAD = 116		CZAS = 4
 
-OP = 2		ZAD = 961		CZAS = 29
+OP = 2		ZAD = 113		CZAS = 17
 
-OP = 2		ZAD = 958		CZAS = 48
+OP = 2		ZAD = 110		CZAS = 16
 
-OP = 2		ZAD = 954		CZAS = 12
+OP = 2		ZAD = 104		CZAS = 7
 
-OP = 2		ZAD = 953		CZAS = 25
+OP = 2		ZAD = 103		CZAS = 30
 
-OP = 2		ZAD = 951		CZAS = 39
+OP = 2		ZAD = 102		CZAS = 26
 
-OP = 2		ZAD = 949		CZAS = 26
+OP = 2		ZAD = 101		CZAS = 29
 
-OP = 2		ZAD = 945		CZAS = 45
+OP = 2		ZAD = 100		CZAS = 20
 
-OP = 2		ZAD = 943		CZAS = 25
+OP = 2		ZAD = 93		CZAS = 13
 
-OP = 2		ZAD = 940		CZAS = 36
+OP = 2		ZAD = 89		CZAS = 2
 
-OP = 2		ZAD = 934		CZAS = 8
+OP = 2		ZAD = 88		CZAS = 2
 
-OP = 2		ZAD = 932		CZAS = 41
+OP = 2		ZAD = 86		CZAS = 27
 
-OP = 2		ZAD = 931		CZAS = 42
+OP = 2		ZAD = 85		CZAS = 5
 
-OP = 2		ZAD = 926		CZAS = 20
+OP = 2		ZAD = 84		CZAS = 35
 
-OP = 2		ZAD = 923		CZAS = 48
+OP = 2		ZAD = 82		CZAS = 42
 
-OP = 2		ZAD = 921		CZAS = 49
+OP = 2		ZAD = 78		CZAS = 28
 
-OP = 2		ZAD = 912		CZAS = 39
+OP = 2		ZAD = 73		CZAS = 31
 
-OP = 2		ZAD = 910		CZAS = 21
+OP = 2		ZAD = 70		CZAS = 42
 
-OP = 2		ZAD = 908		CZAS = 46
+OP = 2		ZAD = 68		CZAS = 46
 
-OP = 2		ZAD = 906		CZAS = 10
+OP = 2		ZAD = 64		CZAS = 30
 
-OP = 2		ZAD = 903		CZAS = 33
+OP = 2		ZAD = 62		CZAS = 39
 
-OP = 2		ZAD = 902		CZAS = 30
+OP = 2		ZAD = 59		CZAS = 19
 
-OP = 2		ZAD = 898		CZAS = 33
+OP = 2		ZAD = 55		CZAS = 31
 
-OP = 2		ZAD = 897		CZAS = 21
+OP = 2		ZAD = 53		CZAS = 14
 
-OP = 2		ZAD = 891		CZAS = 38
+OP = 2		ZAD = 51		CZAS = 23
 
-OP = 2		ZAD = 887		CZAS = 23
+OP = 2		ZAD = 49		CZAS = 8
 
-OP = 2		ZAD = 886		CZAS = 2
+OP = 2		ZAD = 48		CZAS = 13
 
-OP = 2		ZAD = 885		CZAS = 22
-
-OP = 2		ZAD = 883		CZAS = 33
-
-OP = 2		ZAD = 880		CZAS = 32
-
-OP = 2		ZAD = 876		CZAS = 45
-
-OP = 2		ZAD = 874		CZAS = 16
-
-OP = 2		ZAD = 868		CZAS = 21
-
-OP = 2		ZAD = 864		CZAS = 17
-
-OP = 2		ZAD = 863		CZAS = 27
-
-OP = 2		ZAD = 862		CZAS = 13
-
-OP = 2		ZAD = 859		CZAS = 12
-
-OP = 2		ZAD = 857		CZAS = 13
-
-OP = 2		ZAD = 855		CZAS = 43
-
-OP = 2		ZAD = 854		CZAS = 45
-
-OP = 2		ZAD = 850		CZAS = 41
-
-OP = 2		ZAD = 847		CZAS = 2
-
-OP = 2		ZAD = 844		CZAS = 23
-
-OP = 2		ZAD = 840		CZAS = 6
-
-OP = 2		ZAD = 838		CZAS = 18
-
-OP = 2		ZAD = 837		CZAS = 40
-
-OP = 2		ZAD = 836		CZAS = 38
-
-OP = 2		ZAD = 830		CZAS = 32
-
-OP = 2		ZAD = 827		CZAS = 15
-
-OP = 2		ZAD = 825		CZAS = 43
-
-OP = 2		ZAD = 822		CZAS = 17
-
-OP = 2		ZAD = 817		CZAS = 33
-
-OP = 2		ZAD = 816		CZAS = 31
-
-OP = 2		ZAD = 808		CZAS = 27
-
-OP = 2		ZAD = 806		CZAS = 29
-
-OP = 2		ZAD = 804		CZAS = 15
-
-OP = 2		ZAD = 800		CZAS = 1
-
-OP = 2		ZAD = 797		CZAS = 8
-
-OP = 2		ZAD = 796		CZAS = 19
-
-OP = 2		ZAD = 795		CZAS = 30
-
-OP = 2		ZAD = 794		CZAS = 14
-
-OP = 2		ZAD = 792		CZAS = 6
-
-OP = 2		ZAD = 791		CZAS = 24
-
-OP = 2		ZAD = 790		CZAS = 4
-
-OP = 2		ZAD = 788		CZAS = 4
-
-OP = 2		ZAD = 787		CZAS = 1
-
-OP = 2		ZAD = 786		CZAS = 7
-
-OP = 2		ZAD = 785		CZAS = 46
-
-OP = 2		ZAD = 783		CZAS = 37
-
-OP = 2		ZAD = 782		CZAS = 14
-
-OP = 2		ZAD = 779		CZAS = 39
-
-OP = 2		ZAD = 778		CZAS = 19
-
-OP = 2		ZAD = 772		CZAS = 14
-
-OP = 2		ZAD = 770		CZAS = 29
-
-OP = 2		ZAD = 769		CZAS = 46
-
-OP = 2		ZAD = 767		CZAS = 3
-
-OP = 2		ZAD = 755		CZAS = 4
-
-OP = 2		ZAD = 754		CZAS = 28
-
-OP = 2		ZAD = 751		CZAS = 1
-
-OP = 2		ZAD = 744		CZAS = 31
-
-OP = 2		ZAD = 742		CZAS = 32
-
-OP = 2		ZAD = 740		CZAS = 45
-
-OP = 2		ZAD = 738		CZAS = 27
-
-OP = 2		ZAD = 732		CZAS = 43
-
-OP = 2		ZAD = 730		CZAS = 16
-
-OP = 2		ZAD = 729		CZAS = 10
-
-OP = 2		ZAD = 726		CZAS = 45
-
-OP = 2		ZAD = 725		CZAS = 31
-
-OP = 2		ZAD = 721		CZAS = 36
-
-OP = 2		ZAD = 717		CZAS = 26
-
-OP = 2		ZAD = 712		CZAS = 32
-
-OP = 2		ZAD = 711		CZAS = 10
-
-OP = 2		ZAD = 710		CZAS = 19
-
-OP = 2		ZAD = 708		CZAS = 31
-
-OP = 2		ZAD = 706		CZAS = 38
-
-OP = 2		ZAD = 705		CZAS = 20
-
-OP = 2		ZAD = 700		CZAS = 36
-
-OP = 2		ZAD = 697		CZAS = 24
-
-OP = 2		ZAD = 692		CZAS = 25
-
-OP = 2		ZAD = 691		CZAS = 33
-
-OP = 2		ZAD = 685		CZAS = 37
-
-OP = 2		ZAD = 684		CZAS = 36
-
-OP = 2		ZAD = 679		CZAS = 22
-
-OP = 2		ZAD = 676		CZAS = 19
-
-OP = 2		ZAD = 672		CZAS = 25
-
-OP = 2		ZAD = 670		CZAS = 46
-
-OP = 2		ZAD = 669		CZAS = 45
-
-OP = 2		ZAD = 657		CZAS = 18
-
-OP = 2		ZAD = 656		CZAS = 36
-
-OP = 2		ZAD = 655		CZAS = 41
-
-OP = 2		ZAD = 652		CZAS = 1
-
-OP = 2		ZAD = 649		CZAS = 2
-
-OP = 2		ZAD = 646		CZAS = 9
-
-OP = 2		ZAD = 644		CZAS = 20
-
-OP = 2		ZAD = 642		CZAS = 15
-
-OP = 2		ZAD = 641		CZAS = 1
-
-OP = 2		ZAD = 640		CZAS = 21
-
-OP = 2		ZAD = 638		CZAS = 35
-
-OP = 2		ZAD = 632		CZAS = 34
-
-OP = 2		ZAD = 631		CZAS = 23
-
-OP = 2		ZAD = 629		CZAS = 36
-
-OP = 2		ZAD = 625		CZAS = 7
-
-OP = 2		ZAD = 624		CZAS = 24
-
-OP = 2		ZAD = 622		CZAS = 45
-
-OP = 2		ZAD = 618		CZAS = 36
-
-OP = 2		ZAD = 615		CZAS = 25
-
-OP = 2		ZAD = 612		CZAS = 19
-
-OP = 2		ZAD = 611		CZAS = 37
-
-OP = 2		ZAD = 608		CZAS = 20
-
-OP = 2		ZAD = 607		CZAS = 29
-
-OP = 2		ZAD = 603		CZAS = 6
-
-OP = 2		ZAD = 601		CZAS = 43
-
-OP = 2		ZAD = 600		CZAS = 5
-
-OP = 2		ZAD = 597		CZAS = 12
-
-OP = 2		ZAD = 585		CZAS = 16
-
-OP = 2		ZAD = 581		CZAS = 16
-
-OP = 2		ZAD = 580		CZAS = 27
-
-OP = 2		ZAD = 576		CZAS = 5
-
-OP = 2		ZAD = 574		CZAS = 49
-
-OP = 2		ZAD = 571		CZAS = 3
-
-OP = 2		ZAD = 570		CZAS = 21
-
-OP = 2		ZAD = 565		CZAS = 26
-
-OP = 2		ZAD = 562		CZAS = 15
-
-OP = 2		ZAD = 560		CZAS = 1
-
-OP = 2		ZAD = 559		CZAS = 20
-
-OP = 2		ZAD = 558		CZAS = 21
-
-OP = 2		ZAD = 554		CZAS = 17
-
-OP = 2		ZAD = 553		CZAS = 2
-
-OP = 2		ZAD = 552		CZAS = 31
-
-OP = 2		ZAD = 551		CZAS = 2
-
-OP = 2		ZAD = 550		CZAS = 22
-
-OP = 2		ZAD = 548		CZAS = 15
-
-OP = 2		ZAD = 546		CZAS = 42
-
-OP = 2		ZAD = 541		CZAS = 22
-
-OP = 2		ZAD = 537		CZAS = 9
-
-OP = 2		ZAD = 536		CZAS = 13
-
-OP = 2		ZAD = 535		CZAS = 13
-
-OP = 2		ZAD = 534		CZAS = 5
-
-OP = 2		ZAD = 531		CZAS = 2
-
-OP = 2		ZAD = 530		CZAS = 35
-
-OP = 2		ZAD = 528		CZAS = 22
-
-OP = 2		ZAD = 526		CZAS = 30
-
-OP = 2		ZAD = 517		CZAS = 12
-
-OP = 2		ZAD = 514		CZAS = 42
-
-OP = 2		ZAD = 510		CZAS = 22
-
-OP = 2		ZAD = 509		CZAS = 23
-
-OP = 2		ZAD = 505		CZAS = 11
-
-OP = 2		ZAD = 504		CZAS = 32
-
-OP = 2		ZAD = 503		CZAS = 26
-
-OP = 2		ZAD = 496		CZAS = 25
-
-OP = 2		ZAD = 495		CZAS = 27
-
-OP = 2		ZAD = 486		CZAS = 19
-
-OP = 2		ZAD = 485		CZAS = 49
-
-OP = 2		ZAD = 479		CZAS = 7
-
-OP = 2		ZAD = 478		CZAS = 4
-
-OP = 2		ZAD = 476		CZAS = 21
-
-OP = 2		ZAD = 475		CZAS = 31
-
-OP = 2		ZAD = 473		CZAS = 25
-
-OP = 2		ZAD = 470		CZAS = 12
-
-OP = 2		ZAD = 469		CZAS = 43
-
-OP = 2		ZAD = 468		CZAS = 39
-
-OP = 2		ZAD = 465		CZAS = 11
-
-OP = 2		ZAD = 461		CZAS = 13
-
-OP = 2		ZAD = 460		CZAS = 5
-
-OP = 2		ZAD = 456		CZAS = 17
-
-OP = 2		ZAD = 452		CZAS = 11
-
-OP = 2		ZAD = 449		CZAS = 3
-
-OP = 2		ZAD = 447		CZAS = 2
-
-OP = 2		ZAD = 446		CZAS = 21
-
-OP = 2		ZAD = 444		CZAS = 19
-
-OP = 2		ZAD = 442		CZAS = 46
-
-OP = 2		ZAD = 435		CZAS = 31
-
-OP = 2		ZAD = 431		CZAS = 40
-
-OP = 2		ZAD = 428		CZAS = 27
-
-OP = 2		ZAD = 425		CZAS = 39
-
-OP = 2		ZAD = 421		CZAS = 31
-
-OP = 2		ZAD = 418		CZAS = 31
-
-OP = 2		ZAD = 415		CZAS = 27
-
-OP = 2		ZAD = 414		CZAS = 18
-
-OP = 2		ZAD = 413		CZAS = 39
-
-OP = 2		ZAD = 411		CZAS = 5
-
-OP = 2		ZAD = 408		CZAS = 11
-
-OP = 2		ZAD = 405		CZAS = 40
-
-OP = 2		ZAD = 399		CZAS = 30
-
-OP = 2		ZAD = 398		CZAS = 31
-
-OP = 2		ZAD = 397		CZAS = 27
-
-OP = 2		ZAD = 391		CZAS = 20
-
-OP = 2		ZAD = 390		CZAS = 3
-
-OP = 2		ZAD = 388		CZAS = 42
-
-OP = 2		ZAD = 383		CZAS = 4
-
-OP = 2		ZAD = 381		CZAS = 11
-
-OP = 2		ZAD = 379		CZAS = 3
-
-OP = 2		ZAD = 376		CZAS = 38
-
-OP = 2		ZAD = 373		CZAS = 41
-
-OP = 2		ZAD = 371		CZAS = 34
-
-OP = 2		ZAD = 369		CZAS = 44
-
-OP = 2		ZAD = 359		CZAS = 30
-
-OP = 2		ZAD = 358		CZAS = 3
-
-OP = 2		ZAD = 356		CZAS = 12
-
-OP = 2		ZAD = 354		CZAS = 45
-
-OP = 2		ZAD = 352		CZAS = 12
-
-OP = 2		ZAD = 351		CZAS = 25
-
-OP = 2		ZAD = 350		CZAS = 8
-
-OP = 2		ZAD = 348		CZAS = 33
-
-OP = 2		ZAD = 347		CZAS = 26
-
-OP = 2		ZAD = 344		CZAS = 41
-
-OP = 2		ZAD = 341		CZAS = 25
-
-OP = 2		ZAD = 334		CZAS = 37
-
-OP = 2		ZAD = 331		CZAS = 39
-
-OP = 2		ZAD = 326		CZAS = 35
-
-OP = 2		ZAD = 321		CZAS = 9
-
-OP = 2		ZAD = 314		CZAS = 9
-
-OP = 2		ZAD = 313		CZAS = 29
-
-OP = 2		ZAD = 312		CZAS = 17
-
-OP = 2		ZAD = 307		CZAS = 33
-
-OP = 2		ZAD = 304		CZAS = 4
-
-OP = 2		ZAD = 302		CZAS = 11
-
-OP = 2		ZAD = 300		CZAS = 31
-
-OP = 2		ZAD = 299		CZAS = 48
-
-OP = 2		ZAD = 297		CZAS = 24
-
-OP = 2		ZAD = 294		CZAS = 30
-
-OP = 2		ZAD = 290		CZAS = 20
-
-OP = 2		ZAD = 282		CZAS = 21
-
-OP = 2		ZAD = 279		CZAS = 12
-
-OP = 2		ZAD = 278		CZAS = 39
-
-OP = 2		ZAD = 275		CZAS = 33
-
-OP = 2		ZAD = 273		CZAS = 19
-
-OP = 2		ZAD = 270		CZAS = 35
-
-OP = 2		ZAD = 268		CZAS = 12
-
-OP = 2		ZAD = 267		CZAS = 13
-
-OP = 2		ZAD = 266		CZAS = 5
-
-OP = 2		ZAD = 264		CZAS = 27
-
-OP = 2		ZAD = 258		CZAS = 17
-
-OP = 2		ZAD = 257		CZAS = 12
-
-OP = 2		ZAD = 254		CZAS = 16
-
-OP = 2		ZAD = 252		CZAS = 33
-
-OP = 2		ZAD = 251		CZAS = 7
-
-OP = 2		ZAD = 247		CZAS = 36
-
-OP = 2		ZAD = 245		CZAS = 21
-
-OP = 2		ZAD = 242		CZAS = 19
-
-OP = 2		ZAD = 239		CZAS = 6
-
-OP = 2		ZAD = 238		CZAS = 42
-
-OP = 2		ZAD = 236		CZAS = 29
-
-OP = 2		ZAD = 235		CZAS = 4
-
-OP = 2		ZAD = 233		CZAS = 46
-
-OP = 2		ZAD = 223		CZAS = 13
-
-OP = 2		ZAD = 222		CZAS = 14
-
-OP = 2		ZAD = 219		CZAS = 40
-
-OP = 2		ZAD = 217		CZAS = 46
-
-OP = 2		ZAD = 214		CZAS = 48
-
-OP = 2		ZAD = 208		CZAS = 17
-
-OP = 2		ZAD = 205		CZAS = 17
-
-OP = 2		ZAD = 203		CZAS = 39
-
-OP = 2		ZAD = 200		CZAS = 13
-
-OP = 2		ZAD = 197		CZAS = 35
-
-OP = 2		ZAD = 196		CZAS = 35
-
-OP = 2		ZAD = 192		CZAS = 7
-
-OP = 2		ZAD = 189		CZAS = 22
-
-OP = 2		ZAD = 187		CZAS = 48
-
-OP = 2		ZAD = 184		CZAS = 2
-
-OP = 2		ZAD = 183		CZAS = 15
-
-OP = 2		ZAD = 179		CZAS = 11
-
-OP = 2		ZAD = 178		CZAS = 13
-
-OP = 2		ZAD = 176		CZAS = 44
-
-OP = 2		ZAD = 175		CZAS = 45
-
-OP = 2		ZAD = 169		CZAS = 43
-
-OP = 2		ZAD = 168		CZAS = 13
-
-OP = 2		ZAD = 161		CZAS = 46
-
-OP = 2		ZAD = 158		CZAS = 19
-
-OP = 2		ZAD = 157		CZAS = 46
-
-OP = 2		ZAD = 149		CZAS = 20
-
-OP = 2		ZAD = 148		CZAS = 8
-
-OP = 2		ZAD = 147		CZAS = 12
-
-OP = 2		ZAD = 144		CZAS = 18
-
-OP = 2		ZAD = 143		CZAS = 21
-
-OP = 2		ZAD = 141		CZAS = 14
-
-OP = 2		ZAD = 133		CZAS = 14
-
-OP = 2		ZAD = 131		CZAS = 5
-
-OP = 2		ZAD = 130		CZAS = 39
-
-OP = 2		ZAD = 128		CZAS = 46
-
-OP = 2		ZAD = 127		CZAS = 35
-
-OP = 2		ZAD = 123		CZAS = 39
-
-OP = 2		ZAD = 114		CZAS = 34
-
-OP = 2		ZAD = 112		CZAS = 35
-
-OP = 2		ZAD = 109		CZAS = 27
-
-OP = 2		ZAD = 107		CZAS = 15
-
-OP = 2		ZAD = 105		CZAS = 49
-
-OP = 2		ZAD = 103		CZAS = 14
-
-OP = 2		ZAD = 99		CZAS = 30
-
-OP = 2		ZAD = 97		CZAS = 34
-
-OP = 2		ZAD = 95		CZAS = 6
-
-OP = 2		ZAD = 92		CZAS = 26
-
-OP = 2		ZAD = 85		CZAS = 41
-
-OP = 2		ZAD = 84		CZAS = 34
-
-OP = 2		ZAD = 81		CZAS = 4
-
-OP = 2		ZAD = 80		CZAS = 31
-
-OP = 2		ZAD = 74		CZAS = 25
-
-OP = 2		ZAD = 72		CZAS = 20
-
-OP = 2		ZAD = 67		CZAS = 22
-
-OP = 2		ZAD = 66		CZAS = 5
-
-OP = 2		ZAD = 65		CZAS = 3
-
-OP = 2		ZAD = 59		CZAS = 38
-
-OP = 2		ZAD = 56		CZAS = 49
-
-OP = 2		ZAD = 53		CZAS = 38
-
-OP = 2		ZAD = 49		CZAS = 6
-
-OP = 2		ZAD = 48		CZAS = 4
-
-OP = 2		ZAD = 47		CZAS = 2
-
-OP = 2		ZAD = 45		CZAS = 3
-
-OP = 2		ZAD = 44		CZAS = 40
-
-OP = 2		ZAD = 41		CZAS = 22
-
-OP = 2		ZAD = 38		CZAS = 42
-
-OP = 2		ZAD = 35		CZAS = 49
-
-OP = 2		ZAD = 33		CZAS = 26
-
-OP = 2		ZAD = 29		CZAS = 23
-
-OP = 2		ZAD = 26		CZAS = 46
-
-OP = 2		ZAD = 25		CZAS = 31
-
-OP = 2		ZAD = 18		CZAS = 45
-
-OP = 2		ZAD = 17		CZAS = 26
-
-OP = 2		ZAD = 15		CZAS = 8
-
-OP = 2		ZAD = 5		CZAS = 23
-
-OP = 2		ZAD = 2		CZAS = 27
-
-OP = 3		ZAD = 999		CZAS = 45
-
-OP = 3		ZAD = 998		CZAS = 41
-
-OP = 3		ZAD = 997		CZAS = 35
-
-OP = 3		ZAD = 996		CZAS = 49
-
-OP = 3		ZAD = 992		CZAS = 42
-
-OP = 3		ZAD = 991		CZAS = 38
-
-OP = 3		ZAD = 990		CZAS = 4
-
-OP = 3		ZAD = 989		CZAS = 43
-
-OP = 3		ZAD = 988		CZAS = 33
-
-OP = 3		ZAD = 987		CZAS = 36
-
-OP = 3		ZAD = 975		CZAS = 29
-
-OP = 3		ZAD = 974		CZAS = 31
-
-OP = 3		ZAD = 968		CZAS = 23
-
-OP = 3		ZAD = 964		CZAS = 19
-
-OP = 3		ZAD = 960		CZAS = 27
-
-OP = 3		ZAD = 959		CZAS = 13
-
-OP = 3		ZAD = 957		CZAS = 13
-
-OP = 3		ZAD = 950		CZAS = 19
-
-OP = 3		ZAD = 948		CZAS = 24
-
-OP = 3		ZAD = 947		CZAS = 11
-
-OP = 3		ZAD = 946		CZAS = 3
-
-OP = 3		ZAD = 942		CZAS = 15
-
-OP = 3		ZAD = 941		CZAS = 36
-
-OP = 3		ZAD = 939		CZAS = 28
-
-OP = 3		ZAD = 938		CZAS = 29
-
-OP = 3		ZAD = 937		CZAS = 29
-
-OP = 3		ZAD = 919		CZAS = 36
-
-OP = 3		ZAD = 918		CZAS = 6
-
-OP = 3		ZAD = 916		CZAS = 46
-
-OP = 3		ZAD = 914		CZAS = 21
-
-OP = 3		ZAD = 911		CZAS = 32
-
-OP = 3		ZAD = 907		CZAS = 13
-
-OP = 3		ZAD = 901		CZAS = 24
-
-OP = 3		ZAD = 900		CZAS = 13
-
-OP = 3		ZAD = 899		CZAS = 47
-
-OP = 3		ZAD = 896		CZAS = 44
-
-OP = 3		ZAD = 895		CZAS = 34
-
-OP = 3		ZAD = 894		CZAS = 30
-
-OP = 3		ZAD = 893		CZAS = 18
-
-OP = 3		ZAD = 890		CZAS = 28
-
-OP = 3		ZAD = 889		CZAS = 37
-
-OP = 3		ZAD = 884		CZAS = 35
-
-OP = 3		ZAD = 879		CZAS = 9
-
-OP = 3		ZAD = 878		CZAS = 29
-
-OP = 3		ZAD = 877		CZAS = 48
-
-OP = 3		ZAD = 861		CZAS = 34
-
-OP = 3		ZAD = 860		CZAS = 43
-
-OP = 3		ZAD = 858		CZAS = 48
-
-OP = 3		ZAD = 856		CZAS = 49
-
-OP = 3		ZAD = 853		CZAS = 16
-
-OP = 3		ZAD = 851		CZAS = 24
-
-OP = 3		ZAD = 849		CZAS = 39
-
-OP = 3		ZAD = 846		CZAS = 33
-
-OP = 3		ZAD = 845		CZAS = 15
-
-OP = 3		ZAD = 843		CZAS = 16
-
-OP = 3		ZAD = 842		CZAS = 29
-
-OP = 3		ZAD = 832		CZAS = 20
-
-OP = 3		ZAD = 829		CZAS = 32
-
-OP = 3		ZAD = 826		CZAS = 26
-
-OP = 3		ZAD = 824		CZAS = 26
-
-OP = 3		ZAD = 823		CZAS = 34
-
-OP = 3		ZAD = 821		CZAS = 14
-
-OP = 3		ZAD = 820		CZAS = 36
-
-OP = 3		ZAD = 819		CZAS = 12
-
-OP = 3		ZAD = 815		CZAS = 42
-
-OP = 3		ZAD = 814		CZAS = 24
-
-OP = 3		ZAD = 813		CZAS = 40
-
-OP = 3		ZAD = 811		CZAS = 27
-
-OP = 3		ZAD = 810		CZAS = 18
-
-OP = 3		ZAD = 807		CZAS = 32
-
-OP = 3		ZAD = 805		CZAS = 23
-
-OP = 3		ZAD = 803		CZAS = 47
-
-OP = 3		ZAD = 802		CZAS = 31
-
-OP = 3		ZAD = 801		CZAS = 12
-
-OP = 3		ZAD = 784		CZAS = 23
-
-OP = 3		ZAD = 781		CZAS = 24
-
-OP = 3		ZAD = 776		CZAS = 46
-
-OP = 3		ZAD = 775		CZAS = 32
-
-OP = 3		ZAD = 774		CZAS = 12
-
-OP = 3		ZAD = 773		CZAS = 7
-
-OP = 3		ZAD = 771		CZAS = 43
-
-OP = 3		ZAD = 764		CZAS = 20
-
-OP = 3		ZAD = 763		CZAS = 13
-
-OP = 3		ZAD = 762		CZAS = 4
-
-OP = 3		ZAD = 760		CZAS = 7
-
-OP = 3		ZAD = 759		CZAS = 7
-
-OP = 3		ZAD = 758		CZAS = 33
-
-OP = 3		ZAD = 752		CZAS = 30
-
-OP = 3		ZAD = 750		CZAS = 26
-
-OP = 3		ZAD = 749		CZAS = 24
-
-OP = 3		ZAD = 746		CZAS = 25
-
-OP = 3		ZAD = 745		CZAS = 21
-
-OP = 3		ZAD = 743		CZAS = 26
-
-OP = 3		ZAD = 739		CZAS = 48
-
-OP = 3		ZAD = 737		CZAS = 2
-
-OP = 3		ZAD = 735		CZAS = 29
-
-OP = 3		ZAD = 734		CZAS = 5
-
-OP = 3		ZAD = 724		CZAS = 44
-
-OP = 3		ZAD = 723		CZAS = 8
-
-OP = 3		ZAD = 722		CZAS = 12
-
-OP = 3		ZAD = 720		CZAS = 43
-
-OP = 3		ZAD = 719		CZAS = 3
-
-OP = 3		ZAD = 718		CZAS = 13
-
-OP = 3		ZAD = 716		CZAS = 1
-
-OP = 3		ZAD = 709		CZAS = 15
-
-OP = 3		ZAD = 704		CZAS = 27
-
-OP = 3		ZAD = 702		CZAS = 5
-
-OP = 3		ZAD = 699		CZAS = 12
-
-OP = 3		ZAD = 698		CZAS = 37
-
-OP = 3		ZAD = 696		CZAS = 5
-
-OP = 3		ZAD = 683		CZAS = 28
-
-OP = 3		ZAD = 682		CZAS = 13
-
-OP = 3		ZAD = 681		CZAS = 7
-
-OP = 3		ZAD = 680		CZAS = 10
-
-OP = 3		ZAD = 678		CZAS = 45
-
-OP = 3		ZAD = 675		CZAS = 9
-
-OP = 3		ZAD = 674		CZAS = 11
-
-OP = 3		ZAD = 671		CZAS = 4
-
-OP = 3		ZAD = 668		CZAS = 16
-
-OP = 3		ZAD = 667		CZAS = 2
-
-OP = 3		ZAD = 666		CZAS = 4
-
-OP = 3		ZAD = 665		CZAS = 38
-
-OP = 3		ZAD = 664		CZAS = 7
-
-OP = 3		ZAD = 661		CZAS = 13
-
-OP = 3		ZAD = 645		CZAS = 14
-
-OP = 3		ZAD = 639		CZAS = 31
-
-OP = 3		ZAD = 637		CZAS = 12
-
-OP = 3		ZAD = 636		CZAS = 25
-
-OP = 3		ZAD = 634		CZAS = 40
-
-OP = 3		ZAD = 628		CZAS = 18
-
-OP = 3		ZAD = 627		CZAS = 10
-
-OP = 3		ZAD = 621		CZAS = 3
-
-OP = 3		ZAD = 620		CZAS = 36
-
-OP = 3		ZAD = 619		CZAS = 26
-
-OP = 3		ZAD = 614		CZAS = 26
-
-OP = 3		ZAD = 613		CZAS = 19
-
-OP = 3		ZAD = 610		CZAS = 25
-
-OP = 3		ZAD = 609		CZAS = 25
-
-OP = 3		ZAD = 606		CZAS = 13
-
-OP = 3		ZAD = 604		CZAS = 20
-
-OP = 3		ZAD = 602		CZAS = 48
-
-OP = 3		ZAD = 599		CZAS = 11
-
-OP = 3		ZAD = 594		CZAS = 29
-
-OP = 3		ZAD = 593		CZAS = 28
-
-OP = 3		ZAD = 592		CZAS = 10
-
-OP = 3		ZAD = 590		CZAS = 34
-
-OP = 3		ZAD = 589		CZAS = 7
-
-OP = 3		ZAD = 588		CZAS = 24
-
-OP = 3		ZAD = 587		CZAS = 20
-
-OP = 3		ZAD = 586		CZAS = 23
-
-OP = 3		ZAD = 583		CZAS = 19
-
-OP = 3		ZAD = 582		CZAS = 49
-
-OP = 3		ZAD = 577		CZAS = 8
-
-OP = 3		ZAD = 573		CZAS = 17
-
-OP = 3		ZAD = 569		CZAS = 5
-
-OP = 3		ZAD = 549		CZAS = 14
-
-OP = 3		ZAD = 544		CZAS = 42
-
-OP = 3		ZAD = 540		CZAS = 14
-
-OP = 3		ZAD = 529		CZAS = 35
-
-OP = 3		ZAD = 527		CZAS = 34
-
-OP = 3		ZAD = 525		CZAS = 1
-
-OP = 3		ZAD = 524		CZAS = 45
-
-OP = 3		ZAD = 523		CZAS = 15
-
-OP = 3		ZAD = 522		CZAS = 10
-
-OP = 3		ZAD = 521		CZAS = 29
-
-OP = 3		ZAD = 520		CZAS = 22
-
-OP = 3		ZAD = 516		CZAS = 17
-
-OP = 3		ZAD = 515		CZAS = 42
-
-OP = 3		ZAD = 508		CZAS = 39
-
-OP = 3		ZAD = 502		CZAS = 20
-
-OP = 3		ZAD = 501		CZAS = 26
-
-OP = 3		ZAD = 499		CZAS = 14
-
-OP = 3		ZAD = 498		CZAS = 5
-
-OP = 3		ZAD = 493		CZAS = 32
-
-OP = 3		ZAD = 492		CZAS = 5
-
-OP = 3		ZAD = 491		CZAS = 23
-
-OP = 3		ZAD = 489		CZAS = 22
-
-OP = 3		ZAD = 488		CZAS = 26
-
-OP = 3		ZAD = 484		CZAS = 26
-
-OP = 3		ZAD = 482		CZAS = 33
-
-OP = 3		ZAD = 481		CZAS = 45
-
-OP = 3		ZAD = 466		CZAS = 11
-
-OP = 3		ZAD = 464		CZAS = 38
-
-OP = 3		ZAD = 463		CZAS = 22
-
-OP = 3		ZAD = 459		CZAS = 33
-
-OP = 3		ZAD = 457		CZAS = 23
-
-OP = 3		ZAD = 455		CZAS = 37
-
-OP = 3		ZAD = 454		CZAS = 27
-
-OP = 3		ZAD = 451		CZAS = 24
-
-OP = 3		ZAD = 443		CZAS = 40
-
-OP = 3		ZAD = 430		CZAS = 10
-
-OP = 3		ZAD = 429		CZAS = 16
-
-OP = 3		ZAD = 422		CZAS = 25
-
-OP = 3		ZAD = 420		CZAS = 39
-
-OP = 3		ZAD = 419		CZAS = 32
-
-OP = 3		ZAD = 417		CZAS = 41
-
-OP = 3		ZAD = 412		CZAS = 17
-
-OP = 3		ZAD = 410		CZAS = 38
-
-OP = 3		ZAD = 404		CZAS = 2
-
-OP = 3		ZAD = 396		CZAS = 17
-
-OP = 3		ZAD = 393		CZAS = 9
-
-OP = 3		ZAD = 389		CZAS = 16
-
-OP = 3		ZAD = 385		CZAS = 7
-
-OP = 3		ZAD = 374		CZAS = 25
-
-OP = 3		ZAD = 372		CZAS = 47
-
-OP = 3		ZAD = 368		CZAS = 4
-
-OP = 3		ZAD = 367		CZAS = 19
-
-OP = 3		ZAD = 366		CZAS = 41
-
-OP = 3		ZAD = 365		CZAS = 15
-
-OP = 3		ZAD = 364		CZAS = 8
-
-OP = 3		ZAD = 363		CZAS = 29
-
-OP = 3		ZAD = 362		CZAS = 41
-
-OP = 3		ZAD = 360		CZAS = 43
-
-OP = 3		ZAD = 357		CZAS = 41
-
-OP = 3		ZAD = 353		CZAS = 13
-
-OP = 3		ZAD = 346		CZAS = 7
-
-OP = 3		ZAD = 343		CZAS = 11
-
-OP = 3		ZAD = 339		CZAS = 48
-
-OP = 3		ZAD = 338		CZAS = 9
-
-OP = 3		ZAD = 337		CZAS = 12
-
-OP = 3		ZAD = 333		CZAS = 21
-
-OP = 3		ZAD = 329		CZAS = 10
-
-OP = 3		ZAD = 328		CZAS = 23
-
-OP = 3		ZAD = 325		CZAS = 13
-
-OP = 3		ZAD = 322		CZAS = 25
-
-OP = 3		ZAD = 320		CZAS = 5
-
-OP = 3		ZAD = 317		CZAS = 18
-
-OP = 3		ZAD = 316		CZAS = 13
-
-OP = 3		ZAD = 315		CZAS = 43
-
-OP = 3		ZAD = 309		CZAS = 34
-
-OP = 3		ZAD = 308		CZAS = 22
-
-OP = 3		ZAD = 306		CZAS = 9
-
-OP = 3		ZAD = 305		CZAS = 43
-
-OP = 3		ZAD = 296		CZAS = 35
-
-OP = 3		ZAD = 295		CZAS = 15
-
-OP = 3		ZAD = 293		CZAS = 17
-
-OP = 3		ZAD = 288		CZAS = 38
-
-OP = 3		ZAD = 287		CZAS = 24
-
-OP = 3		ZAD = 286		CZAS = 1
-
-OP = 3		ZAD = 285		CZAS = 2
-
-OP = 3		ZAD = 283		CZAS = 30
-
-OP = 3		ZAD = 277		CZAS = 1
-
-OP = 3		ZAD = 272		CZAS = 19
-
-OP = 3		ZAD = 263		CZAS = 2
-
-OP = 3		ZAD = 262		CZAS = 15
-
-OP = 3		ZAD = 261		CZAS = 23
-
-OP = 3		ZAD = 260		CZAS = 18
-
-OP = 3		ZAD = 259		CZAS = 6
-
-OP = 3		ZAD = 256		CZAS = 11
-
-OP = 3		ZAD = 255		CZAS = 37
-
-OP = 3		ZAD = 250		CZAS = 44
-
-OP = 3		ZAD = 248		CZAS = 45
-
-OP = 3		ZAD = 244		CZAS = 25
-
-OP = 3		ZAD = 230		CZAS = 17
-
-OP = 3		ZAD = 229		CZAS = 43
-
-OP = 3		ZAD = 228		CZAS = 7
-
-OP = 3		ZAD = 226		CZAS = 2
-
-OP = 3		ZAD = 225		CZAS = 40
-
-OP = 3		ZAD = 221		CZAS = 25
-
-OP = 3		ZAD = 218		CZAS = 32
-
-OP = 3		ZAD = 213		CZAS = 32
-
-OP = 3		ZAD = 211		CZAS = 14
-
-OP = 3		ZAD = 207		CZAS = 12
-
-OP = 3		ZAD = 194		CZAS = 28
-
-OP = 3		ZAD = 193		CZAS = 20
-
-OP = 3		ZAD = 191		CZAS = 43
-
-OP = 3		ZAD = 188		CZAS = 14
-
-OP = 3		ZAD = 186		CZAS = 19
-
-OP = 3		ZAD = 174		CZAS = 18
-
-OP = 3		ZAD = 170		CZAS = 47
-
-OP = 3		ZAD = 167		CZAS = 18
-
-OP = 3		ZAD = 165		CZAS = 25
-
-OP = 3		ZAD = 164		CZAS = 45
-
-OP = 3		ZAD = 162		CZAS = 40
-
-OP = 3		ZAD = 160		CZAS = 24
-
-OP = 3		ZAD = 156		CZAS = 11
-
-OP = 3		ZAD = 155		CZAS = 26
-
-OP = 3		ZAD = 154		CZAS = 29
-
-OP = 3		ZAD = 153		CZAS = 15
-
-OP = 3		ZAD = 152		CZAS = 9
-
-OP = 3		ZAD = 151		CZAS = 27
-
-OP = 3		ZAD = 146		CZAS = 25
-
-OP = 3		ZAD = 139		CZAS = 6
-
-OP = 3		ZAD = 125		CZAS = 44
-
-OP = 3		ZAD = 119		CZAS = 42
-
-OP = 3		ZAD = 118		CZAS = 20
-
-OP = 3		ZAD = 110		CZAS = 9
-
-OP = 3		ZAD = 104		CZAS = 32
-
-OP = 3		ZAD = 101		CZAS = 13
-
-OP = 3		ZAD = 98		CZAS = 13
-
-OP = 3		ZAD = 96		CZAS = 24
-
-OP = 3		ZAD = 94		CZAS = 37
-
-OP = 3		ZAD = 93		CZAS = 28
-
-OP = 3		ZAD = 91		CZAS = 1
-
-OP = 3		ZAD = 90		CZAS = 34
-
-OP = 3		ZAD = 89		CZAS = 31
-
-OP = 3		ZAD = 82		CZAS = 24
-
-OP = 3		ZAD = 78		CZAS = 22
-
-OP = 3		ZAD = 77		CZAS = 20
-
-OP = 3		ZAD = 76		CZAS = 40
-
-OP = 3		ZAD = 73		CZAS = 20
-
-OP = 3		ZAD = 70		CZAS = 32
-
-OP = 3		ZAD = 63		CZAS = 6
-
-OP = 3		ZAD = 61		CZAS = 9
-
-OP = 3		ZAD = 60		CZAS = 41
-
-OP = 3		ZAD = 55		CZAS = 20
-
-OP = 3		ZAD = 54		CZAS = 39
-
-OP = 3		ZAD = 51		CZAS = 9
-
-OP = 3		ZAD = 40		CZAS = 37
-
-OP = 3		ZAD = 34		CZAS = 44
-
-OP = 3		ZAD = 30		CZAS = 44
-
-OP = 3		ZAD = 28		CZAS = 15
-
-OP = 3		ZAD = 24		CZAS = 19
-
-OP = 3		ZAD = 22		CZAS = 36
-
-OP = 3		ZAD = 20		CZAS = 29
-
-OP = 3		ZAD = 16		CZAS = 27
-
-OP = 3		ZAD = 13		CZAS = 30
-
-OP = 3		ZAD = 12		CZAS = 6
-
-OP = 3		ZAD = 10		CZAS = 16
-
-OP = 3		ZAD = 6		CZAS = 32
-
-OP = 3		ZAD = 4		CZAS = 47
-
-OP = 3		ZAD = 3		CZAS = 31
-
-NR 2 MASZYNA:
-------
-OP = 99		ZAD = 99		CZAS = 1
-
-OP = 1		ZAD = 709		CZAS = 5
-
-OP = 1		ZAD = 469		CZAS = 12
-
-OP = 1		ZAD = 326		CZAS = 27
-
-OP = 1		ZAD = 880		CZAS = 6
-
-OP = 1		ZAD = 562		CZAS = 1
-
-OP = 1		ZAD = 583		CZAS = 29
-
-OP = 1		ZAD = 806		CZAS = 2
-
-OP = 1		ZAD = 571		CZAS = 3
-
-OP = 1		ZAD = 879		CZAS = 46
-
-OP = 1		ZAD = 964		CZAS = 29
-
-OP = 1		ZAD = 435		CZAS = 38
-
-OP = 1		ZAD = 938		CZAS = 24
-
-OP = 1		ZAD = 632		CZAS = 2
-
-OP = 1		ZAD = 396		CZAS = 12
-
-OP = 1		ZAD = 676		CZAS = 39
-
-OP = 1		ZAD = 358		CZAS = 20
-
-OP = 1		ZAD = 636		CZAS = 12
-
-OP = 1		ZAD = 522		CZAS = 49
-
-OP = 1		ZAD = 665		CZAS = 6
-
-OP = 1		ZAD = 534		CZAS = 1
-
-OP = 1		ZAD = 320		CZAS = 12
-
-OP = 1		ZAD = 919		CZAS = 37
-
-OP = 1		ZAD = 390		CZAS = 46
-
-OP = 1		ZAD = 726		CZAS = 16
-
-OP = 1		ZAD = 385		CZAS = 8
-
-OP = 1		ZAD = 381		CZAS = 30
-
-OP = 1		ZAD = 343		CZAS = 44
-
-OP = 1		ZAD = 720		CZAS = 3
-
-OP = 1		ZAD = 531		CZAS = 7
-
-OP = 1		ZAD = 359		CZAS = 44
-
-OP = 1		ZAD = 443		CZAS = 2
-
-OP = 1		ZAD = 322		CZAS = 33
-
-OP = 1		ZAD = 313		CZAS = 14
-
-OP = 1		ZAD = 314		CZAS = 35
-
-OP = 1		ZAD = 602		CZAS = 27
-
-OP = 1		ZAD = 814		CZAS = 1
-
-OP = 1		ZAD = 411		CZAS = 35
-
-OP = 1		ZAD = 719		CZAS = 41
-
-OP = 1		ZAD = 810		CZAS = 8
-
-OP = 1		ZAD = 325		CZAS = 38
-
-OP = 1		ZAD = 364		CZAS = 36
-
-OP = 1		ZAD = 667		CZAS = 14
-
-OP = 1		ZAD = 859		CZAS = 15
-
-OP = 1		ZAD = 974		CZAS = 29
-
-OP = 1		ZAD = 790		CZAS = 46
-
-OP = 1		ZAD = 837		CZAS = 12
-
-OP = 1		ZAD = 499		CZAS = 35
-
-OP = 1		ZAD = 576		CZAS = 40
-
-OP = 1		ZAD = 641		CZAS = 43
-
-OP = 1		ZAD = 914		CZAS = 45
-
-OP = 1		ZAD = 990		CZAS = 1
-
-OP = 1		ZAD = 493		CZAS = 30
-
-OP = 1		ZAD = 803		CZAS = 19
-
-OP = 1		ZAD = 503		CZAS = 20
-
-OP = 1		ZAD = 489		CZAS = 29
-
-OP = 1		ZAD = 505		CZAS = 34
-
-OP = 1		ZAD = 408		CZAS = 13
-
-OP = 1		ZAD = 931		CZAS = 20
-
-OP = 1		ZAD = 901		CZAS = 44
-
-OP = 1		ZAD = 691		CZAS = 33
-
-OP = 1		ZAD = 997		CZAS = 23
-
-OP = 1		ZAD = 613		CZAS = 24
-
-OP = 1		ZAD = 523		CZAS = 9
-
-OP = 1		ZAD = 858		CZAS = 48
-
-OP = 1		ZAD = 796		CZAS = 37
-
-OP = 1		ZAD = 678		CZAS = 20
-
-OP = 1		ZAD = 896		CZAS = 38
-
-OP = 1		ZAD = 860		CZAS = 36
-
-OP = 1		ZAD = 508		CZAS = 4
-
-OP = 1		ZAD = 442		CZAS = 45
-
-OP = 1		ZAD = 805		CZAS = 20
-
-OP = 1		ZAD = 540		CZAS = 36
-
-OP = 1		ZAD = 410		CZAS = 8
-
-OP = 1		ZAD = 795		CZAS = 12
-
-OP = 1		ZAD = 994		CZAS = 27
-
-OP = 1		ZAD = 431		CZAS = 48
-
-OP = 1		ZAD = 372		CZAS = 20
-
-OP = 1		ZAD = 838		CZAS = 17
-
-OP = 1		ZAD = 417		CZAS = 18
-
-OP = 1		ZAD = 907		CZAS = 9
-
-OP = 1		ZAD = 525		CZAS = 48
-
-OP = 1		ZAD = 749		CZAS = 16
-
-OP = 1		ZAD = 366		CZAS = 44
-
-OP = 1		ZAD = 475		CZAS = 30
-
-OP = 1		ZAD = 599		CZAS = 37
-
-OP = 1		ZAD = 536		CZAS = 3
-
-OP = 1		ZAD = 496		CZAS = 27
-
-OP = 1		ZAD = 478		CZAS = 21
-
-OP = 1		ZAD = 495		CZAS = 16
-
-OP = 1		ZAD = 939		CZAS = 46
-
-OP = 1		ZAD = 537		CZAS = 8
-
-OP = 1		ZAD = 460		CZAS = 42
-
-OP = 1		ZAD = 455		CZAS = 44
-
-OP = 1		ZAD = 692		CZAS = 15
-
-OP = 1		ZAD = 486		CZAS = 41
-
-OP = 1		ZAD = 906		CZAS = 27
-
-OP = 1		ZAD = 730		CZAS = 40
-
-OP = 1		ZAD = 530		CZAS = 7
-
-OP = 1		ZAD = 514		CZAS = 4
-
-OP = 1		ZAD = 491		CZAS = 6
-
-OP = 1		ZAD = 845		CZAS = 25
-
-OP = 1		ZAD = 981		CZAS = 34
-
-OP = 1		ZAD = 444		CZAS = 23
-
-OP = 1		ZAD = 413		CZAS = 22
-
-OP = 1		ZAD = 943		CZAS = 16
-
-OP = 1		ZAD = 456		CZAS = 36
-
-OP = 1		ZAD = 957		CZAS = 9
-
-OP = 1		ZAD = 763		CZAS = 17
-
-OP = 1		ZAD = 461		CZAS = 5
-
-OP = 1		ZAD = 393		CZAS = 7
-
-OP = 1		ZAD = 391		CZAS = 19
-
-OP = 1		ZAD = 874		CZAS = 25
-
-OP = 1		ZAD = 637		CZAS = 34
-
-OP = 1		ZAD = 362		CZAS = 34
-
-OP = 1		ZAD = 721		CZAS = 8
-
-OP = 1		ZAD = 569		CZAS = 5
-
-OP = 1		ZAD = 982		CZAS = 27
-
-OP = 1		ZAD = 802		CZAS = 16
-
-OP = 1		ZAD = 422		CZAS = 35
-
-OP = 1		ZAD = 399		CZAS = 4
-
-OP = 1		ZAD = 447		CZAS = 30
-
-OP = 1		ZAD = 485		CZAS = 25
-
-OP = 1		ZAD = 778		CZAS = 40
-
-OP = 1		ZAD = 978		CZAS = 42
-
-OP = 1		ZAD = 883		CZAS = 38
-
-OP = 1		ZAD = 992		CZAS = 33
-
-OP = 1		ZAD = 911		CZAS = 15
-
-OP = 1		ZAD = 772		CZAS = 22
-
-OP = 1		ZAD = 773		CZAS = 19
-
-OP = 1		ZAD = 735		CZAS = 23
-
-OP = 1		ZAD = 581		CZAS = 16
-
-OP = 1		ZAD = 910		CZAS = 37
-
-OP = 1		ZAD = 470		CZAS = 9
-
-OP = 1		ZAD = 794		CZAS = 35
-
-OP = 1		ZAD = 421		CZAS = 1
-
-OP = 1		ZAD = 415		CZAS = 12
-
-OP = 1		ZAD = 683		CZAS = 48
-
-OP = 1		ZAD = 656		CZAS = 9
-
-OP = 1		ZAD = 389		CZAS = 37
-
-OP = 1		ZAD = 843		CZAS = 49
-
-OP = 1		ZAD = 897		CZAS = 11
-
-OP = 1		ZAD = 657		CZAS = 8
-
-OP = 1		ZAD = 552		CZAS = 40
-
-OP = 1		ZAD = 724		CZAS = 35
-
-OP = 1		ZAD = 492		CZAS = 49
-
-OP = 1		ZAD = 430		CZAS = 19
-
-OP = 1		ZAD = 589		CZAS = 43
-
-OP = 1		ZAD = 631		CZAS = 44
-
-OP = 1		ZAD = 560		CZAS = 3
-
-OP = 1		ZAD = 559		CZAS = 33
-
-OP = 1		ZAD = 502		CZAS = 19
-
-OP = 1		ZAD = 934		CZAS = 41
-
-OP = 1		ZAD = 856		CZAS = 16
-
-OP = 1		ZAD = 612		CZAS = 27
-
-OP = 1		ZAD = 465		CZAS = 37
-
-OP = 1		ZAD = 732		CZAS = 28
-
-OP = 1		ZAD = 755		CZAS = 5
-
-OP = 1		ZAD = 822		CZAS = 9
-
-OP = 1		ZAD = 742		CZAS = 8
-
-OP = 1		ZAD = 580		CZAS = 10
-
-OP = 1		ZAD = 348		CZAS = 27
-
-OP = 1		ZAD = 946		CZAS = 16
-
-OP = 1		ZAD = 781		CZAS = 25
-
-OP = 1		ZAD = 459		CZAS = 42
-
-OP = 1		ZAD = 347		CZAS = 6
-
-OP = 1		ZAD = 611		CZAS = 25
-
-OP = 1		ZAD = 344		CZAS = 5
-
-OP = 1		ZAD = 341		CZAS = 49
-
-OP = 1		ZAD = 771		CZAS = 31
-
-OP = 1		ZAD = 339		CZAS = 19
-
-OP = 1		ZAD = 769		CZAS = 36
-
-OP = 1		ZAD = 333		CZAS = 16
-
-OP = 1		ZAD = 329		CZAS = 9
-
-OP = 1		ZAD = 942		CZAS = 4
-
-OP = 1		ZAD = 743		CZAS = 35
-
-OP = 1		ZAD = 328		CZAS = 39
-
-OP = 1		ZAD = 984		CZAS = 44
-
-OP = 1		ZAD = 321		CZAS = 44
-
-OP = 1		ZAD = 315		CZAS = 21
-
-OP = 1		ZAD = 853		CZAS = 23
-
-OP = 1		ZAD = 308		CZAS = 46
-
-OP = 1		ZAD = 620		CZAS = 16
-
-OP = 1		ZAD = 792		CZAS = 45
-
-OP = 1		ZAD = 625		CZAS = 38
-
-OP = 1		ZAD = 501		CZAS = 22
-
-OP = 1		ZAD = 558		CZAS = 15
-
-OP = 1		ZAD = 306		CZAS = 9
-
-OP = 1		ZAD = 959		CZAS = 22
-
-OP = 1		ZAD = 516		CZAS = 47
-
-OP = 1		ZAD = 302		CZAS = 13
-
-OP = 1		ZAD = 674		CZAS = 20
-
-OP = 1		ZAD = 951		CZAS = 46
-
-OP = 1		ZAD = 627		CZAS = 41
-
-OP = 1		ZAD = 587		CZAS = 15
-
-OP = 1		ZAD = 300		CZAS = 10
-
-OP = 1		ZAD = 297		CZAS = 43
-
-OP = 1		ZAD = 783		CZAS = 9
-
-OP = 1		ZAD = 619		CZAS = 14
-
-OP = 1		ZAD = 549		CZAS = 29
-
-OP = 1		ZAD = 782		CZAS = 13
-
-OP = 1		ZAD = 680		CZAS = 9
-
-OP = 1		ZAD = 294		CZAS = 32
-
-OP = 1		ZAD = 847		CZAS = 38
-
-OP = 1		ZAD = 675		CZAS = 45
-
-OP = 1		ZAD = 945		CZAS = 43
-
-OP = 1		ZAD = 969		CZAS = 8
-
-OP = 1		ZAD = 836		CZAS = 1
-
-OP = 1		ZAD = 685		CZAS = 3
-
-OP = 1		ZAD = 618		CZAS = 6
-
-OP = 1		ZAD = 293		CZAS = 31
-
-OP = 1		ZAD = 288		CZAS = 15
-
-OP = 1		ZAD = 287		CZAS = 47
-
-OP = 1		ZAD = 286		CZAS = 18
-
-OP = 1		ZAD = 729		CZAS = 33
-
-OP = 1		ZAD = 797		CZAS = 28
-
-OP = 1		ZAD = 279		CZAS = 10
-
-OP = 1		ZAD = 278		CZAS = 11
-
-OP = 1		ZAD = 277		CZAS = 34
-
-OP = 1		ZAD = 273		CZAS = 2
-
-OP = 1		ZAD = 272		CZAS = 33
-
-OP = 1		ZAD = 820		CZAS = 7
-
-OP = 1		ZAD = 270		CZAS = 16
-
-OP = 1		ZAD = 267		CZAS = 5
-
-OP = 1		ZAD = 266		CZAS = 43
-
-OP = 1		ZAD = 666		CZAS = 29
-
-OP = 1		ZAD = 264		CZAS = 12
-
-OP = 1		ZAD = 263		CZAS = 3
-
-OP = 1		ZAD = 261		CZAS = 42
-
-OP = 1		ZAD = 807		CZAS = 14
-
-OP = 1		ZAD = 821		CZAS = 35
-
-OP = 1		ZAD = 864		CZAS = 26
-
-OP = 1		ZAD = 257		CZAS = 16
-
-OP = 1		ZAD = 737		CZAS = 4
-
-OP = 1		ZAD = 255		CZAS = 24
-
-OP = 1		ZAD = 254		CZAS = 23
-
-OP = 1		ZAD = 250		CZAS = 40
-
-OP = 1		ZAD = 700		CZAS = 48
-
-OP = 1		ZAD = 826		CZAS = 40
-
-OP = 1		ZAD = 800		CZAS = 3
-
-OP = 1		ZAD = 779		CZAS = 22
-
-OP = 1		ZAD = 710		CZAS = 1
-
-OP = 1		ZAD = 696		CZAS = 12
-
-OP = 1		ZAD = 239		CZAS = 48
-
-OP = 1		ZAD = 236		CZAS = 39
-
-OP = 1		ZAD = 233		CZAS = 33
-
-OP = 1		ZAD = 775		CZAS = 12
-
-OP = 1		ZAD = 705		CZAS = 16
-
-OP = 1		ZAD = 746		CZAS = 37
-
-OP = 1		ZAD = 706		CZAS = 13
-
-OP = 1		ZAD = 230		CZAS = 12
-
-OP = 1		ZAD = 229		CZAS = 28
-
-OP = 1		ZAD = 815		CZAS = 17
-
-OP = 1		ZAD = 226		CZAS = 25
-
-OP = 1		ZAD = 991		CZAS = 27
-
-OP = 1		ZAD = 223		CZAS = 20
-
-OP = 1		ZAD = 221		CZAS = 16
-
-OP = 1		ZAD = 218		CZAS = 5
-
-OP = 1		ZAD = 217		CZAS = 34
-
-OP = 1		ZAD = 213		CZAS = 31
-
-OP = 1		ZAD = 208		CZAS = 32
-
-OP = 1		ZAD = 205		CZAS = 40
-
-OP = 1		ZAD = 760		CZAS = 44
-
-OP = 1		ZAD = 900		CZAS = 8
-
-OP = 1		ZAD = 804		CZAS = 27
-
-OP = 1		ZAD = 200		CZAS = 21
-
-OP = 1		ZAD = 840		CZAS = 40
-
-OP = 1		ZAD = 197		CZAS = 12
-
-OP = 1		ZAD = 196		CZAS = 15
-
-OP = 1		ZAD = 194		CZAS = 14
-
-OP = 1		ZAD = 960		CZAS = 41
-
-OP = 1		ZAD = 192		CZAS = 40
-
-OP = 1		ZAD = 191		CZAS = 37
-
-OP = 1		ZAD = 189		CZAS = 20
-
-OP = 1		ZAD = 187		CZAS = 10
-
-OP = 1		ZAD = 186		CZAS = 46
-
-OP = 1		ZAD = 751		CZAS = 4
-
-OP = 1		ZAD = 183		CZAS = 42
-
-OP = 1		ZAD = 178		CZAS = 27
-
-OP = 1		ZAD = 175		CZAS = 45
-
-OP = 1		ZAD = 987		CZAS = 17
-
-OP = 1		ZAD = 169		CZAS = 7
-
-OP = 1		ZAD = 168		CZAS = 6
-
-OP = 1		ZAD = 167		CZAS = 15
-
-OP = 1		ZAD = 165		CZAS = 23
-
-OP = 1		ZAD = 162		CZAS = 25
-
-OP = 1		ZAD = 161		CZAS = 37
-
-OP = 1		ZAD = 160		CZAS = 44
-
-OP = 1		ZAD = 996		CZAS = 9
-
-OP = 1		ZAD = 158		CZAS = 5
-
-OP = 1		ZAD = 157		CZAS = 48
-
-OP = 1		ZAD = 154		CZAS = 2
-
-OP = 1		ZAD = 153		CZAS = 30
-
-OP = 1		ZAD = 816		CZAS = 3
-
-OP = 1		ZAD = 151		CZAS = 32
-
-OP = 1		ZAD = 149		CZAS = 29
-
-OP = 1		ZAD = 147		CZAS = 45
-
-OP = 1		ZAD = 823		CZAS = 45
-
-OP = 1		ZAD = 131		CZAS = 21
-
-OP = 1		ZAD = 130		CZAS = 33
-
-OP = 1		ZAD = 127		CZAS = 41
-
-OP = 1		ZAD = 123		CZAS = 25
-
-OP = 1		ZAD = 118		CZAS = 18
-
-OP = 1		ZAD = 114		CZAS = 36
-
-OP = 1		ZAD = 110		CZAS = 2
-
-OP = 1		ZAD = 109		CZAS = 27
-
-OP = 1		ZAD = 107		CZAS = 7
-
-OP = 1		ZAD = 105		CZAS = 5
-
-OP = 1		ZAD = 104		CZAS = 43
-
-OP = 1		ZAD = 101		CZAS = 18
-
-OP = 1		ZAD = 98		CZAS = 49
-
-OP = 1		ZAD = 976		CZAS = 45
-
-OP = 1		ZAD = 94		CZAS = 39
-
-OP = 1		ZAD = 92		CZAS = 12
-
-OP = 1		ZAD = 91		CZAS = 19
-
-OP = 1		ZAD = 84		CZAS = 14
-
-OP = 1		ZAD = 894		CZAS = 14
-
-OP = 1		ZAD = 82		CZAS = 28
-
-OP = 1		ZAD = 78		CZAS = 23
-
-OP = 1		ZAD = 77		CZAS = 27
-
-OP = 1		ZAD = 74		CZAS = 24
-
-OP = 1		ZAD = 72		CZAS = 45
-
-OP = 1		ZAD = 67		CZAS = 10
-
-OP = 1		ZAD = 66		CZAS = 10
-
-OP = 1		ZAD = 65		CZAS = 37
-
-OP = 1		ZAD = 63		CZAS = 2
-
-OP = 1		ZAD = 61		CZAS = 41
-
-OP = 1		ZAD = 59		CZAS = 18
-
-OP = 1		ZAD = 998		CZAS = 47
-
-OP = 1		ZAD = 903		CZAS = 39
-
-OP = 1		ZAD = 56		CZAS = 5
-
-OP = 1		ZAD = 54		CZAS = 48
-
-OP = 1		ZAD = 49		CZAS = 39
-
-OP = 1		ZAD = 44		CZAS = 38
-
-OP = 1		ZAD = 40		CZAS = 41
-
-OP = 1		ZAD = 35		CZAS = 14
-
-OP = 1		ZAD = 34		CZAS = 48
-
-OP = 1		ZAD = 29		CZAS = 2
-
-OP = 1		ZAD = 28		CZAS = 14
-
-OP = 1		ZAD = 26		CZAS = 12
-
-OP = 1		ZAD = 24		CZAS = 23
-
-OP = 1		ZAD = 971		CZAS = 49
-
-OP = 1		ZAD = 988		CZAS = 48
-
-OP = 1		ZAD = 18		CZAS = 1
-
-OP = 1		ZAD = 17		CZAS = 15
-
-OP = 1		ZAD = 15		CZAS = 23
-
-OP = 1		ZAD = 12		CZAS = 23
-
-OP = 1		ZAD = 967		CZAS = 14
-
-OP = 1		ZAD = 6		CZAS = 13
-
-OP = 1		ZAD = 4		CZAS = 6
-
-OP = 1		ZAD = 3		CZAS = 26
-
-OP = 99		ZAD = 99		CZAS = 231
-
-OP = 2		ZAD = 999		CZAS = 22
-
-OP = 2		ZAD = 993		CZAS = 26
-
-OP = 2		ZAD = 995		CZAS = 5
-
-OP = 2		ZAD = 989		CZAS = 42
-
-OP = 2		ZAD = 986		CZAS = 15
-
-OP = 2		ZAD = 983		CZAS = 12
-
-OP = 2		ZAD = 980		CZAS = 35
-
-OP = 2		ZAD = 975		CZAS = 22
-
-OP = 2		ZAD = 973		CZAS = 21
-
-OP = 2		ZAD = 970		CZAS = 38
-
-OP = 2		ZAD = 968		CZAS = 35
-
-OP = 2		ZAD = 965		CZAS = 46
-
-OP = 2		ZAD = 963		CZAS = 14
-
-OP = 2		ZAD = 962		CZAS = 43
-
-OP = 2		ZAD = 956		CZAS = 26
-
-OP = 2		ZAD = 950		CZAS = 21
-
-OP = 2		ZAD = 948		CZAS = 35
-
-OP = 2		ZAD = 947		CZAS = 39
-
-OP = 2		ZAD = 941		CZAS = 43
-
-OP = 2		ZAD = 937		CZAS = 32
-
-OP = 2		ZAD = 935		CZAS = 19
-
-OP = 2		ZAD = 930		CZAS = 37
-
-OP = 2		ZAD = 929		CZAS = 48
-
-OP = 2		ZAD = 928		CZAS = 2
-
-OP = 2		ZAD = 927		CZAS = 8
-
-OP = 2		ZAD = 925		CZAS = 36
-
-OP = 2		ZAD = 924		CZAS = 1
-
-OP = 2		ZAD = 922		CZAS = 34
-
-OP = 2		ZAD = 918		CZAS = 27
-
-OP = 2		ZAD = 916		CZAS = 47
-
-OP = 2		ZAD = 913		CZAS = 22
-
-OP = 2		ZAD = 909		CZAS = 20
-
-OP = 2		ZAD = 904		CZAS = 6
-
-OP = 2		ZAD = 899		CZAS = 39
-
-OP = 2		ZAD = 895		CZAS = 40
-
-OP = 2		ZAD = 893		CZAS = 34
-
-OP = 2		ZAD = 890		CZAS = 12
-
-OP = 2		ZAD = 889		CZAS = 49
-
-OP = 2		ZAD = 884		CZAS = 21
-
-OP = 2		ZAD = 882		CZAS = 16
-
-OP = 2		ZAD = 878		CZAS = 16
-
-OP = 2		ZAD = 877		CZAS = 24
-
-OP = 2		ZAD = 875		CZAS = 47
-
-OP = 2		ZAD = 873		CZAS = 38
-
-OP = 2		ZAD = 870		CZAS = 28
-
-OP = 2		ZAD = 869		CZAS = 4
-
-OP = 2		ZAD = 867		CZAS = 33
-
-OP = 2		ZAD = 866		CZAS = 33
-
-OP = 2		ZAD = 861		CZAS = 30
-
-OP = 2		ZAD = 851		CZAS = 23
-
-OP = 2		ZAD = 849		CZAS = 16
-
-OP = 2		ZAD = 846		CZAS = 39
-
-OP = 2		ZAD = 842		CZAS = 34
-
-OP = 2		ZAD = 841		CZAS = 7
-
-OP = 2		ZAD = 835		CZAS = 33
-
-OP = 2		ZAD = 834		CZAS = 42
-
-OP = 2		ZAD = 832		CZAS = 44
-
-OP = 2		ZAD = 831		CZAS = 2
-
-OP = 2		ZAD = 829		CZAS = 13
-
-OP = 2		ZAD = 824		CZAS = 43
-
-OP = 2		ZAD = 819		CZAS = 10
-
-OP = 2		ZAD = 813		CZAS = 24
-
-OP = 2		ZAD = 812		CZAS = 36
-
-OP = 2		ZAD = 811		CZAS = 12
-
-OP = 2		ZAD = 809		CZAS = 29
-
-OP = 2		ZAD = 801		CZAS = 35
-
-OP = 2		ZAD = 799		CZAS = 8
-
-OP = 2		ZAD = 789		CZAS = 38
-
-OP = 2		ZAD = 784		CZAS = 33
-
-OP = 2		ZAD = 780		CZAS = 45
-
-OP = 2		ZAD = 777		CZAS = 18
-
-OP = 2		ZAD = 776		CZAS = 40
-
-OP = 2		ZAD = 774		CZAS = 29
-
-OP = 2		ZAD = 768		CZAS = 18
-
-OP = 2		ZAD = 765		CZAS = 4
-
-OP = 2		ZAD = 764		CZAS = 25
-
-OP = 2		ZAD = 762		CZAS = 2
-
-OP = 2		ZAD = 759		CZAS = 14
-
-OP = 2		ZAD = 758		CZAS = 37
-
-OP = 2		ZAD = 753		CZAS = 30
-
-OP = 2		ZAD = 752		CZAS = 10
-
-OP = 2		ZAD = 750		CZAS = 33
-
-OP = 2		ZAD = 748		CZAS = 1
-
-OP = 2		ZAD = 747		CZAS = 1
-
-OP = 2		ZAD = 745		CZAS = 25
-
-OP = 2		ZAD = 741		CZAS = 38
-
-OP = 2		ZAD = 739		CZAS = 39
-
-OP = 2		ZAD = 734		CZAS = 38
-
-OP = 2		ZAD = 727		CZAS = 44
-
-OP = 2		ZAD = 723		CZAS = 24
-
-OP = 2		ZAD = 722		CZAS = 22
-
-OP = 2		ZAD = 718		CZAS = 37
-
-OP = 2		ZAD = 716		CZAS = 47
-
-OP = 2		ZAD = 715		CZAS = 4
-
-OP = 2		ZAD = 713		CZAS = 26
-
-OP = 2		ZAD = 704		CZAS = 32
-
-OP = 2		ZAD = 703		CZAS = 15
-
-OP = 2		ZAD = 702		CZAS = 20
-
-OP = 2		ZAD = 701		CZAS = 40
-
-OP = 2		ZAD = 699		CZAS = 4
-
-OP = 2		ZAD = 698		CZAS = 46
-
-OP = 2		ZAD = 693		CZAS = 10
-
-OP = 2		ZAD = 690		CZAS = 44
-
-OP = 2		ZAD = 688		CZAS = 38
-
-OP = 2		ZAD = 686		CZAS = 15
-
-OP = 2		ZAD = 682		CZAS = 19
-
-OP = 2		ZAD = 681		CZAS = 10
-
-OP = 2		ZAD = 673		CZAS = 48
-
-OP = 2		ZAD = 671		CZAS = 32
-
-OP = 2		ZAD = 668		CZAS = 23
-
-OP = 2		ZAD = 664		CZAS = 19
-
-OP = 2		ZAD = 661		CZAS = 36
-
-OP = 2		ZAD = 653		CZAS = 8
-
-OP = 2		ZAD = 651		CZAS = 41
-
-OP = 2		ZAD = 650		CZAS = 14
-
-OP = 2		ZAD = 645		CZAS = 12
-
-OP = 2		ZAD = 643		CZAS = 32
-
-OP = 2		ZAD = 639		CZAS = 43
-
-OP = 2		ZAD = 635		CZAS = 7
-
-OP = 2		ZAD = 634		CZAS = 25
-
-OP = 2		ZAD = 633		CZAS = 15
-
-OP = 2		ZAD = 630		CZAS = 38
-
-OP = 2		ZAD = 628		CZAS = 11
-
-OP = 2		ZAD = 626		CZAS = 38
-
-OP = 2		ZAD = 621		CZAS = 41
-
-OP = 2		ZAD = 617		CZAS = 4
-
-OP = 2		ZAD = 616		CZAS = 13
-
-OP = 2		ZAD = 614		CZAS = 8
-
-OP = 2		ZAD = 610		CZAS = 27
-
-OP = 2		ZAD = 609		CZAS = 3
-
-OP = 2		ZAD = 606		CZAS = 14
-
-OP = 2		ZAD = 604		CZAS = 13
-
-OP = 2		ZAD = 598		CZAS = 26
-
-OP = 2		ZAD = 595		CZAS = 35
-
-OP = 2		ZAD = 594		CZAS = 5
-
-OP = 2		ZAD = 593		CZAS = 34
-
-OP = 2		ZAD = 592		CZAS = 13
-
-OP = 2		ZAD = 590		CZAS = 7
-
-OP = 2		ZAD = 588		CZAS = 46
-
-OP = 2		ZAD = 586		CZAS = 27
-
-OP = 2		ZAD = 582		CZAS = 32
-
-OP = 2		ZAD = 579		CZAS = 17
-
-OP = 2		ZAD = 577		CZAS = 44
-
-OP = 2		ZAD = 573		CZAS = 29
-
-OP = 2		ZAD = 568		CZAS = 27
-
-OP = 2		ZAD = 566		CZAS = 46
-
-OP = 2		ZAD = 563		CZAS = 31
-
-OP = 2		ZAD = 556		CZAS = 38
-
-OP = 2		ZAD = 555		CZAS = 44
-
-OP = 2		ZAD = 544		CZAS = 25
-
-OP = 2		ZAD = 542		CZAS = 9
-
-OP = 2		ZAD = 539		CZAS = 33
-
-OP = 2		ZAD = 538		CZAS = 11
-
-OP = 2		ZAD = 529		CZAS = 34
-
-OP = 2		ZAD = 527		CZAS = 39
-
-OP = 2		ZAD = 524		CZAS = 33
-
-OP = 2		ZAD = 521		CZAS = 24
-
-OP = 2		ZAD = 520		CZAS = 46
-
-OP = 2		ZAD = 515		CZAS = 22
-
-OP = 2		ZAD = 513		CZAS = 21
-
-OP = 2		ZAD = 511		CZAS = 35
-
-OP = 2		ZAD = 500		CZAS = 41
-
-OP = 2		ZAD = 498		CZAS = 45
-
-OP = 2		ZAD = 494		CZAS = 1
-
-OP = 2		ZAD = 490		CZAS = 18
-
-OP = 2		ZAD = 488		CZAS = 10
-
-OP = 2		ZAD = 484		CZAS = 16
-
-OP = 2		ZAD = 483		CZAS = 12
-
-OP = 2		ZAD = 482		CZAS = 9
-
-OP = 2		ZAD = 481		CZAS = 22
-
-OP = 2		ZAD = 480		CZAS = 37
-
-OP = 2		ZAD = 477		CZAS = 34
-
-OP = 2		ZAD = 472		CZAS = 48
-
-OP = 2		ZAD = 471		CZAS = 38
-
-OP = 2		ZAD = 466		CZAS = 13
-
-OP = 2		ZAD = 464		CZAS = 8
-
-OP = 2		ZAD = 463		CZAS = 42
-
-OP = 2		ZAD = 458		CZAS = 25
-
-OP = 2		ZAD = 457		CZAS = 11
-
-OP = 2		ZAD = 454		CZAS = 45
-
-OP = 2		ZAD = 453		CZAS = 34
-
-OP = 2		ZAD = 451		CZAS = 18
-
-OP = 2		ZAD = 448		CZAS = 12
-
-OP = 2		ZAD = 440		CZAS = 9
-
-OP = 2		ZAD = 439		CZAS = 21
-
-OP = 2		ZAD = 434		CZAS = 2
-
-OP = 2		ZAD = 433		CZAS = 31
-
-OP = 2		ZAD = 429		CZAS = 48
-
-OP = 2		ZAD = 427		CZAS = 13
-
-OP = 2		ZAD = 426		CZAS = 23
-
-OP = 2		ZAD = 424		CZAS = 4
-
-OP = 2		ZAD = 423		CZAS = 40
-
-OP = 2		ZAD = 420		CZAS = 41
-
-OP = 2		ZAD = 419		CZAS = 49
-
-OP = 2		ZAD = 416		CZAS = 14
-
-OP = 2		ZAD = 412		CZAS = 31
-
-OP = 2		ZAD = 409		CZAS = 13
-
-OP = 2		ZAD = 404		CZAS = 20
-
-OP = 2		ZAD = 403		CZAS = 34
-
-OP = 2		ZAD = 402		CZAS = 42
-
-OP = 2		ZAD = 400		CZAS = 17
-
-OP = 2		ZAD = 387		CZAS = 25
-
-OP = 2		ZAD = 384		CZAS = 26
-
-OP = 2		ZAD = 377		CZAS = 1
-
-OP = 2		ZAD = 375		CZAS = 22
-
-OP = 2		ZAD = 374		CZAS = 47
-
-OP = 2		ZAD = 368		CZAS = 13
-
-OP = 2		ZAD = 367		CZAS = 31
-
-OP = 2		ZAD = 365		CZAS = 13
-
-OP = 2		ZAD = 363		CZAS = 4
-
-OP = 2		ZAD = 361		CZAS = 8
-
-OP = 2		ZAD = 360		CZAS = 35
-
-OP = 2		ZAD = 357		CZAS = 49
-
-OP = 2		ZAD = 353		CZAS = 47
-
-OP = 2		ZAD = 346		CZAS = 42
-
-OP = 2		ZAD = 342		CZAS = 27
-
-OP = 2		ZAD = 340		CZAS = 6
-
-OP = 2		ZAD = 338		CZAS = 9
-
-OP = 2		ZAD = 337		CZAS = 14
-
-OP = 2		ZAD = 335		CZAS = 23
-
-OP = 2		ZAD = 324		CZAS = 47
-
-OP = 2		ZAD = 323		CZAS = 1
-
-OP = 2		ZAD = 319		CZAS = 26
-
-OP = 2		ZAD = 318		CZAS = 48
-
-OP = 2		ZAD = 317		CZAS = 45
-
-OP = 2		ZAD = 316		CZAS = 6
-
-OP = 2		ZAD = 309		CZAS = 30
-
-OP = 2		ZAD = 305		CZAS = 30
-
-OP = 2		ZAD = 303		CZAS = 41
-
-OP = 2		ZAD = 298		CZAS = 36
-
-OP = 2		ZAD = 296		CZAS = 10
-
-OP = 2		ZAD = 295		CZAS = 11
-
-OP = 2		ZAD = 292		CZAS = 46
-
-OP = 2		ZAD = 289		CZAS = 6
-
-OP = 2		ZAD = 285		CZAS = 23
-
-OP = 2		ZAD = 284		CZAS = 35
-
-OP = 2		ZAD = 283		CZAS = 14
-
-OP = 2		ZAD = 281		CZAS = 35
-
-OP = 2		ZAD = 280		CZAS = 13
-
-OP = 2		ZAD = 276		CZAS = 39
-
-OP = 2		ZAD = 274		CZAS = 20
-
-OP = 2		ZAD = 262		CZAS = 4
-
-OP = 2		ZAD = 260		CZAS = 9
-
-OP = 2		ZAD = 259		CZAS = 15
-
-OP = 2		ZAD = 256		CZAS = 28
-
-OP = 2		ZAD = 253		CZAS = 42
-
-OP = 2		ZAD = 248		CZAS = 26
-
-OP = 2		ZAD = 246		CZAS = 18
-
-OP = 2		ZAD = 244		CZAS = 39
-
-OP = 2		ZAD = 243		CZAS = 35
-
-OP = 2		ZAD = 241		CZAS = 32
-
-OP = 2		ZAD = 240		CZAS = 37
-
-OP = 2		ZAD = 234		CZAS = 36
-
-OP = 2		ZAD = 228		CZAS = 18
-
-OP = 2		ZAD = 225		CZAS = 43
-
-OP = 2		ZAD = 224		CZAS = 43
-
-OP = 2		ZAD = 220		CZAS = 34
-
-OP = 2		ZAD = 212		CZAS = 5
-
-OP = 2		ZAD = 211		CZAS = 33
-
-OP = 2		ZAD = 207		CZAS = 17
-
-OP = 2		ZAD = 204		CZAS = 16
-
-OP = 2		ZAD = 202		CZAS = 49
-
-OP = 2		ZAD = 199		CZAS = 2
-
-OP = 2		ZAD = 198		CZAS = 39
-
-OP = 2		ZAD = 195		CZAS = 2
-
-OP = 2		ZAD = 193		CZAS = 14
-
-OP = 2		ZAD = 190		CZAS = 30
-
-OP = 2		ZAD = 188		CZAS = 24
-
-OP = 2		ZAD = 185		CZAS = 30
-
-OP = 2		ZAD = 182		CZAS = 13
-
-OP = 2		ZAD = 181		CZAS = 32
-
-OP = 2		ZAD = 177		CZAS = 33
-
-OP = 2		ZAD = 174		CZAS = 17
-
-OP = 2		ZAD = 173		CZAS = 39
-
-OP = 2		ZAD = 171		CZAS = 2
-
-OP = 2		ZAD = 170		CZAS = 9
-
-OP = 2		ZAD = 166		CZAS = 10
-
-OP = 2		ZAD = 164		CZAS = 45
-
-OP = 2		ZAD = 159		CZAS = 29
-
-OP = 2		ZAD = 156		CZAS = 25
-
-OP = 2		ZAD = 155		CZAS = 25
-
-OP = 2		ZAD = 152		CZAS = 44
-
-OP = 2		ZAD = 150		CZAS = 26
-
-OP = 2		ZAD = 146		CZAS = 4
-
-OP = 2		ZAD = 145		CZAS = 49
-
-OP = 2		ZAD = 139		CZAS = 24
-
-OP = 2		ZAD = 138		CZAS = 45
-
-OP = 2		ZAD = 137		CZAS = 16
-
-OP = 2		ZAD = 134		CZAS = 37
-
-OP = 2		ZAD = 126		CZAS = 24
-
-OP = 2		ZAD = 125		CZAS = 5
-
-OP = 2		ZAD = 122		CZAS = 45
-
-OP = 2		ZAD = 121		CZAS = 6
-
-OP = 2		ZAD = 120		CZAS = 35
-
-OP = 2		ZAD = 119		CZAS = 31
-
-OP = 2		ZAD = 117		CZAS = 36
-
-OP = 2		ZAD = 115		CZAS = 43
-
-OP = 2		ZAD = 100		CZAS = 49
-
-OP = 2		ZAD = 96		CZAS = 32
-
-OP = 2		ZAD = 93		CZAS = 9
-
-OP = 2		ZAD = 90		CZAS = 16
-
-OP = 2		ZAD = 89		CZAS = 12
-
-OP = 2		ZAD = 88		CZAS = 21
-
-OP = 2		ZAD = 87		CZAS = 40
-
-OP = 2		ZAD = 86		CZAS = 14
-
-OP = 2		ZAD = 76		CZAS = 19
-
-OP = 2		ZAD = 75		CZAS = 16
-
-OP = 2		ZAD = 73		CZAS = 10
-
-OP = 2		ZAD = 71		CZAS = 17
-
-OP = 2		ZAD = 70		CZAS = 6
-
-OP = 2		ZAD = 69		CZAS = 40
-
-OP = 2		ZAD = 68		CZAS = 26
-
-OP = 2		ZAD = 64		CZAS = 44
-
-OP = 2		ZAD = 62		CZAS = 4
-
-OP = 2		ZAD = 60		CZAS = 35
-
-OP = 2		ZAD = 57		CZAS = 20
-
-OP = 2		ZAD = 55		CZAS = 6
-
-OP = 2		ZAD = 51		CZAS = 40
-
-OP = 2		ZAD = 50		CZAS = 38
+OP = 2		ZAD = 46		CZAS = 17
 
 OP = 2		ZAD = 42		CZAS = 3
 
-OP = 2		ZAD = 39		CZAS = 48
+OP = 2		ZAD = 41		CZAS = 10
 
-OP = 2		ZAD = 37		CZAS = 38
+OP = 2		ZAD = 40		CZAS = 14
 
-OP = 2		ZAD = 36		CZAS = 23
+OP = 2		ZAD = 38		CZAS = 19
 
-OP = 2		ZAD = 30		CZAS = 38
+OP = 2		ZAD = 36		CZAS = 21
 
-OP = 2		ZAD = 27		CZAS = 36
+OP = 2		ZAD = 35		CZAS = 4
 
-OP = 2		ZAD = 22		CZAS = 23
+OP = 2		ZAD = 34		CZAS = 14
 
-OP = 2		ZAD = 20		CZAS = 40
+OP = 2		ZAD = 32		CZAS = 35
 
-OP = 2		ZAD = 16		CZAS = 1
+OP = 2		ZAD = 31		CZAS = 28
 
-OP = 2		ZAD = 14		CZAS = 4
+OP = 2		ZAD = 30		CZAS = 2
 
-OP = 2		ZAD = 13		CZAS = 29
+OP = 2		ZAD = 27		CZAS = 49
 
-OP = 2		ZAD = 11		CZAS = 7
+OP = 2		ZAD = 24		CZAS = 40
 
-OP = 2		ZAD = 10		CZAS = 34
+OP = 2		ZAD = 22		CZAS = 36
 
-OP = 2		ZAD = 8		CZAS = 32
+OP = 2		ZAD = 15		CZAS = 37
 
-OP = 3		ZAD = 1000		CZAS = 18
+OP = 2		ZAD = 13		CZAS = 41
 
-OP = 3		ZAD = 985		CZAS = 48
+OP = 2		ZAD = 7		CZAS = 5
 
-OP = 3		ZAD = 979		CZAS = 16
+OP = 2		ZAD = 6		CZAS = 18
 
-OP = 3		ZAD = 977		CZAS = 30
+OP = 2		ZAD = 4		CZAS = 9
 
-OP = 3		ZAD = 972		CZAS = 18
+OP = 3		ZAD = 143		CZAS = 27
 
-OP = 3		ZAD = 966		CZAS = 27
+OP = 3		ZAD = 140		CZAS = 34
 
-OP = 3		ZAD = 961		CZAS = 47
+OP = 3		ZAD = 139		CZAS = 1
 
-OP = 3		ZAD = 958		CZAS = 3
+OP = 3		ZAD = 138		CZAS = 27
 
-OP = 3		ZAD = 955		CZAS = 1
+OP = 3		ZAD = 136		CZAS = 10
 
-OP = 3		ZAD = 954		CZAS = 20
+OP = 3		ZAD = 135		CZAS = 9
 
-OP = 3		ZAD = 953		CZAS = 14
+OP = 3		ZAD = 132		CZAS = 41
 
-OP = 3		ZAD = 952		CZAS = 36
+OP = 3		ZAD = 131		CZAS = 4
 
-OP = 3		ZAD = 949		CZAS = 47
+OP = 3		ZAD = 125		CZAS = 48
 
-OP = 3		ZAD = 944		CZAS = 16
+OP = 3		ZAD = 117		CZAS = 33
 
-OP = 3		ZAD = 940		CZAS = 48
+OP = 3		ZAD = 112		CZAS = 32
 
-OP = 3		ZAD = 936		CZAS = 6
+OP = 3		ZAD = 108		CZAS = 14
 
-OP = 3		ZAD = 933		CZAS = 48
+OP = 3		ZAD = 96		CZAS = 27
 
-OP = 3		ZAD = 932		CZAS = 49
+OP = 3		ZAD = 95		CZAS = 30
 
-OP = 3		ZAD = 926		CZAS = 24
+OP = 3		ZAD = 92		CZAS = 17
 
-OP = 3		ZAD = 923		CZAS = 31
+OP = 3		ZAD = 90		CZAS = 20
 
-OP = 3		ZAD = 921		CZAS = 44
+OP = 3		ZAD = 83		CZAS = 23
 
-OP = 3		ZAD = 920		CZAS = 18
+OP = 3		ZAD = 81		CZAS = 49
 
-OP = 3		ZAD = 917		CZAS = 29
+OP = 3		ZAD = 77		CZAS = 31
 
-OP = 3		ZAD = 915		CZAS = 34
+OP = 3		ZAD = 75		CZAS = 3
 
-OP = 3		ZAD = 912		CZAS = 27
+OP = 3		ZAD = 74		CZAS = 25
 
-OP = 3		ZAD = 908		CZAS = 20
+OP = 3		ZAD = 72		CZAS = 48
 
-OP = 3		ZAD = 905		CZAS = 14
+OP = 3		ZAD = 67		CZAS = 43
 
-OP = 3		ZAD = 902		CZAS = 8
+OP = 3		ZAD = 66		CZAS = 46
 
-OP = 3		ZAD = 898		CZAS = 25
+OP = 3		ZAD = 65		CZAS = 12
 
-OP = 3		ZAD = 892		CZAS = 22
+OP = 3		ZAD = 63		CZAS = 28
 
-OP = 3		ZAD = 891		CZAS = 45
+OP = 3		ZAD = 61		CZAS = 14
 
-OP = 3		ZAD = 888		CZAS = 49
+OP = 3		ZAD = 60		CZAS = 41
 
-OP = 3		ZAD = 887		CZAS = 32
+OP = 3		ZAD = 45		CZAS = 35
 
-OP = 3		ZAD = 886		CZAS = 37
+OP = 3		ZAD = 44		CZAS = 9
 
-OP = 3		ZAD = 885		CZAS = 27
+OP = 3		ZAD = 29		CZAS = 27
 
-OP = 3		ZAD = 881		CZAS = 16
+OP = 3		ZAD = 28		CZAS = 49
 
-OP = 3		ZAD = 876		CZAS = 16
+OP = 3		ZAD = 26		CZAS = 32
 
-OP = 3		ZAD = 872		CZAS = 45
+OP = 3		ZAD = 20		CZAS = 2
 
-OP = 3		ZAD = 871		CZAS = 28
+OP = 3		ZAD = 18		CZAS = 13
 
-OP = 3		ZAD = 868		CZAS = 13
+OP = 3		ZAD = 17		CZAS = 14
 
-OP = 3		ZAD = 865		CZAS = 38
+OP = 3		ZAD = 14		CZAS = 36
 
-OP = 3		ZAD = 863		CZAS = 25
+OP = 3		ZAD = 12		CZAS = 29
 
-OP = 3		ZAD = 862		CZAS = 35
+OP = 3		ZAD = 11		CZAS = 15
 
-OP = 3		ZAD = 857		CZAS = 27
+OP = 3		ZAD = 5		CZAS = 30
 
-OP = 3		ZAD = 855		CZAS = 18
+NR 1 MASZYNA:
+------
+OP = 99		ZAD = 99		CZAS = 30
 
-OP = 3		ZAD = 854		CZAS = 3
+OP = 1		ZAD = 4		CZAS = 48
 
-OP = 3		ZAD = 852		CZAS = 46
+OP = 1		ZAD = 18		CZAS = 20
 
-OP = 3		ZAD = 850		CZAS = 46
+OP = 1		ZAD = 20		CZAS = 19
 
-OP = 3		ZAD = 848		CZAS = 39
+OP = 1		ZAD = 22		CZAS = 39
 
-OP = 3		ZAD = 844		CZAS = 29
+OP = 1		ZAD = 27		CZAS = 37
 
-OP = 3		ZAD = 839		CZAS = 23
+OP = 1		ZAD = 41		CZAS = 2
 
-OP = 3		ZAD = 833		CZAS = 46
+OP = 1		ZAD = 42		CZAS = 14
 
-OP = 3		ZAD = 830		CZAS = 14
+OP = 1		ZAD = 36		CZAS = 15
 
-OP = 3		ZAD = 828		CZAS = 16
+OP = 1		ZAD = 35		CZAS = 5
 
-OP = 3		ZAD = 827		CZAS = 12
+OP = 1		ZAD = 45		CZAS = 48
 
-OP = 3		ZAD = 825		CZAS = 22
+OP = 1		ZAD = 60		CZAS = 11
 
-OP = 3		ZAD = 818		CZAS = 41
+OP = 1		ZAD = 61		CZAS = 19
 
-OP = 3		ZAD = 817		CZAS = 32
+OP = 1		ZAD = 55		CZAS = 44
 
-OP = 3		ZAD = 808		CZAS = 37
+OP = 1		ZAD = 68		CZAS = 2
 
-OP = 3		ZAD = 798		CZAS = 4
+OP = 1		ZAD = 67		CZAS = 36
 
-OP = 3		ZAD = 793		CZAS = 33
+OP = 1		ZAD = 74		CZAS = 47
 
-OP = 3		ZAD = 791		CZAS = 33
+OP = 1		ZAD = 78		CZAS = 39
 
-OP = 3		ZAD = 788		CZAS = 24
+OP = 1		ZAD = 82		CZAS = 10
 
-OP = 3		ZAD = 787		CZAS = 3
+OP = 1		ZAD = 84		CZAS = 43
 
-OP = 3		ZAD = 786		CZAS = 2
+OP = 1		ZAD = 95		CZAS = 46
 
-OP = 3		ZAD = 785		CZAS = 7
+OP = 1		ZAD = 102		CZAS = 46
 
-OP = 3		ZAD = 770		CZAS = 39
+OP = 1		ZAD = 110		CZAS = 27
 
-OP = 3		ZAD = 767		CZAS = 38
+OP = 1		ZAD = 103		CZAS = 35
 
-OP = 3		ZAD = 766		CZAS = 29
+OP = 1		ZAD = 117		CZAS = 28
 
-OP = 3		ZAD = 761		CZAS = 44
+OP = 1		ZAD = 121		CZAS = 13
 
-OP = 3		ZAD = 757		CZAS = 22
+OP = 1		ZAD = 123		CZAS = 13
 
-OP = 3		ZAD = 756		CZAS = 29
+OP = 1		ZAD = 125		CZAS = 49
 
-OP = 3		ZAD = 754		CZAS = 36
+OP = 1		ZAD = 126		CZAS = 12
 
-OP = 3		ZAD = 744		CZAS = 9
+OP = 1		ZAD = 131		CZAS = 32
 
-OP = 3		ZAD = 740		CZAS = 24
+OP = 1		ZAD = 142		CZAS = 12
 
-OP = 3		ZAD = 738		CZAS = 30
+OP = 1		ZAD = 143		CZAS = 32
 
-OP = 3		ZAD = 736		CZAS = 36
+OP = 1		ZAD = 145		CZAS = 8
 
-OP = 3		ZAD = 733		CZAS = 43
+OP = 1		ZAD = 147		CZAS = 22
 
-OP = 3		ZAD = 731		CZAS = 5
+OP = 1		ZAD = 149		CZAS = 19
 
-OP = 3		ZAD = 728		CZAS = 48
+OP = 1		ZAD = 140		CZAS = 10
 
-OP = 3		ZAD = 725		CZAS = 12
+OP = 1		ZAD = 138		CZAS = 40
 
-OP = 3		ZAD = 717		CZAS = 39
+OP = 1		ZAD = 85		CZAS = 31
 
-OP = 3		ZAD = 714		CZAS = 43
+OP = 1		ZAD = 77		CZAS = 27
 
-OP = 3		ZAD = 712		CZAS = 44
+OP = 1		ZAD = 73		CZAS = 15
 
-OP = 3		ZAD = 711		CZAS = 43
+OP = 1		ZAD = 72		CZAS = 21
 
-OP = 3		ZAD = 708		CZAS = 11
+OP = 1		ZAD = 53		CZAS = 32
 
-OP = 3		ZAD = 707		CZAS = 16
+OP = 1		ZAD = 51		CZAS = 41
 
-OP = 3		ZAD = 697		CZAS = 19
+OP = 1		ZAD = 32		CZAS = 10
 
-OP = 3		ZAD = 695		CZAS = 37
+OP = 1		ZAD = 30		CZAS = 17
 
-OP = 3		ZAD = 694		CZAS = 49
+OP = 1		ZAD = 12		CZAS = 8
 
-OP = 3		ZAD = 689		CZAS = 44
+OP = 1		ZAD = 11		CZAS = 47
 
-OP = 3		ZAD = 687		CZAS = 7
+OP = 2		ZAD = 148		CZAS = 19
 
-OP = 3		ZAD = 684		CZAS = 13
+OP = 2		ZAD = 144		CZAS = 26
 
-OP = 3		ZAD = 679		CZAS = 24
+OP = 2		ZAD = 141		CZAS = 7
 
-OP = 3		ZAD = 677		CZAS = 32
+OP = 2		ZAD = 139		CZAS = 23
 
-OP = 3		ZAD = 672		CZAS = 32
+OP = 2		ZAD = 137		CZAS = 5
 
-OP = 3		ZAD = 670		CZAS = 4
+OP = 2		ZAD = 136		CZAS = 8
 
-OP = 3		ZAD = 669		CZAS = 41
+OP = 2		ZAD = 135		CZAS = 30
 
-OP = 3		ZAD = 663		CZAS = 16
+OP = 2		ZAD = 133		CZAS = 28
 
-OP = 3		ZAD = 662		CZAS = 40
+OP = 2		ZAD = 132		CZAS = 28
 
-OP = 3		ZAD = 660		CZAS = 19
+OP = 2		ZAD = 127		CZAS = 33
 
-OP = 3		ZAD = 659		CZAS = 28
+OP = 2		ZAD = 120		CZAS = 47
 
-OP = 3		ZAD = 658		CZAS = 16
+OP = 2		ZAD = 115		CZAS = 20
 
-OP = 3		ZAD = 655		CZAS = 2
+OP = 2		ZAD = 114		CZAS = 41
 
-OP = 3		ZAD = 654		CZAS = 49
+OP = 2		ZAD = 112		CZAS = 8
 
-OP = 3		ZAD = 652		CZAS = 31
+OP = 2		ZAD = 108		CZAS = 2
 
-OP = 3		ZAD = 649		CZAS = 18
+OP = 2		ZAD = 106		CZAS = 19
 
-OP = 3		ZAD = 648		CZAS = 12
+OP = 2		ZAD = 96		CZAS = 2
 
-OP = 3		ZAD = 647		CZAS = 21
+OP = 2		ZAD = 92		CZAS = 22
 
-OP = 3		ZAD = 646		CZAS = 13
+OP = 2		ZAD = 91		CZAS = 9
 
-OP = 3		ZAD = 644		CZAS = 21
+OP = 2		ZAD = 90		CZAS = 21
 
-OP = 3		ZAD = 642		CZAS = 26
+OP = 2		ZAD = 83		CZAS = 1
 
-OP = 3		ZAD = 640		CZAS = 36
+OP = 2		ZAD = 81		CZAS = 33
 
-OP = 3		ZAD = 638		CZAS = 39
+OP = 2		ZAD = 79		CZAS = 42
 
-OP = 3		ZAD = 629		CZAS = 17
+OP = 2		ZAD = 76		CZAS = 3
 
-OP = 3		ZAD = 624		CZAS = 21
+OP = 2		ZAD = 75		CZAS = 17
 
-OP = 3		ZAD = 623		CZAS = 16
+OP = 2		ZAD = 71		CZAS = 46
 
-OP = 3		ZAD = 622		CZAS = 10
+OP = 2		ZAD = 69		CZAS = 40
 
-OP = 3		ZAD = 615		CZAS = 26
+OP = 2		ZAD = 66		CZAS = 3
 
-OP = 3		ZAD = 608		CZAS = 30
+OP = 2		ZAD = 65		CZAS = 25
 
-OP = 3		ZAD = 607		CZAS = 12
+OP = 2		ZAD = 63		CZAS = 48
 
-OP = 3		ZAD = 605		CZAS = 29
+OP = 2		ZAD = 57		CZAS = 46
 
-OP = 3		ZAD = 603		CZAS = 23
+OP = 2		ZAD = 50		CZAS = 20
 
-OP = 3		ZAD = 601		CZAS = 27
+OP = 2		ZAD = 44		CZAS = 20
 
-OP = 3		ZAD = 600		CZAS = 9
+OP = 2		ZAD = 39		CZAS = 29
 
-OP = 3		ZAD = 597		CZAS = 49
+OP = 2		ZAD = 33		CZAS = 20
 
-OP = 3		ZAD = 596		CZAS = 15
+OP = 2		ZAD = 29		CZAS = 33
 
-OP = 3		ZAD = 591		CZAS = 28
+OP = 2		ZAD = 28		CZAS = 38
 
-OP = 3		ZAD = 585		CZAS = 23
+OP = 2		ZAD = 26		CZAS = 10
 
-OP = 3		ZAD = 584		CZAS = 12
+OP = 2		ZAD = 23		CZAS = 10
 
-OP = 3		ZAD = 578		CZAS = 32
+OP = 2		ZAD = 21		CZAS = 43
 
-OP = 3		ZAD = 575		CZAS = 22
+OP = 2		ZAD = 19		CZAS = 34
 
-OP = 3		ZAD = 574		CZAS = 12
+OP = 2		ZAD = 17		CZAS = 16
 
-OP = 3		ZAD = 572		CZAS = 5
+OP = 2		ZAD = 14		CZAS = 42
 
-OP = 3		ZAD = 570		CZAS = 4
+OP = 2		ZAD = 10		CZAS = 5
 
-OP = 3		ZAD = 567		CZAS = 48
+OP = 2		ZAD = 9		CZAS = 3
 
-OP = 3		ZAD = 565		CZAS = 9
+OP = 2		ZAD = 8		CZAS = 20
 
-OP = 3		ZAD = 564		CZAS = 6
+OP = 2		ZAD = 5		CZAS = 19
 
-OP = 3		ZAD = 561		CZAS = 46
+OP = 2		ZAD = 3		CZAS = 39
 
-OP = 3		ZAD = 557		CZAS = 24
+OP = 2		ZAD = 2		CZAS = 44
 
-OP = 3		ZAD = 554		CZAS = 3
+OP = 3		ZAD = 150		CZAS = 46
 
-OP = 3		ZAD = 553		CZAS = 12
+OP = 3		ZAD = 146		CZAS = 6
 
-OP = 3		ZAD = 551		CZAS = 49
+OP = 3		ZAD = 134		CZAS = 37
 
-OP = 3		ZAD = 550		CZAS = 8
+OP = 3		ZAD = 130		CZAS = 44
 
-OP = 3		ZAD = 548		CZAS = 36
+OP = 3		ZAD = 129		CZAS = 36
 
-OP = 3		ZAD = 547		CZAS = 25
+OP = 3		ZAD = 128		CZAS = 46
 
-OP = 3		ZAD = 546		CZAS = 48
+OP = 3		ZAD = 124		CZAS = 43
 
-OP = 3		ZAD = 545		CZAS = 36
+OP = 3		ZAD = 122		CZAS = 25
 
-OP = 3		ZAD = 543		CZAS = 42
+OP = 3		ZAD = 119		CZAS = 18
 
-OP = 3		ZAD = 541		CZAS = 22
+OP = 3		ZAD = 118		CZAS = 21
 
-OP = 3		ZAD = 535		CZAS = 21
+OP = 3		ZAD = 116		CZAS = 34
 
-OP = 3		ZAD = 533		CZAS = 39
+OP = 3		ZAD = 113		CZAS = 13
 
-OP = 3		ZAD = 532		CZAS = 33
+OP = 3		ZAD = 111		CZAS = 11
 
-OP = 3		ZAD = 528		CZAS = 46
+OP = 3		ZAD = 109		CZAS = 42
 
-OP = 3		ZAD = 526		CZAS = 20
+OP = 3		ZAD = 107		CZAS = 37
 
-OP = 3		ZAD = 519		CZAS = 47
+OP = 3		ZAD = 105		CZAS = 43
 
-OP = 3		ZAD = 518		CZAS = 24
+OP = 3		ZAD = 104		CZAS = 17
 
-OP = 3		ZAD = 517		CZAS = 34
+OP = 3		ZAD = 101		CZAS = 36
 
-OP = 3		ZAD = 512		CZAS = 49
+OP = 3		ZAD = 100		CZAS = 4
 
-OP = 3		ZAD = 510		CZAS = 11
+OP = 3		ZAD = 99		CZAS = 9
 
-OP = 3		ZAD = 509		CZAS = 28
+OP = 3		ZAD = 98		CZAS = 43
 
-OP = 3		ZAD = 507		CZAS = 18
+OP = 3		ZAD = 97		CZAS = 49
 
-OP = 3		ZAD = 506		CZAS = 14
+OP = 3		ZAD = 94		CZAS = 7
 
-OP = 3		ZAD = 504		CZAS = 22
+OP = 3		ZAD = 93		CZAS = 9
 
-OP = 3		ZAD = 497		CZAS = 39
+OP = 3		ZAD = 89		CZAS = 46
 
-OP = 3		ZAD = 487		CZAS = 6
+OP = 3		ZAD = 88		CZAS = 19
 
-OP = 3		ZAD = 479		CZAS = 47
+OP = 3		ZAD = 87		CZAS = 40
 
-OP = 3		ZAD = 476		CZAS = 36
+OP = 3		ZAD = 86		CZAS = 47
 
-OP = 3		ZAD = 474		CZAS = 45
+OP = 3		ZAD = 80		CZAS = 2
 
-OP = 3		ZAD = 473		CZAS = 49
+OP = 3		ZAD = 70		CZAS = 42
 
-OP = 3		ZAD = 468		CZAS = 36
+OP = 3		ZAD = 64		CZAS = 1
 
-OP = 3		ZAD = 467		CZAS = 44
+OP = 3		ZAD = 62		CZAS = 7
 
-OP = 3		ZAD = 462		CZAS = 45
+OP = 3		ZAD = 59		CZAS = 16
 
-OP = 3		ZAD = 452		CZAS = 31
+OP = 3		ZAD = 58		CZAS = 22
 
-OP = 3		ZAD = 450		CZAS = 26
+OP = 3		ZAD = 56		CZAS = 45
 
-OP = 3		ZAD = 449		CZAS = 20
+OP = 3		ZAD = 54		CZAS = 34
 
-OP = 3		ZAD = 446		CZAS = 13
+OP = 3		ZAD = 52		CZAS = 31
 
-OP = 3		ZAD = 445		CZAS = 44
+OP = 3		ZAD = 49		CZAS = 26
 
-OP = 3		ZAD = 441		CZAS = 16
+OP = 3		ZAD = 48		CZAS = 38
 
-OP = 3		ZAD = 438		CZAS = 27
+OP = 3		ZAD = 47		CZAS = 13
 
-OP = 3		ZAD = 437		CZAS = 36
+OP = 3		ZAD = 46		CZAS = 2
 
-OP = 3		ZAD = 436		CZAS = 1
+OP = 3		ZAD = 43		CZAS = 5
 
-OP = 3		ZAD = 432		CZAS = 21
+OP = 3		ZAD = 40		CZAS = 47
 
-OP = 3		ZAD = 428		CZAS = 28
+OP = 3		ZAD = 38		CZAS = 31
 
-OP = 3		ZAD = 425		CZAS = 8
+OP = 3		ZAD = 37		CZAS = 19
 
-OP = 3		ZAD = 418		CZAS = 17
+OP = 3		ZAD = 34		CZAS = 43
 
-OP = 3		ZAD = 414		CZAS = 3
+OP = 3		ZAD = 31		CZAS = 39
 
-OP = 3		ZAD = 407		CZAS = 25
+OP = 3		ZAD = 25		CZAS = 37
 
-OP = 3		ZAD = 406		CZAS = 33
+OP = 3		ZAD = 24		CZAS = 4
 
-OP = 3		ZAD = 405		CZAS = 39
+OP = 3		ZAD = 16		CZAS = 24
 
-OP = 3		ZAD = 401		CZAS = 1
+OP = 3		ZAD = 15		CZAS = 26
 
-OP = 3		ZAD = 398		CZAS = 49
+OP = 3		ZAD = 13		CZAS = 41
 
-OP = 3		ZAD = 397		CZAS = 12
+OP = 3		ZAD = 7		CZAS = 2
 
-OP = 3		ZAD = 395		CZAS = 15
+OP = 3		ZAD = 6		CZAS = 41
 
-OP = 3		ZAD = 394		CZAS = 31
+OP = 3		ZAD = 1		CZAS = 36
 
-OP = 3		ZAD = 392		CZAS = 14
+NR 2 MASZYNA:
+------
+OP = 99		ZAD = 99		CZAS = 40
 
-OP = 3		ZAD = 388		CZAS = 8
+OP = 1		ZAD = 5		CZAS = 21
 
-OP = 3		ZAD = 386		CZAS = 6
+OP = 1		ZAD = 7		CZAS = 18
 
-OP = 3		ZAD = 383		CZAS = 30
+OP = 1		ZAD = 6		CZAS = 37
 
-OP = 3		ZAD = 382		CZAS = 18
+OP = 1		ZAD = 17		CZAS = 22
 
-OP = 3		ZAD = 380		CZAS = 47
+OP = 1		ZAD = 15		CZAS = 35
 
-OP = 3		ZAD = 379		CZAS = 20
+OP = 1		ZAD = 24		CZAS = 25
 
-OP = 3		ZAD = 378		CZAS = 24
+OP = 1		ZAD = 26		CZAS = 5
 
-OP = 3		ZAD = 376		CZAS = 17
+OP = 1		ZAD = 14		CZAS = 34
 
-OP = 3		ZAD = 373		CZAS = 1
+OP = 1		ZAD = 40		CZAS = 16
 
-OP = 3		ZAD = 371		CZAS = 26
+OP = 1		ZAD = 38		CZAS = 14
 
-OP = 3		ZAD = 370		CZAS = 1
+OP = 1		ZAD = 44		CZAS = 14
 
-OP = 3		ZAD = 369		CZAS = 6
+OP = 1		ZAD = 46		CZAS = 24
 
-OP = 3		ZAD = 356		CZAS = 17
+OP = 1		ZAD = 48		CZAS = 18
 
-OP = 3		ZAD = 355		CZAS = 33
+OP = 1		ZAD = 59		CZAS = 33
 
-OP = 3		ZAD = 354		CZAS = 4
+OP = 1		ZAD = 62		CZAS = 5
 
-OP = 3		ZAD = 352		CZAS = 12
+OP = 1		ZAD = 63		CZAS = 21
 
-OP = 3		ZAD = 351		CZAS = 36
+OP = 1		ZAD = 65		CZAS = 28
 
-OP = 3		ZAD = 350		CZAS = 23
+OP = 1		ZAD = 66		CZAS = 6
 
-OP = 3		ZAD = 349		CZAS = 27
+OP = 1		ZAD = 64		CZAS = 35
 
-OP = 3		ZAD = 345		CZAS = 33
+OP = 1		ZAD = 83		CZAS = 32
 
-OP = 3		ZAD = 336		CZAS = 29
+OP = 1		ZAD = 86		CZAS = 22
 
-OP = 3		ZAD = 334		CZAS = 34
+OP = 1		ZAD = 88		CZAS = 11
 
-OP = 3		ZAD = 332		CZAS = 7
+OP = 1		ZAD = 89		CZAS = 10
 
-OP = 3		ZAD = 331		CZAS = 10
+OP = 1		ZAD = 90		CZAS = 27
 
-OP = 3		ZAD = 330		CZAS = 7
+OP = 1		ZAD = 93		CZAS = 17
 
-OP = 3		ZAD = 327		CZAS = 12
+OP = 1		ZAD = 96		CZAS = 41
 
-OP = 3		ZAD = 312		CZAS = 29
+OP = 1		ZAD = 100		CZAS = 27
 
-OP = 3		ZAD = 311		CZAS = 20
+OP = 1		ZAD = 101		CZAS = 26
 
-OP = 3		ZAD = 310		CZAS = 5
+OP = 1		ZAD = 104		CZAS = 21
 
-OP = 3		ZAD = 307		CZAS = 36
+OP = 1		ZAD = 108		CZAS = 33
 
-OP = 3		ZAD = 304		CZAS = 20
+OP = 1		ZAD = 113		CZAS = 1
 
-OP = 3		ZAD = 301		CZAS = 42
+OP = 1		ZAD = 112		CZAS = 9
 
-OP = 3		ZAD = 299		CZAS = 22
+OP = 1		ZAD = 92		CZAS = 35
 
-OP = 3		ZAD = 291		CZAS = 16
+OP = 1		ZAD = 116		CZAS = 15
 
-OP = 3		ZAD = 290		CZAS = 31
+OP = 1		ZAD = 119		CZAS = 30
 
-OP = 3		ZAD = 282		CZAS = 17
+OP = 1		ZAD = 128		CZAS = 11
 
-OP = 3		ZAD = 275		CZAS = 31
+OP = 1		ZAD = 129		CZAS = 40
 
-OP = 3		ZAD = 271		CZAS = 10
+OP = 1		ZAD = 132		CZAS = 5
 
-OP = 3		ZAD = 269		CZAS = 47
+OP = 1		ZAD = 134		CZAS = 27
 
-OP = 3		ZAD = 268		CZAS = 7
+OP = 1		ZAD = 136		CZAS = 15
 
-OP = 3		ZAD = 265		CZAS = 43
+OP = 1		ZAD = 146		CZAS = 46
 
-OP = 3		ZAD = 258		CZAS = 36
+OP = 1		ZAD = 150		CZAS = 6
 
-OP = 3		ZAD = 252		CZAS = 2
+OP = 1		ZAD = 139		CZAS = 29
 
-OP = 3		ZAD = 251		CZAS = 27
+OP = 1		ZAD = 135		CZAS = 21
 
-OP = 3		ZAD = 249		CZAS = 34
+OP = 1		ZAD = 118		CZAS = 28
 
-OP = 3		ZAD = 247		CZAS = 13
+OP = 1		ZAD = 81		CZAS = 22
 
-OP = 3		ZAD = 245		CZAS = 38
+OP = 1		ZAD = 75		CZAS = 47
 
-OP = 3		ZAD = 242		CZAS = 20
+OP = 1		ZAD = 70		CZAS = 46
 
-OP = 3		ZAD = 238		CZAS = 25
+OP = 1		ZAD = 49		CZAS = 18
 
-OP = 3		ZAD = 237		CZAS = 12
+OP = 1		ZAD = 34		CZAS = 20
 
-OP = 3		ZAD = 235		CZAS = 7
+OP = 1		ZAD = 31		CZAS = 16
 
-OP = 3		ZAD = 232		CZAS = 20
+OP = 1		ZAD = 29		CZAS = 2
 
-OP = 3		ZAD = 231		CZAS = 9
+OP = 1		ZAD = 28		CZAS = 17
 
-OP = 3		ZAD = 227		CZAS = 18
+OP = 1		ZAD = 13		CZAS = 35
 
-OP = 3		ZAD = 222		CZAS = 11
+OP = 2		ZAD = 143		CZAS = 33
 
-OP = 3		ZAD = 219		CZAS = 28
+OP = 2		ZAD = 140		CZAS = 28
 
-OP = 3		ZAD = 216		CZAS = 46
+OP = 2		ZAD = 138		CZAS = 46
 
-OP = 3		ZAD = 215		CZAS = 41
+OP = 2		ZAD = 131		CZAS = 41
 
-OP = 3		ZAD = 214		CZAS = 40
+OP = 2		ZAD = 130		CZAS = 21
 
-OP = 3		ZAD = 210		CZAS = 9
+OP = 2		ZAD = 125		CZAS = 38
 
-OP = 3		ZAD = 209		CZAS = 3
+OP = 2		ZAD = 124		CZAS = 39
 
-OP = 3		ZAD = 206		CZAS = 14
+OP = 2		ZAD = 122		CZAS = 3
 
-OP = 3		ZAD = 203		CZAS = 35
+OP = 2		ZAD = 117		CZAS = 33
 
-OP = 3		ZAD = 201		CZAS = 46
+OP = 2		ZAD = 111		CZAS = 13
 
-OP = 3		ZAD = 184		CZAS = 16
+OP = 2		ZAD = 109		CZAS = 12
 
-OP = 3		ZAD = 180		CZAS = 22
+OP = 2		ZAD = 107		CZAS = 14
 
-OP = 3		ZAD = 179		CZAS = 22
+OP = 2		ZAD = 105		CZAS = 29
 
-OP = 3		ZAD = 176		CZAS = 9
+OP = 2		ZAD = 99		CZAS = 10
 
-OP = 3		ZAD = 172		CZAS = 18
+OP = 2		ZAD = 98		CZAS = 3
 
-OP = 3		ZAD = 163		CZAS = 5
+OP = 2		ZAD = 97		CZAS = 26
 
-OP = 3		ZAD = 148		CZAS = 18
+OP = 2		ZAD = 95		CZAS = 11
 
-OP = 3		ZAD = 144		CZAS = 8
+OP = 2		ZAD = 94		CZAS = 41
 
-OP = 3		ZAD = 143		CZAS = 39
+OP = 2		ZAD = 87		CZAS = 7
 
-OP = 3		ZAD = 142		CZAS = 37
+OP = 2		ZAD = 80		CZAS = 48
 
-OP = 3		ZAD = 141		CZAS = 9
+OP = 2		ZAD = 77		CZAS = 32
 
-OP = 3		ZAD = 140		CZAS = 4
+OP = 2		ZAD = 74		CZAS = 49
 
-OP = 3		ZAD = 136		CZAS = 42
+OP = 2		ZAD = 72		CZAS = 38
 
-OP = 3		ZAD = 135		CZAS = 15
+OP = 2		ZAD = 67		CZAS = 49
 
-OP = 3		ZAD = 133		CZAS = 43
+OP = 2		ZAD = 61		CZAS = 2
 
-OP = 3		ZAD = 132		CZAS = 23
+OP = 2		ZAD = 60		CZAS = 41
 
-OP = 3		ZAD = 129		CZAS = 22
+OP = 2		ZAD = 58		CZAS = 21
 
-OP = 3		ZAD = 128		CZAS = 9
+OP = 2		ZAD = 56		CZAS = 20
 
-OP = 3		ZAD = 124		CZAS = 26
+OP = 2		ZAD = 54		CZAS = 19
 
-OP = 3		ZAD = 116		CZAS = 24
+OP = 2		ZAD = 52		CZAS = 30
 
-OP = 3		ZAD = 113		CZAS = 36
+OP = 2		ZAD = 47		CZAS = 35
 
-OP = 3		ZAD = 112		CZAS = 35
+OP = 2		ZAD = 45		CZAS = 20
 
-OP = 3		ZAD = 111		CZAS = 42
+OP = 2		ZAD = 43		CZAS = 37
 
-OP = 3		ZAD = 108		CZAS = 17
+OP = 2		ZAD = 37		CZAS = 32
 
-OP = 3		ZAD = 106		CZAS = 38
+OP = 2		ZAD = 25		CZAS = 39
 
-OP = 3		ZAD = 103		CZAS = 46
+OP = 2		ZAD = 20		CZAS = 33
+
+OP = 2		ZAD = 18		CZAS = 30
+
+OP = 2		ZAD = 16		CZAS = 40
+
+OP = 2		ZAD = 12		CZAS = 36
+
+OP = 2		ZAD = 11		CZAS = 41
+
+OP = 2		ZAD = 1		CZAS = 29
+
+OP = 3		ZAD = 149		CZAS = 35
+
+OP = 3		ZAD = 148		CZAS = 45
+
+OP = 3		ZAD = 147		CZAS = 48
+
+OP = 3		ZAD = 145		CZAS = 21
+
+OP = 3		ZAD = 144		CZAS = 33
+
+OP = 3		ZAD = 142		CZAS = 35
+
+OP = 3		ZAD = 141		CZAS = 6
+
+OP = 3		ZAD = 137		CZAS = 40
+
+OP = 3		ZAD = 133		CZAS = 23
+
+OP = 3		ZAD = 127		CZAS = 8
+
+OP = 3		ZAD = 126		CZAS = 33
+
+OP = 3		ZAD = 123		CZAS = 20
+
+OP = 3		ZAD = 121		CZAS = 16
+
+OP = 3		ZAD = 120		CZAS = 14
+
+OP = 3		ZAD = 115		CZAS = 49
+
+OP = 3		ZAD = 114		CZAS = 44
+
+OP = 3		ZAD = 110		CZAS = 3
+
+OP = 3		ZAD = 106		CZAS = 49
+
+OP = 3		ZAD = 103		CZAS = 26
 
 OP = 3		ZAD = 102		CZAS = 19
 
-OP = 3		ZAD = 99		CZAS = 38
+OP = 3		ZAD = 91		CZAS = 33
 
-OP = 3		ZAD = 97		CZAS = 14
+OP = 3		ZAD = 85		CZAS = 11
 
-OP = 3		ZAD = 95		CZAS = 26
+OP = 3		ZAD = 84		CZAS = 42
 
-OP = 3		ZAD = 85		CZAS = 14
+OP = 3		ZAD = 82		CZAS = 22
 
-OP = 3		ZAD = 83		CZAS = 39
+OP = 3		ZAD = 79		CZAS = 1
 
-OP = 3		ZAD = 81		CZAS = 29
+OP = 3		ZAD = 78		CZAS = 44
 
-OP = 3		ZAD = 80		CZAS = 47
+OP = 3		ZAD = 76		CZAS = 46
 
-OP = 3		ZAD = 79		CZAS = 8
+OP = 3		ZAD = 73		CZAS = 14
 
-OP = 3		ZAD = 58		CZAS = 42
+OP = 3		ZAD = 71		CZAS = 37
 
-OP = 3		ZAD = 53		CZAS = 3
+OP = 3		ZAD = 69		CZAS = 37
 
-OP = 3		ZAD = 52		CZAS = 35
+OP = 3		ZAD = 68		CZAS = 5
 
-OP = 3		ZAD = 48		CZAS = 1
+OP = 3		ZAD = 57		CZAS = 10
 
-OP = 3		ZAD = 47		CZAS = 40
+OP = 3		ZAD = 55		CZAS = 35
 
-OP = 3		ZAD = 46		CZAS = 49
+OP = 3		ZAD = 53		CZAS = 17
 
-OP = 3		ZAD = 45		CZAS = 32
+OP = 3		ZAD = 51		CZAS = 49
 
-OP = 3		ZAD = 43		CZAS = 47
+OP = 3		ZAD = 50		CZAS = 2
 
-OP = 3		ZAD = 41		CZAS = 47
+OP = 3		ZAD = 42		CZAS = 33
 
-OP = 3		ZAD = 38		CZAS = 8
+OP = 3		ZAD = 41		CZAS = 23
 
-OP = 3		ZAD = 33		CZAS = 14
+OP = 3		ZAD = 39		CZAS = 44
 
-OP = 3		ZAD = 32		CZAS = 2
+OP = 3		ZAD = 36		CZAS = 20
 
-OP = 3		ZAD = 31		CZAS = 21
+OP = 3		ZAD = 35		CZAS = 37
 
-OP = 3		ZAD = 25		CZAS = 41
+OP = 3		ZAD = 33		CZAS = 16
 
-OP = 3		ZAD = 23		CZAS = 39
+OP = 3		ZAD = 32		CZAS = 49
 
-OP = 3		ZAD = 21		CZAS = 19
+OP = 3		ZAD = 30		CZAS = 47
 
-OP = 3		ZAD = 19		CZAS = 11
+OP = 3		ZAD = 27		CZAS = 42
 
-OP = 3		ZAD = 9		CZAS = 31
+OP = 3		ZAD = 23		CZAS = 29
 
-OP = 3		ZAD = 7		CZAS = 3
+OP = 3		ZAD = 22		CZAS = 8
 
-OP = 3		ZAD = 5		CZAS = 25
+OP = 3		ZAD = 21		CZAS = 46
 
-OP = 3		ZAD = 2		CZAS = 41
+OP = 3		ZAD = 19		CZAS = 30
 
-OP = 3		ZAD = 1		CZAS = 16
+OP = 3		ZAD = 10		CZAS = 17
+
+OP = 3		ZAD = 9		CZAS = 33
+
+OP = 3		ZAD = 8		CZAS = 30
+
+OP = 3		ZAD = 4		CZAS = 25
+
+OP = 3		ZAD = 3		CZAS = 49
+
+OP = 3		ZAD = 2		CZAS = 25
 
 //////////////	ALGORYTM LOSOWY	///////////////////
