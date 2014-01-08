@@ -230,9 +230,8 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 	for(int i = 1; i < dlugosc; ++i) {																		//dla ka¿dej operacji na maszynie
 		zapychacz = 0;
 		if(uszeregowanie[i]->numer < 3) {	
-			while(!warunki(*uszeregowanie[i],czas+zapychacz)) {															//sprawdzenie poprawnoœci
+			while(!warunki(*uszeregowanie[i],czas+zapychacz))															//sprawdzenie poprawnoœci
 				zapychacz++;
-			}
 			if(zapychacz !=0) {
 				Operacja  *op = new Operacja(zapychacz,98,NULL,98);													//tworzenie zapychacza
 				op->begin=czas;
@@ -242,35 +241,20 @@ bool obliczenie_uszeregowania(vector<Operacja*> & uszeregowanie, Maszyna & maszy
 				czas +=	zapychacz;									//dodajemy d³ugoœæ zapychacza do czasu
 				dlugosc++;
 			}
-			
-			if(czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas)) {														//je¿eli czas siê nie zgadza
-																											
-				//for(int j = 0; j < maszyna.nPrzestojow; ++j) {//przestoje
-				czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
-				if ( czas > czas_przestoju &&  czyPrzestoje) {	//&& czas < (czas_przestoju + maszyna.dlugosc[nastepny_przestoj]) ) {	
-																																		//jesteœmy obecnie na przestoju
-					if ( czas != (uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj])) {
-																																		//jesteœmy na przestoju i czas siê nie zgadza
-						uszeregowanie[i]->begin = czas + uszeregowanie[i-1]->begin + uszeregowanie[i-1]->czas*0.3 
-							+ maszyna.dlugosc[nastepny_przestoj];																		//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
-					}																													//poprzedniej operacji
-					czas += maszyna.dlugosc[nastepny_przestoj] + 0.3*uszeregowanie[i]->czas;											//tylko 0.3 bo resztê dodajemy póŸniej
-					if(maszyna.nPrzestojow==(nastepny_przestoj+1))																		//je¿eli skoñczy³y siê przestoje
+			czas_przestoju = maszyna.rozpoczecie[nastepny_przestoj];
+			if ( czas_przestoju < (czas + uszeregowanie[i]->czas ) &&  czyPrzestoje){ 													//je¿eli jesteœmy obecnie na przestoju																														
+					czas += uszeregowanie[i]->czas*0.3 + maszyna.dlugosc[nastepny_przestoj];											//ustawiamy czas rozpoczêcia operacji od pocz¹tku bazuj¹c na czasie
+					if(maszyna.nPrzestojow == (nastepny_przestoj+1))																		//je¿eli skoñczy³y siê przestoje
 						czyPrzestoje = false;																							//to podnosimy flagê ich braku
 					if(czyPrzestoje)
 						nastepny_przestoj++;
-					
-				}
-				else						//czas siê zgadza
-					uszeregowanie[i]->begin = czas;					//tu to samo tylko nie dodajemy d³ugoœci przestoju
-			} //koniec czegos ;o
-
+			}
 			if(uszeregowanie[i]->numer == 1 || uszeregowanie[i]->numer == 0) {						//sprawdzamy czy nastêpna operacja nie zaczyna siê za wczeœnie
 				Operacja *nastepna = uszeregowanie[i]->parent->operacje[uszeregowanie[i]->numer+1];
 				if ( nastepna->begin < (czas + uszeregowanie[i]->czas) )		
 					return false;									//je¿eli tak to giñ
 			}
-			uszeregowanie[i]->begin=czas;
+			uszeregowanie[i]->begin = czas;		
 			czas += uszeregowanie[i]->czas;								//przesuwamy kwant czasu o d³ugoœæ operacji
 		}
 		else{
@@ -440,7 +424,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 								czas=(float)(koniec-start)/CLOCKS_PER_SEC;
 								float a = czas_uszeregowania(maszyna->uszeregowanie);
 								pliki << czas << "\t" << (a/granica) << endl;
-								do_poprawy  = czas_uszeregowania(maszyna->uszeregowanie);
+								do_poprawy  -= krok;
 								break;
 								}}
 							if(zamieniono==true)
@@ -472,7 +456,7 @@ int wyzarzanie(const Generator& generator, int tablica[], int krok) {
 								float a = czas_uszeregowania(maszyna->uszeregowanie);
 								//cout << "\t" << a;
 								pliki << czas << "\t" << (a/granica) << endl;
-								do_poprawy = czas_uszeregowania(maszyna->uszeregowanie);
+								do_poprawy -= krok;
 								break;
 							}}
 					}
