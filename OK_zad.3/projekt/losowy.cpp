@@ -58,7 +58,7 @@ void algorytmLosowy(const Generator& generator, int tablica[])
 	Maszyna* maszyna;								//wskaŸnik na preferowan¹ maszynê
 
 	
-	ofstream plik("plik.txt");
+	ofstream plik("dla_poprawy_od_kroku.txt");
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
@@ -263,7 +263,7 @@ void algorytmLosowy2(const Generator& generator, int tablica[])
 	int ileDodanych = 0;							//liczba dodanych operacji
 
 	
-	ofstream plik("plik.txt");
+	ofstream plik("dla_poprawy_w_ czasie.txt");
 
 	int zadanie = zadania.size()-1;					//zadanie do wykonania
 	int preferred;									//preferowana maszyna
